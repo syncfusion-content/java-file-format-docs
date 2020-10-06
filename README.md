@@ -1,1 +1,1 @@
-Update your product
+This repository contains Java UG documentation for the Syncfusion File Format products.
