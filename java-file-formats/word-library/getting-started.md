@@ -121,7 +121,7 @@ paragraph.getParagraphFormat().setHorizontalAlignment(HorizontalAlignment.Center
 IWPicture picture = paragraph.appendPicture(new FileInputStream("Image.jpg"));
 //Specify the size of the picture.
 picture.setHeight(100);
-picture.setWidth(100);
+picture.setWidth(170);
 {% endhighlight %}
 
 {% endtabs %}  
@@ -156,8 +156,8 @@ firstCell.setWidth(150);
 paragraph=firstCell.addParagraph();
 IWPicture profilePicture = paragraph.appendPicture(new FileInputStream("ProfilePicture.jpg"));
 //Set the height and width for the image.
-profilePicture.setHeight(100);
-profilePicture.setWidth(100);
+profilePicture.setHeight(65);
+profilePicture.setWidth(130);
 //Access the instance of cell (second row, second cell) and adds text.
 secondCell=table.getRows().get(1).getCells().get(1);
 secondCell.setWidth(330);
@@ -178,11 +178,10 @@ paragraph.appendText("Level 0");
 //Apply the default numbered list formats. 
 paragraph.getListFormat().applyDefNumberedStyle();
 paragraph=section.addParagraph();
+paragraph.appendText("Level 1");
 //Specify the list format to continue from the last list.
 paragraph.getListFormat().continueListNumbering();
-paragraph.appendText("Level 1");
 //Increment the list level.
-paragraph.getListFormat().continueListNumbering();
 paragraph.getListFormat().increaseIndentLevel();
 paragraph=section.addParagraph();
 paragraph.appendText("Level 0");
@@ -202,14 +201,12 @@ paragraph.getListFormat().continueListNumbering();
 //Increment the list level.
 paragraph.getListFormat().increaseIndentLevel();
 paragraph=section.addParagraph();
-//Specify the list format to continue from the last list.
 paragraph.appendText("Level 0");
+//Specify the list format to continue from the last list.
 paragraph.getListFormat().continueListNumbering();
 //Decrement the list level.
 paragraph.getListFormat().decreaseIndentLevel();
 section.addParagraph();
-reaseIndentLevel();
-section.AddParagraph();
 {% endhighlight %}
 
 {% endtabs %}  
