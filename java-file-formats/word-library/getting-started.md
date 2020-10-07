@@ -1,6 +1,6 @@
 ---
-title: Create a simple Word document in java | Syncfusion
-description: This section illustrate how to create a new Word document from scratch in java
+title: Create a simple Word document in Java | Syncfusion
+description: This section illustrate how to create a new Word document from scratch in Java
 platform: file-formats
 control: Word Library
 documentation: UG
