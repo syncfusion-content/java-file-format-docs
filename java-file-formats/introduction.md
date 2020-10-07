@@ -1,7 +1,7 @@
 ---
 title: Create, read, edit & convert Word files | Syncfusion
 description: Create, read, edit, write, and convert Word file formats in java applications without Microsoft Office or interop dependencies.
-platform: file-formats
+platform: java-file-formats
 control: general
 documentation: UG
 keywords: Word, Office, SDK, Automation, API, create, edit, convert, read
