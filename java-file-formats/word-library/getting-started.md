@@ -64,7 +64,7 @@ document.close();
 
 ## Creating a new Word document from scratch with the basic elements
 
-An entire Word document is represented by an instance of the WordDocument and it is the root element of DocIO’s DOM. The Word document contains a collection of sections. A Word document must contain at least one section.
+An entire Word document is represented by an instance of the WordDocument and it is the root element of DocIOâ€™s DOM. The Word document contains a collection of sections. A Word document must contain at least one section.
 
 A section represents a group of paragraphs, tables, and more, that have a specific set of properties used to define the pages, a number of columns, headers, and footers, and more, that decides how the text appears. A section should contain at least one paragraph in this body.
 
@@ -126,7 +126,7 @@ picture.setWidth(170);
 
 {% endtabs %}  
 
-A table is another important element in the Word that contains a set of paragraphs arranged in rows and columns. You can create a simple as well as a complex table by using the Essential DocIO’s API. The following code example creates a simple table and adds content to it. Each table cell must contain at least one paragraph.
+A table is another important element in the Word that contains a set of paragraphs arranged in rows and columns. You can create a simple as well as a complex table by using the Essential DocIOâ€™s API. The following code example creates a simple table and adds content to it. Each table cell must contain at least one paragraph.
 
 {% tabs %} 
 
@@ -242,7 +242,7 @@ Also, you can perform more than one Mail merge operations over the same template
 
 Follow the given steps to perform a simple Mail merge in a Word document.
 
-Let’s consider that you have a template Word document with the merge fields as shown.
+Letâ€™s consider that you have a template Word document with the merge fields as shown.
 
 ![Performing Mail merge input document](GettingStarted_images/GettingStarted_img2.png)
 
@@ -274,22 +274,22 @@ The resultant Word document looks as follows.
 
 ### Simple Mail merge with Group
 
-You can perform a Mail merge with the group to append multiple records from the data source into a single document. The group is a part of the document enclosed by two special merge fields named «TableStart:TableName» and «TableEnd:TableName»
+You can perform a Mail merge with the group to append multiple records from the data source into a single document. The group is a part of the document enclosed by two special merge fields named Â«TableStart:TableNameÂ» and Â«TableEnd:TableNameÂ»
 
-* «TableStart:TableName»: Denotes the start of the group.
-* «TableEnd:TableName»: Denotes the end of the group.
+* Â«TableStart:TableNameÂ»: Denotes the start of the group.
+* Â«TableEnd:TableNameÂ»: Denotes the end of the group.
 
 The region between these two merge fields gets repeated for every record from the data source.
 
-For example – let’s consider that you have a template document as shown.
+For example â€“ letâ€™s consider that you have a template document as shown.
 
 ![Simple Mail merge with Group input document](GettingStarted_images/GettingStarted_img4.png)
 
-Here in this template, the employees are the group name and the exact same name should be used while performing the Mail merge through code. There are two special merge fields “TableStart:Employees” and “TableEnd:Employees” to denote the start and end of the Mail merge group.
+Here in this template, the employees are the group name and the exact same name should be used while performing the Mail merge through code. There are two special merge fields â€œTableStart:Employeesâ€ and â€œTableEnd:Employeesâ€ to denote the start and end of the Mail merge group.
 
-To merge an image in the replace of a merge field, you need to add a prefix (“Image:”)the merge field name.
+To merge an image in the replace of a merge field, you need to add a prefix (â€œImage:â€)the merge field name.
 
-For example, the merge field name should be like “<<Image:Photo>>”(<<Image:MergeFieldName>>)
+For example, the merge field name should be like â€œ<<Image:Photo>>â€(<<Image:MergeFieldName>>)
 
 The following code example shows how to perform a Mail merge with objects.
 
