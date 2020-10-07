@@ -1,6 +1,6 @@
 ---
-title: Create a simple Word document in java | Syncfusion
-description: This section illustrate how to create a new Word document from scratch in java
+title: Create a simple Word document in Java | Syncfusion
+description: This section illustrate how to create a new Word document from scratch in Java
 platform: file-formats
 control: Word Library
 documentation: UG
@@ -296,22 +296,49 @@ The following code example shows how to perform a Mail merge with objects.
 {% tabs %}  
 
 {% highlight JAVA %}
-//Load an existing Word document into the DocIO instance.
+//Loads an existing Word document into DocIO instance.
 WordDocument document = new WordDocument("EmployeesReportDemo.docx");
-//Get the employee details as an IEnumerable collection.
+//Gets the employee details as IEnumerable collection.
 ListSupport<Employee> employeeList = getEmployees();
-//Create an instance of the MailMergeDataTable by specifying the MailMerge group name and IEnumerable collection.
+//Uses the mail merge events handler for image fields.
+document.getMailMerge().MergeImageField.add("mergeField_EmployeeImage", new MergeImageFieldEventHandler() {
+ListSupport<MergeImageFieldEventHandler> delegateList = new ListSupport<MergeImageFieldEventHandler>(
+MergeImageFieldEventHandler.class);
+//Represents event handling for MergeFieldEventHandlerCollection.
+public void invoke(Object sender, MergeImageFieldEventArgs args) throws Exception 
+{
+	mergeField_EmployeeImage(sender, args);
+}
+//Represents the method that handles MergeField event.
+public void dynamicInvoke(Object... args) throws Exception 
+{
+	mergeField_EmployeeImage((Object) args[0], (MergeImageFieldEventArgs) args[1]);
+}
+//Represents the method that handles MergeField event to add collection item.
+public void add(MergeImageFieldEventHandler delegate) throws Exception 
+{
+	if (delegate != null)
+		delegateList.add(delegate);
+}
+//Represents the method that handles MergeField event to remove collection item.
+public void remove(MergeImageFieldEventHandler delegate) throws Exception 
+{
+	if (delegate != null)
+		delegateList.remove(delegate);
+}
+});
+//Creates an instance of MailMergeDataTable by specifying MailMerge group name and IEnumerable collection.
 MailMergeDataTable dataSource = new MailMergeDataTable("Employees",employeeList);
-//Performs the Mail merge.
+//Executes the mail merge for group.
 document.getMailMerge().executeGroup(dataSource);
-//Save and close the WordDocument instance.
+//Saves and closes the WordDocument instance.
 document.save("Sample.docx");
 document.close();
 {% endhighlight %}
 
 {% endtabs %}  
 
-The following code example provides supporting methods and class for the above code.
+The following code example shows getEmployees method which is used to get data for mail merge.
 
 {% tabs %}  
 
@@ -321,13 +348,134 @@ public ListSupport<Employee> getEmployees()throws Exception
 	ListSupport<Employee> employees = new ListSupport<Employee>(Employee.class);
 	employees.add(new Employee("Nancy","Smith","Sales Representative","505 - 20th Ave. E. Apt. 2A,","Seattle","WA","USA","Nancy.png"));
 	employees.add(new Employee("Andrew","Fuller","Vice President, Sales","908 W. Capital Way","Tacoma","WA","USA","Andrew.png"));
-	employees.add(new Employee("Roland","Mendel","Sales Representative","722 Moss Bay Blvd.","Kirkland","WA","USA","Janet.png"));
-	employees.add(new Employee("Margaret","Peacock","Sales Representative","4110 Old Redmond Rd.","Redmond","WA","USA","Margaret.png"));
-	employees.add(new Employee("Steven","Buchanan","Sales Manager","14 Garrett Hill","London","","UK","Steven.png"));
 	return employees;
+}
+{% endhighlight %}
+
+{% endtabs %}
+
+The following code example shows how to bind the image from file system during Mail merge process by using MergeImageFieldEventHandler.
+
+{% tabs %}  
+
+{% highlight JAVA %}
+private void mergeField_EmployeeImage(Object sender, MergeImageFieldEventArgs args) throws Exception 
+{
+	//Binds image from file system during mail merge.
+	if ((args.getFieldName()).equals("Photo")) 
+	{
+		String ProductFileName = args.getFieldValue().toString();
+		//Gets the image from file system.
+		FileStreamSupport imageStream = new FileStreamSupport(ProductFileName, FileMode.Open, FileAccess.Read);
+		ByteArrayInputStream stream = new ByteArrayInputStream(imageStream.toArray());
+		args.setImageStream(stream);
+	}
 }
 
 {% endhighlight %}
+
+{% endtabs %}
+
+The following code example provides supporting class for the above code.
+{% tabs %}  
+
+{% highlight JAVA %}
+public class Employee 
+{
+	private String _firstName;
+	private String _lastName;
+	private String _address;
+	private String _city;
+	private String _region;
+	private String _country;
+	private String _title;
+	private String _photo;
+	public String getFirstName()throws Exception
+	{
+		return _firstName;
+	}
+	public String setFirstName(String value)throws Exception
+	{
+		_firstName=value;
+		return value;
+	}
+	public String getLastName()throws Exception
+	{
+		return _lastName;
+	}
+	public String setLastName(String value)throws Exception
+	{
+		_lastName=value;
+		return value;
+	}
+	public String getAddress()throws Exception
+	{
+		return _address;
+	}
+	public String setAddress(String value)throws Exception
+	{
+		_address=value;
+		return value;
+	}
+	public String getCity()throws Exception
+	{
+		return _city;
+	}
+	public String setCity(String value)throws Exception
+	{
+		_city=value;
+		return value;
+	}
+	public String getRegion()throws Exception
+	{
+		return _region;
+	}
+	public String setRegion(String value)throws Exception
+	{
+		_region=value;
+		return value;
+	}
+	public String getCountry()throws Exception{
+		return _country;
+	}
+	public String setCountry(String value)throws Exception
+	{
+		_country=value;
+		return value;
+	}
+	public String getTitle()throws Exception
+	{
+		return _title;
+	}
+	public String setTitle(String value)throws Exception
+	{
+		_title=value;
+		return value;
+	}
+	public String getPhoto()throws Exception
+	{
+		return _photo;
+	}
+	public String setPhoto(String image)throws Exception
+	{
+		_photo=image;
+	return image;
+	}
+	public Employee(String firstName,String lastName,String title,String address,String city,String region,String country,String photoFilePath)throws Exception
+	{
+		setFirstName(firstName);
+		setLastName(lastName);
+		setTitle(title);
+		setAddress(address);
+		setCity(city);
+		setRegion(region);
+		setCountry(country);
+		setPhoto((photoFilePath));
+	}
+}
+{% endhighlight %}
+
+{% endtabs %}
 
 The resultant document looks as follows.
 
