@@ -283,7 +283,7 @@ The region between these two merge fields gets repeated for every record from th
 
 For example – let’s consider that you have a template document as shown.
 
-![Simple Mail merge with Group input document](GettingStarted_images/GettingStarted_img4.jpeg)
+![Simple Mail merge with Group input document](GettingStarted_images/GettingStarted_img4.png)
 
 Here in this template, the employees are the group name and the exact same name should be used while performing the Mail merge through code. There are two special merge fields “TableStart:Employees” and “TableEnd:Employees” to denote the start and end of the Mail merge group.
 
@@ -331,4 +331,4 @@ public ListSupport<Employee> getEmployees()throws Exception
 
 The resultant document looks as follows.
 
-![Simple Mail merge with Group output document](GettingStarted_images/GettingStarted_img5.jpeg)
+![Simple Mail merge with Group output document](GettingStarted_images/GettingStarted_img5.png)
