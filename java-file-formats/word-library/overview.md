@@ -1,7 +1,7 @@
 ---
 title: Overview of Word library (DocIO) | Syncfusion
 description: Java Word library to create, read, edit, and convert Word documents in Java applications.
-platform: file-formats
+platform: java-file-formats
 control: Word Library
 documentation: UG
 ---
