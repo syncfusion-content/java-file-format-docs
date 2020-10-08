@@ -9,7 +9,7 @@ keywords: Word, Office, SDK, Automation, API, create, edit, convert, read
 
 # Welcome to Syncfusion Essential File Formats Java Platform
 
-Essential File Formats for Java is a Java class library to create, edit, write, and convert Word file formats in Java applications without Microsoft Office or interop dependencies.
+Essential File Formats for Java includes a Java class library to create, edit, write, and convert Word file formats in Java applications without Microsoft Office or interop dependencies.
 
 ## How to best read this user guide
 

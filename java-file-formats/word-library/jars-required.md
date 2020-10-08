@@ -10,9 +10,9 @@ documentation: UG
 
 The following jar files are required to be referenced in your Java application.
 
-1.Syncfusion-docio
+1.syncfusion-docio
 
-2.Syncfusion-Javahelper
+2.syncfusion-javahelper
 
 # Supported Java versions
 
