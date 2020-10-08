@@ -62,13 +62,13 @@ document.close();
 
 {% endtabs %}
 
-## Creating a new Word document from scratch with the basic elements
+## Creating a new Word document from scratch with basic elements
 
-An entire Word document is represented by an instance of the WordDocument and it is the root element of DocIO’s DOM. The Word document contains a collection of sections. A Word document must contain at least one section.
+An entire Word document is represented by an instance of the `WordDocument` and it is the root element of DocIO’s DOM. The Word document contains a collection of sections. A Word document must contain at least one section.
 
 A section represents a group of paragraphs, tables, and more, that have a specific set of properties used to define the pages, a number of columns, headers, and footers, and more, that decides how the text appears. A section should contain at least one paragraph in this body.
 
-The following code example explains how to add a section into a WordDocument instance.
+The following code example explains how to add a section into a `WordDocument` instance.
 
 {% tabs %}  
 
@@ -78,7 +78,7 @@ WordDocument document = new WordDocument();
 //Add a new section into the Word document.
 IWSection section = document.addSection();
 //Specifies the page margins. 
-section.getPageSetup().getMargins().setAll(50f);
+section.getPageSetup().getMargins().setAll(50);
 {% endhighlight %}
 
 {% endtabs %}  
@@ -235,8 +235,8 @@ Essential DocIO allows you to generate documents by filling data in the template
 The following data sources are supported by the Essential DocIO for performing the Mail merge.
 
 * String Arrays
-* Dataset
-* Datatable
+* DataSet
+* DataTable
 
 Also, you can perform more than one Mail merge operations over the same template to generate documents as per your requirement.
 
@@ -246,7 +246,7 @@ Let’s consider that you have a template Word document with the merge fields as
 
 ![Performing Mail merge input document](GettingStarted_images/GettingStarted_img2.png)
 
-The MailMerge class provides various overloads for the Execute method to perform a Mail merge from the various data source. The Mail merge operation replaces the matching merge fields with the respective data.
+The `MailMerge` class provides various overloads for the `execute` method to perform a Mail merge from the various data source. The Mail merge operation replaces the matching merge fields with the respective data.
 
 The following code example shows how to perform a simple Mail merge by using a string array.
 
