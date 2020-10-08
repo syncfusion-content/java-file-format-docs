@@ -1,6 +1,6 @@
 ---
 title: Jars Required for Java Word library (DocIO) | Syncfusion
-description: This section illustrate jars requirred to use Java Word library (DocIO)
+description: This section illustrate jars required to use Java Word library (DocIO)
 platform: java-file-formats
 control: Word library
 documentation: UG
