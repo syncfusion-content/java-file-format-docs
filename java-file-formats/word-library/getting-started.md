@@ -24,7 +24,7 @@ This jar contains the core features needed for creating, reading, manipulating a
 <tr>
 <td>
 syncfusion-javahelper<br/><br/></td><td>
-This jar is used to package the Word document contents.<br/><br/></td></tr>
+This jar contains common functionalities required for file format libraries.<br/><br/></td></tr>
 </tbody>
 </table>
 
@@ -117,11 +117,13 @@ The following code example shows how to add an image into the Word document.
 //Add another paragraph and aligns it as a center.
 IWParagraph paragraph = section.addParagraph();
 paragraph.getParagraphFormat().setHorizontalAlignment(HorizontalAlignment.Center);
+//Set after spacing for paragraph.
+paragraph.getParagraphFormat().setAfterSpacing(6);
 //Add a picture into the paragraph.
-IWPicture picture = paragraph.appendPicture(new FileInputStream("Image.jpg"));
+IWPicture picture = paragraph.appendPicture(new FileInputStream("DummyProfilePicture.jpg"));
 //Specify the size of the picture.
-picture.setHeight(100);
-picture.setWidth(170);
+picture.setHeight(86);
+picture.setWidth(81);
 {% endhighlight %}
 
 {% endtabs %}  
@@ -154,10 +156,12 @@ firstCell=table.getRows().get(1).getCells().get(0);
 firstCell.setWidth(150);
 //Add image to  the paragraph.
 paragraph=firstCell.addParagraph();
-IWPicture profilePicture = paragraph.appendPicture(new FileInputStream("ProfilePicture.jpg"));
+//Set after spacing for paragraph.
+paragraph.getParagraphFormat().setAfterSpacing(6);
+IWPicture profilePicture = paragraph.appendPicture(new FileInputStream("DummyProfilePicture.jpg"));
 //Set the height and width for the image.
-profilePicture.setHeight(65);
-profilePicture.setWidth(130);
+profilePicture.setHeight(98);
+profilePicture.setWidth(95);
 //Access the instance of cell (second row, second cell) and adds text.
 secondCell=table.getRows().get(1).getCells().get(1);
 secondCell.setWidth(330);
@@ -174,6 +178,8 @@ Essential DocIO allows you to create simple and multi-level lists. The following
 {% highlight JAVA %}
 //Write the default numbered list. 
 paragraph=section.addParagraph();
+//Set before spacing for paragraph.
+paragraph.getParagraphFormat().setBeforeSpacing(6);
 paragraph.appendText("Level 0");
 //Apply the default numbered list formats. 
 paragraph.getListFormat().applyDefNumberedStyle();
