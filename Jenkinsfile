@@ -7,7 +7,7 @@ timestamps
 		env.PATH = "${ProgramFiles}"+"\\Git\\mingw64\\bin;${env.PATH}"
 
      timeout(time: 7200000, unit: 'MILLISECONDS') {
-	String platform='java-file-format';
+	String platform='java-file-formats';
    try
 	{   
 		//Clone scm repository in Workspace source directory
