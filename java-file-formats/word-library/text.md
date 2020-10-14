@@ -6,7 +6,7 @@ control: Word Library
 documentation: UG
 ---
 
-# Text Conversion
+# Word to Text and Text to Word Conversions
 
 The Essential DocIO converts the Word document into the Text file and vice versa. The following code example shows how to convert the Word document into text file.
 
