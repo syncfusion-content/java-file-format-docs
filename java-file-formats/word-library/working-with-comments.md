@@ -1,6 +1,6 @@
----
+﻿---
 title: Working with Comments | Syncfusion
-description: This section illustrates how to add, modify and remove the comments
+description: This section illustrates how to add, modify and remove the comments using Syncfusion Word library (Essential DocIO)
 platform: java-file-formats
 control: Word Library
 documentation: UG
