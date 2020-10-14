@@ -1,6 +1,6 @@
 ---
 title: Overview of Word library (DocIO) | Syncfusion
-description: Java Word library to create, read, edit, and convert Word documents in Java applications.
+description: Java Word library to create, read, edit, and convert the Microsoft Word documents in the Java application without Microsoft Word or interop dependencies.
 platform: java-file-formats
 control: Word Library
 documentation: UG
@@ -17,7 +17,6 @@ It is a non-UI component that provides a full-fledged document instance model si
 * Support to open, modify, and save the existing Word documents.
 * Advanced Mail merge support with different data sources.
 * Ability to create or edit Word 2007 and later version documents, and convert them to commonly used file formats such as WordML, TXT, HTML, and vice versa.
-* Ability to export a Word document as an image of high quality.
 * Ability to create and manipulate shapes, and group shape in the DOCX and WordML format documents.
 * Ability to read and write the built-in and custom document properties.
 * Support to insert and edit the form fields.
