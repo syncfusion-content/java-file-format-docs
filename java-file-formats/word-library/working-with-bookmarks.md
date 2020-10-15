@@ -90,10 +90,10 @@ BookmarkNavigator is used for navigating to a bookmark in a Word document. You c
 
 You can get the content between bookmark start and bookmark end of the specified bookmark in two ways: 
 
-1. You can use `GetBookmarkContent` method for retrieving content as collection of body items when the bookmark start and bookmark end are preserved in a single section.
-2. You can use `GetContent` method for retrieving content as collection of sections when the bookmark start and bookmark end are preserved in different sections. 
+1. You can use `getBookmarkContent` method for retrieving content as collection of body items when the bookmark start and bookmark end are preserved in a single section.
+2. You can use `getContent` method for retrieving content as collection of sections when the bookmark start and bookmark end are preserved in different sections. 
 
-The following code example shows how to retrieve the specified bookmark content by using `GetBookmarkContent` method in a Word document.
+The following code example shows how to retrieve the specified bookmark content by using `getBookmarkContent` method in a Word document.
 
 {% tabs %}   
 
@@ -117,7 +117,7 @@ document.close();
 
 {% endtabs %} 
 
-The following code example shows how to retrieve the specified bookmark content by using `GetContent` method in a Word document.
+The following code example shows how to retrieve the specified bookmark content by using `getContent` method in a Word document.
 
 {% tabs %}  
 
@@ -414,7 +414,7 @@ Case 2
 ![Bookmark start placed outside table and end in table](WorkingwithBookmarks_images/WorkingwithBookmarks_img2.jpeg)
 
 
-The following code example shows how to replace a specified bookmark content by using `ReplaceBookmarkContent` method in Word document.
+The following code example shows how to replace a specified bookmark content by using `replaceBookmarkContent` method in Word document.
 
 {% tabs %}  
 
@@ -444,7 +444,7 @@ document.close();
 
 {% endtabs %}  
 
-The following code example shows how to replace a specified bookmark content by using `ReplaceContent` method in Word document.
+The following code example shows how to replace a specified bookmark content by using `replaceContent` method in Word document.
 
 {% tabs %} 
 
