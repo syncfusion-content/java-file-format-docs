@@ -1,4 +1,4 @@
-﻿---
+---
 title: Simple Mail merge | Syncfusion
 description: This section illustrates how to Mail merge - replace all merge fields in a document with data, by repeating whole document for each record in data source.
 platform: java-file-formats

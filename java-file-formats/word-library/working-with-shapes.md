@@ -1,4 +1,4 @@
-﻿---
+---
 title: Working with Shapes | Syncfusion
 description: This section describes how to work with the shapes and groupshape in Word document using Syncfusion Java Word library (Essential DocIO)
 platform: java-file-formats
