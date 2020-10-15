@@ -202,7 +202,7 @@ document.close();
 
 ## Align text within a table
 
-You can iterate the cells within a table and align text for each cell. Find more information about iterating the cells from [here](https://help.syncfusion.com/file-formats/docio/working-with-tables#iterating-through-table-elements)
+You can iterate the cells within a table and align text for each cell. Find more information about iterating the cells from [here](https://help.syncfusion.com/java-file-formats/word-library/working-with-tables#iterating-through-table-elements)
 
 The following code example illustrates how to align text within a table.
 
@@ -541,6 +541,8 @@ table.get(0,1).getCellFormat().setHorizontalMerge(CellMerge.Continue);
 document.save("HorizontalMerge.docx",FormatType.Docx);
 document.close();
 {% endhighlight %}
+
+{% endtabs %} 
 
 The following code example illustrates how to create a table with vertical merged cells.
 
