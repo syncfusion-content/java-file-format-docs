@@ -176,42 +176,66 @@ Essential DocIO allows you to create simple and multi-level lists. The following
 {% tabs %} 
 
 {% highlight JAVA %}
-//Write the default numbered list. 
-paragraph=section.addParagraph();
+//Write the default numbered list.
+paragraph = section.addParagraph();
 //Set before spacing for paragraph.
 paragraph.getParagraphFormat().setBeforeSpacing(6);
 paragraph.appendText("Level 0");
-//Apply the default numbered list formats. 
+//Apply the default numbered list formats.
 paragraph.getListFormat().applyDefNumberedStyle();
-paragraph=section.addParagraph();
+//Applies list formatting.
+paragraph.getListFormat().getCurrentListLevel().getParagraphFormat().setLeftIndent(36);
+paragraph.getListFormat().getCurrentListLevel().getParagraphFormat().setFirstLineIndent(-18);
+paragraph.getListFormat().getCurrentListLevel().setNumberAlignment(ListNumberAlignment.Left);
+paragraph = section.addParagraph();
 paragraph.appendText("Level 1");
 //Specify the list format to continue from the last list.
 paragraph.getListFormat().continueListNumbering();
 //Increment the list level.
 paragraph.getListFormat().increaseIndentLevel();
-paragraph=section.addParagraph();
+//Applies list formatting.
+paragraph.getListFormat().getCurrentListLevel().getParagraphFormat().setLeftIndent(72);
+paragraph.getListFormat().getCurrentListLevel().getParagraphFormat().setFirstLineIndent(-18);
+paragraph.getListFormat().getCurrentListLevel().setNumberAlignment(ListNumberAlignment.Left);
+paragraph = section.addParagraph();
 paragraph.appendText("Level 0");
 //Decrement the list level.
 paragraph.getListFormat().continueListNumbering();
 paragraph.getListFormat().decreaseIndentLevel();
-//Write the default bulleted list. 
+//Applies list formatting.
+paragraph.getListFormat().getCurrentListLevel().getParagraphFormat().setLeftIndent(36);
+paragraph.getListFormat().getCurrentListLevel().getParagraphFormat().setFirstLineIndent(-18);
+paragraph.getListFormat().getCurrentListLevel().setNumberAlignment(ListNumberAlignment.Left);
+//Write the default bulleted list.
 section.addParagraph();
-paragraph=section.addParagraph();	
+paragraph = section.addParagraph();
 paragraph.appendText("Level 0");
 //Apply the default bulleted list formats.
 paragraph.getListFormat().applyDefBulletStyle();
-paragraph=section.addParagraph();
+//Applies list formatting.
+paragraph.getListFormat().getCurrentListLevel().getParagraphFormat().setLeftIndent(36);
+paragraph.getListFormat().getCurrentListLevel().getParagraphFormat().setFirstLineIndent(-18);
+paragraph.getListFormat().getCurrentListLevel().setNumberAlignment(ListNumberAlignment.Left);
+paragraph = section.addParagraph();
 paragraph.appendText("Level 1");
 //Specify the list format to continue from the last list.
 paragraph.getListFormat().continueListNumbering();
 //Increment the list level.
 paragraph.getListFormat().increaseIndentLevel();
-paragraph=section.addParagraph();
+//Applies list formatting.
+paragraph.getListFormat().getCurrentListLevel().getParagraphFormat().setLeftIndent(72);
+paragraph.getListFormat().getCurrentListLevel().getParagraphFormat().setFirstLineIndent(-18);
+paragraph.getListFormat().getCurrentListLevel().setNumberAlignment(ListNumberAlignment.Left);
+paragraph = section.addParagraph();
 paragraph.appendText("Level 0");
 //Specify the list format to continue from the last list.
 paragraph.getListFormat().continueListNumbering();
 //Decrement the list level.
 paragraph.getListFormat().decreaseIndentLevel();
+//Applies list formatting.
+paragraph.getListFormat().getCurrentListLevel().getParagraphFormat().setLeftIndent(36);
+paragraph.getListFormat().getCurrentListLevel().getParagraphFormat().setFirstLineIndent(-18);
+paragraph.getListFormat().getCurrentListLevel().setNumberAlignment(ListNumberAlignment.Left);
 section.addParagraph();
 {% endhighlight %}
 
