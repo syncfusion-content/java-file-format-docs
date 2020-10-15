@@ -14,8 +14,6 @@ The `MailMerge` class provides event support to customize the document contents 
 
 * `MergeImageField`- occurs when an **image Mail merge field** is encountered.
 
-* `BeforeClearField`- occurs when an **unmerged field** is encountered.
-
 * `BeforeClearGroupField`- occurs when an **unmerged group field** is encountered.
 
 ## MergeField Event
@@ -174,115 +172,6 @@ private void mergeField_ProductImage(Object sender, MergeImageFieldEventArgs arg
 
 {% endtabs %} 
 
-## BeforeClearField Event
-
-You can get the unmerged fields in a Word document during mail merge process using the `BeforeClearField` Event.
-
-The following code example shows how to use the `BeforeClearField` event during Mail merge process.
-
-{% tabs %}  
-
-{% highlight JAVA %}
-//Opens the template document.
-WordDocument document = new WordDocument("Template.docx",FormatType.Docx);
-//Sets a value indicating whether to remove empty mail merge fields from a document.
-document.getMailMerge().setClearFields(false);
-//Uses the mail merge event to clear the unmerged field while perform mail merge execution.
-document.getMailMerge().BeforeClearField.add("beforeClearFieldEvent", new BeforeClearFieldEventHandler() {
-ListSupport<BeforeClearFieldEventHandler> delegateList = new ListSupport<BeforeClearFieldEventHandler>(
-BeforeClearFieldEventHandler.class);
-//Represents event handling for BeforeClearFieldEventHandler.
-public void invoke(Object sender, BeforeClearFieldEventArgs args) throws Exception {
-beforeClearFieldEvent(sender, args);
-}
-//Represents the method that handles BeforeClearField event.
-public void dynamicInvoke(Object... args) throws Exception {
-beforeClearFieldEvent((Object) args[0], (BeforeClearFieldEventArgs) args[1]);
-}
-//Represents the method that handles BeforeClearField event to add collection item.
-public void add(BeforeClearFieldEventHandler delegate) throws Exception {
-if (delegate != null)
-delegateList.add(delegate);
-}
-//Represents the method that handles BeforeClearField event to remove collection item.
-public void remove(BeforeClearFieldEventHandler delegate) throws Exception {
-if (delegate != null)
-delegateList.remove(delegate);
-}
-});
-//Execute group mail merge.
-document.getMailMerge().executeGroup(getDataTable());
-//Saves the Word document.
-document.save("Samples.docx", FormatType.Docx);
-//Closes the Word document.
-document.close();
-{% endhighlight %}
-
-{% endtabs %} 
-
-The following code example shows how to bind the data to unmerged fields during Mail merge process by using BeforeClearFieldEventHandler.
-
-{% tabs %}  
-
-{% highlight JAVA %}
-private void beforeClearFieldEvent (Object sender, BeforeClearFieldEventArgs args) throws Exception
-{
-if (args.getHasMappedFieldInDataSource())
-{
-//To check whether the mapped field has null value.
-if ((args.getFieldValue())==null) //|| args.getFieldValue().equals(DBNull.Value))
-{
-//Gets the unmerged field name.
-String unmergedFieldName = args.getFieldName();
-String ownerGroup = args.getGroupName();
-//Sets error message for unmerged fields.
-args.setFieldValue("Error! The value of MergeField " + unmergedFieldName + " of owner group " + ownerGroup + " is defined as Null in the data source.");
-}
-else
-//If field value is empty, you can set whether the unmerged merge field can be clear or not.
-args.setClearField(true);
-}
-else
-{
-String unmergedFieldName = args.getFieldName();
-//Sets error message for unmerged fields, which is not found in data source.
-args.setFieldValue("Error! The value of MergeField " + unmergedFieldName + " is not found in the data source.");
-}
-}
-{% endhighlight %}
-
-{% endtabs %} 
-
-The following code example shows getDataTable method which is used to get data for mail merge.
-
-{% tabs %} 
-
-{% highlight JAVA %}
-private DataTableSupport getDataTable() throws Exception
-{
-//Create an instance of DataTable.
-DataTableSupport dataTable = new DataTableSupport("Employee");
-//Add columns.
-dataTable.getColumns().add("EmployeeId");
-dataTable.getColumns().add("City");
-//Add records.
-DataRowSupport row;
-row = dataTable.newRow();
-row.set("EmployeeId", "1001");
-row.set("City", null);
-dataTable.getRows().add(row);
-row = dataTable.newRow();
-row.set("EmployeeId", "1002");
-row.set("City", "");
-dataTable.getRows().add(row);
-row = dataTable.newRow();
-row.set("EmployeeId", "1003");
-row.set("City", "London");
-dataTable.getRows().add(row);
-return dataTable;
-}
-{% endhighlight %} 
-{% endtabs %}
 
 ## BeforeClearGroupField Event
 
