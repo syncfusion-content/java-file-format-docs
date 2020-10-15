@@ -55,7 +55,7 @@ The following code example shows getOrganizations method which is used to get da
 public static ListSupport<Organization> getOrganizations() throws Exception
 {
 	//Creates Employee details.
-    ListSupport<EmployeeDetails> employees = new ListSupport<EmployeeDetails>();
+	ListSupport<EmployeeDetails> employees = new ListSupport<EmployeeDetails>();
 	employees.add(new EmployeeDetails("Thomas Hardy", "1001", "05/27/1996"));
 	employees.add(new EmployeeDetails("Maria Anders", "1002", "04/10/1998")); 
 	//Creates Departments details.
@@ -79,129 +79,156 @@ The following code example shows Organization, DepartmentDetails, and EmployeeDe
 {% highlight JAVA %}
 public class Organization
 {
-private String _branchName;
-private String _address;
-private String _city;
-private String _zipCode;
-private String _country;
-private ListSupport<DepartmentDetails> _departments;
-public String getBranchName()throws Exception{
-return _branchName;
-}
-public String setBranchName(String value)throws Exception{
-_branchName=value;
-return value;
-}
-public String getAddress()throws Exception{
-return _address;
-}
-public String setAddress(String value)throws Exception{
-_address=value;
-return value;
-}
-public String getCity()throws Exception{
-return _city;
-}
-public String setCity(String value)throws Exception{
-_city=value;
-return value;
-}
-public String getZipCode()throws Exception{
-return _zipCode;
-}
-public String setZipCode(String value)throws Exception{
-_zipCode=value;
-return value;
-}
-public String getCountry()throws Exception{
-return _country;
-}
-public String setCountry(String value)throws Exception{
-_country=value;
-return value;
-}
-public ListSupport<DepartmentDetails> getDepartments()throws Exception{
-return _departments;
-}
-public ListSupport<DepartmentDetails> setDepartments(ListSupport<DepartmentDetails> value)throws Exception{
-_departments=value;
-return value;
-}
-public Organization(String branchName,String address,String city,String zipcode,String country,ListSupport<DepartmentDetails> departments)throws Exception{
-setBranchName(branchName);
-setAddress(address);
-setCity(city);
-setZipCode(zipcode);
-setCountry(country);
-setDepartments(departments);
-}
+	private String _branchName;
+	private String _address;
+	private String _city;
+	private String _zipCode;
+	private String _country;
+	private ListSupport<DepartmentDetails> _departments;
+	public String getBranchName()throws Exception
+	{
+		return _branchName;
+	}
+	public String setBranchName(String value)throws Exception
+	{
+		_branchName=value;
+		return value;
+	}
+	public String getAddress()throws Exception
+	{
+		return _address;
+	}
+	public String setAddress(String value)throws Exception
+	{
+		_address=value;
+		return value;
+	}
+	public String getCity()throws Exception
+	{
+		return _city;
+	}
+	public String setCity(String value)throws Exception
+	{
+		_city=value;
+		return value;
+	}
+	public String getZipCode()throws Exception
+	{
+		return _zipCode;
+	}
+	public String setZipCode(String value)throws Exception
+	{
+		_zipCode=value;
+		return value;
+	}
+	public String getCountry()throws Exception
+	{
+		return _country;
+	}
+	public String setCountry(String value)throws Exception
+	{
+		_country=value;
+		return value;
+	}
+	public ListSupport<DepartmentDetails> getDepartments()throws Exception
+	{
+		return _departments;
+	}
+	public ListSupport<DepartmentDetails> setDepartments(ListSupport<DepartmentDetails> value)throws Exception
+	{
+		_departments=value;
+		return value;
+	}
+	public Organization(String branchName,String address,String city,String zipcode,String country,ListSupport<DepartmentDetails> departments)throws Exception
+	{
+		setBranchName(branchName);
+		setAddress(address);
+		setCity(city);
+		setZipCode(zipcode);
+		setCountry(country);
+		setDepartments(departments);
+	}
 }
 
 
 public class DepartmentDetails
 {
-private String _departmentName;
-private String _supervisor;
-private ListSupport<EmployeeDetails> _employees;
-public String getDepartmentName()throws Exception{
-return _departmentName;
-}
-public String setDepartmentName(String value)throws Exception{
-_departmentName=value;
-return value;
-}
-public String getSupervisor()throws Exception{
-return _supervisor;
-}
-public String setSupervisor(String value)throws Exception{
-_supervisor=value;
-return value;
-}
-public ListSupport<EmployeeDetails> getEmployees()throws Exception{
-return _employees;
-}
-public ListSupport<EmployeeDetails> setEmployees(ListSupport<EmployeeDetails> value)throws Exception{
-_employees=value;
-return value;
-}
-public DepartmentDetails(String departmentName,String supervisor,ListSupport<EmployeeDetails> employees)throws Exception{
-setDepartmentName(departmentName);
-setSupervisor(supervisor);
-setEmployees(employees);
-}
+	private String _departmentName;
+	private String _supervisor;
+	private ListSupport<EmployeeDetails> _employees;
+	public String getDepartmentName()throws Exception
+	{
+		return _departmentName;
+	}
+	public String setDepartmentName(String value)throws Exception
+	{
+		_departmentName=value;
+		return value;
+	}
+	public String getSupervisor()throws Exception
+	{
+		return _supervisor;
+	}
+	public String setSupervisor(String value)throws Exception
+	{
+		_supervisor=value;
+		return value;
+	}
+	public ListSupport<EmployeeDetails> getEmployees()throws Exception
+	{
+		return _employees;
+	}
+	public ListSupport<EmployeeDetails> setEmployees(ListSupport<EmployeeDetails> value)throws Exception
+	{
+		_employees=value;
+		return value;
+	}
+	public DepartmentDetails(String departmentName,String supervisor,ListSupport<EmployeeDetails> employees)throws Exception
+	{
+		setDepartmentName(departmentName);
+		setSupervisor(supervisor);
+		setEmployees(employees);
+	}
 }
 
 public class EmployeeDetails
 {
-private String _employeeName;
-private String _employeeID;
-private String _joinedDate;
-public String getEmployeeName()throws Exception{
-return _employeeName;
-}
-public String setEmployeeName(String value)throws Exception{
-_employeeName=value;
-return value;
-}
-public String getEmployeeID()throws Exception{
-return _employeeID;
-}
-public String setEmployeeID(String value)throws Exception{
-_employeeID=value;
-return value;
-}
-public String getJoinedDate()throws Exception{
-return _joinedDate;
-}
-public String setJoinedDate(String value)throws Exception{
-_joinedDate=value;
-return value;
-}
-public EmployeeDetails(String employeeName,String employeeID,String joinedDate)throws Exception{
-setEmployeeName(employeeName);
-setEmployeeID(employeeID);
-setJoinedDate(joinedDate);
-}
+	private String _employeeName;
+	private String _employeeID;
+	private String _joinedDate;
+	public String getEmployeeName()throws Exception
+	{
+		return _employeeName;
+	}
+	public String setEmployeeName(String value)throws Exception
+	{
+		_employeeName=value;
+		return value;
+	}
+	public String getEmployeeID()throws Exception
+	{
+		return _employeeID;
+	}
+	public String setEmployeeID(String value)throws Exception
+	{
+		_employeeID=value;
+		return value;
+	}
+	public String getJoinedDate()throws Exception
+	{
+		return _joinedDate;
+	}
+	public String setJoinedDate(String value)throws Exception
+	{
+		_joinedDate=value;
+		return value;
+	}
+	public EmployeeDetails(String employeeName,String employeeID,String joinedDate)throws Exception
+	{
+		setEmployeeName(employeeName);
+		setEmployeeID(employeeID);
+		setJoinedDate(joinedDate);
+	}
 }
 {% endhighlight %}
 {% endtabs %}

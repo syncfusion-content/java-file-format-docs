@@ -323,13 +323,13 @@ WParagraph lastParagraph = document.getLastParagraph();
 //Iterate through the paragraph items to get the group shape.
 for (int i = 0; i < lastParagraph.getChildEntities().getCount(); i++)
 {
-if (lastParagraph.getChildEntities().get(i) instanceof GroupShape)
-{
-  GroupShape groupShape = (GroupShape)lastParagraph.getChildEntities().get(i);
-  //Ungroup the child shapes in the group shape.
-  groupShape.ungroup();
-  break;
-}
+	if (lastParagraph.getChildEntities().get(i) instanceof GroupShape)
+	{
+		GroupShape groupShape = (GroupShape)lastParagraph.getChildEntities().get(i);
+		//Ungroup the child shapes in the group shape.
+		groupShape.ungroup();
+		break;
+	}
 }
 //Save and closes the Word document instance.
 document.save("Result.docx", FormatType.Docx);
