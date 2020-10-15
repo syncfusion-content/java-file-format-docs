@@ -14,7 +14,7 @@ The following jar files are required to be referenced in your Java application.
 
 2.syncfusion-javahelper
 
-Get the dependent jar files by installing [file formats controls](https://www.syncfusion.com/sales/products/fileformats?utm_source=github&utm_medium=listing&utm_campaign=java-demos#). You can find the required jars in the build installed location `$system drive:\Program Files\Syncfusion\Essential Studio\`.
+Get the dependent jar files by installing [file formats controls](https://www.syncfusion.com/sales/products/fileformats?utm_source=github&utm_medium=listing&utm_campaign=java-demos#). You can find the required jars in the build installed drive `$system drive:\Program Files (x86)\Syncfusion\Essential Studio\FileFormats\18.3.0.35\JarFiles`.
 
 ## Supported Java versions
 
