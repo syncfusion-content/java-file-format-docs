@@ -50,6 +50,7 @@ paragraph.appendText("Female");
 document.save("Checkbox.docx", FormatType.Docx);
 //Closes the document
 document.close();
+{% endhighlight %}
 
 {% endtabs %}  
 
