@@ -1,4 +1,4 @@
----
+﻿---
 title: Working with Mail merge | Syncfusion
 description: This section illustrates about Mail merge Word document to create reports (letters, envelopes, labels, invoice, payroll) without MS Word or Office interop.
 platform: java-file-formats
@@ -111,8 +111,6 @@ The `MailMerge` class provides event support to customize the document contents 
 
 * `MergeImageField`: Occurs when an **image Mail merge field** is encountered.
 
-* `BeforeClearField`: Occurs when an **unmerged field** is encountered.
-
 * `BeforeClearGroupField`: Occurs when an **unmerged group field** is encountered.
 
 ### MergeField event
@@ -122,10 +120,6 @@ You can customize the merging text during Mail merge process by using the `Merge
 ### MergeImageField event
 
 You can customize the merging image during Mail merge process by using the `MergeImageField` event. For further information, click [here](https://help.syncfusion.com/java-file-formats/word-library/mail-merge/mail-merge-events#mergeimagefield-event).
-
-### BeforeClearField event
-
-You can get the unmerged fields during Mail merge process by using the `BeforeClearField` event. For further information, click [here](https://help.syncfusion.com/java-file-formats/word-library/mail-merge/mail-merge-events#beforeclearfield-event).
 
 ### BeforeClearGroupField event
 
