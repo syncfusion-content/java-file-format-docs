@@ -1,4 +1,4 @@
-﻿---
+---
 title: Mail merge events | Syncfusion
 description: This section illustrates how to format or customize the merged text and image, clear or retain unmerged fields during mail merge using events.
 platform: java-file-formats
@@ -32,22 +32,26 @@ document.getMailMerge().MergeField.add("applyAlternateRecordsTextColor", new Mer
 ListSupport<MergeFieldEventHandler> delegateList = new ListSupport<MergeFieldEventHandler>(
 MergeFieldEventHandler.class);
 // Represents event handling for MergeFieldEventHandlerCollection.
-public void invoke(Object sender, MergeFieldEventArgs args) throws Exception {
-applyAlternateRecordsTextColor(sender, args);
+public void invoke(Object sender, MergeFieldEventArgs args) throws Exception 
+{
+	applyAlternateRecordsTextColor(sender, args);
 }
 // Represents the method that handles MergeField event.
-public void dynamicInvoke(Object... args) throws Exception {
-applyAlternateRecordsTextColor((Object) args[0], (MergeFieldEventArgs) args[1]);
+public void dynamicInvoke(Object... args) throws Exception 
+{
+	applyAlternateRecordsTextColor((Object) args[0], (MergeFieldEventArgs) args[1]);
 }
 // Represents the method that handles MergeField event to add collection item.
-public void add(MergeFieldEventHandler delegate) throws Exception {
-if (delegate != null)
-delegateList.add(delegate);
+public void add(MergeFieldEventHandler delegate) throws Exception 
+{
+	if (delegate != null)
+		delegateList.add(delegate);
 }
 // Represents the method that handles MergeField event to remove collection item.
-public void remove(MergeFieldEventHandler delegate) throws Exception {
-if (delegate != null)
-delegateList.remove(delegate);
+public void remove(MergeFieldEventHandler delegate) throws Exception 
+{
+	if (delegate != null)
+		delegateList.remove(delegate);
 }
 });
 //Executes Mail Merge with groups.
@@ -70,7 +74,7 @@ private void applyAlternateRecordsTextColor (Object sender, MergeFieldEventArgs 
     //Sets text color to the alternate mail merge record.
 	if (Integer.compare((args.getRowIndex() % 2),0)==0)
 	{
-			args.getTextRange().getCharacterFormat().setTextColor(ColorSupport.fromArgb(255, 102, 0));
+		args.getTextRange().getCharacterFormat().setTextColor(ColorSupport.fromArgb(255, 102, 0));
 	}
 }
 {% endhighlight %}
@@ -84,17 +88,17 @@ The following code example shows getDataTable method which are is to get data fo
 {% highlight JAVA %}
 private static DataTableSupport getDataTable() throws Exception
 {
-		DataTableSupport dataTable = new DataTableSupport("Employee");
-		dataTable.getColumns().add("EmployeeName");
-		dataTable.getColumns().add("EmployeeNumber");
-		for (int i = 0; i < 20; i++)
-		{
-			DataRowSupport datarow = dataTable.newRow();
-			dataTable.getRows().add(datarow);
-			datarow.set(0 , "Employee" + Integer.toString(i));
-			datarow.set(1 , "EMP" + Integer.toString(i));
-		}
-		return dataTable;
+	DataTableSupport dataTable = new DataTableSupport("Employee");
+	dataTable.getColumns().add("EmployeeName");
+	dataTable.getColumns().add("EmployeeNumber");
+	for (int i = 0; i < 20; i++)
+	{
+		DataRowSupport datarow = dataTable.newRow();
+		dataTable.getRows().add(datarow);
+		datarow.set(0 , "Employee" + Integer.toString(i));
+		datarow.set(1 , "EMP" + Integer.toString(i));
+	}
+	return dataTable;
 }
 {% endhighlight %}
 
@@ -115,22 +119,26 @@ document.getMailMerge().MergeImageField.add("mergeField_ProductImage", new Merge
 ListSupport<MergeImageFieldEventHandler> delegateList = new ListSupport<MergeImageFieldEventHandler>(
 MergeImageFieldEventHandler.class);
 //Represents event handling for MergeImageFieldEventHandlerCollection.
-public void invoke(Object sender, MergeImageFieldEventArgs args) throws Exception {
-mergeField_ProductImage(sender, args);
+public void invoke(Object sender, MergeImageFieldEventArgs args) throws Exception
+{
+	mergeField_ProductImage(sender, args);
 }
 //Represents the method that handles MergeImageField event.
-public void dynamicInvoke(Object... args) throws Exception {
-mergeField_ProductImage((Object) args[0], (MergeImageFieldEventArgs) args[1]);
+public void dynamicInvoke(Object... args) throws Exception 
+{
+	mergeField_ProductImage((Object) args[0], (MergeImageFieldEventArgs) args[1]);
 }
 //Represents the method that handles MergeImageField event to add collection item.
-public void add(MergeImageFieldEventHandler delegate) throws Exception {
-if (delegate != null)
-delegateList.add(delegate);
+public void add(MergeImageFieldEventHandler delegate) throws Exception 
+{
+	if (delegate != null)
+		delegateList.add(delegate);
 }
 //Represents the method that handles MergeImageField event to remove collection item.
-public void remove(MergeImageFieldEventHandler delegate) throws Exception {
-if (delegate != null)
-delegateList.remove(delegate);
+public void remove(MergeImageFieldEventHandler delegate) throws Exception 
+{
+	if (delegate != null)
+		elegateList.remove(delegate);
 }
 });
 //Specifies the field names and field values.
@@ -153,20 +161,20 @@ The following code example shows how to bind the image from file system during M
 {% highlight JAVA %}
 private void mergeField_ProductImage(Object sender, MergeImageFieldEventArgs args) throws Exception
 { 
-		//Binds image from file system during mail merge.
-		if ((args.getFieldName()).equals("Logo"))
-		{
-			String ProductFileName = args.getFieldValue().toString();
-			//Gets the image from file system.
-			FileStreamSupport imageStream = new FileStreamSupport(ProductFileName, FileMode.Open, FileAccess.Read);
-			ByteArrayInputStream stream = new ByteArrayInputStream(imageStream.toArray());
-			args.setImageStream(stream);
-			//Gets the picture, to be merged for image merge field.
-			WPicture picture = args.getPicture();
-			//Resizes the picture.
-			picture.setHeight(50);
-			picture.setWidth(150);
-		}
+	//Binds image from file system during mail merge.
+	if ((args.getFieldName()).equals("Logo"))
+	{
+		String ProductFileName = args.getFieldValue().toString();
+		//Gets the image from file system.
+		FileStreamSupport imageStream = new FileStreamSupport(ProductFileName, FileMode.Open, FileAccess.Read);
+		ByteArrayInputStream stream = new ByteArrayInputStream(imageStream.toArray());
+		args.setImageStream(stream);
+		//Gets the picture, to be merged for image merge field.
+		WPicture picture = args.getPicture();
+		//Resizes the picture.
+		picture.setHeight(50);
+		picture.setWidth(150);
+	}
 }
 {% endhighlight %}
 
@@ -190,27 +198,27 @@ document.getMailMerge().setClearFields(false);
 document.getMailMerge().BeforeClearGroupField.add("beforeClearFields", new BeforeClearGroupFieldEventHandler() {
 ListSupport<BeforeClearGroupFieldEventHandler> delegateList = new ListSupport<BeforeClearGroupFieldEventHandler>(
 BeforeClearGroupFieldEventHandler.class);
-
 // Represents event handling for BeforeClearGroupFieldEvent.
-public void invoke(Object sender, BeforeClearGroupFieldEventArgs args) throws Exception {
-beforeClearFields(sender, args);
+public void invoke(Object sender, BeforeClearGroupFieldEventArgs args) throws Exception 
+{
+	beforeClearFields(sender, args);
 }
-
 // Represents the method that handles BeforeClearGroupField event.
-public void dynamicInvoke(Object... args) throws Exception {
-beforeClearFields((Object) args[0], (BeforeClearGroupFieldEventArgs) args[1]);
+public void dynamicInvoke(Object... args) throws Exception 
+{
+	beforeClearFields((Object) args[0], (BeforeClearGroupFieldEventArgs) args[1]);
 }
-
 // Represents the method that handles BeforeClearGroupField event to add collection item.
-public void add(BeforeClearGroupFieldEventHandler delegate) throws Exception {
-if (delegate != null)
-delegateList.add(delegate);
+public void add(BeforeClearGroupFieldEventHandler delegate) throws Exception 
+{
+	if (delegate != null)
+		delegateList.add(delegate);
 }
-
 // Represents the method that handles BeforeClearGroupField event to remove collection item.
-public void remove(BeforeClearGroupFieldEventHandler delegate) throws Exception {
-if (delegate != null)
-delegateList.remove(delegate);
+public void remove(BeforeClearGroupFieldEventHandler delegate) throws Exception 
+{
+	if (delegate != null)
+		delegateList.remove(delegate);
 }
 });
 // Gets the employee details as “IEnumerable” collection.
@@ -233,20 +241,24 @@ The following code example shows how to bind the data to unmerged group fields d
 {% tabs %}  
 
 {% highlight JAVA %}
-private static void beforeClearFields(Object sender, BeforeClearGroupFieldEventArgs args) throws Exception {
-		if (!args.getHasMappedGroupInDataSource()) {
-			// Gets the Current unmerged group name from the event argument.
-			String[] groupName = args.getGroupName().split(":");
-			if ((groupName[groupName.length - 1]).equals("Orders")) {
-				String[] fields = args.getFieldNames();
-				ListSupport<OrderDetails> orderList = getOrders();
-				// Binds the data to the unmerged fields in group as alternative values.
-				args.setAlternateValues(orderList);
-			} else
-				// If group value is empty, you can set whether the unmerged merge group field can be clear or not.
-				args.setClearGroup(true);
-		}
+private static void beforeClearFields(Object sender, BeforeClearGroupFieldEventArgs args) throws Exception 
+{
+	if (!args.getHasMappedGroupInDataSource()) 
+	{
+		// Gets the Current unmerged group name from the event argument.
+		String[] groupName = args.getGroupName().split(":");
+		if ((groupName[groupName.length - 1]).equals("Orders")) 
+		{
+			String[] fields = args.getFieldNames();
+			ListSupport<OrderDetails> orderList = getOrders();
+			// Binds the data to the unmerged fields in group as alternative values.
+			args.setAlternateValues(orderList);
+		} 
+		else
+			// If group value is empty, you can set whether the unmerged merge group field can be clear or not.
+			args.setClearGroup(true);
 	}
+}
 {% endhighlight %}
 
 {% endtabs %} 
@@ -257,28 +269,29 @@ The following code example shows getOrders and getEmployees methods which are us
 
 {% highlight JAVA %}
 //Gets order list.
-private static ListSupport<OrderDetails> getOrders() throws Exception {
-		ListSupport<OrderDetails> orders = new ListSupport<OrderDetails>();
-		orders.add(new OrderDetails("10952", LocalDateTime.of(2015, 2, 5, 0, 0, 0),
-				LocalDateTime.of(2015, 2, 12, 0, 0, 0), LocalDateTime.of(2015, 2, 21, 0, 0, 0)));
-		return orders;
-	}
+private static ListSupport<OrderDetails> getOrders() throws Exception 
+{
+	ListSupport<OrderDetails> orders = new ListSupport<OrderDetails>();
+	orders.add(new OrderDetails("10952", LocalDateTime.of(2015, 2, 5, 0, 0, 0),
+	LocalDateTime.of(2015, 2, 12, 0, 0, 0), LocalDateTime.of(2015, 2, 21, 0, 0, 0)));
+	return orders;
+}
 //Gets employee list.
-public static ListSupport<Employees> getEmployees() throws Exception {
-		// Gets the OrderDetails as “IEnumerable” collection.
-		ListSupport<OrderDetails> orders = new ListSupport<OrderDetails>();
-		orders.add(new OrderDetails("10835", LocalDateTime.of(2015, 1, 5, 0, 0, 0),
-				LocalDateTime.of(2015, 1, 12, 0, 0, 0), LocalDateTime.of(2015, 1, 21, 0, 0, 0)));
-		// Gets the CustomerDetails as “IEnumerable” collection.
-		ListSupport<CustomerDetails> customerDetails = new ListSupport<CustomerDetails>();
-		customerDetails.add(new CustomerDetails("Maria Anders", "Maria Anders", "Berlin", "Germany", orders));
-		customerDetails.add(new CustomerDetails("Andy", "Bernard", "Berlin", "Germany", null));
-		// Gets the Employees details as “IEnumerable” collection.
-		ListSupport<Employees> employees = new ListSupport<Employees>();
-		employees.add(
-				new Employees("Nancy", "Smith", "1", "505 - 20th Ave. E. Apt. 2A,", "Seattle", "USA", customerDetails));
-		return employees;
-	}
+public static ListSupport<Employees> getEmployees() throws Exception 
+{
+	// Gets the OrderDetails as “IEnumerable” collection.
+	ListSupport<OrderDetails> orders = new ListSupport<OrderDetails>();
+	orders.add(new OrderDetails("10835", LocalDateTime.of(2015, 1, 5, 0, 0, 0),
+	LocalDateTime.of(2015, 1, 12, 0, 0, 0), LocalDateTime.of(2015, 1, 21, 0, 0, 0)));
+	// Gets the CustomerDetails as “IEnumerable” collection.
+	ListSupport<CustomerDetails> customerDetails = new ListSupport<CustomerDetails>();
+	customerDetails.add(new CustomerDetails("Maria Anders", "Maria Anders", "Berlin", "Germany", orders));
+	customerDetails.add(new CustomerDetails("Andy", "Bernard", "Berlin", "Germany", null));
+	// Gets the Employees details as “IEnumerable” collection.
+	ListSupport<Employees> employees = new ListSupport<Employees>();
+	employees.add(new Employees("Nancy", "Smith", "1", "505 - 20th Ave. E. Apt. 2A,", "Seattle", "USA", customerDetails));
+	return employees;
+}
 {% endhighlight %}
 
 {% endtabs %} 
@@ -287,7 +300,8 @@ The following code example shows Employees, CustomerDetails, and OrderDetails cl
 
 {% tabs %}  
 {% highlight JAVA %}
-public class Employees {
+public class Employees 
+{
 	private String _firstName;
 	private String _lastName;
 	private String _employeeID;
@@ -295,72 +309,72 @@ public class Employees {
 	private String _city;
 	private String _country;
 	private ListSupport<CustomerDetails> _customers;
-
-	public String getFirstName() throws Exception {
+	public String getFirstName() throws Exception 
+	{
 		return _firstName;
 	}
-
-	public String setFirstName(String value) throws Exception {
+	public String setFirstName(String value) throws Exception 
+	{
 		_firstName = value;
 		return value;
 	}
-
-	public String getLastName() throws Exception {
+	public String getLastName() throws Exception 
+	{
 		return _lastName;
 	}
-
-	public String setLastName(String value) throws Exception {
+	public String setLastName(String value) throws Exception 
+	{
 		_lastName = value;
 		return value;
 	}
-
-	public String getEmployeeID() throws Exception {
+	public String getEmployeeID() throws Exception 
+	{
 		return _employeeID;
 	}
-
-	public String setEmployeeID(String value) throws Exception {
+	public String setEmployeeID(String value) throws Exception 
+	{
 		_employeeID = value;
 		return value;
 	}
-
-	public String getAddress() throws Exception {
+	public String getAddress() throws Exception 
+	{
 		return _address;
 	}
-
-	public String setAddress(String value) throws Exception {
+	public String setAddress(String value) throws Exception 
+	{
 		_address = value;
 		return value;
 	}
-
-	public String getCity() throws Exception {
+	public String getCity() throws Exception 
+	{
 		return _city;
 	}
-
-	public String setCity(String value) throws Exception {
+	public String setCity(String value) throws Exception 
+	{
 		_city = value;
 		return value;
 	}
-
-	public String getCountry() throws Exception {
+	public String getCountry() throws Exception 
+	{
 		return _country;
 	}
-
-	public String setCountry(String value) throws Exception {
+	public String setCountry(String value) throws Exception 
+	{
 		_country = value;
 		return value;
 	}
-
-	public ListSupport<CustomerDetails> getCustomers() throws Exception {
+	public ListSupport<CustomerDetails> getCustomers() throws Exception 
+	{
 		return _customers;
 	}
-
-	public ListSupport<CustomerDetails> setCustomers(ListSupport<CustomerDetails> value) throws Exception {
+	public ListSupport<CustomerDetails> setCustomers(ListSupport<CustomerDetails> value) throws Exception 
+	{
 		_customers = value;
 		return value;
 	}
 
-	public Employees(String firstName, String lastName, String employeeId, String address, String city, String country,
-			ListSupport<CustomerDetails> customers) throws Exception {
+	public Employees(String firstName, String lastName, String employeeId, String address, String city, String country,ListSupport<CustomerDetails> customers) throws Exception 
+	{
 		setFirstName(firstName);
 		setLastName(lastName);
 		setAddress(address);
@@ -371,60 +385,60 @@ public class Employees {
 	}
 }
 
-public class CustomerDetails {
+public class CustomerDetails 
+{
 	private String _contactName;
 	private String _companyName;
 	private String _city;
 	private String _country;
 	private ListSupport<OrderDetails> _orders;
-
-	public String getContactName() throws Exception {
+	public String getContactName() throws Exception 
+	{
 		return _contactName;
 	}
-
-	public String setContactName(String value) throws Exception {
+	public String setContactName(String value) throws Exception 
+	{
 		_contactName = value;
 		return value;
 	}
-
-	public String getCompanyName() throws Exception {
+	public String getCompanyName() throws Exception
+	{
 		return _companyName;
 	}
-
-	public String setCompanyName(String value) throws Exception {
+	public String setCompanyName(String value) throws Exception 
+	{
 		_companyName = value;
 		return value;
 	}
-
-	public String getCity() throws Exception {
+	public String getCity() throws Exception 
+	{
 		return _city;
 	}
-
-	public String setCity(String value) throws Exception {
+	public String setCity(String value) throws Exception 
+	{
 		_city = value;
 		return value;
 	}
-
-	public String getCountry() throws Exception {
+	public String getCountry() throws Exception 
+	{
 		return _country;
 	}
-
-	public String setCountry(String value) throws Exception {
+	public String setCountry(String value) throws Exception 
+	{
 		_country = value;
 		return value;
 	}
-
-	public ListSupport<OrderDetails> getOrders() throws Exception {
+	public ListSupport<OrderDetails> getOrders() throws Exception 
+	{
 		return _orders;
 	}
-
-	public ListSupport<OrderDetails> setOrders(ListSupport<OrderDetails> value) throws Exception {
+	public ListSupport<OrderDetails> setOrders(ListSupport<OrderDetails> value) throws Exception 
+	{
 		_orders = value;
 		return value;
 	}
-
-	public CustomerDetails(String contactName, String companyName, String city, String country,
-			ListSupport<OrderDetails> orders) throws Exception {
+	public CustomerDetails(String contactName, String companyName, String city, String country,ListSupport<OrderDetails> orders) throws Exception 
+	{
 		setContactName(contactName);
 		setCompanyName(companyName);
 		setCity(city);
@@ -433,50 +447,50 @@ public class CustomerDetails {
 	}
 }
 
-public class OrderDetails {
+public class OrderDetails 
+{
 	private String _orderID;
 	private LocalDateTime _orderDate;
 	private LocalDateTime _shippedDate;
 	private LocalDateTime _requiredDate;
-
-	public String getOrderID() throws Exception {
+	public String getOrderID() throws Exception 
+	{
 		return _orderID;
 	}
-
-	public String setOrderID(String value) throws Exception {
+	public String setOrderID(String value) throws Exception 
+	{
 		_orderID = value;
 		return value;
 	}
-
-	public LocalDateTime getOrderDate() throws Exception {
+	public LocalDateTime getOrderDate() throws Exception 
+	{
 		return _orderDate;
 	}
-
-	public LocalDateTime setOrderDate(LocalDateTime value) throws Exception {
+	public LocalDateTime setOrderDate(LocalDateTime value) throws Exception 
+	{
 		_orderDate = value;
 		return value;
 	}
-
-	public LocalDateTime getShippedDate() throws Exception {
+	public LocalDateTime getShippedDate() throws Exception 
+	{
 		return _shippedDate;
 	}
-
-	public LocalDateTime setShippedDate(LocalDateTime value) throws Exception {
+	public LocalDateTime setShippedDate(LocalDateTime value) throws Exception 
+	{
 		_shippedDate = value;
 		return value;
 	}
-
-	public LocalDateTime getRequiredDate() throws Exception {
+	public LocalDateTime getRequiredDate() throws Exception 
+	{
 		return _requiredDate;
 	}
-
-	public LocalDateTime setRequiredDate(LocalDateTime value) throws Exception {
+	public LocalDateTime setRequiredDate(LocalDateTime value) throws Exception 
+	{
 		_requiredDate = value;
 		return value;
 	}
-
-	public OrderDetails(String orderId, LocalDateTime orderDate, LocalDateTime shippedDate, LocalDateTime requiredDate)
-			throws Exception {
+	public OrderDetails(String orderId, LocalDateTime orderDate, LocalDateTime shippedDate, LocalDateTime requiredDate) throws Exception 
+	{
 		setOrderID(orderId);
 		setOrderDate(orderDate);
 		setShippedDate(shippedDate);

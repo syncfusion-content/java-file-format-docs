@@ -1,4 +1,4 @@
-﻿---
+---
 title: Mail merge options | Syncfusion
 description: This section illustrates the mail merge options used to customize field mapping, remove unmerged fields, unmerged mail merge groups, empty paragraphs and more.
 platform: java-file-formats
@@ -155,184 +155,214 @@ The following code example shows getEmployees method which is used to get data f
 {% highlight JAVA %}
 public  ListSupport<Employees> getEmployees() throws Exception
 {
-//Gets the OrderDetails as “IEnumerable” collection.
-ListSupport<OrderDetails> orders = new ListSupport<OrderDetails>();
-orders.add(new OrderDetails("10835", LocalDateTime.of(2015, 1, 5,0,0,0),  LocalDateTime.of(2015, 1, 12,0,0,0), LocalDateTime.of(2015, 1, 21,0,0,0)));
-//Gets the CustomerDetails as “IEnumerable” collection.
-ListSupport<CustomerDetails> customerDetails = new ListSupport<CustomerDetails>();
-customerDetails.add(new CustomerDetails("Maria Anders", "Maria Anders", "Berlin", "Germany", orders));
-customerDetails.add(new CustomerDetails("Andy", "Bernard", "Berlin", "Germany", null));
-//Gets the Employees details as “IEnumerable” collection.
-ListSupport<Employees> employees = new ListSupport<Employees>();
-employees.add(new Employees("Nancy", "Smith", "1", "505 - 20th Ave. E. Apt. 2A,", "Seattle", "USA", customerDetails));
-return employees;
+	/Gets the OrderDetails as “IEnumerable” collection.
+	ListSupport<OrderDetails> orders = new ListSupport<OrderDetails>();
+	orders.add(new OrderDetails("10835", LocalDateTime.of(2015, 1, 5,0,0,0),  LocalDateTime.of(2015, 1, 12,0,0,0), LocalDateTime.of(2015, 1, 21,0,0,0)));
+	//Gets the CustomerDetails as “IEnumerable” collection.
+	ListSupport<CustomerDetails> customerDetails = new ListSupport<CustomerDetails>();
+	customerDetails.add(new CustomerDetails("Maria Anders", "Maria Anders", "Berlin", "Germany", orders));
+	customerDetails.add(new CustomerDetails("Andy", "Bernard", "Berlin", "Germany", null));
+	//Gets the Employees details as “IEnumerable” collection.
+	ListSupport<Employees> employees = new ListSupport<Employees>();
+	employees.add(new Employees("Nancy", "Smith", "1", "505 - 20th Ave. E. Apt. 2A,", "Seattle", "USA", customerDetails));
+	return employees;
 }
-
-
 
 public class Employees
 {
-private String _firstName;
-private String _lastName;
-private String _employeeID;
-private String _address;
-private String _city;
-private String _country;
-private ListSupport<CustomerDetails> _customers;
-public String getFirstName()throws Exception{
-return _firstName;
+	private String _firstName;
+	private String _lastName;
+	private String _employeeID;
+	private String _address;
+	private String _city;
+	private String _country;
+	private ListSupport<CustomerDetails> _customers;
+	public String getFirstName()throws Exception
+	{
+		return _firstName;
+	}
+	public String setFirstName(String value)throws Exception
+	{
+		_firstName=value;
+		return value;
+	}
+	public String getLastName()throws Exception
+	{
+		return _lastName;
+	}
+	public String setLastName(String value)throws Exception
+	{
+		_lastName=value;
+		return value;
+	}
+	public String getEmployeeID()throws Exception
+	{
+		return _employeeID;
+	}
+	public String setEmployeeID(String value)throws Exception
+	{
+		_employeeID=value;
+		return value;
+	}
+	public String getAddress()throws Exception
+	{
+		return _address;
+	}
+	public String setAddress(String value)throws Exception
+	{
+		_address=value;
+		return value;
+	}
+	public String getCity()throws Exception
+	{
+		return _city;
+	}
+	public String setCity(String value)throws Exception
+	{
+		_city=value;
+		return value;
+	}
+	public String getCountry()throws Exception
+	{
+		return _country;
+	}
+	public String setCountry(String value)throws Exception
+	{
+		_country=value;
+		return value;
+	}
+	public ListSupport<CustomerDetails> getCustomers()throws Exception
+	{
+		return _customers;
+	}
+	public ListSupport<CustomerDetails> setCustomers(ListSupport<CustomerDetails> value)throws Exception
+	{
+		_customers=value;
+		return value;
+	}
+	public Employees(String firstName,String lastName,String employeeId,String address,String city,String country,ListSupport<CustomerDetails> customers)throws Exception
+	{
+		setFirstName(firstName);
+		setLastName(lastName);
+		setAddress(address);
+		setEmployeeID(employeeId);
+		setCity(city);
+		setCountry(country);
+		setCustomers(customers);
+	}
 }
-public String setFirstName(String value)throws Exception{
-_firstName=value;
-return value;
-}
-public String getLastName()throws Exception{
-return _lastName;
-}
-public String setLastName(String value)throws Exception{
-_lastName=value;
-return value;
-}
-public String getEmployeeID()throws Exception{
-return _employeeID;
-}
-public String setEmployeeID(String value)throws Exception{
-_employeeID=value;
-return value;
-}
-public String getAddress()throws Exception{
-return _address;
-}
-public String setAddress(String value)throws Exception{
-_address=value;
-return value;
-}
-public String getCity()throws Exception{
-return _city;
-}
-public String setCity(String value)throws Exception{
-_city=value;
-return value;
-}
-public String getCountry()throws Exception{
-return _country;
-}
-public String setCountry(String value)throws Exception{
-_country=value;
-return value;
-}
-public ListSupport<CustomerDetails> getCustomers()throws Exception{
-return _customers;
-}
-public ListSupport<CustomerDetails> setCustomers(ListSupport<CustomerDetails> value)throws Exception{
-_customers=value;
-return value;
-}
-public Employees(String firstName,String lastName,String employeeId,String address,String city,String country,ListSupport<CustomerDetails> customers)throws Exception{
-setFirstName(firstName);
-setLastName(lastName);
-setAddress(address);
-setEmployeeID(employeeId);
-setCity(city);
-setCountry(country);
-setCustomers(customers);
-}
-}
-
 
 public class CustomerDetails
 {
-private String _contactName;
-private String _companyName;
-private String _city;
-private String _country;
-private ListSupport<OrderDetails> _orders;
-public String getContactName()throws Exception{
-return _contactName;
+	private String _contactName;
+	private String _companyName;
+	private String _city;
+	private String _country;
+	private ListSupport<OrderDetails> _orders;
+	public String getContactName()throws Exception
+	{
+		return _contactName;
+	}
+	public String setContactName(String value)throws Exception
+	{
+		_contactName=value;
+		return value;
+	}
+	public String getCompanyName()throws Exception
+	{
+		return _companyName;
+	}
+	public String setCompanyName(String value)throws Exception
+	{
+		_companyName=value;
+		return value;
+	}
+	public String getCity()throws Exception
+	{
+		return _city;
+	}
+	public String setCity(String value)throws Exception
+	{
+		_city=value;
+		return value;
+	}
+	public String getCountry()throws Exception
+	{
+		return _country;
+	}
+	public String setCountry(String value)throws Exception
+	{
+		_country=value;
+		return value;
+	}
+	public ListSupport<OrderDetails> getOrders()throws Exception
+	{
+		return _orders;
+	}
+	public ListSupport<OrderDetails> setOrders(ListSupport<OrderDetails> value)throws Exception
+	{
+		_orders=value;
+		return value;
+	}
+	public CustomerDetails(String contactName,String companyName,String city,String country,ListSupport<OrderDetails> orders)throws Exception
+	{
+		setContactName(contactName);
+		setCompanyName(companyName);
+		setCity(city);
+		setCountry(country);
+		setOrders(orders);
+	}
 }
-public String setContactName(String value)throws Exception{
-_contactName=value;
-return value;
-}
-public String getCompanyName()throws Exception{
-return _companyName;
-}
-public String setCompanyName(String value)throws Exception{
-_companyName=value;
-return value;
-}
-public String getCity()throws Exception{
-return _city;
-}
-public String setCity(String value)throws Exception{
-_city=value;
-return value;
-}
-public String getCountry()throws Exception{
-return _country;
-}
-public String setCountry(String value)throws Exception{
-_country=value;
-return value;
-}
-public ListSupport<OrderDetails> getOrders()throws Exception{
-return _orders;
-}
-public ListSupport<OrderDetails> setOrders(ListSupport<OrderDetails> value)throws Exception{
-_orders=value;
-return value;
-}
-public CustomerDetails(String contactName,String companyName,String city,String country,ListSupport<OrderDetails> orders)throws Exception{
-setContactName(contactName);
-setCompanyName(companyName);
-setCity(city);
-setCountry(country);
-setOrders(orders);
-}
-}
-
-
 
 public class OrderDetails
 {
-private String _orderID;
-private LocalDateTime _orderDate;
-private LocalDateTime _shippedDate;
-private LocalDateTime _requiredDate;
-public String getOrderID()throws Exception{
-return _orderID;
-}
-public String setOrderID(String value)throws Exception{
-_orderID=value;
-return value;
-}
-public LocalDateTime getOrderDate()throws Exception{
-return _orderDate;
-}
-public LocalDateTime setOrderDate(LocalDateTime value)throws Exception{
-_orderDate=value;
-return value;
-}
-public LocalDateTime getShippedDate()throws Exception{
-return _shippedDate;
-}
-public LocalDateTime setShippedDate(LocalDateTime value)throws Exception{
-_shippedDate=value;
-return value;
-}
-public LocalDateTime getRequiredDate()throws Exception{
-return _requiredDate;
-}
-public LocalDateTime setRequiredDate(LocalDateTime value)throws Exception{
-_requiredDate=value;
-return value;
-}
-public OrderDetails(String orderId,LocalDateTime orderDate,LocalDateTime shippedDate,LocalDateTime requiredDate)throws Exception{
-setOrderID(orderId);
-setOrderDate(orderDate);
-setShippedDate(shippedDate);
-setRequiredDate(requiredDate);
-}
+	private String _orderID;
+	private LocalDateTime _orderDate;
+	private LocalDateTime _shippedDate;
+	private LocalDateTime _requiredDate;
+	public String getOrderID()throws Exception
+	{
+		return _orderID;
+	}
+	public String setOrderID(String value)throws Exception
+	{
+		_orderID=value;
+		return value;
+	}
+	public LocalDateTime getOrderDate()throws Exception
+	{
+		return _orderDate;
+	}
+	ublic LocalDateTime setOrderDate(LocalDateTime value)throws Exception
+	{
+		_orderDate=value;
+		return value;
+	}
+	public LocalDateTime getShippedDate()throws Exception
+	{
+		return _shippedDate;
+	}
+	public LocalDateTime setShippedDate(LocalDateTime value)throws Exception
+	{
+		_shippedDate=value;
+		return value;
+	}
+	public LocalDateTime getRequiredDate()throws Exception
+	{
+		return _requiredDate;
+	}
+	public LocalDateTime setRequiredDate(LocalDateTime value)throws Exception
+	{
+		_requiredDate=value;
+		return value;
+	}
+	public OrderDetails(String orderId,LocalDateTime orderDate,LocalDateTime shippedDate,LocalDateTime requiredDate)throws Exception
+	{
+		setOrderID(orderId);
+		setOrderDate(orderDate);
+		setShippedDate(shippedDate);
+		setRequiredDate(requiredDate);
+	}
 }
 {% endhighlight %}
 
@@ -373,38 +403,43 @@ The following code example shows Employee class.
 {% highlight JAVA %}
 public class Employee
 {
-private String _employeeName ;
-private String _location ;
-private String _employeeID;
-
-
-public String getEmployeeName()throws Exception{
-return _employeeName;
-}
-public String setEmployeeName(String value)throws Exception{
-_employeeName=value;
-return value;
-}
-public String getLocation()throws Exception{
-return _location;
-}
-public String setLocation(String value)throws Exception{
-_location=value;
-return value;
-}
-public String getEmployeeID()throws Exception{
-return _employeeID;
-}
-public String setEmployeeID(String value)throws Exception{
-_employeeID=value;
-return value;
-}
-//Represents a constructor to create value for merge fields.
-public Employee(String employeeId,String employeeName,String location)throws Exception{
-setEmployeeName(employeeName);
-setLocation(location);
-setEmployeeID(employeeId);
-}
+	private String _employeeName ;
+	private String _location ;
+	private String _employeeID;
+	public String getEmployeeName()throws Exception
+	{
+		return _employeeName;
+	}
+	public String setEmployeeName(String value)throws Exception
+	{
+		_employeeName=value;
+		return value;
+	}
+	public String getLocation()throws Exception
+	{
+		return _location;
+	}
+	public String setLocation(String value)throws Exception
+	{
+		_location=value;
+		return value;
+	}
+	public String getEmployeeID()throws Exception
+	{
+		return _employeeID;
+	}
+	public String setEmployeeID(String value)throws Exception
+	{
+		_employeeID=value;
+		return value;
+	}
+	//Represents a constructor to create value for merge fields.
+	public Employee(String employeeId,String employeeName,String location)throws Exception
+	{
+		setEmployeeName(employeeName);
+		setLocation(location);
+		setEmployeeID(employeeId);
+	}
 }
 {% endhighlight %}
 {% endtabs %}
@@ -470,24 +505,24 @@ MergeImageFieldEventHandler.class);
 //Represents event handling for MergeImageFieldHandlerCollection.
 public void invoke(Object sender, MergeImageFieldEventArgs args) throws Exception
 {
-mergeEmployeePhoto(sender, args);
+	mergeEmployeePhoto(sender, args);
 }
 //Represents the method that handles MergeImageField event.
 public void dynamicInvoke(Object... args) throws Exception
 {
-mergeEmployeePhoto((Object) args[0], (MergeImageFieldEventArgs) args[1]);
+	mergeEmployeePhoto((Object) args[0], (MergeImageFieldEventArgs) args[1]);
 }
 //Represents the method that handles MergeImageField event to add collection item.
 public void add(MergeImageFieldEventHandler delegate) throws Exception
 {
-if (delegate != null)
-delegateList.add(delegate);
+	if (delegate != null)
+		delegateList.add(delegate);
 }
 //Represents the method that handles MergeImageField event to remove collection item.
 public void remove(MergeImageFieldEventHandler delegate) throws Exception
 {
-if (delegate != null)
-delegateList.remove(delegate);
+	if (delegate != null)
+		delegateList.remove(delegate);
 }
 });
 //Executes Mail Merge with groups.
@@ -512,20 +547,20 @@ The following code example shows how to skip merging particular image during mai
 
 private void mergeEmployeePhoto(Object sender, MergeImageFieldEventArgs args) throws Exception
 {
-//Skip to merge particular image.
-if ((args.getFieldName()).equals("Andrew"))
-args.setSkip(true);
-//Sets image.
-String ProductFileName = args.getFieldValue().toString();
-//Gets the image from file system.
-FileStreamSupport imageStream = new FileStreamSupport(ProductFileName, FileMode.Open, FileAccess.Read);
-ByteArrayInputStream stream = new ByteArrayInputStream(imageStream.toArray());
-args.setImageStream(stream);
-//Gets the picture, to be merged for image merge field.
-WPicture picture = args.getPicture();
-//Resizes the picture.
-picture.setHeight(100);
-picture.setWidth(100);
+	//Skip to merge particular image.
+	if ((args.getFieldName()).equals("Andrew"))
+		args.setSkip(true);
+	//Sets image.
+	String ProductFileName = args.getFieldValue().toString();
+	//Gets the image from file system.
+	FileStreamSupport imageStream = new FileStreamSupport(ProductFileName, FileMode.Open, FileAccess.Read);
+	ByteArrayInputStream stream = new ByteArrayInputStream(imageStream.toArray());
+	args.setImageStream(stream);
+	//Gets the picture, to be merged for image merge field.
+	WPicture picture = args.getPicture();
+	//Resizes the picture.
+	picture.setHeight(100);
+	picture.setWidth(100);
 }  
 
 {% endhighlight %}

@@ -9,7 +9,7 @@ documentation: UG
 
 ## Opening an existing document
 
-You can open an existing Word document by using either the `Open` method or the constructor of `WordDocument` class.
+You can open an existing Word document by using either the `open` method or the constructor of `WordDocument` class.
 
 {% tabs %}  
 
@@ -25,7 +25,7 @@ WordDocument document = new WordDocument(fileName);
 {% highlight JAVA %}
 //Create an empty Word document instance.
 WordDocument document = new WordDocument();
-//Load or open an existing word document using the Open method of WordDocument class.
+//Load or open an existing word document using the open method of WordDocument class.
 document.open(fileName);
 {% endhighlight %}
 
@@ -33,12 +33,12 @@ document.open(fileName);
 
 ## Opening an existing document from Stream
 
-You can open an existing document from the stream by using either the overload of Open methods or the constructor of WordDocument class.
+You can open an existing document from the stream by using either the overload of `open` methods or the constructor of `WordDocument` class.
 
 {% tabs %}  
 
 {% highlight JAVA %}
-//Open an existing document from the stream using the constructor of the `WordDocument` class.
+//Open an existing document from the stream using the constructor of the WordDocument class.
 FileInputStream fileStreamPath = new FileInputStream("Input.docx");
 WordDocument document = new WordDocument(fileStreamPath, FormatType.Automatic);
 {% endhighlight %}
@@ -50,7 +50,7 @@ WordDocument document = new WordDocument(fileStreamPath, FormatType.Automatic);
 {% highlight JAVA %}
 //Create an empty WordDocument instance.
 FileInputStream fileStreamPath = new FileInputStream("Input.docx");
-//Loads or opens an existing Word document using the Open method of WordDocument class
+//Loads or opens an existing Word document using the open method of WordDocument class
 WordDocument document = new WordDocument();
 document.open(fileStreamPath, FormatType.Automatic);
 {% endhighlight %}
@@ -59,7 +59,7 @@ document.open(fileStreamPath, FormatType.Automatic);
 
 ## Opening the read only Word document
 
-You can open the ready only documents or read-only streams using the OpenReadOnly method. If the Word document for reading is opened by any other application such as Microsoft Word, then the same document can be opened using the DocIO in ReadOnly mode. The following code sample explains the same.
+You can open the ready only documents or read-only streams using the openReadOnly method. If the Word document for reading is opened by any other application such as Microsoft Word, then the same document can be opened using the DocIO in ReadOnly mode. The following code sample explains the same.
 
 {% tabs %}  
   
@@ -74,7 +74,7 @@ document.openReadOnly("Template.docx", FormatType.Docx);
 
 ## Saving a Word document to file system
 
-You can save the created or manipulated Word document to the file system using the Save method of WordDocument class.
+You can save the created or manipulated Word document to the file system using the `save` method of `WordDocument` class.
 
 {% tabs %}  
 
@@ -93,7 +93,7 @@ document.save(outputFileName, FormatType.Docx);
 
 ## Saving a Word document to Stream
 
-You can also save the created or manipulated word document to the stream by using the overloads of save methods.
+You can also save the created or manipulated word document to the stream by using the overloads of `save` methods.
 
 {% tabs %} 
 
@@ -114,7 +114,7 @@ document.save(stream, FormatType.Docx);
 
 ## Sending to a client browser
 
-You can save and send the document to a client browser from a web site or web application by invoking the following shown overload of Save method. This method explicitly makes use of an instance of the HttpResponse as its parameter to stream the document to the client browser. So, this overload is suitable for a web application that references System.Web assembly.
+You can save and send the document to a client browser from a web site or web application by invoking the following shown overload of `save` method. This method explicitly makes use of an instance of [HttpResponse](https://msdn.microsoft.com/en-us/library/system.web.httpresponse(v=vs.110).aspx#) as its parameter to stream the document to the client browser. So, this overload is suitable for a web application that references System.Web assembly.
 
 {% tabs %}  
 
@@ -135,7 +135,7 @@ document.save(outputFileName, FormatType.Docx, Response, HttpContentDisposition.
 
 ## Closing a document
 
-Once the document manipulation and save operation are completed, you should close the instance of WordDocument to release all the memory consumed by the DocIO’s DOM. The following code example shows how to close a WordDocument instance.
+Once the document manipulation and save operation are completed, you should close the instance of `WordDocument`, in order to release all the memory consumed by the DocIO’s DOM. The following code example shows how to close a WordDocument instance.
 
 {% tabs %}  
 

@@ -1,4 +1,4 @@
-﻿---
+---
 title: Working with Shapes | Syncfusion
 description: This section describes how to work with the shapes and groupshape in Word document using Syncfusion Java Word library (Essential DocIO)
 platform: java-file-formats
@@ -323,13 +323,13 @@ WParagraph lastParagraph = document.getLastParagraph();
 //Iterate through the paragraph items to get the group shape.
 for (int i = 0; i < lastParagraph.getChildEntities().getCount(); i++)
 {
-if (lastParagraph.getChildEntities().get(i) instanceof GroupShape)
-{
-  GroupShape groupShape = (GroupShape)lastParagraph.getChildEntities().get(i);
-  //Ungroup the child shapes in the group shape.
-  groupShape.ungroup();
-  break;
-}
+	if (lastParagraph.getChildEntities().get(i) instanceof GroupShape)
+	{
+		GroupShape groupShape = (GroupShape)lastParagraph.getChildEntities().get(i);
+		//Ungroup the child shapes in the group shape.
+		groupShape.ungroup();
+		break;
+	}
 }
 //Save and closes the Word document instance.
 document.save("Result.docx", FormatType.Docx);

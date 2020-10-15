@@ -1,4 +1,4 @@
-﻿---
+---
 title: Working with Comments | Syncfusion
 description: This section illustrates how to add, modify and remove the comments using Syncfusion Word library (Essential DocIO)
 platform: java-file-formats
@@ -55,10 +55,10 @@ WordDocument document = new WordDocument("Comment.docx", FormatType.Docx);
 //Iterates the comments in the Word document.
 for (Object comments : document.getComments())
 {
-  WComment comment = (WComment)comments;
-  //Modifies the last paragraph text of an existing comment when it is added by "Peter".
-  if ((comment.getFormat().getUser()).equals("Peter"))
-    comment.getTextBody().getLastParagraph().setText("Modified Comment Content");
+	WComment comment = (WComment)comments;
+	//Modifies the last paragraph text of an existing comment when it is added by "Peter".
+	if ((comment.getFormat().getUser()).equals("Peter"))
+		comment.getTextBody().getLastParagraph().setText("Modified Comment Content");
 }
 //Saves the Word document.
 document.save("ModifiedComment.docx", FormatType.Docx);
