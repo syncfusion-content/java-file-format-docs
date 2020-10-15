@@ -556,24 +556,3 @@ document.close();
 {% endhighlight %}
 
 {% endtabs %}
-
-## Change mail merge data source path 
-
-You can change the linked **data source file path from a Word mail merge main document**, which is used for mail merge process by Microsoft Word application.
-
-The following code example shows how to change the data source file path in the template Word document. 
-
-{% tabs %}
-  
-{% highlight JAVA %}
-//Opens the template document.
-WordDocument document = new WordDocument("Template.docx", FormatType.Docx);
-//Change the data source file path.
-document.getMailMerge().getSettings().setDataSource("Document.txt");
-//Saves the Word document.
-document.save("Sample.docx", FormatType.Docx);
-//Closes the Word document.
-document.close();
-{% endhighlight %}
-
-{% endtabs %}
