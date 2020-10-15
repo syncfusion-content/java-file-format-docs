@@ -542,6 +542,8 @@ document.save("HorizontalMerge.docx",FormatType.Docx);
 document.close();
 {% endhighlight %}
 
+{% endtabs %} 
+
 The following code example illustrates how to create a table with vertical merged cells.
 
 {% tabs %} 
