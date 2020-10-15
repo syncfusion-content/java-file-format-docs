@@ -1,5 +1,5 @@
----
-title: Word file format conversions | DocIO | Syncfusion
+﻿---
+title: Word file format conversions | Word library | Syncfusion
 description: This section illustrates Word file format conversions supported in Syncfusion Java Word library (Essential DocIO)
 platform: java-file-formats
 control: Word Library
@@ -161,7 +161,7 @@ Not supported<br/><br/></td>
 Form Fields
 </td>
 <td>
-Unparsed in Word Processing 2003 XML document.
+Unparsed in Word Processing 2003 XML document
 </td>
 </tr>
 <tr>
@@ -169,7 +169,7 @@ Unparsed in Word Processing 2003 XML document.
 Ole Object
 </td>
 <td>
-Unparsed in Word Processing 2003 XML document.
+Not supported
 </td>
 </tr>
 </table>
