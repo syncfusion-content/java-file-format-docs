@@ -15,7 +15,7 @@ It is a non-UI component that provides a full-fledged document instance model si
 
 * Support to [create Word document](https://help.syncfusion.com/java-file-formats/word-library/getting-started) from scratch.
 * Support to open, modify, and save the existing Word documents.
-* Advanced [Mail merge](https://help.syncfusion.com/java-file-formats/word-library/working-with-mailmerge) support with different data sources.
+* Advanced [Mail merge](https://help.syncfusion.com/java-file-formats/word-library/working-with-mail-merge) support with different data sources.
 * Ability to create or edit Word 2007 and later version documents, and convert them to commonly used file formats such as [WordML](https://help.syncfusion.com/java-file-formats/word-library/word-file-formats#word-processing-xml-xml), [TXT](https://help.syncfusion.com/java-file-formats/word-library/text), [HTML](https://help.syncfusion.com/java-file-formats/word-library/html) and vice versa.
 * Ability to create and manipulate [shapes](https://help.syncfusion.com/java-file-formats/word-library/working-with-shapes), and [group shape](https://help.syncfusion.com/java-file-formats/word-library/working-with-shapes#grouping-shapes) in the DOCX and WordML format documents.
 * Ability to read and write the [built-in and custom document properties](https://help.syncfusion.com/java-file-formats/word-library/working-with-word-document#working-with-word-document-properties).
