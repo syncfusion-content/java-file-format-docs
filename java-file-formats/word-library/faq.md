@@ -1,4 +1,4 @@
-﻿---
+---
 title: FAQ Section | Word library | Syncfusion
 description: This section illustrates about Frequently Asked Questions in Essential Syncfusion Word library (Essential DocIO)
 platform: java-file-formats

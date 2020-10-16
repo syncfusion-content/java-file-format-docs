@@ -1,4 +1,4 @@
-﻿---
+---
 title: Word Document to HTML conversion | Word library | Syncfusion
 description: This section illustrates how to convert Word document to HTML using Syncfusion Word library (Essential DocIO)
 platform: java-file-formats
