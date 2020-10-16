@@ -41,7 +41,7 @@ document.close();
 
 ## Accept all changes
 
-You can **accept all track changes in Word document** using `acceptAll`method.
+You can **accept all track changes in Word document** using `acceptAll` method.
 
 The following code example shows how to accept all the tracked changes.
 
@@ -91,7 +91,7 @@ By executing the above code example, it generates output Word document as follow
 
 ## Accept all changes by a particular reviewer
 
-You can **accept all changes made by the author** in the Word document using `accept`  method.
+You can **accept all changes made by the author** in the Word document using `accept` method.
 
 The following code example shows how to accept the tracked changes made by the author.
 

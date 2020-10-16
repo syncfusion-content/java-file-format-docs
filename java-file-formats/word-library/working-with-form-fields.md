@@ -59,7 +59,7 @@ You can modify the checkbox properties such as checked state, size, help text in
 {% tabs %} 
 
 {% highlight JAVA %}
-//Loads the template document .
+//Loads the template document.
 WordDocument document = new WordDocument("Checkbox.docx");
 //Iterates through paragraph items.
 for (Object item_tempObj : document.getLastParagraph().getChildEntities()) 
@@ -121,7 +121,7 @@ You can add or modify list of items of a Dropdown form field in a Word document.
 {% tabs %}  
 
 {% highlight JAVA %}
-//Loads the template document .
+//Loads the template document.
 WordDocument document = new WordDocument("Dropdown.docx");
 //Iterates through paragraph items.
 for (Object item_tempObj : document.getLastParagraph().getChildEntities()) 
