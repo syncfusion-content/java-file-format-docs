@@ -56,16 +56,6 @@ Yes<br/><br/></td><td>
 Yes<br/><br/></td></tr>
 <tr>
 <td>
-Font substitution table<br/><br/></td><td>
-Yes<br/><br/></td><td>
-Yes<br/><br/></td></tr>
-<tr>
-<td>
-Attached Template<br/><br/></td><td>
-No<br/><br/></td><td>
-No<br/><br/></td></tr>
-<tr>
-<td>
 Track changes<br/><br/></td><td>
 Yes<br/><br/></td><td>
 Yes – limited [can only accept/reject]<br/><br/></td></tr>
@@ -82,11 +72,6 @@ Yes<br/><br/></td></tr>
 <tr>
 <td>
 Macros<br/><br/></td><td>
-Yes<br/><br/></td><td>
-Yes<br/><br/></td></tr>
-<tr>
-<td>
-Embedded fonts<br/><br/></td><td>
 Yes<br/><br/></td><td>
 Yes<br/><br/></td></tr>
 </tbody>
