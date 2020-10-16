@@ -105,67 +105,22 @@ You can position a table in a Word document by setting position properties. The 
 
 {% tabs %}  
 
-{% highlight c# %}
-
-
-//Loads the template document
-
+{% highlight JAVA %}
+//Load the template document.
 WordDocument document = new WordDocument("Template.docx");
-
-//Gets the text body of first section
-
-WTextBody textbody = document.Sections[0].Body;
-
-//Gets the table
-
-IWTable table = textbody.Tables[0];
-
-//Sets the horizontal and vertical position for table
-
-table.TableFormat.Positioning.HorizPosition = 40;
-
-table.TableFormat.Positioning.VertPosition = 100;
-
-//Saves and closes the document
-
-document.Save("Sample.docx", FormatType.Docx);
-
-document.Close();
-
-
-
+//Get the text body of first section.
+WTextBody textbody = document.getSections().get(0).getBody();
+//Get the table.
+IWTable table = textbody.getTables().get(0);
+//Set the horizontal and vertical position for table.
+table.getTableFormat().getPositioning().setHorizPosition(40);
+table.getTableFormat().getPositioning().setVertPosition(100);
+//Save and close the document.
+document.save("Sample.docx", FormatType.Docx);
+document.close();
 {% endhighlight %}
 
-{% highlight vb.net %}
-
-
-'Loads the template document
-
-Dim document As New WordDocument("Template.docx")
-
-'Gets the text body of first section
-
-Dim textbody As WTextBody = document.Sections(0).Body
-
-'Gets the table
-
-Dim table As IWTable = textbody.Tables(0)
-
-'Sets the horizontal and vertical position for table
-
-table.TableFormat.Positioning.HorizPosition = 40
-
-table.TableFormat.Positioning.VertPosition = 100
-
-'Saves and closes the document
-
-document.Save("Sample.docx", FormatType.Docx)
-
-document.Close()
-
-{% endhighlight %}
-
-  {% endtabs %}  
+{% endtabs %}  
 
   
   
