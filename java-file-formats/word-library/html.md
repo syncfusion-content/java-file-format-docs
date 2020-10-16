@@ -1,4 +1,4 @@
-﻿---
+---
 title: Word Document to HTML conversion | Word library | Syncfusion
 description: This section illustrates how to convert Word document to HTML using Syncfusion Word library (Essential DocIO)
 platform: java-file-formats
@@ -148,6 +148,16 @@ Field<br/><br/></td>
 <br/><br/></td>
 <td>
 Yes<br/><br/></td>
+<td>
+-<br/><br/></td>
+</tr>
+<tr>
+<td>
+Footnotes and Endnotes<br/><br/></td>
+<td>
+<br/><br/></td>
+<td>
+No<br/><br/></td>
 <td>
 -<br/><br/></td>
 </tr>
