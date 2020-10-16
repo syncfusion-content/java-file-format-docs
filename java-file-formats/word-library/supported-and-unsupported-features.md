@@ -41,6 +41,11 @@ Yes<br/><br/></td><td>
 Yes<br/><br/></td></tr>
 <tr>
 <td>
+Encryption and Decryption<br/><br/></td><td>
+No<br/><br/></td><td>
+No<br/><br/></td></tr>
+<tr>
+<td>
 View setup<br/><br/></td><td>
 Yes<br/><br/></td><td>
 Yes<br/><br/></td></tr>
@@ -54,6 +59,11 @@ Yes<br/><br/></td></tr>
 Font substitution table<br/><br/></td><td>
 Yes<br/><br/></td><td>
 Yes<br/><br/></td></tr>
+<tr>
+<td>
+Attached Template<br/><br/></td><td>
+No<br/><br/></td><td>
+No<br/><br/></td></tr>
 <tr>
 <td>
 Track changes<br/><br/></td><td>
@@ -262,7 +272,7 @@ Yes<br/><br/></td></tr>
 <thead>  
 <tr>
 <th>Element<br/><br/></th>
-<th colspan="2">DOCX, DOTX, DOTM, DOCM<br/><br/></th>
+<th colspan="2">DOCX, DOTX, DOTM, DOCM, WordML<br/><br/></th>
 </tr>
 </thead> 
 <tr>
@@ -280,7 +290,7 @@ Yes<br/><br/></td></tr>
 <td>
 Alignment – left, right, center and justify<br/><br/></td><td>
 Yes<br/><br/></td><td>
-Yes<br/><br/></td><</tr>
+Yes<br/><br/></td></tr>
 <tr>
 <td>
 Right to left paragraph<br/><br/></td><td>
@@ -303,7 +313,7 @@ No<br/><br/></td><td>
 No<br/><br/></td></tr>
 <tr>
 <td>
-Indents – left, right, first line & hanging<br/><br/></td><<td>
+Indents – left, right, first line & hanging<br/><br/></td><td>
 Yes<br/><br/></td><td>
 Yes<br/><br/></td></tr>
 <tr>
@@ -593,8 +603,6 @@ Yes<br/><br/></td></tr>
 <tr>
 <td>
 Strikethrough<br/><br/></td><td>
-Yes<br/><br/></td><td>
-Yes<br/><br/></td><td>
 Yes<br/><br/></td><td>
 Yes<br/><br/></td></tr>
 <tr>
