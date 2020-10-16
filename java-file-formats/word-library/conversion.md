@@ -1,4 +1,4 @@
-﻿---
+---
 title: Working with Document Conversions | Word library | Syncfusion
 description: This section illustrates how to convert a Word document into other supported file formats using Syncfusion Java Word library
 platform: java-file-formats
