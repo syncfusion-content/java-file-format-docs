@@ -153,6 +153,16 @@ Yes<br/><br/></td>
 </tr>
 <tr>
 <td>
+Footnotes and Endnotes<br/><br/></td>
+<td>
+<br/><br/></td>
+<td>
+No<br/><br/></td>
+<td>
+-<br/><br/></td>
+</tr>
+<tr>
+<td>
 Form Field<br/><br/></td>
 <td>
 Text input, Checkbox and combo box<br/><br/></td>
