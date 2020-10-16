@@ -39,6 +39,156 @@ document.close();
 
 {% endtabs %} 
 
+## How to set OpenType Font Features?
+
+The Open type features provide special effects for the text. This feature is specific to Word 2010 and later version documents. The OpenType features includes the following:
+
+* Ligatures – combination of characters, written as glyph
+* Use Contextual Alternates – combination of letters based on surrounding characters
+* Number spacing – specifies number width 
+* Number forms – specifies number height
+* Stylistic sets – specifies the look of the text, based on the font used
+
+The following code illustrates how to set ligature types for text.
+
+{% tabs %}  
+
+{% highlight JAVA %}
+//Create a new Word document. 
+WordDocument document = new WordDocument();
+//Add new section to the document.
+IWSection section = document.addSection();
+//Add new paragraph to the section.
+IWParagraph paragraph = section.addParagraph();
+//Add new text.
+IWTextRange text = paragraph.appendText("Text to describe discretional ligatures");
+//Set ligature type.
+text.getCharacterFormat().setLigatures(LigatureType.Discretional);
+text.getCharacterFormat().setFontName("Arial");
+paragraph = section.addParagraph();
+text = paragraph.appendText("Text to describe contextual ligatures");
+text.getCharacterFormat().setLigatures(LigatureType.Contextual);
+text.getCharacterFormat().setFontName("Arial");
+paragraph = section.addParagraph();
+text = paragraph.appendText("Text to describe historical ligatures");
+text.getCharacterFormat().setLigatures(LigatureType.Historical);
+text.getCharacterFormat().setFontName("Arial");
+//Save and close the document.
+document.save("Sample.docx", FormatType.Docx);
+document.close();
+{% endhighlight %}
+
+{% endtabs %}
+
+The following code example illustrates how to set contextual alternates.
+
+{% tabs %} 
+
+{% highlight JAVA %}
+//Create a new Word document. 
+WordDocument document = new WordDocument();
+//Add new section to the document.
+IWSection section = document.addSection();
+//Add new paragraph to the section.
+IWParagraph paragraph = section.addParagraph();
+//Add new text.
+IWTextRange text = paragraph.appendText("Text to describe contextual alternates");
+text.getCharacterFormat().setFontName("Segoe Script");
+//Set contextual alternates.
+text.getCharacterFormat().setUseContextualAlternates(true);
+paragraph = section.addParagraph();
+//Save and close the document.
+document.save("Sample.docx", FormatType.Docx);
+document.close();
+{% endhighlight %}
+
+{% endtabs %}
+
+The following code example illustrates how to set number spacing.
+
+{% tabs %} 
+
+{% highlight JAVA %}
+//Create a new Word document.
+WordDocument document = new WordDocument();
+//Add new section to the document.
+IWSection section = document.addSection();
+//Add new paragraph to the section.
+IWParagraph paragraph = section.addParagraph();
+//Add new text.
+IWTextRange text = paragraph.appendText("Numbers to describe tabular number spacing 0123456789");
+text.getCharacterFormat().setFontName("Calibri");
+//Set number spacing.
+text.getCharacterFormat().setNumberSpacing(NumberSpacingType.Tabular);
+paragraph = section.addParagraph();
+text = paragraph.appendText("Numbers to describe proportional number spacing 0123456789");
+text.getCharacterFormat().setFontName("Calibri");
+//Set number spacing.
+text.getCharacterFormat().setNumberSpacing(NumberSpacingType.Proportional);
+//Save and close the document.
+document.save("Sample.docx", FormatType.Docx);
+document.close();
+{% endhighlight %}
+
+{% endtabs %}
+
+The following code example illustrates how to set number style.
+
+{% tabs %} 
+
+{% highlight JAVA %}
+//Create a new Word document. 
+WordDocument document = new WordDocument();
+//Add new section to the document.
+IWSection section = document.addSection();
+//Add new paragraph to the section.
+IWParagraph paragraph = section.addParagraph();
+//Add new text.
+IWTextRange text = paragraph.appendText("Numbers to describe oldstyle number form 0123456789");
+text.getCharacterFormat().setFontName("Calibri");
+//Set number style.
+text.getCharacterFormat().setNumberForm(NumberFormType.OldStyle);
+paragraph = section.addParagraph();
+text = paragraph.appendText("Numbers to describe lining number form 0123456789");
+text.getCharacterFormat().setFontName("Calibri");
+//Set number style.
+text.getCharacterFormat().setNumberForm(NumberFormType.Lining);
+//Save and close the document.
+document.save("Sample.docx", FormatType.Docx);
+document.close();
+{% endhighlight %}
+
+{% endtabs %}
+
+The following code example illustrates how to set different styles for the text.
+
+{% tabs %} 
+
+{% highlight JAVA %}
+//Create a new Word document.
+WordDocument document = new WordDocument();
+//Add new section to the document.
+IWSection section = document.addSection();
+//Add new paragraph to the section.
+IWParagraph paragraph = section.addParagraph();
+//Add new text.
+IWTextRange text = paragraph.appendText("Text to describe stylistic sets");
+text.getCharacterFormat().setFontName("Gabriola");
+//Set stylistic set.
+text.getCharacterFormat().setStylisticSet(StylisticSetType.StylisticSet06);
+paragraph = section.addParagraph();
+//Add new text.
+text = paragraph.appendText("Text to describe stylistic sets");
+text.getCharacterFormat().setFontName("Gabriola");
+//Set stylistic set.
+text.getCharacterFormat().setStylisticSet(StylisticSetType.StylisticSet15);
+//Save and close the document.
+document.save("Sample.docx", FormatType.Docx);
+document.close();
+{% endhighlight %}
+
+{% endtabs %}
+
 ## How to insert a table from HTML string in Word document?
 
 An HTML string can be inserted to the Word document at text body or paragraph. The following code illustrates how to insert a table to the document from the HTML string.
@@ -57,11 +207,9 @@ textbody.insertXHTML(htmlString);
 //Saves and closes the document
 document.save("Sample.docx");
 document.close();
-
 {% endhighlight %}
 
 {% endtabs %}  
-
  
 ## How to set table cell width?
 
@@ -230,8 +378,6 @@ Java Word library uses Points for measurement properties in a Word document.
 
 Bookmarks identify the location of text in a Word document that you can name and identify for future reference.
  
-### Using DocIO
-
 The following code example illustrates how to insert the bookmark by using DocIO. Here, the `appendBookmarkStart()` and `appendBookmarkEnd()` methods are used to add the bookmark.
 
 {% tabs %}  
@@ -264,8 +410,6 @@ doc.close();
 
 Page numbers can be added to the Word document in headers or footers.
 
-### Using DocIO
-
 The following code example illustrates how page numbers are inserted to the footer of the Word document by using DocIO.
 
 {% tabs %}   
@@ -296,8 +440,7 @@ doc.close();
 ### Headers and Footers
 
 The headers and footers can be inserted with text, graphics, and any other information that is contained in the document. 
-  
-### Using DocIO
+
 You can set the header and footer by using the HeadersFooters property in the Word document section. To access a particular header/footer, you can use the following properties of `WHeadersFooters` class:
 
 * FirstPageHeader
@@ -339,8 +482,6 @@ doc.close();
 
 Tables are used to organize information and to display the information in rows and columns. You can also add images or even other tables to the table.
 
-### Using DocIO
-
 The following code example shows how to insert an empty table to a Word document. The `resetCells()` method is used to specify the number of rows and columns in a table.
 
 {% tabs %} 
@@ -367,8 +508,6 @@ N>  For more information on creating tables using DocIO, refer to online documen
 ### Comments 
 
 Comments are used to include additional information to a paragraph or text in a Word document. Comments can be added or modified whenever needed and deleted when the comment has served its purpose. 
-
-#### Adding Comments Using DocIO
 
 You can insert comments to a paragraph or text in a Word document by using DocIO. The following code example shows how to insert comments to a Word document.
 
