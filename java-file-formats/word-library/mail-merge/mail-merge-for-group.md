@@ -198,7 +198,7 @@ public class Employee
 	public String setPhoto(String image)throws Exception
 	{
 		_photo=image;
-	return image;
+		return image;
 	}
 	public Employee(String firstName,String lastName,String title,String address,String city,String region,String country,String photoFilePath)throws Exception
 	{
