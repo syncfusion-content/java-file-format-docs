@@ -1,1 +1,1 @@
-This repository contains Java UG documentation for the Syncfusion File Format products.
+This repository contains Java UG documentation for the Syncfusion File Format products. 
