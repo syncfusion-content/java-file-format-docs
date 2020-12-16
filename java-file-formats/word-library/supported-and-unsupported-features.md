@@ -16,11 +16,15 @@ This section describes the support and unsupported elements in the DocIO.
 <tr>
 <th>
 Element<br/><br/></th><th colspan="2">
-DOCX, DOTX, DOTM, DOCM, WordML<br/><br/></th></tr>
+DOCX, DOTX, DOTM, DOCM, WordML<br/><br/></th>
+<th colspan="2">
+RTF<br/><br/></th></tr>
 </thead>  
 <tr>
 <th>
 <br/><br/></th><th>
+Read<br/><br/></th><th>
+Write<br/><br/></th><th>
 Read<br/><br/></th><th>
 Write<br/><br/></th></tr>
 <tbody>
@@ -28,52 +32,72 @@ Write<br/><br/></th></tr>
 <td>
 Built-in document properties<br/><br/></td><td>
 Yes<br/><br/></td><td>
-Yes<br/><br/></td></tr>
+Yes<br/><br/></td><td>
+Yes<br/><br/></td><td>
+No<br/><br/></td></tr>
 <tr>
 <td>
 Custom document properties<br/><br/></td><td>
 Yes<br/><br/></td><td>
-Yes<br/><br/></td></tr>
+Yes<br/><br/></td><td>
+No<br/><br/></td><td>
+No<br/><br/></td></tr>
 <tr>
 <td>
 Mail merge<br/><br/></td><td>
+Yes<br/><br/></td><td>
+Yes<br/><br/></td><td>
 Yes<br/><br/></td><td>
 Yes<br/><br/></td></tr>
 <tr>
 <td>
 Encryption and Decryption<br/><br/></td><td>
-No<br/><br/></td><td>
-No<br/><br/></td></tr>
+Yes<br/><br/></td><td>
+Yes<br/><br/></td><td>
+N/A<br/><br/></td><td>
+N/A<br/><br/></td></tr>
 <tr>
 <td>
 View setup<br/><br/></td><td>
 Yes<br/><br/></td><td>
-Yes<br/><br/></td></tr>
+Yes<br/><br/></td><td>
+Yes<br/><br/></td><td>
+No<br/><br/></td></tr>
 <tr>
 <td>
 Watermark<br/><br/></td><td>
 Yes<br/><br/></td><td>
+Yes<br/><br/></td><td>
+No<br/><br/></td><td>
 Yes<br/><br/></td></tr>
 <tr>
 <td>
 Track changes<br/><br/></td><td>
 Yes<br/><br/></td><td>
-Yes – limited [can only accept/reject]<br/><br/></td></tr>
+Yes – limited [can only accept/reject]<br/><br/></td><td>
+No<br/><br/></td><td>
+No<br/><br/></td></tr>
 <tr>
 <td>
 Themes<br/><br/></td><td>
 Yes<br/><br/></td><td>
-Yes<br/><br/></td></tr>
+Yes<br/><br/></td><td>
+No<br/><br/></td><td>
+No<br/><br/></td></tr>
 <tr>
 <td>
 Document variables<br/><br/></td><td>
 Yes<br/><br/></td><td>
-Yes<br/><br/></td></tr>
+Yes<br/><br/></td><td>
+No<br/><br/></td><td>
+No<br/><br/></td></tr>
 <tr>
 <td>
 Macros<br/><br/></td><td>
 Yes<br/><br/></td><td>
-Yes<br/><br/></td></tr>
+Yes<br/><br/></td><td>
+No<br/><br/></td><td>
+No<br/><br/></td></tr>
 </tbody>
 </table>
 
@@ -85,11 +109,14 @@ Yes<br/><br/></td></tr>
 <tr>
 <th>
 Element<br/><br/></th><th colspan="2">
-DOCX, DOTX, DOTM, DOCM, WordML<br/><br/></th></tr>
+DOCX, DOTX, DOTM, DOCM, WordML<br/><br/></th><th colspan="2">
+RTF<br/><br/></th></tr>
 </thead>
 <tr>
 <th>
 <br/><br/></th><th>
+Read<br/><br/></th><th>
+Write<br/><br/></th><th>
 Read<br/><br/></th><th>
 Write<br/><br/></th></tr>
 <tbody> 
@@ -97,45 +124,63 @@ Write<br/><br/></th></tr>
 <td>
 Headers & footers<br/><br/></td><td>
 Yes<br/><br/></td><td>
+Yes<br/><br/></td><td>
+Yes<br/><br/></td><td>
 Yes<br/><br/></td></tr>
 <tr>
 <td>
 Section break<br/><br/></td><td>
+Yes<br/><br/></td><td>
+Yes<br/><br/></td><td>
 Yes<br/><br/></td><td>
 Yes<br/><br/></td></tr>
 <tr>
 <td>
 Text columns<br/><br/></td><td>
 Yes<br/><br/></td><td>
+Yes<br/><br/></td><td>
+Yes<br/><br/></td><td>
 Yes<br/><br/></td></tr>
 <tr>
 <td>
 Page margin<br/><br/></td><td>
+Yes<br/><br/></td><td>
+Yes<br/><br/></td><td>
 Yes<br/><br/></td><td>
 Yes<br/><br/></td></tr>
 <tr>
 <td>
 Page border<br/><br/></td><td>
 Yes<br/><br/></td><td>
+Yes<br/><br/></td><td>
+No<br/><br/></td><td>
 Yes<br/><br/></td></tr>
 <tr>
 <td>
 Page orientation<br/><br/></td><td>
+Yes<br/><br/></td><td>
+Yes<br/><br/></td><td>
 Yes<br/><br/></td><td>
 Yes<br/><br/></td></tr>
 <tr>
 <td>
 Page size<br/><br/></td><td>
 Yes<br/><br/></td><td>
+Yes<br/><br/></td><td>
+Yes<br/><br/></td><td>
 Yes<br/><br/></td></tr>
 <tr>
 <td>
 Header & footer distance<br/><br/></td><td>
 Yes<br/><br/></td><td>
-Yes<br/><br/></td></tr>
+Yes<br/><br/></td><td>
+No<br/><br/></td><td>
+No<br/><br/></td></tr>
 <tr>
 <td>
 Vertical alignment<br/><br/></td><td>
+Yes<br/><br/></td><td>
+Yes<br/><br/></td><td>
 Yes<br/><br/></td><td>
 Yes<br/><br/></td></tr>
 </tbody>
@@ -149,11 +194,14 @@ Yes<br/><br/></td></tr>
 <tr>
 <th>Element<br/><br/></th>
 <th colspan="2">DOCX, DOTX, DOTM, DOCM, WordML<br/><br/></th>
+<th colspan="2">RTF<br/><br/></th>
 </tr>
 </thead> 
 <tr>
 <th>
 <br/><br/></th><th>
+Read<br/><br/></th><th>
+Write<br/><br/></th><th>
 Read<br/><br/></th><th>
 Write<br/><br/></th></tr>
 <tbody> 
@@ -161,90 +209,126 @@ Write<br/><br/></th></tr>
 <td>
 Break – Page break, column break and Line break<br/><br/></td><td>
 Yes<br/><br/></td><td>
+Yes<br/><br/></td><td>
+Yes<br/><br/></td><td>
 Yes<br/><br/></td></tr>
 <tr>
 <td>
 Symbols<br/><br/></td><td>
 Yes<br/><br/></td><td>
+Yes<br/><br/></td><td>
+No<br/><br/></td><td>
 Yes<br/><br/></td></tr>
 <tr>
 <td>
 Comments<br/><br/></td><td>
+Yes<br/><br/></td><td>
+Yes<br/><br/></td><td>
 Yes<br/><br/></td><td>
 Yes<br/><br/></td></tr>
 <tr>
 <td>
 Footnote and endnote<br/><br/></td><td>
 No<br/><br/></td><td>
+No<br/><br/></td><td>
+No<br/><br/></td><td>
 No<br/><br/></td></tr>
 <tr>
 <td>
 Pictures (*.bmp, *.jpg, *.png, *.emf, *.tif and *.gif)<br/><br/></td><td>
+Yes<br/><br/></td><td>
+Yes<br/><br/></td><td>
 Yes<br/><br/></td><td>
 Yes<br/><br/></td></tr>
 <tr>
 <td>
 Text boxes<br/><br/></td><td>
 Yes<br/><br/></td><td>
+Yes<br/><br/></td><td>
+Yes<br/><br/></td><td>
 Yes<br/><br/></td></tr>
 <tr>
 <td>
 OLE objects<br/><br/></td><td>
+No<br/><br/></td><td>
+No<br/><br/></td><td>
 No<br/><br/></td><td>
 No<br/><br/></td></tr>
 <tr>
 <td>
 Predefined shapes<br/><br/></td><td>
 Yes<br/><br/></td><td>
+Yes<br/><br/></td><td>
+Yes<br/><br/></td><td>
 Yes<br/><br/></td></tr>
 <tr>
 <td>
 Custom shapes<br/><br/></td><td>
+No<br/><br/></td><td>
+No<br/><br/></td><td>
 No<br/><br/></td><td>
 No<br/><br/></td></tr>
 <tr>
 <td>
 Grouped shapes<br/><br/></td><td>
 Yes<br/><br/></td><td>
-Yes<br/><br/></td></tr>
+Yes<br/><br/></td><td>
+No<br/><br/></td><td>
+No<br/><br/></td></tr>
 <tr>
 <td>
 Equation<br/><br/></td><td>
+No<br/><br/></td><td>
+No<br/><br/></td><td>
 No<br/><br/></td><td>
 No<br/><br/></td></tr>
 <tr>
 <td>
 SmartArt<br/><br/></td><td>
 No<br/><br/></td><td>
+No<br/><br/></td><td>
+No<br/><br/></td><td>
 No<br/><br/></td></tr>
 <tr>
 <td>
 WordArt<br/><br/></td><td>
+No<br/><br/></td><td>
+No<br/><br/></td><td>
 No<br/><br/></td><td>
 No<br/><br/></td></tr>
 <tr>
 <td>
 Bookmark<br/><br/></td><td>
 Yes<br/><br/></td><td>
+Yes<br/><br/></td><td>
+Yes<br/><br/></td><td>
 Yes<br/><br/></td></tr>
 <tr>
 <td>
 Hyperlink<br/><br/></td><td>
+Yes<br/><br/></td><td>
+Yes<br/><br/></td><td>
 Yes<br/><br/></td><td>
 Yes<br/><br/></td></tr>
 <tr>
 <td>
 Chart<br/><br/></td><td>
 No<br/><br/></td><td>
+No<br/><br/></td><td>
+No<br/><br/></td><td>
 No<br/><br/></td></tr>
 <tr>
 <td>
 Fields<br/><br/></td><td>
 Yes<br/><br/></td><td>
+Yes<br/><br/></td><td>
+Yes<br/><br/></td><td>
 Yes<br/><br/></td></tr>
 <tr>
 <td>
 Form Fields-TextInput, CheckBox & DropDown<br/><br/></td><td>
+Yes<br/><br/></td><td>
+Yes<br/><br/></td><td>
 Yes<br/><br/></td><td>
 Yes<br/><br/></td></tr>
 </tbody>
@@ -258,11 +342,14 @@ Yes<br/><br/></td></tr>
 <tr>
 <th>Element<br/><br/></th>
 <th colspan="2">DOCX, DOTX, DOTM, DOCM, WordML<br/><br/></th>
+<th colspan="2">RTF<br/><br/></th>
 </tr>
 </thead> 
 <tr>
 <th>
 <br/><br/></th><th>
+Read<br/><br/></th><th>
+Write<br/><br/></th><th>
 Read<br/><br/></th><th>
 Write<br/><br/></th></tr>
 <tbody> 
@@ -270,65 +357,91 @@ Write<br/><br/></th></tr>
 <td>
 Paragraph style<br/><br/></td><td>
 Yes<br/><br/></td><td>
+Yes<br/><br/></td><td>
+Yes<br/><br/></td><td>
 Yes<br/><br/></td></tr>
 <tr>
 <td>
 Alignment – left, right, center and justify<br/><br/></td><td>
+Yes<br/><br/></td><td>
+Yes<br/><br/></td><td>
 Yes<br/><br/></td><td>
 Yes<br/><br/></td></tr>
 <tr>
 <td>
 Right to left paragraph<br/><br/></td><td>
 Yes<br/><br/></td><td>
+Yes<br/><br/></td><td>
+Yes<br/><br/></td><td>
 Yes<br/><br/></td></tr>
 <tr>
 <td>
 Lists - bullets and numbers<br/><br/></td><td>
+Yes<br/><br/></td><td>
+Yes<br/><br/></td><td>
 Yes<br/><br/></td><td>
 Yes<br/><br/></td></tr>
 <tr>
 <td>
 Run properties for the paragraph mark<br/><br/></td><td>
 Yes<br/><br/></td><td>
+Yes<br/><br/></td><td>
+Yes<br/><br/></td><td>
 Yes<br/><br/></td></tr>
 <tr>
 <td>
 Suppress hyphenation<br/><br/></td><td>
+No<br/><br/></td><td>
+No<br/><br/></td><td>
 No<br/><br/></td><td>
 No<br/><br/></td></tr>
 <tr>
 <td>
 Indents – left, right, first line & hanging<br/><br/></td><td>
 Yes<br/><br/></td><td>
+Yes<br/><br/></td><td>
+Yes<br/><br/></td><td>
 Yes<br/><br/></td></tr>
 <tr>
 <td>
 Spacing – before, after & auto<br/><br/></td><td>
+Yes<br/><br/></td><td>
+Yes<br/><br/></td><td>
 Yes<br/><br/></td><td>
 Yes<br/><br/></td></tr>
 <tr>
 <td>
 Keeps and breaks<br/><br/></td><td>
 Yes<br/><br/></td><td>
+Yes<br/><br/></td><td>
+Yes<br/><br/></td><td>
 Yes<br/><br/></td></tr>
 <tr>
 <td>
 Text frames<br/><br/></td><td>
+Yes<br/><br/></td><td>
+Yes<br/><br/></td><td>
 Yes<br/><br/></td><td>
 Yes<br/><br/></td></tr>
 <tr>
 <td>
 Tabs<br/><br/></td><td>
 Yes<br/><br/></td><td>
+Yes<br/><br/></td><td>
+Yes<br/><br/></td><td>
 Yes<br/><br/></td></tr>
 <tr>
 <td>
 Borders<br/><br/></td><td>
 Yes<br/><br/></td><td>
+Yes<br/><br/></td><td>
+Yes<br/><br/></td><td>
 Yes<br/><br/></td></tr>
 <tr>
 <td>
 Shading<br/><br/></td><td>
+Yes<br/><br/></td><td>
+Yes<br/><br/></td><td>
 Yes<br/><br/></td><td>
 Yes<br/><br/></td></tr>
 </tbody>
@@ -342,11 +455,14 @@ Yes<br/><br/></td></tr>
 <tr>
 <th>Element<br/><br/></th>
 <th colspan="2">DOCX, DOTX, DOTM, DOCM, WordML<br/><br/></th>
+<th colspan="2">RTF<br/><br/></th>
 </tr>
 </thead>  
 <tr>
 <th>
 <br/><br/></th><th>
+Read<br/><br/></th><th>
+Write<br/><br/></th><th>
 Read<br/><br/></th><th>
 Write<br/><br/></th></tr>
 <tbody>
@@ -354,42 +470,58 @@ Write<br/><br/></th></tr>
 <td>
 Built-in paragraph style<br/><br/></td><td>
 Yes<br/><br/></td><td>
+Yes<br/><br/></td><td>
+Yes<br/><br/></td><td>
 Yes<br/><br/></td></tr>
 <tr>
 <td>
 Custom paragraph style<br/><br/></td><td>
+Yes<br/><br/></td><td>
+Yes<br/><br/></td><td>
 Yes<br/><br/></td><td>
 Yes<br/><br/></td></tr>
 <tr>
 <td>
 Built-in character style<br/><br/></td><td>
 Yes<br/><br/></td><td>
+Yes<br/><br/></td><td>
+Yes<br/><br/></td><td>
 Yes<br/><br/></td></tr>
 <tr>
 <td>
 Custom character style<br/><br/></td><td>
+Yes<br/><br/></td><td>
+Yes<br/><br/></td><td>
 Yes<br/><br/></td><td>
 Yes<br/><br/></td></tr>
 <tr>
 <td>
 Built-in list style<br/><br/></td><td>
 Yes<br/><br/></td><td>
+Yes<br/><br/></td><td>
+Yes<br/><br/></td><td>
 Yes<br/><br/></td></tr>
 <tr>
 <td>
 Custom list style<br/><br/></td><td>
+Yes<br/><br/></td><td>
+Yes<br/><br/></td><td>
 Yes<br/><br/></td><td>
 Yes<br/><br/></td></tr>
 <tr>
 <td>
 Built-in table style<br/><br/></td><td>
 Yes<br/><br/></td><td>
-Yes<br/><br/></td></tr>
+Yes<br/><br/></td><td>
+No<br/><br/></td><td>
+No<br/><br/></td></tr>
 <tr>
 <td>
 Custom table style<br/><br/></td><td>
 Yes<br/><br/></td><td>
-Yes<br/><br/></td></tr>
+Yes<br/><br/></td><td>
+No<br/><br/></td><td>
+No<br/><br/></td></tr>
 </tbody>
 </table>
 
@@ -401,11 +533,14 @@ Yes<br/><br/></td></tr>
 <tr>
 <th>Element<br/><br/></th>
 <th colspan="2">DOCX, DOTX, DOTM, DOCM, WordML<br/><br/></th>
+<th colspan="2">RTF<br/><br/></th>
 </tr>
 </thead>  
 <tr>
 <th>
 <br/><br/></th><th>
+Read<br/><br/></th><th>
+Write<br/><br/></th><th>
 Read<br/><br/></th><th>
 Write<br/><br/></th></tr>
 <tbody>
@@ -413,120 +548,168 @@ Write<br/><br/></th></tr>
 <td>
 Nested tables<br/><br/></td><td>
 Yes<br/><br/></td><td>
+Yes<br/><br/></td><td>
+Yes<br/><br/></td><td>
 Yes<br/><br/></td></tr>
 <tr>
 <td>
 Right to left tables<br/><br/></td><td>
+Yes<br/><br/></td><td>
+Yes<br/><br/></td><td>
 Yes<br/><br/></td><td>
 Yes<br/><br/></td></tr>
 <tr>
 <td>
 Table style<br/><br/></td><td>
 Yes<br/><br/></td><td>
-Yes<br/><br/></td></tr>
+Yes<br/><br/></td><td>
+No<br/><br/></td><td>
+No<br/><br/></td></tr>
 <tr>
 <td>
 Conditional formatting style<br/><br/></td><td>
 Yes<br/><br/></td><td>
-Yes<br/><br/></td></tr>
+Yes<br/><br/></td><td>
+No<br/><br/></td><td>
+No<br/><br/></td></tr>
 <tr>
 <td>
 Table alignment<br/><br/></td><td>
+Yes<br/><br/></td><td>
+Yes<br/><br/></td><td>
 Yes<br/><br/></td><td>
 Yes<br/><br/></td></tr>
 <tr>
 <td>
 Table indent<br/><br/></td><td>
 Yes<br/><br/></td><td>
+Yes<br/><br/></td><td>
+Yes<br/><br/></td><td>
 Yes<br/><br/></td></tr>
 <tr>
 <td>
 Allow AutoFit<br/><br/></td><td>
+Yes<br/><br/></td><td>
+Yes<br/><br/></td><td>
 Yes<br/><br/></td><td>
 Yes<br/><br/></td></tr>
 <tr>
 <td>
 Cell margins<br/><br/></td><td>
 Yes<br/><br/></td><td>
+Yes<br/><br/></td><td>
+Yes<br/><br/></td><td>
 Yes<br/><br/></td></tr>
 <tr>
 <td>
 Cell spacing<br/><br/></td><td>
+Yes<br/><br/></td><td>
+Yes<br/><br/></td><td>
 Yes<br/><br/></td><td>
 Yes<br/><br/></td></tr>
 <tr>
 <td>
 Preferred table width<br/><br/></td><td>
 Yes<br/><br/></td><td>
+Yes<br/><br/></td><td>
+Yes<br/><br/></td><td>
 Yes<br/><br/></td></tr>
 <tr>
 <td>
 Table shading<br/><br/></td><td>
+Yes<br/><br/></td><td>
+Yes<br/><br/></td><td>
 Yes<br/><br/></td><td>
 Yes<br/><br/></td></tr>
 <tr>
 <td>
 Table borders<br/><br/></td><td>
 Yes<br/><br/></td><td>
+Yes<br/><br/></td><td>
+Yes<br/><br/></td><td>
 Yes<br/><br/></td></tr>
 <tr>
 <td>
 Floating tables<br/><br/></td><td>
+Yes<br/><br/></td><td>
+Yes<br/><br/></td><td>
 Yes<br/><br/></td><td>
 Yes<br/><br/></td></tr>
 <tr>
 <td>
 Allow row to break across pages<br/><br/></td><td>
 Yes<br/><br/></td><td>
+Yes<br/><br/></td><td>
+Yes<br/><br/></td><td>
 Yes<br/><br/></td></tr>
 <tr>
 <td>
 Repeat as header row<br/><br/></td><td>
+Yes<br/><br/></td><td>
+Yes<br/><br/></td><td>
 Yes<br/><br/></td><td>
 Yes<br/><br/></td></tr>
 <tr>
 <td>
 Height<br/><br/></td><td>
 Yes<br/><br/></td><td>
+Yes<br/><br/></td><td>
+Yes<br/><br/></td><td>
 Yes<br/><br/></td></tr>
 <tr>
 <td>
 Height type<br/><br/></td><td>
+Yes<br/><br/></td><td>
+Yes<br/><br/></td><td>
 Yes<br/><br/></td><td>
 Yes<br/><br/></td></tr>
 <tr>
 <td>
 Cell borders<br/><br/></td><td>
 Yes<br/><br/></td><td>
+Yes<br/><br/></td><td>
+Yes<br/><br/></td><td>
 Yes<br/><br/></td></tr>
 <tr>
 <td>
 Cell shading<br/><br/></td><td>
+Yes<br/><br/></td><td>
+Yes<br/><br/></td><td>
 Yes<br/><br/></td><td>
 Yes<br/><br/></td></tr>
 <tr>
 <td>
 Wrap text<br/><br/></td><td>
 Yes<br/><br/></td><td>
+Yes<br/><br/></td><td>
+Yes<br/><br/></td><td>
 Yes<br/><br/></td></tr>
 <tr>
 <td>
 Fit text<br/><br/></td><td>
+Yes<br/><br/></td><td>
+Yes<br/><br/></td><td>
 Yes<br/><br/></td><td>
 Yes<br/><br/></td></tr>
 <tr>
 <td>
 Horizontal & vertical merged cells<br/><br/></td><td>
 Yes<br/><br/></td><td>
+Yes<br/><br/></td><td>
+Yes<br/><br/></td><td>
 Yes<br/><br/></td></tr>
 <tr>
 <td>
 Vertical alignment<br/><br/></td><td>
 Yes<br/><br/></td><td>
+Yes<br/><br/></td><td>
+Yes<br/><br/></td><td>
 Yes<br/><br/></td></tr>
 <tr>
 <td>
 Text direction<br/><br/></td><td>
+Yes<br/><br/></td><td>
+Yes<br/><br/></td><td>
 Yes<br/><br/></td><td>
 Yes<br/><br/></td></tr>
 </tbody>
@@ -539,9 +722,12 @@ Yes<br/><br/></td></tr>
 <th>
 Element<br/><br/></th><th colspan="2">
 DOCX, DOTX, DOTM, DOCM, WordML<br/><br/></th>
+<th colspan="2">RTF<br/><br/></th>
 <tr>
 <th>
 <br/><br/></th><th>
+Read<br/><br/></th><th>
+Write<br/><br/></th><th>
 Read<br/><br/></th><th>
 Write<br/><br/></th></tr>
 <tbody>
@@ -549,86 +735,120 @@ Write<br/><br/></th></tr>
 <td>
 Character style<br/><br/></td><td>
 Yes<br/><br/></td><td>
+Yes<br/><br/></td><td>
+Yes<br/><br/></td><td>
 Yes<br/><br/></td></tr>
 <tr>
 <td>
 Color<br/><br/></td><td>
+Yes<br/><br/></td><td>
+Yes<br/><br/></td><td>
 Yes<br/><br/></td><td>
 Yes<br/><br/></td></tr>
 <tr>
 <td>
 Highlight color<br/><br/></td><td>
 Yes<br/><br/></td><td>
+Yes<br/><br/></td><td>
+Yes<br/><br/></td><td>
 Yes<br/><br/></td></tr>
 <tr>
 <td>
 Language<br/><br/></td><td>
+Yes<br/><br/></td><td>
+Yes<br/><br/></td><td>
 Yes<br/><br/></td><td>
 Yes<br/><br/></td></tr>
 <tr>
 <td>
 Border<br/><br/></td><td>
 Yes<br/><br/></td><td>
+Yes<br/><br/></td><td>
+No<br/><br/></td><td>
 Yes<br/><br/></td></tr>
 <tr>
 <td>
 Shading<br/><br/></td><td>
+Yes<br/><br/></td><td>
+Yes<br/><br/></td><td>
 Yes<br/><br/></td><td>
 Yes<br/><br/></td></tr>
 <tr>
 <td>
 Font<br/><br/></td><td>
 Yes<br/><br/></td><td>
+Yes<br/><br/></td><td>
+Yes<br/><br/></td><td>
 Yes<br/><br/></td></tr>
 <tr>
 <td>
 Underline <br/><br/></td><td>
+Yes<br/><br/></td><td>
+Yes<br/><br/></td><td>
 Yes<br/><br/></td><td>
 Yes<br/><br/></td></tr>
 <tr>
 <td>
 Strikethrough<br/><br/></td><td>
 Yes<br/><br/></td><td>
+Yes<br/><br/></td><td>
+Yes<br/><br/></td><td>
 Yes<br/><br/></td></tr>
 <tr>
 <td>
 Double strikethrough<br/><br/></td><td>
+Yes<br/><br/></td><td>
+Yes<br/><br/></td><td>
 Yes<br/><br/></td><td>
 Yes<br/><br/></td></tr>
 <tr>
 <td>
 Subscript/Superscript<br/><br/></td><td>
 Yes<br/><br/></td><td>
+Yes<br/><br/></td><td>
+Yes<br/><br/></td><td>
 Yes<br/><br/></td></tr>
 <tr>
 <td>
 Small caps<br/><br/></td><td>
+Yes<br/><br/></td><td>
+Yes<br/><br/></td><td>
 Yes<br/><br/></td><td>
 Yes<br/><br/></td></tr>
 <tr>
 <td>
 All caps<br/><br/></td><td>
 Yes<br/><br/></td><td>
+Yes<br/><br/></td><td>
+Yes<br/><br/></td><td>
 Yes<br/><br/></td></tr>
 <tr>
 <td>
 Hidden text<br/><br/></td><td>
+Yes<br/><br/></td><td>
+Yes<br/><br/></td><td>
 Yes<br/><br/></td><td>
 Yes<br/><br/></td></tr>
 <tr>
 <td>
 Scale<br/><br/></td><td>
 Yes<br/><br/></td><td>
+Yes<br/><br/></td><td>
+Yes<br/><br/></td><td>
 Yes<br/><br/></td></tr>
 <tr>
 <td>
 Expanded / Compressed<br/><br/></td><td>
 Yes<br/><br/></td><td>
-Yes<br/><br/></td></tr>
+Yes<br/><br/></td><td>
+Yes<br/><br/></td><td>
+No<br/><br/></td></tr>
 <tr>
 <td>
 Vertical Position<br/><br/></td><td>
 Yes<br/><br/></td><td>
+Yes<br/><br/></td><td>
+No<br/><br/></td><td>
 Yes<br/><br/></td></tr>
 </tbody>
 </table>
