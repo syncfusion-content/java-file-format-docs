@@ -29,3 +29,5 @@ It is a non-UI component that provides a full-fledged document instance model si
 * Microsoft Word 2013
 * Microsoft Word 2016
 * Microsoft Word 2019
+
+T> You may face a memory leak in Java and it throws an error “Java.Lang.OutOfMemoryError” exception. Usually, this occurs due to insufficient RAM heap space to allocate an object in the Java heap. To avoid this kind of problem, we suggest increasing the RAM heap size.
