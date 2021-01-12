@@ -619,9 +619,9 @@ document.close();
 {% endtabs %}
 
 ## How to configure Syncfusion Java packages in Gradle?
-You can easily download the Syncfusion packages for Java via [maven repository](https://jars.syncfusion.com/).
+You can easily download the Syncfusion packages for Java using the [maven repository](https://jars.syncfusion.com/).
  
-The following command illustrates to mention the repository in Gradle.
+The following command shows how to mention the repository in Gradle.
 
 {% tabs %}  
 
@@ -636,7 +636,8 @@ url "https://jars.syncfusion.com/repository/maven-public/"
 
 {% endtabs %}
 
-The following command shows how to refer the Syncfusion package which need to be used in your project as the dependency.
+The following command shows how to refer to the Syncfusion package, which needs to be used in your project as the dependency.
+
 {% tabs %}  
 
 {% highlight Gradle %}
@@ -649,9 +650,9 @@ implementation 'com.syncfusion:syncfusion-javahelper:18.4.0.30'
 
 ## How to configure Syncfusion Java packages in Apache Maven?
 
-You can easily download the Syncfusion packages for Java via [maven repository](https://jars.syncfusion.com/). 
+You can easily download the Syncfusion packages for Java using the [maven repository](https://jars.syncfusion.com/).
 
-The following command illustrates to mention the repository in Apache Maven.
+The following command shows how to mention the repository in Apache Maven.
 
 {% tabs %}  
 
@@ -665,7 +666,8 @@ The following command illustrates to mention the repository in Apache Maven.
 
 {% endtabs %}
 
-The following command shows how to refer the Syncfusion package which need to be used in your project as the dependency.
+The following command shows how to refer to the Syncfusion package, which needs to be used in your project as the dependency.
+
 {% tabs %}  
 
 {% highlight XML %}

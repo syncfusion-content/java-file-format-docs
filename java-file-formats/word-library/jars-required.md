@@ -20,7 +20,7 @@ Syncfusion Java Word library supports Java SE 8.0(1.8) or above versions.
 
 ## Download Jars
 
-You can download the jars from Syncfusion [maven repository](https://jars.syncfusion.com/) to use our artifacts in your projects. It helps to use the Syncfusion Java packages without installing Essential Studio or platform installation to development with Syncfusion controls.
+You can download the jars from the Syncfusion [maven repository](https://jars.syncfusion.com/) to use our artifacts in your projects. It helps you to use the Syncfusion Java packages without installing Essential Studio or platform installation to development with Syncfusion controls.
 
 **Frequently Asked questions**
 
