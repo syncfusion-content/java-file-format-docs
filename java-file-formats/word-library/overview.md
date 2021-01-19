@@ -30,4 +30,4 @@ It is a non-UI component that provides a full-fledged document instance model si
 * Microsoft Word 2016
 * Microsoft Word 2019
 
-T> Sometimes a Java application may throw an error “Java.Lang.OutOfMemoryError”. Usually, this occurs due to insufficient RAM heap space to allocate an object in the Java heap. To avoid this kind of problem, we suggest [increasing the JVM heap size](https://docs.oracle.com/cd/E29587_01/PlatformServices.60x/ps_rel_discovery/src/crd_advanced_jvm_heap.html). 
+T> Sometimes a Java application may throw an error like this "Java.Lang.OutOfMemoryError." Usually, this error occurs due to insufficient RAM heap space to allocate an object in the Java heap. To avoid this kind of problem, we suggest [increasing the JVM heap size](https://docs.oracle.com/cd/E29587_01/PlatformServices.60x/ps_rel_discovery/src/crd_advanced_jvm_heap.html). 
