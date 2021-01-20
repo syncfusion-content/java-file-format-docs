@@ -48,11 +48,11 @@ The following command shows how to mention the repository in Apache Maven.
 {% tabs %}  
 
 {% highlight XML %}
-&lt;repository&gt;
-&lt;id&gt;Syncfusion-Java&lt;/id&gt;
-&lt;name&gt;Syncfusion Java repo&lt;/name&gt;
-&lt;url&gt;https://jars.syncfusion.com/repository/maven-public/&lt;/url&gt;
-&lt;/repository&gt;
+<repository>
+<id>Syncfusion-Java</id>
+<name>Syncfusion Java repo</name>
+<url>https://jars.syncfusion.com/repository/maven-public/</url>
+</repository>
 {% endhighlight %}
 
 {% endtabs %}
@@ -62,11 +62,11 @@ The following command shows how to refer to the Syncfusion package, which needs 
 {% tabs %}  
 
 {% highlight XML %}
-&lt;dependency&gt;
-&lt;groupId&gt;com.syncfusion&lt;/groupId&gt;
-&lt;artifactId&gt;syncfusion-javahelper&lt;/artifactId&gt;
-&lt;version&gt;18.4.0.30&lt;/version&gt;
-&lt;/dependency&gt;
+<dependency>
+<groupId>com.syncfusion</groupId>
+<artifactId>syncfusion-javahelper</artifactId>
+<version>18.4.0.30</version>
+</dependency>
 {% endhighlight %}
 
 {% endtabs %}
