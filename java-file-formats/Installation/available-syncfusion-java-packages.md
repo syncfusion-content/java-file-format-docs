@@ -1,6 +1,6 @@
 ---
-title: Available Syncfusion Java packages  | Syncfusion
-description: This section showcases the available Syncfusion Java packages.
+title: Available Syncfusion Java packages | Syncfusion
+description: This section showcases the available Syncfusion Java packages
 platform: java-file-formats
 control: general
 documentation: UG

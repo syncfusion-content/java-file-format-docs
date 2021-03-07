@@ -1,6 +1,6 @@
 ---
 title: Configure to download Syncfusion Java packages from Gradle | Syncfusion
-description: This section illustrate how to Download JAR from Gradle.
+description: This section illustrate how to Download JAR from Gradle
 platform: java-file-formats
 control: general
 documentation: UG

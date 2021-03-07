@@ -1,6 +1,6 @@
 ---
 title: Configure to download Syncfusion Java packages from Apache Maven | Syncfusion
-description: This section illustrate how to configure to Download JAR from Apache Maven.
+description: This section illustrate how to Download JAR from Apache Maven
 platform: java-file-formats
 control: general
 documentation: UG
