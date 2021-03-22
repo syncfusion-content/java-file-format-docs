@@ -21,7 +21,7 @@ Below are the Java packages available in syncfusion.
 <tr>
 <td>
 syncfusion-docio<br/><br/></td><td>
-This jar contains the core features needed for creating, reading, and editing a Word document programatically.<br/><br/></td></tr>
+This jar contains the core features needed for creating, reading, and editing a Word document programmatically.<br/><br/></td></tr>
 <tr>
 <td>
 syncfusion-javahelper<br/><br/></td><td>
