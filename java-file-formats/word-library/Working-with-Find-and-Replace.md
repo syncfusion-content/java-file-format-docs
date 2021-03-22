@@ -1,11 +1,11 @@
 ---
 title: Working with Find and Replace | Syncfusion
-description: This section illustrates finding a text and replacing it with a new text
+description: This section illustrates finding a text and replacing it with a new text in a Word document without Microsoft Word or Office interop
 platform: java-file-formats
 control: Word Library
 documentation: UG
 ---
-# Find and Replace
+# Working with Find and Replace
 
 You can search a particular text you like to change and replace it with another text or part of the document.
 
