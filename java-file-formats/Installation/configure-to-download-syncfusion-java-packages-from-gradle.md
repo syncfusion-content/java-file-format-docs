@@ -14,11 +14,11 @@ The following command shows how to mention the repository in Gradle.
 <table>
 <tr>
 <td>
-repositories {
-maven {
-// Syncfusion maven repository to download the artifacts
-url "https://jars.syncfusion.com/repository/maven-public/"
-}
+repositories&nbsp;{<br />
+&nbsp;&nbsp;&nbsp;maven&nbsp; {<br />
+&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:green;font-size:13px;font-style:italic">&nbsp;&nbsp;//Syncfusion maven repository to download the artifacts</span>.<br />
+&nbsp;&nbsp;&nbsp;&nbsp;url "https://jars.syncfusion.com/repository/maven-public/"<br />
+}<br />
 }
 </td>
 </tr>
@@ -29,8 +29,8 @@ The following command shows how to refer to the Syncfusion package in Gradle, wh
 <table>
 <tr>
 <td>
-dependencies {
-implementation 'com.syncfusion:syncfusion-docio:18.4.0.30'
+	dependencies &nbsp;{<br />
+ &nbsp;&nbsp;&nbsp;&nbsp;implementation 'com.syncfusion:syncfusion-docio:18.4.0.30'<br />
 }
 </td>
 </tr>

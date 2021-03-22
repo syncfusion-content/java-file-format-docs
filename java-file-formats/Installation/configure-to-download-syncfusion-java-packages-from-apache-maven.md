@@ -15,9 +15,9 @@ The following command shows how to mention the repository in Apache Maven.
 
 {% highlight XML %}
 <repository>
-<id>Syncfusion-Java</id>
-<name>Syncfusion Java repo</name>
-<url>https://jars.syncfusion.com/repository/maven-public/</url>
+&nbsp;&nbsp;&nbsp;<id>Syncfusion-Java</id>
+&nbsp;&nbsp;&nbsp;<name>Syncfusion Java repo</name>
+&nbsp;&nbsp;&nbsp;<url>https://jars.syncfusion.com/repository/maven-public/</url>
 </repository>
 {% endhighlight %}
 
@@ -29,9 +29,9 @@ The following command shows how to refer to the Syncfusion package, which needs 
 
 {% highlight XML %}
 <dependency>
-<groupId>com.syncfusion</groupId>
-<artifactId>syncfusion-docio</artifactId>
-<version>18.4.0.30</version>
+&nbsp;&nbsp;&nbsp;<groupId>com.syncfusion</groupId>
+&nbsp;&nbsp;&nbsp;<artifactId>syncfusion-docio</artifactId>
+&nbsp;&nbsp;&nbsp;<version>18.4.0.30</version>
 </dependency>
 {% endhighlight %}
 
