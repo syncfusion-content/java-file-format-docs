@@ -33,6 +33,8 @@ Get the dependent jar files by installing [file formats controls](https://www.sy
 **Location:** {ProgramFilesFolder}\Syncfusion\Essential Studio\ {Platform}\ {version}\JarFiles
 **Example:** C:\Program Files (x86)\Syncfusion\Essential Studio\FileFormats\18.3.0.35\JarFiles
 
+N> 1. Starting with v19.1.0.x, if you reference Syncfusion Java packages from trial setup or from the maven repository, you also have to add "syncfusion.licensing" package reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/license-key) to know about registering Syncfusion license key in your application to use our components.
+
 Import the following package in your Java application.
 
 {% tabs %}  
