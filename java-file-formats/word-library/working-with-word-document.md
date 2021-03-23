@@ -534,6 +534,75 @@ document.close();
 {% endhighlight %}
 
 {% endtabs %}  
+
+## Working with Content Type Properties
+
+Content type properties refers the metadata stored in a Word document, such as author name, subject, and company. DocIO represents metadata with MetaProperty instance and you can access in the Word document (DOCX, WordML) by using the ContentTypeProperties collection of WordDocument class.
+
+The following screenshots shows the content type property in the input Word document.
+![Resultant output Word document](WorkingwithWordDocument_images/QuickPart.png)
+
+N> You can use Content Type Properties only in documents that are saved in the DOCX or WordML Format.
+
+### Accessing and modifying the Content Type Properties
+
+You can access and modify the value of existing metadata in the Word document (DOCX, WordML).
+
+The following code example explains how to access and modify the value of an existing metadata in the Word document.
+{% tabs %} 
+
+{% highlight JAVA %}
+// Loads the template document
+WordDocument document = new WordDocument("Template.docx");
+// Processes the metaproperty collection in the Word document
+MetaProperties metaProperties = document.getContentTypeProperties();
+// Iterates through each of the child items of metaproperties
+for (int i = 0; i < metaProperties.getCount(); i++) 
+{
+	// Checks for particular display name of meta data and modifies its value
+	switch (metaProperties.get(i).getDisplayName()) 
+	{
+		case "ProgressStatus":
+			if (metaProperties.get(i).getType() == MetaPropertyType.Text && !metaProperties.get(i).getIsReadOnly())
+				metaProperties.get(i).setValue("Completed");
+			break;
+		case "Reviewed":
+			if (metaProperties.get(i).getType() == MetaPropertyType.Boolean && !metaProperties.get(i).getIsReadOnly())
+				metaProperties.get(i).setValue(true);
+			break;
+		case "Date":
+			if (metaProperties.get(i).getType() == MetaPropertyType.DateTime && !metaProperties.get(i).getIsReadOnly())
+				metaProperties.get(i).setValue(LocalDateTime.now(ZoneId.of("UTC")));
+			break;
+		case "Salary":
+			if ((metaProperties.get(i).getType() == MetaPropertyType.Number || metaProperties.get(i).getType() == MetaPropertyType.Currency) && !metaProperties.get(i).getIsReadOnly())
+				metaProperties.get(i).setValue(12000);
+			break;
+		case "Url":
+			if (metaProperties.get(i).getType() == MetaPropertyType.Url && !metaProperties.get(i).getIsReadOnly())
+			{
+				String[] value = { "https://www.syncfusion.com", "Syncfusion page" };
+				metaProperties.get(i).setValue(value);
+			}
+			break;
+		case "User":
+			if (metaProperties.get(i).getType() == MetaPropertyType.User && !metaProperties.get(i).getIsReadOnly()) 
+			{
+				String[] value = { "1234", "Syncfusion" };
+				metaProperties.get(i).setValue(value);
+			}
+			break;
+		default:
+			break;
+	}
+}
+// Saves the Word document
+document.save("Sample.docx", FormatType.Docx);
+// Closes the document
+document.close();
+{% endhighlight %}
+
+{% endtabs %} 
   
 ## Setting the Background for a Word document
 
