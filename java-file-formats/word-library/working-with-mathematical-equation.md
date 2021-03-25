@@ -11,8 +11,6 @@ Equations in Word document are combination of mathematical symbols or text. For 
 
 ![Mathematical equation in Microsoft Word document](WorkingwithMathematicalEquation_images/Mathematical Equation.png)
 
-N> You can use mathematical equation only in documents that are saved in the Open XML Format and cannot be used in the Word 97-2003 document (.doc) format.
-
 ## Types of equation
 
 The following different structures of equation can be created by using the Essential DocIO.
