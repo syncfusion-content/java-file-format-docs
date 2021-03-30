@@ -30,6 +30,6 @@ You can download the jars from the Syncfusion [maven repository](https://jars.sy
 
 **Frequently Asked questions**
 
-* [How to configure Syncfusion Java packages in Gradle?](https://help.syncfusion.com/java-file-formats/word-library/java-word-library-faq#how-to-configure-syncfusion-java-packages-in-gradle)
-* [How to configure Syncfusion Java packages in Apache Maven?](https://help.syncfusion.com/java-file-formats/word-library/java-word-library-faq#how-to-configure-syncfusion-java-packages-in-apache-maven)
+* [How to configure Syncfusion Java packages in Gradle?](https://help.syncfusion.com/java-file-formats/installation/configure-to-download-syncfusion-java-packages-from-gradle)
+* [How to configure Syncfusion Java packages in Apache Maven?](https://help.syncfusion.com/java-file-formats/installation/configure-to-download-syncfusion-java-packages-from-apache-maven)
 
