@@ -24,7 +24,7 @@ We have introduced a new licensing system for Syncfusion Java FileFormats platfo
 
 Please note that this license key is different from the installer unlock key that you might have used in the past and needs to be separately generated from Syncfusion website. Refer [this](https://www.syncfusion.com/kb/8950/difference-between-the-unlock-key-and-licensing-key) KB article to know more about difference between the Syncfusion Unlock Key and the Syncfusion License Key.
 
-Following licensing error will be shown if the license key is not registered in your projects, while using assemblies from evaluation installer or from the nuget.org.
+Following licensing error will be shown if the license key is not registered in your projects, while using assemblies from evaluation installer or from [maven repository](https://jars.syncfusion.com).
 
 <div id="license">
 
@@ -33,7 +33,7 @@ This application was built using a trial version of Syncfusion Essential Studio.
 </div>
 
 
-Trial message will be displayed as watermark in the generated documents, if Java packages libraries referred from  trial installer or [maven repository](https://jars.syncfusion.com)
+Trial message will be displayed as watermark in the generated documents, if Java packages libraries referred from  trial installer or from [maven repository](https://jars.syncfusion.com)
 
 **Example**
 
