@@ -10,7 +10,7 @@ documentation: ug
 
 # Syncfusion Licensing in Java FileFormats
 
-We have introduced a new licensing system for Syncfusion Java FileFormats platform starting from version 19.1.0.x release of Essential Studio. This licensing is apply to all the evaluators and only to paid customers who use Syncfusion Java packages from [maven repository](https://jars.syncfusion.com). If you use the evaluation installer or [maven repository](https://jars.syncfusion.com) to use Syncfusion Java packages, you must also include the corresponding platform and version license key in your projects.
+Starting from v19.1.0.x, if you reference Syncfusion Java packages from trial installer or from [maven repository](https://jars.syncfusion.com) you must also include the Java platforms license key in your projects for the corresponding version.
 
 ### Difference between unlock key and license key
 
