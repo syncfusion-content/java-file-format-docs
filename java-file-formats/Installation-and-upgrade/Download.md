@@ -21,7 +21,7 @@ documentation: ug
 Our 30-day trial can be downloaded in two ways.
 
    * Download Free Trial Setup
-   * Start Trials if don't have trial
+   * Start Trials if using components through [maven repository](https://jars.syncfusion.com)
 
 ### Download Free Trial Setup
 
@@ -41,7 +41,7 @@ Our 30-day trial can be downloaded in two ways.
 
    ![License and downloads of Syncfusion Essential Studio](download-images/start-trial-download-offline-installer.png)
    
-### Start Trials if don't have trial 
+### Start Trials if using components through [maven repository](https://jars.syncfusion.com)
 
 1. You can start your 30-day free trial for FileFormats from the [Start Trial](https://www.syncfusion.com/account/manage-trials/start-trials) page from your account.
    
