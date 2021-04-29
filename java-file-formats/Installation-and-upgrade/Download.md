@@ -10,7 +10,7 @@ documentation: ug
 
 # Download FileFormats Installer
 
-The Syncfusion FileFormats installer comes with the controls, and you can download [DocIO](https://www.syncfusion.com/word-framework/net),[PDF](https://www.syncfusion.com/pdf-framework/net),[Presentation](https://www.syncfusion.com/powerpoint-framework/net), and [XlsIO](https://www.syncfusion.com/excel-framework/net) from it. You can either download the licensed installer or try our trial installer depending on your license. 
+[DocIO](https://www.syncfusion.com/word-framework/net),[PDF](https://www.syncfusion.com/pdf-framework/net),[Presentation](https://www.syncfusion.com/powerpoint-framework/net), and [XlsIO](https://www.syncfusion.com/excel-framework/net) controls will be included in the Syncfusion FileFormats installer. You can either download the licensed installer or try our trial installer depending on your license. 
 
    -	Trial Installer
    -	Licensed Installer
@@ -72,4 +72,4 @@ Our 30-day trial can be downloaded in two ways.
    ![License and downloads of Syncfusion Essential Studio](download-images/license-download.png)
 	
 
-You can also refer to the [**Online installer**](https://help.syncfusion.com/file-formats/installation-and-upgrade/install-using-the-web-installer) and [**Offline installer**](https://help.syncfusion.com/file-formats/installation-and-upgrade/install-using-the-offline-installer) links for step-by-step installation guidelines.	
+You can also refer to the [**Online installer**](https://help.syncfusion.com/java-file-formats/installation-and-upgrade/install-using-the-web-installer) and [**Offline installer**](https://help.syncfusion.com/java-file-formats/installation-and-upgrade/install-using-the-offline-installer) links for step-by-step installation guidelines.	
