@@ -14,7 +14,7 @@ The system requirements for using our Syncfusion Java FileFormats platform are a
 ### Operating Systems
 
 * Windows 10
-* macOs versio 10.15.5 and later
+* macOs version 10.15.5 and later
 * Linux Ubuntu
 
 ### Hardware Environment
