@@ -309,6 +309,13 @@ secondText.getCharacterFormat().setUnderlineStyle(UnderlineStyle.DotDash);
 secondText.getCharacterFormat().setItalic(true);
 secondText.getCharacterFormat().setFontName("Times New Roman");
 secondText.getCharacterFormat().setTextColor(ColorSupport.getGreen());
+//Add a new paragraph to the section.
+IWParagraph secondParagraph = section.addParagraph();
+//Adds new text to the paragraph
+IWTextRange thirdText = secondParagraph.appendText("שלום עולם");
+thirdText.getCharacterFormat().setBidi(true);
+//Sets language identifier for right to left characters.
+thirdText.getCharacterFormat().setLocaleIdBidi((short)LocaleIDs.he_IL.getEnumValue());
 //Save the Word document.
 document.save("Sample.docx", FormatType.Docx);
 //Close the document.
