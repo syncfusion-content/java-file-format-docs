@@ -108,7 +108,7 @@ document.close();
 
 ##Accessing parent comment
 
-You can access the parent comment of a particular comment (reply) in a Word document using `Ancestor` API. The ancestor for parent comment returns `null` as default.
+You can access the parent comment of a particular comment (reply) in a Word document using `getAncestor()` API. The ancestor for parent comment returns `null` as default.
 
 The following code examples show how to access the parent comment of a particular comment in a Word document.
 
