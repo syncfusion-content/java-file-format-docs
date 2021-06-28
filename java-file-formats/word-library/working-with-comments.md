@@ -1,6 +1,6 @@
 ---
 title: Working with Comments | Syncfusion
-description: This section illustrates how to add, modify and remove the comments using Syncfusion Word library (Essential DocIO)
+description: This section illustrates about working with comments in the Word document without MS Word or Office interop
 platform: java-file-formats
 control: Word Library
 documentation: UG
@@ -101,6 +101,28 @@ document.getComments().removeAt(1);
 //Saves the Word document.
 document.save("Result.docx", FormatType.Docx);
 //Closes the document
+document.close();
+{% endhighlight %}
+
+{% endtabs %}
+
+##Accessing parent comment
+
+You can access the parent comment of a particular comment (reply) in a Word document using `getAncestor()` API. The ancestor for parent comment returns `null` as default.
+
+The following code examples show how to access the parent comment of a particular comment in a Word document.
+
+{% tabs %}  
+
+{% highlight JAVA %}
+//Create an empty WordDocument instance.
+WordDocument document = new WordDocument();
+//open an existing Word document using the Open method of WordDocument class.
+document.open("Comments.docx");
+//Get the Ancestor comment.
+WComment ancestorComment = document.getComments().get(1).getAncestor();
+//Save and Close the Word document.
+document.save("Result.docx", FormatType.Docx);
 document.close();
 {% endhighlight %}
 
