@@ -30,4 +30,6 @@ It is a non-UI component that provides a full-fledged document instance model si
 * Microsoft Word 2016
 * Microsoft Word 2019
 
-T> Sometimes a Java application may throw an error like this "Java.Lang.OutOfMemoryError." Usually, this error occurs due to insufficient RAM heap space to allocate an object in the Java heap. To avoid this kind of problem, we suggest [increasing the JVM heap size](https://docs.oracle.com/cd/E29587_01/PlatformServices.60x/ps_rel_discovery/src/crd_advanced_jvm_heap.html). 
+T> Sometimes a Java application may throw an error like this "Java.Lang.OutOfMemoryError." Usually, this error occurs due to insufficient RAM heap space to allocate an object in the Java heap. To avoid this kind of problem, we suggest [increasing the JVM heap size](https://docs.oracle.com/cd/E29587_01/PlatformServices.60x/ps_rel_discovery/src/crd_advanced_jvm_heap.html).
+
+N> Currently, Essential DocIO supports the .DOCX, .DOTX, .DOTM, .DOCM, .WordML, .RTF, .Txt, WordML, HTML, Word2007, Word2010 and Word2013 file formats only. Please refer to the [supported and unsupported features](https://help.syncfusion.com/java-file-formats/word-library/supported-and-unsupported-features) in the essential DocIO.
