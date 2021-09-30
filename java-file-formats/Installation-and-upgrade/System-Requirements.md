@@ -42,3 +42,7 @@ The system requirements for using our Syncfusion Java FileFormats platform are a
 * RAM: 512 MB (minimum), 1 GB (recommended)
 * Hard disk: up to 8.5 GB of available space may be required. However, 750 MB free space is required in boot drive even if you are installing in other drive.
 
+### Supported Java versions
+
+Syncfusion Java libraries supports Java SE 8.0(1.8) or above versions.
+
