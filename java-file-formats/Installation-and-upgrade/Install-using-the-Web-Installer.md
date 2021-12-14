@@ -9,7 +9,7 @@ documentation: ug
 
 # Installation using Web Installer
 
-You can refer to the [**Download**](https://help.syncfusion.com/file-formats/installation-and-upgrade/download) section to learn how to get the FileFormats trial or licensed installer.
+You can refer to the [**Download**](https://help.syncfusion.com/java-file-formats/installation-and-upgrade/download) section to learn how to get the FileFormats trial or licensed installer.
 
 ### Overview
 
