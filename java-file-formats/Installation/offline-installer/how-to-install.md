@@ -8,7 +8,7 @@ documentation: ug
 
 ---
 
-# Installation using Offline Installer
+# Installing Syncfusion Java FileFormats offline installer
 
 ## Installing with UI   
 
