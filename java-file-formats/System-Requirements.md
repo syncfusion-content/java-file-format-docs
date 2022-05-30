@@ -1,13 +1,13 @@
 ---
 layout: post
-title: System Requirements | file-formats | Syncfusion
-description: this section provides the information about the system requirements for file formats platform with supported browsers
+title: System Requirements in Java FileFormats - Syncfusion
+description: Checkout and learn here all about the system requirements needed to use Syncfusion Java FileFormats Components.
 platform: file-formats
 control: System Requirements
 documentation: ug
 
 ---
-# System Requirements For Java FileFormats
+# System requirements for Java FileFormats Components
 
 The system requirements for using our Syncfusion Java FileFormats platform are as follows
 

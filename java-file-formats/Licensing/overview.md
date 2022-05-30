@@ -1,14 +1,14 @@
 ---
 layout: post
-title: About Essential Studio FileFormats Licensing | Syncfusion
-description: Learn here about Syncfusion Essential Studio FileFormats license key, how to generate the license key, how to register the license key, and more details.
+title: Overview of Syncfusion license and unlock keys - Syncfusion
+description: Learn here about the Syncfusion license and unlock keys and difference between license and unlock keys.
 platform: java-file-formats
 control: Essential Studio
 documentation: ug
 ---
 
 
-# Syncfusion Licensing in Java FileFormats
+# Syncfusion Licensing Overview
 
 Starting from v19.1.0.x, if you reference Syncfusion Java packages from trial installer or from [maven repository](https://jars.syncfusion.com) you must also include the Java platforms license key in your projects for the corresponding version.
 
@@ -21,3 +21,9 @@ Trial message will be displayed as watermark in the generated documents, if Java
 **Example**
 
 ![IO Licensing Message](licensing-images/io-licensing-message.png)
+
+
+## See Also
+
+* [How to Generate Syncfusion Java FileFormats License Key?](https://help.syncfusion.com/java-file-formats/licensing/generating-license-keys)
+* [How to Register Syncfusion License Key in Java FileFormats Application?](https://help.syncfusion.com/java-file-formats/licensing/registering-license-keys)
