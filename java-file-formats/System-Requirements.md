@@ -7,7 +7,7 @@ control: System Requirements
 documentation: ug
 
 ---
-# System requirements for Java FileFormats Components
+# System Requirements for Java FileFormats Components
 
 The system requirements for using our Syncfusion Java FileFormats platform are as follows
 
