@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Downloading Syncfusion FileFormats offline installer - Syncfusion
-description: TLearn here about how to download the Syncfusion FileFormats offline installer from our Syncfusion website with license.
+description: Learn here about how to download the Syncfusion FileFormats offline installer from our Syncfusion website with license.
 platform: java-file-formats
 control: Installation and Deployment
 documentation: ug
