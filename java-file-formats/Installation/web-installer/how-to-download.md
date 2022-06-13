@@ -8,7 +8,7 @@ documentation: ug
 
 ---
 
-# Downloading Syncfusion Java FileFormats Web Installer
+# Downloading Syncfusion FileFormats Web Installer
 
 [DocIO](https://www.syncfusion.com/word-framework/net),[PDF](https://www.syncfusion.com/pdf-framework/net),[Presentation](https://www.syncfusion.com/powerpoint-framework/net), and [XlsIO](https://www.syncfusion.com/excel-framework/net) controls will be included in the Syncfusion FileFormats installer. You can either download the licensed installer or try our trial installer depending on your license. 
 
@@ -71,7 +71,7 @@ Our 30-day trial can be downloaded in two ways.
    
    ![License and downloads of Syncfusion Essential Studio](images/start-trial-download-web-installer.png)
    
-8. After downloading, the Syncfusion Java FileFormats web installer can be unlocked using Syncfusion registered login credential.
+8. After downloading, the Syncfusion FileFormats web installer can be unlocked using Syncfusion registered login credential.
 
    N> For Syncfusion trial and licensed products, there is no separate web installer. Based on your account license, Syncfusion trial or licensed products will be installed via web installer.
 

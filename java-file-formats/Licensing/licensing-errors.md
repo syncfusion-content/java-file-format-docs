@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Overview of Syncfusion licensing errors - Syncfusion 
-description: Learn here about Syncfusion common licensing errors which appears on license validation in Syncfusion Java FileFormat applications.
+description: Learn here about Syncfusion common licensing errors which appears on license validation in Syncfusion FileFormat applications.
 platform: java-file-formats
 control: Essential Studio
 documentation: ug

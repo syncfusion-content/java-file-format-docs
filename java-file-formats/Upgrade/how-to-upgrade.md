@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Upgrading Syncfusion Java FileFormats installer to a latest version - Syncfusion
-description: Learn here about the how upgrade Syncfusion Java FileFormats installer to a latest version from website and control panel.
+title: Upgrading Syncfusion FileFormats installer to a latest version - Syncfusion
+description: Learn here about the how upgrade Syncfusion FileFormats installer to a latest version from website and control panel.
 platform: java-file-formats
 control: Essential Studio
 documentation: ug

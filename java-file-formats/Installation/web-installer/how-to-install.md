@@ -7,7 +7,7 @@ control: Installation and Deployment
 documentation: ug
 ---
 
-# Installing Syncfusion Java FileFormats web installer
+# Installing Syncfusion FileFormats web installer
 
 
 ## Overview

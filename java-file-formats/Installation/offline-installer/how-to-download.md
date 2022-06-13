@@ -8,7 +8,7 @@ documentation: ug
 
 ---
 
-# Downloading Syncfusion Java FileFormats offline installer
+# Downloading Syncfusion FileFormats offline installer
 
 [DocIO](https://www.syncfusion.com/word-framework/net),[PDF](https://www.syncfusion.com/pdf-framework/net),[Presentation](https://www.syncfusion.com/powerpoint-framework/net), and [XlsIO](https://www.syncfusion.com/excel-framework/net) controls will be included in the Syncfusion FileFormats installer. You can either download the licensed installer or try our trial installer depending on your license. 
 
