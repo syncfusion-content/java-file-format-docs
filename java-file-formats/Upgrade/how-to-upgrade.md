@@ -1,7 +1,7 @@
 ---
 layout: post
-title: Major Version to Service Pack Version| FileFormats | Syncfusion
-description: this section provides the information about upgrading the FileFormats projects from major version to service pack version
+title: Upgrading Syncfusion FileFormats installer to a latest version - Syncfusion
+description: Learn here about the how upgrade Syncfusion FileFormats installer to a latest version from website and control panel.
 platform: java-file-formats
 control: Essential Studio
 documentation: ug
