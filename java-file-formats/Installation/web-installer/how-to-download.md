@@ -49,7 +49,7 @@ Our 30-day trial can be downloaded in two ways.
 
    N> If you've already used the trial products and they haven't expired, you won't be able to start the trial for the same product again.
 
-4. After you've started the trial, go to the [Trials & Downloads](https://www.syncfusion.com/account/manage-trials/downloads) page to get the latest version trial installer. You can generate the [unlock key](https://www.syncfusion.com/kb/8069/how-to-generate-unlock-key-for-essentials-studio-products) and [license key](https://help.syncfusion.com/java-file-formats/licensing/generating-license-keys) here at any time before the trial period expires. (as shown in below screenshot.)
+4. After you've started the trial, go to the [Trials & Downloads](https://www.syncfusion.com/account/manage-trials/downloads) page to get the latest version trial installer. You can generate the [unlock key](https://www.syncfusion.com/kb/8069/how-to-generate-unlock-key-for-essentials-studio-products) and [license key](https://help.syncfusion.com/java-file-formats/licensing/how-to-generate) here at any time before the trial period expires. (as shown in below screenshot.)
 
    ![License and downloads of Syncfusion Essential Studio](images/start-trial-download-installer.png)
 
@@ -75,4 +75,4 @@ Our 30-day trial can be downloaded in two ways.
 
    N> For Syncfusion trial and licensed products, there is no separate web installer. Based on your account license, Syncfusion trial or licensed products will be installed via web installer.
 
-You can also refer to the [**Web installer**](https://help.syncfusion.com/java-file-formats/installation-and-upgrade/install-using-the-web-installer) links for step-by-step installation guidelines.	
+You can also refer to the [**Web installer**](https://help.syncfusion.com/java-file-formats/installation/web-installer/how-to-install) links for step-by-step installation guidelines.	
