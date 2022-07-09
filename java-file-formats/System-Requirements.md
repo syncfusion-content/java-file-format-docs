@@ -2,7 +2,7 @@
 layout: post
 title: System Requirements in FileFormats - Syncfusion
 description: Checkout and learn here all about the system requirements needed to use Syncfusion FileFormats Components.
-platform: file-formats
+platform: java-file-formats
 control: System Requirements
 documentation: ug
 
