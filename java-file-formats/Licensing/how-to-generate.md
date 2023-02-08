@@ -13,7 +13,7 @@ License keys for Java can be generated from the [License & Downloads](https://sy
 
 ![Get License Key](licensing-images/generate-license.png)
 
-I> * Syncfusion license keys are **version and platform-specific**. For example, you must generate separate keys for the front-end (JavaScript) and server-side (Java). Refer to this [KB](https://www.syncfusion.com/kb/8976/how-to-generate-license-key-for-licensed-products?) to generate the license key for the required version and platform.
+I> * Syncfusion license keys are **version and platform-specific**. For example, you must generate separate keys for the front-end (JavaScript) and server-side (Java). Refer to this [KB](https://www.syncfusion.com/kb/8976/how-to-generate-license-key-for-licensed-products) to generate the license key for the required version and platform.
 * Refer this [KB](https://www.syncfusion.com/kb/8951/which-version-syncfusion-license-key-should-i-use-in-my-application) to know about which version of the Syncfusion license key should be used in the application.
 
 ## Claim License key
