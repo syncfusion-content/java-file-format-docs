@@ -24,7 +24,7 @@ Similar to the Knowledge Base, the [Forum](https://www.syncfusion.com/forums/)�
 
 ## Create a support incident
 
-If you are unable to find the information you are looking for in the self-help resources mentioned above, please contact us by creating a [support ticket](https://support.syncfusion.com/account/login).
+If you are unable to find the information you are looking for in the self-help resources mentioned above, please contact us by creating a [support ticket](https://internalsupport.bolddesk.com/agent/tickets/create).
 
 ## List of File Format libraries:
 
