@@ -43,7 +43,7 @@ Import the following package in your Java application.
 
 import com.syncfusion.docio.*;
 
-import com.syncfusion.Javahelper.*;
+import com.synfusion.javahelper.system,.*;
 
 {% endhighlight %}
 
