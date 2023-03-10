@@ -28,7 +28,7 @@ This jar contains common functionalities required for file format libraries.<br/
 </tbody>
 </table>
 
-Get the dependent jar files by installing [file formats controls](https://www.syncfusion.com/sales/products/fileformats?utm_source=ug&utm_medium=listing&utm_campaign=java-word-library#). You can find the required jars in the build installed drive.
+Get the dependent jar files by installing [file formats controls](https://www.syncfusion.com/sales/teamlicense). You can find the required jars in the build installed drive.
 
 **Location:** {ProgramFilesFolder}\Syncfusion\Essential Studio\ {Platform}\ {version}\JarFiles
 **Example:** C:\Program Files (x86)\Syncfusion\Essential Studio\FileFormats\18.3.0.35\JarFiles
