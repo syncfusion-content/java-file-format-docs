@@ -1,6 +1,6 @@
 ---
-title: Convert Markdown to Word document in C# | DocIO | Syncfusion
-description: Convert Markdown to Word document in C# using Syncfusion Java Word library without Microsoft Word or interop dependencies
+title: Convert Markdown to Word document in Java | DocIO | Syncfusion
+description: Convert Markdown to Word document in java using Syncfusion Java Word library without Microsoft Word or interop dependencies
 platform: java-file-formats
 control: Word library
 documentation: UG
@@ -22,7 +22,7 @@ The following code example shows how to convert Markdown to Word document.
 
 {% endtabs %}
 
-T> You can also save the markdown file as [HTML](https://help.syncfusion.com/file-formats/docio/html), [PDF](https://help.syncfusion.com/file-formats/docio/word-to-pdf), and [Image](https://help.syncfusion.com/file-formats/docio/word-to-image).
+T> You can also save the markdown file as [HTML](https://help.syncfusion.com/file-formats/docio/html).
 
 ## Customize image data
 
