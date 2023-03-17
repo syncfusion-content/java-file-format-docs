@@ -1,6 +1,6 @@
 ---
 title: Convert Markdown to Word document in Java | DocIO | Syncfusion
-description: Convert Markdown to Word document in java using Syncfusion Java Word library without Microsoft Word or interop dependencies
+description: Convert Markdown to Word document in java using Syncfusion Java Word library without Microsoft Word.
 platform: java-file-formats
 control: Word library
 documentation: UG
