@@ -17,22 +17,58 @@ The following code example shows how to convert Markdown to Word document.
 
 {% tabs %}
 {% highlight JAVA %}
-
+//Open an existing Markdown file.
+WordDocument document = new WordDocument("Input.md", FormatType.Markdown);
+//Save as a Word document.
+document.save("MarkdownToWord.docx", FormatType.Docx);
+//Close the document.
+document.close();
 {% endhighlight %}
 
 {% endtabs %}
 
-T> You can also save the markdown file as [HTML](https://help.syncfusion.com/file-formats/docio/html).
+T> You can also save the markdown file as [HTML](https://help.syncfusion.com/java-file-formats/word-library/html).
 
 ## Customize image data
 
-The Java Word library provides a MdImageNodeVisited event, which customizes image data while importing a Markdown file. Implement the logic to customize the image data by using this MdImageNodeVisited event.
+The Java Word library provides a ImageNodeVisited event, which customizes image data while importing a Markdown file. Implement the logic to customize the image data by using this ImageNodeVisited event.
 
 The following code example shows how to load image data based on the image source path when importing the Markdown files.
 
 {% tabs %}
 {% highlight JAVA %}
-
+//Create a Word document instance.
+WordDocument document = new WordDocument();
+//Customize the image while importing Markdown using event.
+document.getMdImportSettings().ImageNodeVisited.add("mdImportSettings_ImageNodeVisited", new MdImageNodeVisitedEventHandler() 
+{ListSupport<MdImageNodeVisitedEventHandler> delegateList = new ListSupport<MdImageNodeVisitedEventHandler>(MdImageNodeVisitedEventHandler.class);
+// Represents event handling for MdImageNodeVisitedEventHandlerCollection.
+public void invoke(Object sender, MdImageNodeVisitedEventArgs args) throws Exception
+{
+    mdImportSettings_ImageNodeVisited(sender, args);
+}
+// Represents the method that handles ImageNodeVisited event.
+public void dynamicInvoke(Object... args) throws Exception
+{
+    mdImportSettings_ImageNodeVisited((Object) args[0], (MdImageNodeVisitedEventArgs) args[1]);
+}
+// Represents the method that handles ImageNodeVisited event to add collection item.
+public void add(MdImageNodeVisitedEventHandler delegate) throws Exception
+{
+    if (delegate != null)
+        delegateList.add(delegate);
+}
+// Represents the method that handles ImageNodeVisited event to remove collection item.
+public void remove(MdImageNodeVisitedEventHandler delegate) throws Exception
+{
+    if (delegate != null)
+        delegateList.remove(delegate);
+}
+});
+//Open the Markdown file.
+document.Open("Input.md");
+//Save as a Word document.
+document.Save("Sample.docx");
 {% endhighlight %}
 
 {% endtabs %}
@@ -41,7 +77,15 @@ The following code examples show the event handler to customize the image based 
 
 {% tabs %}
 {% highlight JAVA %}
-
+private static void mdImportSettings_ImageNodeVisited(Object sender,MdImageNodeVisitedEventArgs args)throws Exception
+{
+    //Set the image stream based on the image name from the input Markdown.
+    if(args.getUri().equals("Image_1.png"))
+        args.setImageStream(new FileStreamSupport("Image_1.png",FileMode.Open));
+    else
+        if(args.getUri().equals("Image_2.png"))
+            args.setImageStream(new FileStreamSupport("Image_2.png",FileMode.Open));
+}
 {% endhighlight %}
 
 {% endtabs %}
