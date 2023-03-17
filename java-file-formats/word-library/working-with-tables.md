@@ -470,6 +470,84 @@ document.close();
 {% endhighlight %}
 
 {% endtabs %}  
+
+### Apply Base Style
+
+Table styles can be based on other table styles also. When applying a base style, the new style will inherit the values of the base style that are not explicitly redefined in the new style. You can apply a custom table style or a built-in table style as a base for the table style.
+
+The following code example illustrates how to apply built-in and custom table styles as base styles for another custom table.
+
+{% tabs %} 
+
+{% highlight JAVA %}
+//Create a new Word document.
+WordDocument document = new WordDocument();
+//Add one section and paragraph to the document.
+document.ensureMinimal();
+WTable table = (WTable)document.getLastSection().addTable();
+table.resetCells(3,2);
+table.get(0,0).addParagraph().appendText("Row 1 Cell 1");
+table.get(0,1).addParagraph().appendText("Row 1 Cell 2");
+table.get(1,0).addParagraph().appendText("Row 2 Cell 1");
+table.get(1,1).addParagraph().appendText("Row 2 Cell 2");
+table.get(2,0).addParagraph().appendText("Row 3 Cell 1");
+table.get(2,1).addParagraph().appendText("Row 3 Cell2");
+
+//Add a new custom table style.
+WTableStyle tableStyle = (WTableStyle)document.addTableStyle("CustomStyle1");
+tableStyle.getTableProperties().setRowStripe((long)1);
+//Apply conditional formatting for the first row.
+ConditionalFormattingStyle firstRowStyle = tableStyle.getConditionalFormattingStyles().add(ConditionalFormattingType.FirstRow);
+firstRowStyle.getCharacterFormat().setBold(true);
+//Apply conditional formatting for the odd row.
+ConditionalFormattingStyle oddRowBandingStyle = tableStyle.getConditionalFormattingStyles().add(ConditionalFormattingType.OddRowBanding);
+oddRowBandingStyle.getCharacterFormat().setItalic(true);
+//Apply built-in table style as base style for CustomStyle1.
+tableStyle.applyBaseStyle(BuiltinTableStyle.TableContemporary);
+//Apply the custom table style to the table.
+table.applyStyle("CustomStyle1");
+document.getLastSection().addParagraph();
+
+//Create another table in the Word document.
+table=(WTable)document.getLastSection().addTable();
+table.resetCells(3,2);
+table.get(0,0).addParagraph().appendText("Row 1 Cell 1");
+table.get(0,1).addParagraph().appendText("Row 1 Cell 2");
+table.get(1,0).addParagraph().appendText("Row 2 Cell 1");
+table.get(1,1).addParagraph().appendText("Row 2 Cell 2");
+table.get(2,0).addParagraph().appendText("Row 3 Cell 1");
+table.get(2,1).addParagraph().appendText("Row 3 Cell2");
+
+//Add a new custom table style.
+tableStyle=(WTableStyle)document.addTableStyle("CustomStyle2");
+tableStyle.getTableProperties().setRowStripe((long)1);
+ //Apply conditional formatting for the first row.
+firstRowStyle=tableStyle.getConditionalFormattingStyles().add(ConditionalFormattingType.FirstRow);
+firstRowStyle.getParagraphFormat().setHorizontalAlignment(HorizontalAlignment.Center);
+//Apply conditional formatting for the odd row.
+oddRowBandingStyle=tableStyle.getConditionalFormattingStyles().add(ConditionalFormattingType.OddRowBanding);
+oddRowBandingStyle.getCharacterFormat().setTextColor((ColorSupport.getRed()).clone());
+
+//Add a new custom table style.
+WTableStyle tableStyle2 = (WTableStyle)document.addTableStyle("CustomStyle3");
+tableStyle2.getTableProperties().setRowStripe((long)1);
+//Apply conditional formatting for the first row.
+ConditionalFormattingStyle firstRowStyle2 = tableStyle2.getConditionalFormattingStyles().add(ConditionalFormattingType.FirstRow);
+firstRowStyle2.getCellProperties().setBackColor((ColorSupport.getBlue()).clone());
+//Apply conditional formatting for the odd row.
+ConditionalFormattingStyle oddRowStyle2 = tableStyle2.getConditionalFormattingStyles().add(ConditionalFormattingType.OddRowBanding);
+oddRowStyle2.getCellProperties().setBackColor((ColorSupport.getYellow()).clone());
+//Apply custom table style as base style for another custom table style.
+tableStyle2.applyBaseStyle("CustomStyle2");
+//Apply the custom table style to the table.
+table.applyStyle("CustomStyle3");
+//Save the Word document.
+document.save("Sample.docx",FormatType.Docx);
+//Close the Word document
+document.close();
+{% endhighlight %}
+
+{% endtabs %}  
  
 ## Merging cells vertically and horizontally
 
