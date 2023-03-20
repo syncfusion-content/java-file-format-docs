@@ -9,7 +9,7 @@ documentation: UG
 
 Fields in a Word document are placeholders for data that might change on field update. Fields are represented by the `WField` and `WFieldMark` instances in DocIO. A field in a Word document contains field codes, field separator, field result, and field end.
 
-To learn various types of Microsoft Word supported fields and their syntax,refer to the [MSDN article](https://support.office.com/en-US/article/Field-codes-in-Word-1ad6d91a-55a7-4a8d-b535-cf7888659a51#)
+To learn various types of Microsoft Word supported fields and their syntax,refer to the [MSDN article](https://support.microsoft.com/en-us/office/list-of-field-codes-in-word-1ad6d91a-55a7-4a8d-b535-cf7888659a51?ui=en-us&rs=en-us&ad=us#)
 
 The entire field code is included in Document Object Model(DOM). Hence, adding a field will automatically include the following elements in DOM:
 
