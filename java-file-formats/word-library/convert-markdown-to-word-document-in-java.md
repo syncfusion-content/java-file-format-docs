@@ -348,7 +348,7 @@ N> Hook the event handler before opening a Word document as per the above code e
 </td>
 <td style="width: 41.7072%;">
 <p>For image, enclose an alternative text within the brackets [], and then link of the image source within parentheses ().</p>
-<p>If URL path is base64string, then it will be preserved properly in Word document. Otherwise, you can also {{'[set image from stream while opening Markdown file.](https://help.syncfusion.com/file-formats/docio/convert-markdown-to-word-document-in-csharp#customize-image-data)'| markdownify }}</p>
+<p>If URL path is base64string, then it will be preserved properly in Word document. Otherwise, you can also {{'[set image from stream while opening Markdown file.](https://help.syncfusion.com/java-file-formats/word-library/convert-markdown-to-word-document-in-csharp#customize-image-data)'| markdownify }}</p>
 </td>
 </tr>
 <tr>
