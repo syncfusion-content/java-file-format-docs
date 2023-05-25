@@ -262,7 +262,7 @@ document.close();
 
 The resultant Word document looks as follows.
 
-![Creating a new Word document from scratch with basic elements](GettingStarted_images/GettingStarted_img1.png)
+![Creating a new Word document from scratch with basic elements](GettingStarted_images/java-file-formats-word-library-new-document.png)
 
 
 ## Performing Mail merge
@@ -281,7 +281,7 @@ Follow the given steps to perform a simple Mail merge in a Word document.
 
 Let’s consider that you have a template Word document with the merge fields as shown.
 
-![Performing Mail merge input document](GettingStarted_images/GettingStarted_img2.png)
+![Performing Mail merge input document](GettingStarted_images/java-file-formats-word-library-mail-merge-input.png)
 
 The `MailMerge` class provides various overloads for the `execute` method to perform a Mail merge from the various data source. The Mail merge operation replaces the matching merge fields with the respective data.
 
@@ -307,7 +307,7 @@ document.close();
 
 The resultant Word document looks as follows.
 
-![Performing Mail merge output document](GettingStarted_images/GettingStarted_img3.png)
+![Performing Mail merge output document](GettingStarted_images/java-file-formats-word-library-mail-merge-output.png)
 
 ### Simple Mail merge with Group
 
@@ -320,7 +320,7 @@ The region between these two merge fields gets repeated for every record from th
 
 For example – let’s consider that you have a template document as shown.
 
-![Simple Mail merge with Group input document](GettingStarted_images/GettingStarted_img4.png)
+![Simple Mail merge with Group input document](GettingStarted_images/java-file-formats-word-library-mail-merge-with-group-input.png)
 
 Here in this template, the employees are the group name and the exact same name should be used while performing the Mail merge through code. There are two special merge fields “TableStart:Employees” and “TableEnd:Employees” to denote the start and end of the Mail merge group.
 
@@ -516,4 +516,4 @@ public class Employee
 
 The resultant document looks as follows.
 
-![Simple Mail merge with Group output document](GettingStarted_images/GettingStarted_img5.png)
+![Simple Mail merge with Group output document](GettingStarted_images/java-file-formats-word-library-mail-merge-with-group-output.png)
