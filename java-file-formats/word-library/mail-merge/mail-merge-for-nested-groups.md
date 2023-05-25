@@ -24,7 +24,7 @@ For example:
   
 For example, consider that you have a template document as follow.
 
-![Word document template to map the fields of ancestor group](../MailMerge_images/Mail_merge_with_implicit_relation_template.png)
+![Word document template to map the fields of ancestor group](../MailMerge_images/java-file-formats-word-library-mail-merge-ancestor-group-template.png)
 
 In the above template, Organizations is the owner group and it has two child groups Departments and Employees. The Supervisor merge field of Departments group is used in Employees group.
 
@@ -235,4 +235,4 @@ public class EmployeeDetails
 
 By executing the above code example, it generates the resultant Word document as follows.
  
-![Output Word document of mapping field of ancestor group](../MailMerge_images/Mail_merge_with_implicit_relation_output.png)
+![Output Word document of mapping field of ancestor group](../MailMerge_images/java-file-formats-word-library-mail-merge-ancestor-group-output.png)
