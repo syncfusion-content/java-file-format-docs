@@ -126,7 +126,7 @@ document.close();
 
 IF field compares two values and updates the field result with true text, when comparison succeeds otherwise false text.
 
-To learn more about IF field and its syntax in Microsoft Word, refer to the [MSDN article](https://support.office.com/en-au/article/Field-codes-IF-field-9f79e82f-e53b-4ff5-9d2c-ae3b22b7eb5e#)
+To learn more about IF field and its syntax in Microsoft Word, refer to the [MSDN article](https://support.microsoft.com/en-us/office/field-codes-if-field-9f79e82f-e53b-4ff5-9d2c-ae3b22b7eb5e?ui=en-us&rs=en-us&ad=us#)
 
 The following code example explains how to add an If field to a Word document.
 
@@ -337,7 +337,7 @@ private WordDocument createDocument() throws Exception
 
 By executing the above code example, it generates output Word document as follows.
 
-![Output document after applied Number format for SEQ field](WorkingWithFields_images/SEQField_NumberFormat.png)
+![Output document after applied Number format for SEQ field](workingwithfields_images/java-file-formats-word-library-numberformat.png)
 
 ### Refer Bookmark
 You can refer the sequence field elsewhere in the document by including bookmark name through `BookmarkName` property. The referred sequence field may be present anywhere in the Word document, but not beyond the respective bookmark end.
@@ -372,7 +372,7 @@ document.close();
 
 By executing the above code example, it generates output Word document as follows.
 
-![Output document of Bookmark referred in SEQ field](WorkingWithFields_images/SEQField_Bookmark.png)
+![Output document of Bookmark referred in SEQ field](workingwithfields_images/java-file-formats-word-library-bookmark.png)
 
 ### Reset numbering 
 You can reset the numbering for sequence field (\r) using `ResetNumber` property and reset the numbering based on heading level (\s) in the Word document using `ResetHeadingLevel` property. 
@@ -508,7 +508,7 @@ private WordDocument createDocument() throws Exception
 
 By executing the above code example, it generates output Word document as follows.
 
-![Output of reset numbering in SEQ field](WorkingWithFields_images/SEQField_ResetNumbering.png)
+![Output of reset numbering in SEQ field](workingwithfields_images/java-file-formats-word-library-resetnumbering.png)
 
 ### Repeat nearest number 
 You can insert the closest preceding sequence number (\c) using `RepeatNearestNumber` property.
@@ -600,7 +600,7 @@ private WordDocument createDocument()throws Exception
 
 By executing the above code example, it generates output Word document as follows.
 
-![Output of repeating Nearest number of SEQ field](WorkingWithFields_images/SEQField_RepeatNearestNumber.png)
+![Output of repeating Nearest number of SEQ field](workingwithfields_images/java-file-formats-word-library-repeatnearestnumber.png)
 
 ### Hide
 You can hide the field result of the sequence field using `HideResult` property.
@@ -691,7 +691,7 @@ private WordDocument createDocument() throws Exception
 
 By executing the above code example, it generates output Word document as follows.
 
-![Output after hiding the sequence field](WorkingWithFields_images/SEQField_Hide.png)
+![Output after hiding the sequence field](workingwithfields_images/java-file-formats-word-library-hide.png)
 
 ### Next Sequence number
 You can insert the next sequence number for the specified items using `InsertNextNumber` property. This is the default.

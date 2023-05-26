@@ -16,7 +16,7 @@ The [Microsoft Word's](https://en.wikipedia.org/wiki/Microsoft_Word#) native fil
 
 ## Word Open XML formats (2007 & later)
 
-[Office Open XML](http://en.wikipedia.org/wiki/Office_Open_XML#) (OOXML or Microsoft Open XML (MOX)) is a zipped, new XML-based file format introduced by Microsoft in Office 2007 applications.The WordprocessingML is the markup language used by the Microsoft Office Word to store its DOCX documents.
+[Office Open XML](https://en.wikipedia.org/wiki/Office_Open_XML#) (OOXML or Microsoft Open XML (MOX)) is a zipped, new XML-based file format introduced by Microsoft in Office 2007 applications.The WordprocessingML is the markup language used by the Microsoft Office Word to store its DOCX documents.
 
 DocIO supports the following WordprocessingML:
 
