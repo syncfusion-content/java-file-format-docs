@@ -48,5 +48,4 @@ Java class library used to create, read, edit, and convert Microsoft Word files 
 </table>
 
 ## Quick Start links:
-
 [Create Word file in Java without Microsoft Office](https://help.syncfusion.com/java-file-formats/word-library/getting-started)
