@@ -5,6 +5,7 @@ platform: java-file-formats
 control: Word Library
 documentation: UG
 ---
+
 # Working with Bookmarks
 
 A bookmark identifies a location or a selection of text within a document that you can name and identify for future reference.
