@@ -407,12 +407,12 @@ As per Microsoft Word behavior, you cannot replace the bookmark contents when th
 
 Case 1
 
-![Bookmark start and end present in different tables](workingwithbookmarks_images/java-file-formats-word-library-different-tables.jpeg)
+![Bookmark start and end present in different tables](workingwithbookmarks_images/java-word-library-different-tables.jpeg)
 
 
 Case 2
 
-![Bookmark start placed outside table and end in table](WorkingwithBookmarks_images/java-file-formats-word-library-outside-table.jpeg)
+![Bookmark start placed outside table and end in table](WorkingwithBookmarks_images/java-word-library-outside-table.jpeg)
 
 
 The following code example shows how to replace a specified bookmark content by using `replaceBookmarkContent` method in Word document.
