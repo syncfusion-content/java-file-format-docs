@@ -23,7 +23,7 @@ The region where the Mail merge operations are to be performed must be marked by
   
 For example, consider that you have a template document as shown.
 
-![Java File Formats Word Library Mail merge for a group Template](../MailMerge_images/java-file-formats-word-library-mail-merge-template.png)
+![Java File Formats Word Library Mail merge for a group Template](../mailmerge_images/java-file-formats-word-library-mail-merge-template.png)
 
 In this template, Employees is the group name and the same name should be used while performing Mail merge through code. There are two special merge fields “TableStart:Employees” and “TableEnd:Employees” to denote the start and end of the Mail merge group.
 
@@ -217,4 +217,4 @@ public class Employee
 
 The resultant document looks as follows.
 
-![Java File Formats Word Library Group resultant document](../MailMerge_images/java-file-formats-word-library-mail-merge-output.png)
+![Java File Formats Word Library Group resultant document](../mailmerge_images/java-file-formats-word-library-mail-merge-output.png)
