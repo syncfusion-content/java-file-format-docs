@@ -407,7 +407,7 @@ As per Microsoft Word behavior, you cannot replace the bookmark contents when th
 
 Case 1
 
-![Bookmark start and end present in different tables](WorkingwithBookmarks_images/java-file-formats-word-library-different-tables.jpeg)
+![Bookmark start and end present in different tables](workingwithbookmarks_images/java-file-formats-word-library-different-tables.jpeg)
 
 
 Case 2
