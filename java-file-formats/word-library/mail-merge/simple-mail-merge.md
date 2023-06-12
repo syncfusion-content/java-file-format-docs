@@ -45,7 +45,7 @@ document.close();
 
 The generated template document looks as follows.
 
-![Word document template](../MailMerge_images/Simple_mail_merge_template.png)
+![Word document template Java File Formats Word Library Mail merge](../MailMerge_images/java-file-formats-word-library-mail-merge-simple-template.png)
 
 ### Execute mail merge
 
@@ -70,4 +70,4 @@ document.close();
 
 The resultant document looks as follows.
 
-![Mail merged Word document](../MailMerge_images/Simple_mail_merge_output.png)
+![Mail merged Word document in Java File Formats Word Library](../MailMerge_images/java-file-formats-word-library-mail-merge-simple-output.png)
