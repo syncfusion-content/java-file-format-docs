@@ -129,7 +129,7 @@ document.close();
 Word library now allows you to create or group multiple shapes, pictures, text boxes as a group shape in Word document (DOCX) and preserve it as in DOCX and WordML format conversions.
 
 You can create a document with group shapes by using Microsoft Word. It provides an option to group a set of shapes and images as a single shape and a group shape as individual item.
-![Create Group shape in Java File Formats Microsoft Word](working-with-shapes_images/java-file-formats-word-library-grouping-shapes.jpeg)
+![Create Group shape in Java File Formats Microsoft Word](working-with-shapes_images/java-word-library-grouping-shapes.jpeg)
 
 **Key Features:**
 
