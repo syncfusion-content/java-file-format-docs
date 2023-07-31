@@ -600,7 +600,7 @@ private WordDocument createDocument()throws Exception
 
 By executing the above code example, it generates output Word document as follows.
 
-![Output of repeating Nearest number of SEQ field](workingwithfields_images/java-file-word-library-repeat-nearest-number.png)
+![Output of repeating Nearest number of SEQ field](workingwithfields_images/java-word-library-repeat-nearest-number.png)
 
 ### Hide
 You can hide the field result of the sequence field using `HideResult` property.
