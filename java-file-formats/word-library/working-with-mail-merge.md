@@ -33,7 +33,7 @@ You can create a template document with merge fields by using any Word editor ap
 
 The following screenshot shows how to insert a merge field in the Word document by **using the Microsoft Word.**
 
-![Word template document](MailMerge_images/MailMerge_template.png)
+![Word template document in Java File Formats Word Library](mailmerge_images/java-word-library-template.png)
 
 You need to add a prefix (“Image:”) to the merge field name for merging an image in the place of a merge field.
 
@@ -81,7 +81,7 @@ document.close();
 
 By executing the previous code example, it generates the resultant Word document as follows.
 
-![Mail merge Word document](MailMerge_images/MailMerge_output.png)
+![Mail merge Word document in Java File Formats Word Library](mailmerge_images/java-word-library-output.png)
 
 ## Simple Mail merge
 

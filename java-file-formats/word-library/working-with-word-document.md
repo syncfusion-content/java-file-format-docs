@@ -540,7 +540,7 @@ document.close();
 Content type properties refers the metadata stored in a Word document, such as author name, subject, and company. DocIO represents metadata with MetaProperty instance and you can access in the Word document (DOCX, WordML) by using the ContentTypeProperties collection of WordDocument class.
 
 The following screenshots shows the content type property in the input Word document.
-![Resultant output Word document](WorkingwithWordDocument_images/QuickPart.png)
+![Resultant output in Java File Format Word document](workingwithworddocument_images/java-word-library-quickpart.png)
 
 N> You can use Content Type Properties only in documents that are saved in the DOCX or WordML Format.
 

@@ -5,6 +5,7 @@ platform: java-file-formats
 control: Word Library
 documentation: UG
 ---
+
 # Working with Bookmarks
 
 A bookmark identifies a location or a selection of text within a document that you can name and identify for future reference.
@@ -406,12 +407,12 @@ As per Microsoft Word behavior, you cannot replace the bookmark contents when th
 
 Case 1
 
-![Bookmark start and end present in different tables](WorkingwithBookmarks_images/WorkingwithBookmarks_img1.jpeg)
+![Bookmark start and end present in different tables](workingwithbookmarks_images/java-word-library-different-tables.jpeg)
 
 
 Case 2
 
-![Bookmark start placed outside table and end in table](WorkingwithBookmarks_images/WorkingwithBookmarks_img2.jpeg)
+![Bookmark start placed outside table and end in table](WorkingwithBookmarks_images/java-word-library-outside-table.jpeg)
 
 
 The following code example shows how to replace a specified bookmark content by using `replaceBookmarkContent` method in Word document.
