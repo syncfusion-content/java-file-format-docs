@@ -18,13 +18,13 @@ Essential File Formats for Java includes a Java class library to create, edit, w
 
 ## Additional help resources
 
-The [Knowledge Base](https://www.syncfusion.com/kb/) section contains responses for common questions asked by the customers. This would be a good place to search for the topics that are not covered in the User Guide.
+The [Knowledge Base](https://support.syncfusion.com/kb) section contains responses for common questions asked by the customers. This would be a good place to search for the topics that are not covered in the User Guide.
 
 Similar to the Knowledge Base, the [Forum](https://www.syncfusion.com/forums/) section also contains responses to the questions that are asked by other customers.
 
 ## Create a support incident
 
-If you are unable to find the information you are looking for in the self-help resources mentioned above, please contact us by creating a [support ticket](https://www.syncfusion.com/support/directtrac/incidents).
+If you are unable to find the information you are looking for in the self-help resources mentioned above, please contact us by creating a [support ticket](https://www.syncfusion.com/Account/Login?ReturnUrl=%2fsupport%2fdirecttrac%2fincidents).
 
 ## List of File Format libraries:
 
@@ -48,5 +48,4 @@ Java class library used to create, read, edit, and convert Microsoft Word files 
 </table>
 
 ## Quick Start links:
-
 [Create Word file in Java without Microsoft Office](https://help.syncfusion.com/java-file-formats/word-library/getting-started)
