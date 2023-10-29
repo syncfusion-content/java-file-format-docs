@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Overview of Syncfusion license generation - Syncfusion
-description: Learn here about how to generate Syncfusion FileFormat license key for syncfusion FileForamt application for license validation.
+title: license Generation in Java File Formats Essential Studio | Syncfusion
+description: Learn here about how to generate license key support in Syncfusion Java File Formats Essential Studio Control, its elements, and more.
 platform: java-file-formats
 control: Essential Studio
 documentation: ug
 ---
 
-# Generate Syncfusion FileFormat License key
+# Generate License key in Java File Formats Essential Studio
 
 License keys for Java can be generated from the [License & Downloads](https://syncfusion.com/account/downloads) or [Trial & Downloads](https://www.syncfusion.com/account/manage-trials/downloads) section from your Syncfusion account. 
 
