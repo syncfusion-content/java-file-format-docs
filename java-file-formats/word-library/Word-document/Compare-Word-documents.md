@@ -23,7 +23,7 @@ Compare the existing Word documents or documents created from scratch using the 
 The following code example illustrates how to compare two Word documents.
 
 {% tabs %}
-{% highlight JAVA %}
+{% highlight JAVA %} 
 //Load the original document.
 WordDocument originalDocument = new WordDocument("OriginalDocument.docx", FormatType.Docx);
 
