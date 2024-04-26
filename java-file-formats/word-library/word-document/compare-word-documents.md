@@ -1,7 +1,7 @@
 ---
 title: Compare Word Documents | DocIO | Syncfusion
 description: Learn how to compare two Word documents using Java Word (DocIO) library without Microsoft Word or interop dependencies.
-platform: java-file-formats
+platform: document-processing
 control: Word library
 documentation: UG
 ---

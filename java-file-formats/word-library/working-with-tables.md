@@ -1,7 +1,7 @@
 ---
 title: Working With Tables | DocIO | Syncfusion
 description: This section illustrates how to work with Tables in Word document using Syncfusion Java Word library (Essential DocIO)
-platform: java-file-formats
+platform: document-processing
 control: Word Library
 documentation: UG
 ---
@@ -202,7 +202,7 @@ document.close();
 
 ## Align text within a table
 
-You can iterate the cells within a table and align text for each cell. Find more information about iterating the cells from [here](https://help.syncfusion.com/java-file-formats/word-library/working-with-tables#iterating-through-table-elements)
+You can iterate the cells within a table and align text for each cell. Find more information about iterating the cells from [here](https://help.syncfusion.com/document-processing/word/word-library/java/working-with-tables#iterating-through-table-elements)
 
 The following code example illustrates how to align text within a table.
 

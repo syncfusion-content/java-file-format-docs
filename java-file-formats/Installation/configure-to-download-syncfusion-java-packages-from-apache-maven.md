@@ -1,7 +1,7 @@
 ---
 title: Download Syncfusion Java packages from Apache Maven | Syncfusion
 description: This section demonstrates how to configure and download required Jars from Apache Maven (Jar configuration)
-platform: java-file-formats
+platform: document-processing
 control: general
 documentation: UG
 ---

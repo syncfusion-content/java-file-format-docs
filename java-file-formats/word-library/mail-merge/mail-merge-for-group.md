@@ -1,7 +1,7 @@
 ---
 title: Mail merge for group | Syncfusion
 description: This section illustrates how to Mail merge for a group - replace merge fields in a region of document with data, by repeating the region for each record.
-platform: java-file-formats
+platform: document-processing
 control: Word Library
 documentation: UG
 ---

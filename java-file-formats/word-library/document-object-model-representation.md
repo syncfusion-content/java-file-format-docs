@@ -1,7 +1,7 @@
 ---
 title: Document Object Model representation
 description: This section describes about DOM structure 
-platform: java-file-formats
+platform: document-processing
 control: Word Library
 documentation: UG
 ---

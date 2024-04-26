@@ -1,14 +1,14 @@
 ---
 title: Simple Mail merge | Syncfusion
 description: This section illustrates how to Mail merge - replace all merge fields in a document with data, by repeating whole document for each record in data source.
-platform: java-file-formats
+platform: document-processing
 control: Word Library
 documentation: UG
 ---
 
 # Perform simple Mail merge
 
-You can create a Word document template using Microsoft Word application or by adding merge fields in the Word document programmatically. For further information, click [here](https://help.syncfusion.com/java-file-formats/word-library/working-with-mail-merge#create-word-document-template).
+You can create a Word document template using Microsoft Word application or by adding merge fields in the Word document programmatically. For further information, click [here](https://help.syncfusion.com/document-processing/word/word-library/java/working-with-mail-merge#create-word-document-template).
 
 ## Mail merge with string arrays
 

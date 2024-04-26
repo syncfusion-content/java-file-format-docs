@@ -1,7 +1,7 @@
 ---
 title: Convert Markdown to Word document in Java | DocIO | Syncfusion
 description: Convert Markdown to Word document in java using Syncfusion Java Word library without Microsoft Word.
-platform: java-file-formats
+platform: document-processing
 control: Word library
 documentation: UG
 ---
@@ -27,7 +27,7 @@ document.close();
 
 {% endtabs %}
 
-T> You can also save the markdown file as [HTML](https://help.syncfusion.com/java-file-formats/word-library/html).
+T> You can also save the markdown file as [HTML](https://help.syncfusion.com/document-processing/word/word-library/java/html).
 
 ## Customize image data
 
@@ -348,7 +348,7 @@ N> Hook the event handler before opening a Word document as per the above code e
 </td>
 <td style="width: 41.7072%;">
 <p>For image, enclose an alternative text within the brackets [], and then link of the image source within parentheses ().</p>
-<p>If URL path is base64string, then it will be preserved properly in Word document. Otherwise, you can also {{'[set image from stream while opening Markdown file.](https://help.syncfusion.com/java-file-formats/word-library/convert-markdown-to-word-document-in-java#customize-image-data)'| markdownify }}</p>
+<p>If URL path is base64string, then it will be preserved properly in Word document. Otherwise, you can also {{'[set image from stream while opening Markdown file.](https://help.syncfusion.com/document-processing/word/word-library/java/convert-markdown-to-word-document-in-java#customize-image-data)'| markdownify }}</p>
 </td>
 </tr>
 <tr>

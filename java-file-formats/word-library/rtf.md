@@ -1,7 +1,7 @@
 ---
 title: RTF conversions | Word library | Syncfusion
 description: This section illustrates how to perform RTF to Word conversion and Word to RTF conversions using Syncfusion Word library (Essential DocIO)
-platform: java-file-formats
+platform: document-processing
 control: Word Library
 documentation: UG
 ---
@@ -40,4 +40,4 @@ document.close();
 {% endtabs %}
 
 ## Supported and Unsupported features
-The supported and unsupported features of DocIO based on file formats can be referred [here](https://help.syncfusion.com/java-file-formats/word-library/supported-and-unsupported-features#)
+The supported and unsupported features of DocIO based on file formats can be referred [here](https://help.syncfusion.com/document-processing/word/word-library/java/supported-and-unsupported-features#)

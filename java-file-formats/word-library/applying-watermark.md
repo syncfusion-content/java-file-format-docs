@@ -1,7 +1,7 @@
 ---
 title: Applying Watermark | Syncfusion
 description: This section illustrates how to insert text or pictures watermark to the Word document using Syncfusion Word library (Essential DocIO)
-platform: java-file-formats
+platform: document-processing
 control: Word Library
 documentation: UG
 ---

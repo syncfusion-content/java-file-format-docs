@@ -1,7 +1,7 @@
 ---
 title: Working with Fields | Syncfusion
 description: This section illustrates how to add dynamic information like title, time, page number, etc., in the Word document that updates automatically
-platform: java-file-formats
+platform: document-processing
 control: Word Library
 documentation: UG
 ---

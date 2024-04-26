@@ -1,7 +1,7 @@
 ---
 title: Overview of Word library (DocIO) | Syncfusion
 description: Java Word library to create, read, edit, and convert the Microsoft Word documents in the Java application without Microsoft Word or interop dependencies.
-platform: java-file-formats
+platform: document-processing
 control: Word Library
 documentation: UG
 ---
@@ -13,14 +13,14 @@ It is a non-UI component that provides a full-fledged document instance model si
 
 **Key Features**
 
-* Support to [create Word document](https://help.syncfusion.com/java-file-formats/word-library/getting-started) from scratch.
+* Support to [create Word document](https://help.syncfusion.com/document-processing/word/word-library/java/getting-started) from scratch.
 * Support to open, modify, and save the existing Word documents.
-* Advanced [Mail merge](https://help.syncfusion.com/java-file-formats/word-library/working-with-mail-merge) support with different data sources.
-* Ability to create or edit Word 2007 and later version documents, and convert them to commonly used file formats such as [WordML](https://help.syncfusion.com/java-file-formats/word-library/word-file-formats#word-processing-xml-xml), [TXT](https://help.syncfusion.com/java-file-formats/word-library/text), [HTML](https://help.syncfusion.com/java-file-formats/word-library/html) and vice versa.
-* Ability to create and manipulate [shapes](https://help.syncfusion.com/java-file-formats/word-library/working-with-shapes), and [group shape](https://help.syncfusion.com/java-file-formats/word-library/working-with-shapes#grouping-shapes) in the DOCX and WordML format documents.
-* Ability to read and write the [built-in and custom document properties](https://help.syncfusion.com/java-file-formats/word-library/working-with-word-document#working-with-word-document-properties).
-* Support to insert and edit the [form fields](https://help.syncfusion.com/java-file-formats/word-library/working-with-form-fields).
-* Ability to insert the [bookmarks](https://help.syncfusion.com/java-file-formats/word-library/working-with-bookmarks) and navigate corresponding bookmarks to insert, replace, and delete content.
+* Advanced [Mail merge](https://help.syncfusion.com/document-processing/word/word-library/java/working-with-mail-merge) support with different data sources.
+* Ability to create or edit Word 2007 and later version documents, and convert them to commonly used file formats such as [WordML](https://help.syncfusion.com/document-processing/word/word-library/java/word-file-formats#word-processing-xml-xml), [TXT](https://help.syncfusion.com/document-processing/word/word-library/java/text), [HTML](https://help.syncfusion.com/document-processing/word/word-library/java/html) and vice versa.
+* Ability to create and manipulate [shapes](https://help.syncfusion.com/document-processing/word/word-library/java/working-with-shapes), and [group shape](https://help.syncfusion.com/document-processing/word/word-library/java/working-with-shapes#grouping-shapes) in the DOCX and WordML format documents.
+* Ability to read and write the [built-in and custom document properties](https://help.syncfusion.com/document-processing/word/word-library/java/working-with-word-document#working-with-word-document-properties).
+* Support to insert and edit the [form fields](https://help.syncfusion.com/document-processing/word/word-library/java/working-with-form-fields).
+* Ability to insert the [bookmarks](https://help.syncfusion.com/document-processing/word/word-library/java/working-with-bookmarks) and navigate corresponding bookmarks to insert, replace, and delete content.
 
 **Compatible Microsoft Word Versions**
 
@@ -32,4 +32,4 @@ It is a non-UI component that provides a full-fledged document instance model si
 
 T> Sometimes a Java application may throw an error like this "Java.Lang.OutOfMemoryError." Usually, this error occurs due to insufficient RAM heap space to allocate an object in the Java heap. To avoid this kind of problem, we suggest [increasing the JVM heap size](https://docs.oracle.com/cd/E29587_01/PlatformServices.60x/ps_rel_discovery/src/crd_advanced_jvm_heap.html).
 
-N> Currently, Essential DocIO supports .DOCX, .DOTX, .DOTM, .DOCM, .WordML, .RTF, .Txt, WordML, HTML. Please refer to the [supported and unsupported features](https://help.syncfusion.com/java-file-formats/word-library/supported-and-unsupported-features) in the essential DocIO.
+N> Currently, Essential DocIO supports .DOCX, .DOTX, .DOTM, .DOCM, .WordML, .RTF, .Txt, WordML, HTML. Please refer to the [supported and unsupported features](https://help.syncfusion.com/document-processing/word/word-library/java/supported-and-unsupported-features) in the essential DocIO.

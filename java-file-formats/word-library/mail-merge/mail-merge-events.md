@@ -1,7 +1,7 @@
 ---
 title: Mail merge events | Syncfusion
 description: This section illustrates how to format or customize the merged text and image, clear or retain unmerged fields during mail merge using events.
-platform: java-file-formats
+platform: document-processing
 control: Word Library
 documentation: UG
 ---

@@ -1,7 +1,7 @@
 ---
 title: FAQ Section | Word library | Syncfusion
 description: This section illustrates about Frequently Asked Questions in Essential Syncfusion Word library (Essential DocIO)
-platform: java-file-formats
+platform: document-processing
 control: Word Library
 documentation: UG
 ---
@@ -502,7 +502,7 @@ document.close();
 {% endtabs %}  
    
 N>  For more information on creating tables using DocIO, refer to online documentation link:
-[Working with Tables](https://help.syncfusion.com/java-file-formats/word-library/working-with-tables)
+[Working with Tables](https://help.syncfusion.com/document-processing/word/word-library/java/working-with-tables)
 
 
 ### Comments 
@@ -529,7 +529,7 @@ doc.save("Sample.docx", FormatType.Docx);
 {% endtabs %} 
 
 N>  For more information on working with the comments using Java Word library, you can refer to the online documentation link:
-[Working with Comments](https://help.syncfusion.com/java-file-formats/word-library/working-with-comments) 
+[Working with Comments](https://help.syncfusion.com/document-processing/word/word-library/java/working-with-comments) 
 
 
 ## How to check whether a Word document contains tracked changes or not? 
