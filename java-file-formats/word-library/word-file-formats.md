@@ -1,7 +1,7 @@
 ---
 title: Word file format conversions | Word library | Syncfusion
 description: This section illustrates Word file format conversions supported in Syncfusion Java Word library (Essential DocIO)
-platform: document-processing
+platform: java-file-formats
 control: Word Library
 documentation: UG
 ---

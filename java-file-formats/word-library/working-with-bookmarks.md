@@ -1,7 +1,7 @@
 ---
 title: Working with Bookmarks | Word library | Syncfusion
 description: This section illustrates how to work with Bookmarks in a Word document using Syncfusion Word library.
-platform: document-processing
+platform: java-file-formats
 control: Word Library
 documentation: UG
 ---

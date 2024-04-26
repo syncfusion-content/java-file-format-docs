@@ -1,7 +1,7 @@
 ---
 title: Mail merge options | Syncfusion
 description: This section illustrates the mail merge options used to customize field mapping, remove unmerged fields, unmerged mail merge groups, empty paragraphs and more.
-platform: document-processing
+platform: java-file-formats
 control: Word Library
 documentation: UG
 ---

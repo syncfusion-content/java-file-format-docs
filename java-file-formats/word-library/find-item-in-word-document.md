@@ -1,7 +1,7 @@
 ---
 title: Find item in Word document in Java | Syncfusion
 description: Find an item in the Word document in Java using Syncfusion Java Word library (Essential DocIO)
-platform: document-processing
+platform: java-file-formats
 control: Word Library
 documentation: UG
 ---

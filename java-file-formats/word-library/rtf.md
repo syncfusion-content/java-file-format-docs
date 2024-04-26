@@ -1,7 +1,7 @@
 ---
 title: RTF conversions | Word library | Syncfusion
 description: This section illustrates how to perform RTF to Word conversion and Word to RTF conversions using Syncfusion Word library (Essential DocIO)
-platform: document-processing
+platform: java-file-formats
 control: Word Library
 documentation: UG
 ---

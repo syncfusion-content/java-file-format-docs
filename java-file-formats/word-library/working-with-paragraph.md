@@ -1,7 +1,7 @@
 ---
 title: Working with Paragraph | Syncfusion
 description: This section explains how to work with the child elements of Paragraph in Word document using Syncfusion Java Word library (Essential DocIO) 
-platform: document-processing
+platform: java-file-formats
 control: Word Library
 documentation: UG
 ---

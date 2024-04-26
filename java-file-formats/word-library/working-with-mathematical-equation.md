@@ -1,7 +1,7 @@
 ---
 title: Working with Mathematical Equation | Syncfusion
 description: This section illustrates about create, modify and remove mathematical equation in Word document without MS Word or Office interop
-platform: document-processing
+platform: java-file-formats
 control: Word Library
 documentation: UG
 ---

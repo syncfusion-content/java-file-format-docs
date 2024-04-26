@@ -1,7 +1,7 @@
 ---
 title: Working with Comments | Syncfusion
 description: This section illustrates about working with comments in the Word document without MS Word or Office interop
-platform: document-processing
+platform: java-file-formats
 control: Word Library
 documentation: UG
 ---

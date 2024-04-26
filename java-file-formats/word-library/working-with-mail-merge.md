@@ -1,7 +1,7 @@
 ---
 title: Working with Mail merge | Syncfusion
 description: This section illustrates about Mail merge Word document to create reports (letters, envelopes, labels, invoice, payroll) without MS Word or Office interop.
-platform: document-processing
+platform: java-file-formats
 control: Word Library
 documentation: UG
 ---

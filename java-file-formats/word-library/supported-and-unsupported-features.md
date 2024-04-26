@@ -1,7 +1,7 @@
 ---
 title: Supported and Unsupported Features | Syncfusion
 description: This section describes the support and unsupported elements used in Syncfusion Java Word library (Essential DocIO)
-platform: document-processing
+platform: java-file-formats
 control: Word Library
 documentation: UG
 ---

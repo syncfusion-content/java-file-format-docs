@@ -1,7 +1,7 @@
 ---
 title: Working With Tables | DocIO | Syncfusion
 description: This section illustrates how to work with Tables in Word document using Syncfusion Java Word library (Essential DocIO)
-platform: document-processing
+platform: java-file-formats
 control: Word Library
 documentation: UG
 ---

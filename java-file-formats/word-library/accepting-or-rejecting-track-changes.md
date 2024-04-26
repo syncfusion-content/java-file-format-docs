@@ -1,7 +1,7 @@
 ---
 title: Accepting or Rejecting Track Changes | Word library | Syncfusion
 description: This section illustrates how to Accept or Reject the Track changes in the Word document using Syncfusion Word library (Essential DocIO)
-platform: document-processing
+platform: java-file-formats
 control: Word Library
 documentation: UG
 ---

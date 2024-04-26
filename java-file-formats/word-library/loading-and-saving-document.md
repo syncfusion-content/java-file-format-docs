@@ -1,7 +1,7 @@
 ---
 title: Loading & Saving document | Syncfusion
 description: This section illustrates how to load and save the Word document using Syncfusion Word library (Essential DocIO)
-platform: document-processing
+platform: java-file-formats
 control: Word Library
 documentation: UG
 ---

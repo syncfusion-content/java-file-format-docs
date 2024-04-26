@@ -1,7 +1,7 @@
 ---
 title: Create a simple Word document in Java | Syncfusion
 description: This section illustrate how to create a new Word document from scratch in Java using Syncfusion Java Word library (Essential DocIO)
-platform: document-processing
+platform: java-file-formats
 control: Word Library
 documentation: UG
 ---

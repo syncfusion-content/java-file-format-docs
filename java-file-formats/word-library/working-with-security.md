@@ -1,7 +1,7 @@
 ---
 title: Working with Security | Word library | Syncfusion
 description: This section illustrates how to encrypt, decrypt and protect the Word document using Syncfusion Word library (Essential DocIO)
-platform: document-processing
+platform: java-file-formats
 control: Word Library
 documentation: UG
 ---

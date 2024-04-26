@@ -1,7 +1,7 @@
 ---
 title: Working with Sections | Syncfusion
 description: This section illustrates how to Work with Sections in Word document using Syncfusion Java Word library (Essential DocIO)
-platform: document-processing
+platform: java-file-formats
 control: Word Library
 documentation: UG
 ---

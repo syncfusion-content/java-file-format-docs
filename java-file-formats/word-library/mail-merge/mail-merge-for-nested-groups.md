@@ -1,7 +1,7 @@
 ---
 title: Mail merge for nested groups | Syncfusion
 description: This section illustrates how to Mail merge for nested groups - replace merge fields in nested regions of document with relational data.
-platform: document-processing
+platform: java-file-formats
 control: Word Library
 documentation: UG
 ---

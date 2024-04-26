@@ -1,7 +1,7 @@
 ---
 title: Working with Form Fields | Word library | Syncfusion
 description: This section illustrated how to work with FormFields in Word document using Syncfusion Java Word library (Essential DocIO)
-platform: document-processing
+platform: java-file-formats
 control: Word Library
 documentation: UG
 ---
