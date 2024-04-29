@@ -29,12 +29,12 @@ Essential DocIO can convert various flow document as fixed document by using our
 
 Essential DocIO supports converting the HTML file into Word document and vice versa. It supports only the HTML files that meet the validation either against XHTML 1.0 strict or XHTML 1.0 Transitional schema. 
 
-For further information kindly refer this  [link](https://help.syncfusion.com/java-file-formats/word-library/html#).
+For further information kindly refer this  [link](https://help.syncfusion.com/document-processing/word/word-library/java/html#).
 
 ### Supported Document elements
 
-Kindly refer to this [link](https://help.syncfusion.com/java-file-formats/word-library/html#supported-and-unsupported-items#)  for the document elements and attributes that are supported by DocIO in the Word to HTML and HTML to Word conversions.
+Kindly refer to this [link](https://help.syncfusion.com/document-processing/word/word-library/java/html#supported-and-unsupported-items#)  for the document elements and attributes that are supported by DocIO in the Word to HTML and HTML to Word conversions.
 
 ## Text file
 
-Essential DocIO supports to convert the Word document into a Text file and vice versa. For further information, kindly refer to this [link](https://help.syncfusion.com/java-file-formats/word-library/text#).
+Essential DocIO supports to convert the Word document into a Text file and vice versa. For further information, kindly refer to this [link](https://help.syncfusion.com/document-processing/word/word-library/java/text#).
