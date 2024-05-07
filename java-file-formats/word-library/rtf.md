@@ -40,4 +40,4 @@ document.close();
 {% endtabs %}
 
 ## Supported and Unsupported features
-The supported and unsupported features of DocIO based on file formats can be referred [here](https://help.syncfusion.com/java-file-formats/word-library/supported-and-unsupported-features#)
+The supported and unsupported features of DocIO based on file formats can be referred [here](https://help.syncfusion.com/document-processing/word/word-library/java/supported-and-unsupported-features#)
