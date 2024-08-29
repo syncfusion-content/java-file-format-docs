@@ -9,6 +9,11 @@ documentation: UG
 
 Equations in Word document are combination of mathematical symbols or text. For example, you can create a Fourier series equation in Word document.
 
+The Java Word library offers two ways to create and modify equations in Word document.
+
+* [Using WMath DOM](https://help.syncfusion.com/java-file-formats/word-library/working-with-mathematical-equation#types-of-equation).
+* [Using LaTeX](https://help.syncfusion.com/java-file-formats/word-library/working-with-latex).
+
 ![Mathematical equation in Microsoft Word document](WorkingwithMathematicalEquation_images/Mathematical Equation.png)
 
 ## Types of equation
