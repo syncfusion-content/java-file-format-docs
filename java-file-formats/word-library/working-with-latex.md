@@ -11,7 +11,7 @@ The Java Word library allows to create mathematical equation in Word document us
 
 ## Accent
 
-Add **accent** equation to a Word document using the LaTeX through appendMath() API.
+Add **accent** equation to a Word document using the LaTeX through **appendMath** API.
 
 The following code example illustrates how to create accent equation using LaTeX in Word document.
 
@@ -118,7 +118,7 @@ The following table demonstrates the LaTeX equivalent to professional format acc
 
 ## Bar
 
-Add **bar** equation to a Word document using the LaTeX through appendMath() API.
+Add **bar** equation to a Word document using the LaTeX through **appendMath** API.
 
 The following code example illustrates how to create bar equation using LaTeX in Word document.
 
@@ -165,7 +165,7 @@ The following table demonstrates the LaTeX equivalent to professional format bar
 
 ## Box
 
-Add **box** equation to a Word document using the LaTeX through appendMath() API.
+Add **box** equation to a Word document using the LaTeX through **appendMath** API.
 
 The following code example illustrates how to create box equation using LaTeX in Word document.
 
@@ -207,7 +207,7 @@ The following table demonstrates the LaTeX equivalent to professional format box
 
 ## Border Box
 
-Add **border box** equation to a Word document using the LaTeX through appendMath() API.
+Add **border box** equation to a Word document using the LaTeX through **appendMath** API.
 
 The following code example illustrates how to create border box equation using LaTeX in Word document.
 
@@ -249,7 +249,7 @@ The following table demonstrates the LaTeX equivalent to professional format bor
 
 ## Delimiter
 
-Add **delimiter** equation to a Word document using the LaTeX through appendMath() API.
+Add **delimiter** equation to a Word document using the LaTeX through **appendMath** API.
 
 The following code example illustrates how to create delimiter equation using LaTeX in Word document.
 
@@ -426,7 +426,7 @@ The following table demonstrates the LaTeX equivalent to professional format del
 
 ## Equation Array
 
-Add **equation array** to a Word document using the LaTeX through appendMath() API.
+Add **equation array** to a Word document using the LaTeX through **appendMath** API.
 
 The following code example illustrates how to create an equation array using LaTeX in Word document.
 
@@ -468,7 +468,7 @@ The following table demonstrates the LaTeX equivalent to professional format equ
 
 ## Fraction
 
-Add **fraction** equation to a Word document using the LaTeX through appendMath() API.
+Add **fraction** equation to a Word document using the LaTeX through **appendMath** API.
 
 The following code example illustrates how to create fraction equation using LaTeX in Word document.
 
@@ -521,7 +521,7 @@ The following table demonstrates the LaTeX equivalent to professional format fra
 
 ## Function
 
-Add **function** equation to a Word document using the LaTeX through appendMath() API.
+Add **function** equation to a Word document using the LaTeX through **appendMath** API.
 
 The following code example illustrates how to create function equation using LaTeX in Word document.
 
@@ -708,7 +708,7 @@ The following table demonstrates the LaTeX equivalent to professional format fun
 
 ## Group character
 
-Add **group character** equation to a Word document using the LaTeX through appendMath() API.
+Add **group character** equation to a Word document using the LaTeX through **appendMath** API.
 
 The following code example illustrates how to create group character equation using LaTeX in Word document.
 
@@ -755,7 +755,7 @@ The following table demonstrates the LaTeX equivalent to professional format gro
 
 ## Limit
 
-Add **limit** equation to a Word document using the LaTeX through appendMath() API.
+Add **limit** equation to a Word document using the LaTeX through **appendMath** API.
 
 The following code example illustrates how to create limit equation using LaTeX in Word document.
 
@@ -807,7 +807,7 @@ The following table demonstrates the LaTeX equivalent to professional format lim
 
 ## Matrix
 
-Add **matrix** equation to a Word document using the LaTeX through appendMath() API.
+Add **matrix** equation to a Word document using the LaTeX through **appendMath** API.
 
 The following code example illustrates how to create matrix equation using LaTeX in Word document.
 
@@ -849,7 +849,7 @@ The following table demonstrates the LaTeX equivalent to professional format mat
 
 ## N-array
 
-Add **N-array** equation to a Word document using the LaTeX through appendMath() API.
+Add **N-array** equation to a Word document using the LaTeX through **appendMath** API.
 
 The following code example illustrates how to create N-array equation using LaTeX in Word document.
 
@@ -941,7 +941,7 @@ The following table demonstrates the LaTeX equivalent to professional format N-a
 
 ## Radical
 
-Add **radical** equation to a Word document using the LaTeX through appendMath() API.
+Add **radical** equation to a Word document using the LaTeX through **appendMath** API.
 
 The following code example illustrates how to create radical equation using LaTeX in Word document.
 
@@ -988,7 +988,7 @@ The following table demonstrates the LaTeX equivalent to professional format rad
 
 ## SubSuperScript
 
-Add **SubSuperScript** equation to a Word document using the LaTeX through appendMath() API.
+Add **SubSuperScript** equation to a Word document using the LaTeX through **appendMath** API.
 
 The following code example illustrates how to create SubSuperScript equation using LaTeX in Word document.
 
@@ -1035,7 +1035,7 @@ The following table demonstrates the LaTeX equivalent to professional format Sub
 
 ## Left SubSuperScript
 
-Add **Left SubSuperScript** equation to a Word document using the LaTeX through appendMath() API.
+Add **Left SubSuperScript** equation to a Word document using the LaTeX through **appendMath** API.
 
 The following code example illustrates how to create Left SubSuperScript equation using LaTeX in Word document.
 
@@ -1077,7 +1077,7 @@ The following table demonstrates the LaTeX equivalent to professional format Lef
 
 ## Right SubSuperScript
 
-Add **Right SubSuperScript** equation to a Word document using the LaTeX through appendMath() API.
+Add **Right SubSuperScript** equation to a Word document using the LaTeX through **appendMath** API.
 
 The following code example illustrates how to create Right SubSuperScript equation using LaTeX in Word document.
 
