@@ -84,7 +84,7 @@ The following image demonstrates the LaTeX supported in Java Word library to com
 
 ### Basic N-ary Operators
 
-The following image demonstrates the LaTeX supported in .Java Word library to basic N-ary operators.
+The following image demonstrates the LaTeX supported in Java Word library to basic N-ary operators.
 
 ![Create Basic N-ary Operators Symbols in LaTeX](WorkingwithMathematicalEquation_images/BinaryN-aryOperator_1.png)
 ![Create Basic N-ary Operators Symbols in LaTeX](WorkingwithMathematicalEquation_images/BinaryN-aryOperator_2.png)
