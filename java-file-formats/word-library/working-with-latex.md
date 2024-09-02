@@ -215,6 +215,7 @@ The following code example illustrates how to create border box equation using L
 
 {% highlight JAVA %}
 
+{% raw %}
 //Creates a new Word document.
 WordDocument document = new WordDocument();
 //Adds one section and one paragraph to the document.
@@ -226,6 +227,7 @@ document.save("Sample.docx", FormatType.Docx);
 //Closes the document.
 document.close();
 
+{% endraw %}
 {% endhighlight %}
 
 {% endtabs %} 
@@ -1269,6 +1271,7 @@ The following code examples show how to apply the justification to equations in 
 {% tabs %}  
 
 {% highlight JAVA %}
+{% raw %}
 
 //Creates a new Word document.
 WordDocument document = new WordDocument();
@@ -1283,6 +1286,7 @@ document.save("Sample.docx", FormatType.Docx);
 //Closes the document.
 document.close();
 
+{% endraw %}
 {% endhighlight %}
 
 {% endtabs %}
