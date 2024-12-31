@@ -28,7 +28,7 @@ Our 30-day trial can be downloaded in two ways.
 1. You can evaluate our 30-day free trial by visiting the [Download Free Trial](https://www.syncfusion.com/downloads) page and select the FileFormats platform.
 2. After completing the required form or logging in with your registered Syncfusion<sup style="font-size:70%">&reg;</sup> account, you can download the FileFormats trial installer from the confirmation page. (as shown in below screenshot.) 
    
-   ![Trial and downloads of Syncfusion<sup style="font-size:70%">&reg;</sup> Essential Studio<sup style="font-size:70%">&reg;</sup>](images/trial-confirmation.png)
+   ![Trial and downloads of Syncfusion® Essential Studio®](images/trial-confirmation.png)
    
 3. With a trial license, only the latest version’s trial installer can be downloaded.
 4. After downloading, the Syncfusion<sup style="font-size:70%">&reg;</sup> FileFormats trial installer can be unlocked using either the trial unlock key or the Syncfusion<sup style="font-size:70%">&reg;</sup> registered login credential. More information on generating an unlock key can be found in [this](https://www.syncfusion.com/kb/8069/how-to-generate-unlock-key-for-essentials-studio-products) article.
