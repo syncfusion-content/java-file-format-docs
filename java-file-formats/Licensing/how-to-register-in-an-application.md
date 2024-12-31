@@ -7,9 +7,9 @@ control: Essential Studio
 documentation: ug
 ---
 
-# Register Syncfusion License key in FileForamt application
+# Register Syncfusion<sup style="font-size:70%">&reg;</sup> License key in FileForamt application
 
-The generated license key is just a string that needs to be registered before any Syncfusion control is initiated. The following code is used to register the license.
+The generated license key is just a string that needs to be registered before any Syncfusion<sup style="font-size:70%">&reg;</sup> control is initiated. The following code is used to register the license.
 
 {% tabs %}
 {% highlight c# %}
@@ -18,7 +18,7 @@ Syncfusion.Licensing.SyncfusionLicenseProvider.RegisterLicense("YOUR LICENSE KEY
 {% endtabs %}
 
 N> * Place the license key between double quotes.  Also, ensure that Syncfusion.Licensing.dll is referenced in your project where the license key is being registered.
-* Syncfusion license validation is done offline during application execution and does not require internet access.  Apps registered with a Syncfusion license key can be deployed on any system that does not have an internet connection.
+* Syncfusion<sup style="font-size:70%">&reg;</sup> license validation is done offline during application execution and does not require internet access.  Apps registered with a Syncfusion<sup style="font-size:70%">&reg;</sup> license key can be deployed on any system that does not have an internet connection.
 
 ### Java
 

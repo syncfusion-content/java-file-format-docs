@@ -85,7 +85,7 @@ N>If any white space or line break exists in the merge field's parent paragraph,
 
 ## Remove empty merge fields
 
-Essential DocIO removes or keeps the unmerged merge fields in the output document based on the `ClearFields` property on each mail merge execution.
+Essential<sup style="font-size:70%">&reg;</sup> DocIO removes or keeps the unmerged merge fields in the output document based on the `ClearFields` property on each mail merge execution.
 
 When a merge field is considered as unmerged during mail merge process?
 

@@ -6,9 +6,9 @@ control: general
 documentation: UG
 ---
 
-# Available Syncfusion Java packages
+# Available Syncfusion<sup style="font-size:70%">&reg;</sup> Java packages
 
-Below are the Java packages available in syncfusion.
+Below are the Java packages available in syncfusion<sup style="font-size:70%">&reg;</sup>.
 
 <table>
 <thead>  
@@ -25,10 +25,10 @@ This jar contains the core features needed for creating, reading, and editing a 
 <tr>
 <td>
 syncfusion-javahelper<br/><br/></td><td>
-This jar contains common functionalities required for the syncfusion file format libraries.<br/><br/></td></tr>
+This jar contains common functionalities required for the syncfusion<sup style="font-size:70%">&reg;</sup> file format libraries.<br/><br/></td></tr>
 <tr>
 <td>
 syncfusion-ej2-wordprocessor<br/><br/></td><td>
-This jar used for converting Word documents into Syncfusion Document Text (*.SFDT) format documents.<br/><br/></td></tr>
+This jar used for converting Word documents into Syncfusion<sup style="font-size:70%">&reg;</sup> Document Text (*.SFDT) format documents.<br/><br/></td></tr>
 </tbody>
 </table>
