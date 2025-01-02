@@ -585,7 +585,7 @@ document1.close();
 
 ## Types of Content Controls
 
-The following types of content controls can be created by using the Essential DocIO.
+The following types of content controls can be created by using the Essential<sup style="font-size:70%">&reg;</sup> DocIO.
 
 * Rich Text
 * Plain Text

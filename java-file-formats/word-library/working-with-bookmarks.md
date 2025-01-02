@@ -9,7 +9,7 @@ documentation: UG
 
 A bookmark identifies a location or a selection of text within a document that you can name and identify for future reference.
 
-In Essential DocIO, bookmark is represented by Bookmark instance that is a pair of BookmarkStart and BookmarkEnd. BookmarkStart represents start point of a bookmark and BookmarkEnd represents end point of a bookmark. Every Word document contains a collection of bookmarks that are accessible through the Bookmarks property of WordDocument class.
+In Essential<sup style="font-size:70%">&reg;</sup> DocIO, bookmark is represented by Bookmark instance that is a pair of BookmarkStart and BookmarkEnd. BookmarkStart represents start point of a bookmark and BookmarkEnd represents end point of a bookmark. Every Word document contains a collection of bookmarks that are accessible through the Bookmarks property of WordDocument class.
 
 ## Adding a bookmark
 

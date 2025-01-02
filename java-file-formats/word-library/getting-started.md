@@ -7,7 +7,7 @@ documentation: UG
 ---
 # Getting Started of Word library (DocIO)
 
-In this page, you can see how to create a simple Word document by using Syncfusion Java Word library APIs. For creating and manipulating a Word document, the following jar files are required to be referenced in your Java application.
+In this page, you can see how to create a simple Word document by using Syncfusion<sup style="font-size:70%">&reg;</sup> Java Word library APIs. For creating and manipulating a Word document, the following jar files are required to be referenced in your Java application.
 
 <table>
 <thead>  
@@ -33,7 +33,7 @@ Get the dependent jar files by installing [file formats controls](https://www.sy
 **Location:** {ProgramFilesFolder}\Syncfusion\Essential Studio\ {Platform}\ {version}\JarFiles
 **Example:** C:\Program Files (x86)\Syncfusion\Essential Studio\FileFormats\18.3.0.35\JarFiles
 
-N> 1. Starting with v19.1.0.x, if you reference Syncfusion Java packages from trial setup or from the maven repository, you also have to add "syncfusion.licensing" package reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion license key in your application to use our components.
+N> 1. Starting with v19.1.0.x, if you reference Syncfusion<sup style="font-size:70%">&reg;</sup> Java packages from trial setup or from the maven repository, you also have to add "syncfusion.licensing" package reference and include a license key in your projects. Please refer to this [link](https://help.syncfusion.com/common/essential-studio/licensing/overview) to know about registering Syncfusion<sup style="font-size:70%">&reg;</sup> license key in your application to use our components.
 
 Import the following package in your Java application.
 
@@ -135,7 +135,7 @@ picture.setWidth(81);
 
 {% endtabs %}  
 
-A table is another important element in the Word that contains a set of paragraphs arranged in rows and columns. You can create a simple as well as a complex table by using the Essential DocIO’s API. The following code example creates a simple table and adds content to it. Each table cell must contain at least one paragraph.
+A table is another important element in the Word that contains a set of paragraphs arranged in rows and columns. You can create a simple as well as a complex table by using the Essential<sup style="font-size:70%">&reg;</sup> DocIO’s API. The following code example creates a simple table and adds content to it. Each table cell must contain at least one paragraph.
 
 {% tabs %} 
 
@@ -178,7 +178,7 @@ textRange=paragraph.appendText("AdventureWorks Cycles, the fictitious company on
 
 {% endtabs %}  
 
-Essential DocIO allows you to create simple and multi-level lists. The following code sample explains how to create a numbered and bulleted list.
+Essential<sup style="font-size:70%">&reg;</sup> DocIO allows you to create simple and multi-level lists. The following code sample explains how to create a numbered and bulleted list.
 
 {% tabs %} 
 
@@ -267,9 +267,9 @@ The resultant Word document looks as follows.
 
 ## Performing Mail merge
 
-Essential DocIO allows you to generate documents by filling data in the template document from the data source. Mail merge operation automatically maps the column name in the data source and names of the merge fields in the template Word document and fills the data.
+Essential<sup style="font-size:70%">&reg;</sup> DocIO allows you to generate documents by filling data in the template document from the data source. Mail merge operation automatically maps the column name in the data source and names of the merge fields in the template Word document and fills the data.
 
-The following data sources are supported by the Essential DocIO for performing the Mail merge.
+The following data sources are supported by the Essential<sup style="font-size:70%">&reg;</sup> DocIO for performing the Mail merge.
 
 * String Arrays
 * DataSet

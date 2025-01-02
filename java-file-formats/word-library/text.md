@@ -8,7 +8,7 @@ documentation: UG
 
 # Word to Text and Text to Word Conversions
 
-The Essential DocIO converts the Word document into the Text file and vice versa. The following code example shows how to convert the Word document into text file.
+The Essential<sup style="font-size:70%">&reg;</sup> DocIO converts the Word document into the Text file and vice versa. The following code example shows how to convert the Word document into text file.
 
 {% tabs %}
 {% highlight JAVA %}

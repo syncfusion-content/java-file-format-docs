@@ -7,9 +7,9 @@ documentation: UG
 ---
 
 
-# Word File Formats in Essential DocIO
+# Word File Formats in Essential<sup style="font-size:70%">&reg;</sup> DocIO
 
-The [Microsoft Word's](https://en.wikipedia.org/wiki/Microsoft_Word#) native file formats are DOCX, DOTX, DOCM, and DOTM. The Essential DocIO supports the following major native file formats.
+The [Microsoft Word's](https://en.wikipedia.org/wiki/Microsoft_Word#) native file formats are DOCX, DOTX, DOCM, and DOTM. The Essential<sup style="font-size:70%">&reg;</sup> DocIO supports the following major native file formats.
 
 1. Word Open XML formats (2007 & later)
 2. Word Processing XML (.xml)
@@ -83,7 +83,7 @@ document.close();
 ## Word Processing XML (.xml)
 
 The XML format introduced in Microsoft Word 2003 was a simple, XML-based format called WordprocessingML or WordML.
-The Essential DocIO supports converting the Word document into Word Processing XML document and vice versa.
+The Essential<sup style="font-size:70%">&reg;</sup> DocIO supports converting the Word document into Word Processing XML document and vice versa.
 
 N> 1. Importing and exporting the Word Processing 2007 XML documents is supported.
 N> 2. Exporting the Word Processing 2003 XML document is not supported. Whereas you can import the Word Processing 2003 XML documents and export it to the other supported file formats.

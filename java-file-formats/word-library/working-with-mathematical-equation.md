@@ -18,7 +18,7 @@ The Java Word library offers two ways to create and modify equations in Word doc
 
 ## Types of equation
 
-The following different structures of equation can be created by using the Essential DocIO.
+The following different structures of equation can be created by using the Essential<sup style="font-size:70%">&reg;</sup> DocIO.
 
 ![Different structures of equation in Microsoft Word application](WorkingwithMathematicalEquation_images/EquationStructures.png)
 

@@ -8,7 +8,7 @@ documentation: UG
 
 # Word to HTML and HTML to Word Conversions
 
-The Essential DocIO converts the HTML file into a Word document and vice versa. You can also convert the Word document (DOCX, DOTX, DOCM, and DOTM) into HTML format.
+The Essential<sup style="font-size:70%">&reg;</sup> DocIO converts the HTML file into a Word document and vice versa. You can also convert the Word document (DOCX, DOTX, DOCM, and DOTM) into HTML format.
 
 In the Word library (DocIO) we use the [XmlReader](https://learn.microsoft.com/en-us/dotnet/api/system.xml.xmlreader?view=netframework-4.8) for parsing the content from input HTML. So, the input HTML should meet the XML standard (have proper open and close tags), even if you specify the `XHTMLValidationType` parameter as `XHTMLValidationType.None`.
 
@@ -18,7 +18,7 @@ Every HTML content is validated against a Document Type Declaration (DTD) which 
 
 ### XHTML validation types
 
-The following XHTML validation types are supported in Essential DocIO while importing an HTML content.
+The following XHTML validation types are supported in Essential<sup style="font-size:70%">&reg;</sup> DocIO while importing an HTML content.
 
 <table>
 <thead>

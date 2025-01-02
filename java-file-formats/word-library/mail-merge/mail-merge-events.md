@@ -8,7 +8,7 @@ documentation: UG
 
 # Event support for Mail merge
 
-The `MailMerge` class provides event support to customize the document contents and merging image data during the Mail merge process. The following events are supported by Essential DocIO during Mail merge process:
+The `MailMerge` class provides event support to customize the document contents and merging image data during the Mail merge process. The following events are supported by Essential<sup style="font-size:70%">&reg;</sup> DocIO during Mail merge process:
 
 * `MergeField`- occurs when a **Mail merge field** except image Mail merge field is encountered.
 

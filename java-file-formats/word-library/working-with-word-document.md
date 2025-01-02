@@ -606,7 +606,7 @@ document.close();
   
 ## Setting the Background for a Word document
 
-Essential DocIO allows to apply background such as color, gradient and picture to the Word document. A background of a Word document is represented by `Background` property of `WordDocument' class. 
+Essential<sup style="font-size:70%">&reg;</sup> DocIO allows to apply background such as color, gradient and picture to the Word document. A background of a Word document is represented by `Background` property of `WordDocument' class. 
 
 The following code illustrates how to apply gradient as background to the document.
 
