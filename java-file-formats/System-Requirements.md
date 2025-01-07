@@ -9,7 +9,7 @@ documentation: ug
 ---
 # System Requirements for FileFormats Components
 
-The system requirements for using our Syncfusion FileFormats platform are as follows
+The system requirements for using our Syncfusion<sup style="font-size:70%">&reg;</sup> FileFormats platform are as follows
 
 ### Operating Systems
 
@@ -44,5 +44,5 @@ The system requirements for using our Syncfusion FileFormats platform are as fol
 
 ### Supported Java versions
 
-Syncfusion Java libraries supports Java SE 8.0(1.8) or above versions.
+Syncfusion<sup style="font-size:70%">&reg;</sup> Java libraries supports Java SE 8.0(1.8) or above versions.
 
