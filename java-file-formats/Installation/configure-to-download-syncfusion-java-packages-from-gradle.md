@@ -5,9 +5,9 @@ platform: java-file-formats
 control: general
 documentation: UG
 ---
-# Configure to download Syncfusion Java packages from Gradle
+# Configure to download Syncfusion<sup style="font-size:70%">&reg;</sup> Java packages from Gradle
 
-You can easily download the Syncfusion packages for Java using the [maven repository](https://jars.syncfusion.com/).
+You can easily download the Syncfusion<sup style="font-size:70%">&reg;</sup> packages for Java using the [maven repository](https://jars.syncfusion.com/).
  
 The following command shows how to mention the repository in Gradle.
 
@@ -24,7 +24,7 @@ repositories&nbsp;{<br />
 </tr>
 </table>
 
-The following command shows how to refer to the Syncfusion package in Gradle, which needs to be used in your project as the dependency.
+The following command shows how to refer to the Syncfusion<sup style="font-size:70%">&reg;</sup> package in Gradle, which needs to be used in your project as the dependency.
 
 <table>
 <tr>

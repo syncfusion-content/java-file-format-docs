@@ -32,4 +32,4 @@ It is a non-UI component that provides a full-fledged document instance model si
 
 T> Sometimes a Java application may throw an error like this "Java.Lang.OutOfMemoryError." Usually, this error occurs due to insufficient RAM heap space to allocate an object in the Java heap. To avoid this kind of problem, we suggest [increasing the JVM heap size](https://docs.oracle.com/cd/E29587_01/PlatformServices.60x/ps_rel_discovery/src/crd_advanced_jvm_heap.html).
 
-N> Currently, Essential DocIO supports .DOCX, .DOTX, .DOTM, .DOCM, .WordML, .RTF, .Txt, WordML, HTML. Please refer to the [supported and unsupported features](https://help.syncfusion.com/document-processing/word/word-library/java/supported-and-unsupported-features) in the essential DocIO.
+N> Currently, Essential<sup style="font-size:70%">&reg;</sup> DocIO supports .DOCX, .DOTX, .DOTM, .DOCM, .WordML, .RTF, .Txt, WordML, HTML. Please refer to the [supported and unsupported features](https://help.syncfusion.com/document-processing/word/word-library/java/supported-and-unsupported-features) in the essential DocIO.

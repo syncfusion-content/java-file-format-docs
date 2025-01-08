@@ -5,9 +5,9 @@ platform: java-file-formats
 control: general
 documentation: UG
 ---
-# Configure to download Syncfusion Java packages from Apache Maven
+# Configure to download Syncfusion<sup style="font-size:70%">&reg;</sup> Java packages from Apache Maven
 
-You can easily download the Syncfusion packages for Java using the [maven repository](https://jars.syncfusion.com/).
+You can easily download the Syncfusion<sup style="font-size:70%">&reg;</sup> packages for Java using the [maven repository](https://jars.syncfusion.com/).
 
 The following command shows how to mention the repository in Apache Maven.
 
@@ -23,7 +23,7 @@ The following command shows how to mention the repository in Apache Maven.
 
 {% endtabs %}
 
-The following command shows how to refer to the Syncfusion package, which needs to be used in your project as the dependency.
+The following command shows how to refer to the Syncfusion<sup style="font-size:70%">&reg;</sup> package, which needs to be used in your project as the dependency.
 
 {% tabs %}  
 

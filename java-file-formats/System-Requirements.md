@@ -9,7 +9,7 @@ documentation: ug
 ---
 # System Requirements for FileFormats Components
 
-The system requirements for using our Syncfusion FileFormats platform are as follows
+The system requirements for using our Syncfusion<sup style="font-size:70%">&reg;</sup> FileFormats platform are as follows
 
 ### Operating Systems
 

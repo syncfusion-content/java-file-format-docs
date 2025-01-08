@@ -26,10 +26,10 @@ Syncfusion Java Word library supports Java SE 8.0(1.8) or above versions.
 
 ## Download Jars
 
-You can download the jars from the Syncfusion [maven repository](https://jars.syncfusion.com/) to use our artifacts in your projects. It helps you to use the Syncfusion Java packages without installing Essential Studio or platform installation to development with Syncfusion controls.
+You can download the jars from the Syncfusion<sup style="font-size:70%">&reg;</sup> [maven repository](https://jars.syncfusion.com/) to use our artifacts in your projects. It helps you to use the Syncfusion<sup style="font-size:70%">&reg;</sup> Java packages without installing Essential Studio<sup style="font-size:70%">&reg;</sup>  or platform installation to development with Syncfusion<sup style="font-size:70%">&reg;</sup> controls.
 
 **Frequently Asked questions**
 
-* [How to configure Syncfusion Java packages in Gradle?](https://help.syncfusion.com/document-processing/word/word-library/java/installation/configure-to-download-syncfusion-java-packages-from-gradle)
-* [How to configure Syncfusion Java packages in Apache Maven?](https://help.syncfusion.com/document-processing/word/word-library/java/installation/configure-to-download-syncfusion-java-packages-from-apache-maven)
+* [How to configure Syncfusion<sup style="font-size:70%">&reg;</sup> Java packages in Gradle?](https://help.syncfusion.com/document-processing/word/word-library/java/installation/configure-to-download-syncfusion-java-packages-from-gradle)
+* [How to configure Syncfusion<sup style="font-size:70%">&reg;</sup> Java packages in Apache Maven?](https://help.syncfusion.com/document-processing/word/word-library/java/installation/configure-to-download-syncfusion-java-packages-from-apache-maven)
 

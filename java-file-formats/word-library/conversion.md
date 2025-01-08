@@ -1,6 +1,6 @@
 ---
 title: Working with Document Conversions | Word library | Syncfusion
-description: This section illustrates how to convert a Word document into other supported file formats using Syncfusion Java Word library
+description: This section illustrates how to convert a Word document into other supported file formats using Syncfusion<sup style="font-size:70%">&reg;</sup> Java Word library
 platform: java-file-formats
 control: Word Library
 documentation: UG
@@ -10,7 +10,7 @@ documentation: UG
 
 ## Working with Document Conversions
 
-The Essential DocIO converts documents from one format to another format. Each file format document can be categorized as flow layout document.
+The Essential<sup style="font-size:70%">&reg;</sup> DocIO converts documents from one format to another format. Each file format document can be categorized as flow layout document.
 
 **Flow layout document**
 
@@ -19,7 +19,7 @@ The Essential DocIO converts documents from one format to another format. Each f
 * Dynamically renders the content by application at run time.
 * Example: DOCX, HTML and TEXT file formats.
 
-Essential DocIO can convert various flow document as fixed document by using our layout engine. Following conversions are supported by Essential DocIO.
+Essential<sup style="font-size:70%">&reg;</sup> DocIO can convert various flow document as fixed document by using our layout engine. Following conversions are supported by Essential<sup style="font-size:70%">&reg;</sup> DocIO.
 
 * Microsoft Word file format Conversions.
 * Text Conversions.
