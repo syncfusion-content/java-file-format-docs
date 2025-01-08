@@ -7,7 +7,7 @@ documentation: UG
 ---
 # Frequently Asked Questions
 
-The frequently asked questions in Essential DocIO are listed below.
+The frequently asked questions in Essential<sup style="font-size:70%">&reg;</sup> DocIO are listed below.
 
 ## How to modify an existing style?
 
@@ -372,7 +372,7 @@ document.close();
 
 Java Word library uses Points for measurement properties in a Word document.
 
-## Migration from Microsoft Office Automation to Essential DocIO
+## Migration from Microsoft Office Automation to Essential<sup style="font-size:70%">&reg;</sup> DocIO
 
 ### Bookmarks
 
@@ -534,7 +534,7 @@ N>  For more information on working with the comments using Java Word library, y
 
 ## How to check whether a Word document contains tracked changes or not? 
 
-You can check whether a Word document contains tracked changes by using `HasChanges` property in Essential DocIO.
+You can check whether a Word document contains tracked changes by using `HasChanges` property in Essential<sup style="font-size:70%">&reg;</sup> DocIO.
 
 The following code example shows how to check whether a Word document contains tracked changes.
 
@@ -559,7 +559,7 @@ document.close();
 
 You can **accept or reject track changes by revision type** in the tracked changes Word document. 
 
-For example, if you like to accept or reject changes of specific revision type (insertions, deletions, formatting, move to, or move from), you can iterate into the revisions in Word document and then accept or reject the particular revision type using Essential DocIO.
+For example, if you like to accept or reject changes of specific revision type (insertions, deletions, formatting, move to, or move from), you can iterate into the revisions in Word document and then accept or reject the particular revision type using Essential<sup style="font-size:70%">&reg;</sup> DocIO.
 
 The following code example shows how to accept or reject track changes of specific type in the Word document .
 

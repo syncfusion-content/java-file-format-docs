@@ -7,7 +7,7 @@ documentation: UG
 keywords: Word, Office, SDK, Automation, API, create, edit, convert, read
 ---
 
-# Welcome to Syncfusion Essential File Formats Java Platform
+# Welcome to Syncfusion<sup style="font-size:70%">&reg;</sup> Essential File Formats Java Platform
 
 Essential File Formats for Java includes a Java class library to create, edit, write, and convert Word file formats in Java applications without Microsoft Office or interop dependencies.
 

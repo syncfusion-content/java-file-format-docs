@@ -195,7 +195,7 @@ document.close();
 
 A cross-reference refers to an item that appears in another location in a document. You can create cross-reference to bookmarks in a document by using the `appendCrossReference` method of `WParagraph` class.
 
-N>  The Essential DocIO supports creating and updating the cross-reference fields only for bookmarks in a document.
+N>  The Essential<sup style="font-size:70%">&reg;</sup> DocIO supports creating and updating the cross-reference fields only for bookmarks in a document.
 
 The following code example explains how to append cross reference for bookmark in a Word document.
 
