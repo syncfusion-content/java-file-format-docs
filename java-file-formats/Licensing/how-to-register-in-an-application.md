@@ -32,7 +32,7 @@ Import ‘syncfusion.licensing' package and register the license key in the **ma
 import com.syncfusion.licensing.*;
 
 static void main() { 
-// Register Syncfusion<sup style="font-size:70%">&reg;</sup> license 
+// Register Syncfusion license 
 SyncfusionLicenseProvider.registerLicense("YOUR LICENSE KEY"); 
 }
 {% endhighlight %}
