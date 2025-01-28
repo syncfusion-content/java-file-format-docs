@@ -25,7 +25,7 @@ This jar contains the core features needed for creating, reading, and editing a 
 <tr>
 <td>
 syncfusion-javahelper<br/><br/></td><td>
-This jar contains common functionalities required for the syncfusion file format libraries.<br/><br/></td></tr>
+This jar contains common functionalities required for the syncfusion<sup style="font-size:70%">&reg;</sup> file format libraries.<br/><br/></td></tr>
 <tr>
 <td>
 syncfusion-ej2-wordprocessor<br/><br/></td><td>

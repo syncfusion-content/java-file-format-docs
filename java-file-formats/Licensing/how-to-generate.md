@@ -9,7 +9,7 @@ documentation: ug
 
 # Generate Syncfusion<sup style="font-size:70%">&reg;</sup> FileFormat License key
 
-License keys for Java can be generated from the [License & Downloads](https://syncfusion.com/account/downloads) or [Trial & Downloads](https://www.syncfusion.com/account/manage-trials/downloads) section from your Syncfusion<sup style="font-size:70%">&reg;</sup> account. 
+License keys for Java can be generated from the [License & Downloads](https://syncfusion.com/account/downloads) or [Trial & Downloads](https://www.syncfusion.com/account/manage-trials/downloads) section from your Syncfusion account. 
 
 ![Get License Key](licensing-images/generate-license.png)
 
@@ -18,7 +18,7 @@ I> * Syncfusion<sup style="font-size:70%">&reg;</sup> license keys are **versio
 
 ## Claim License key
 
-Syncfusion License keys can also be generated from the **"Claim License Key"** page based on the trial or valid license associated with your Syncfusion<sup style="font-size:70%">&reg;</sup> account.
+Syncfusion<sup style="font-size:70%">&reg;</sup> License keys can also be generated from the **"Claim License Key"** page based on the trial or valid license associated with your Syncfusion<sup style="font-size:70%">&reg;</sup> account.
 
 You can get the license key, based on license availability in your Syncfusion<sup style="font-size:70%">&reg;</sup> account.
 

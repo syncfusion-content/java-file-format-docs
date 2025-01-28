@@ -12,14 +12,14 @@ documentation: ug
 
 ## Overview
 
-For the Essential Studio<sup style="font-size:70%">&reg;</sup>  FileFormats product, Syncfusion<sup style="font-size:70%">&reg;</sup> offers a Web Installer. This installer alleviates the burden of downloading a larger installer. You can simply download and run the online installer, which will be smaller in size and will download and install the Essential Studio<sup style="font-size:70%">&reg;</sup>  products you have chosen. You can get the most recent version of Essential Studio<sup style="font-size:70%">&reg;</sup>  Web Installer [here](https://www.syncfusion.com/downloads/latest-version). 
+For the Essential Studio<sup style="font-size:70%">&reg;</sup> FileFormats product, Syncfusion<sup style="font-size:70%">&reg;</sup> offers a Web Installer. This installer alleviates the burden of downloading a larger installer. You can simply download and run the online installer, which will be smaller in size and will download and install the Essential Studio<sup style="font-size:70%">&reg;</sup> products you have chosen. You can get the most recent version of Essential Studio<sup style="font-size:70%">&reg;</sup> Web Installer [here](https://www.syncfusion.com/downloads/latest-version). 
 
  
 ## Installation
 
-The steps below show how to install Essential Studio<sup style="font-size:70%">&reg;</sup>  FileFormats Web Installer.
+The steps below show how to install Essential Studio<sup style="font-size:70%">&reg;</sup> FileFormats Web Installer.
 
-1.  Open the Syncfusion<sup style="font-size:70%">&reg;</sup> Essential Studio<sup style="font-size:70%">&reg;</sup>  FileFormats Web Installer file from downloaded location by double-clicking it. The Installer Wizard automatically opens and extracts the package.
+1.  Open the Syncfusion<sup style="font-size:70%">&reg;</sup> Essential Studio<sup style="font-size:70%">&reg;</sup> FileFormats Web Installer file from downloaded location by double-clicking it. The Installer Wizard automatically opens and extracts the package.
 
     ![Installer Extraction Wizard](images/Step-by-Step-Installation_img1.png)
 
@@ -102,7 +102,7 @@ The steps below show how to install Essential Studio<sup style="font-size:70%">&
 	
 	* To open the Syncfusion<sup style="font-size:70%">&reg;</sup> Control Panel, click **Launch Control Panel**.
 
-12. After installation, there will be two Syncfusion<sup style="font-size:70%">&reg;</sup> control panel entries, as shown below. The Essential Studio<sup style="font-size:70%">&reg;</sup>  entry will manage all Syncfusion<sup style="font-size:70%">&reg;</sup> products installed in the same version, while the Product entry will only uninstall the specific product setup.
+12. After installation, there will be two Syncfusion<sup style="font-size:70%">&reg;</sup> control panel entries, as shown below. The Essential Studio<sup style="font-size:70%">&reg;</sup> entry will manage all Syncfusion<sup style="font-size:70%">&reg;</sup> products installed in the same version, while the Product entry will only uninstall the specific product setup.
 
     ![Control Panel](images/Step-by-Step-Installation_img19.png)
 	
@@ -112,27 +112,27 @@ The steps below show how to install Essential Studio<sup style="font-size:70%">&
 	
 ## Uninstallation
 
-Syncfusion FileFormats installer can be uninstalled in two ways.
+Syncfusion<sup style="font-size:70%">&reg;</sup> FileFormats installer can be uninstalled in two ways.
 
    * Uninstall the FileFormats using the Syncfusion<sup style="font-size:70%">&reg;</sup> FileFormats web installer
    * Uninstall the FileFormats from Windows Control Panel
 
-Follow either one of the option below to uninstall Syncfusion<sup style="font-size:70%">&reg;</sup> Essential Studio<sup style="font-size:70%">&reg;</sup>  FileFormats installer.
+Follow either one of the option below to uninstall Syncfusion<sup style="font-size:70%">&reg;</sup> Essential Studio<sup style="font-size:70%">&reg;</sup> FileFormats installer.
   
 **Option 1: Uninstall the FileFormats using the Syncfusion<sup style="font-size:70%">&reg;</sup> FileFormats web installer**
 
-Syncfusion provides the option to uninstall products of the same version directly from the Web Installer application. Select the products to be uninstalled from the list, and Web Installer will uninstall them one by one.
+Syncfusion<sup style="font-size:70%">&reg;</sup> provides the option to uninstall products of the same version directly from the Web Installer application. Select the products to be uninstalled from the list, and Web Installer will uninstall them one by one.
 
 ![Platform Selection wizard Installed](images/Step-by-Step-Installation_img4.png)
 
 	
 **Option 2: Uninstall the FileFormats from Windows Control Panel**  
 	
-You can uninstall all the installed products by selecting the **Syncfusion Essential Studio<sup style="font-size:70%">&reg;</sup>  {version}** entry (element 1 in the below screenshot) from the Windows control panel, or you can uninstall FileFormats alone by selecting the **Syncfusion Essential Studio<sup style="font-size:70%">&reg;</sup>  for FileFormats {version}** entry (element 2 in the below screenshot) from the Windows control panel.
+You can uninstall all the installed products by selecting the **Syncfusion<sup style="font-size:70%">&reg;</sup> Essential Studio<sup style="font-size:70%">&reg;</sup> {version}** entry (element 1 in the below screenshot) from the Windows control panel, or you can uninstall FileFormats alone by selecting the **Syncfusion<sup style="font-size:70%">&reg;</sup> Essential Studio<sup style="font-size:70%">&reg;</sup> for FileFormats {version}** entry (element 2 in the below screenshot) from the Windows control panel.
 
 ![Control Panel](images/Step-by-Step-Installation_img22.png)
 	
-N> If the **Syncfusion Essential Studio<sup style="font-size:70%">&reg;</sup>  for FileFormats {version}** entry is selected from the Windows control panel, the Syncfusion<sup style="font-size:70%">&reg;</sup> Essential Studio<sup style="font-size:70%">&reg;</sup>  FileFormats alone will be removed and the below default MSI uninstallation window will be displayed.	
+N> If the **Syncfusion<sup style="font-size:70%">&reg;</sup> Essential Studio<sup style="font-size:70%">&reg;</sup> for FileFormats {version}** entry is selected from the Windows control panel, the Syncfusion<sup style="font-size:70%">&reg;</sup> Essential Studio<sup style="font-size:70%">&reg;</sup> FileFormats alone will be removed and the below default MSI uninstallation window will be displayed.	
 
 1.  The Syncfusion<sup style="font-size:70%">&reg;</sup> FileFormats Web Installer's welcome wizard will be displayed. Click the Next button
 	

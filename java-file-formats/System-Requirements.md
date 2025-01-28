@@ -44,5 +44,5 @@ The system requirements for using our Syncfusion<sup style="font-size:70%">&reg;
 
 ### Supported Java versions
 
-Syncfusion Java libraries supports Java SE 8.0(1.8) or above versions.
+Syncfusion<sup style="font-size:70%">&reg;</sup> Java libraries supports Java SE 8.0(1.8) or above versions.
 

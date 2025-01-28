@@ -101,7 +101,7 @@ You can perform Mail merge with business objects in a template document. For fur
 
 ## Performing Nested Mail merge with relational data objects
 
-Essential DocIO supports performing nested Mail merge with implicit relational data objects without any explicit relational commands by using the `ExecuteNestedGroup` overload method. For further information, click [here](https://help.syncfusion.com/document-processing/word/word-library/java/mail-merge/mail-merge-for-nested-groups#mail-merge-with-implicit-relational-data).
+Essential<sup style="font-size:70%">&reg;</sup> DocIO supports performing nested Mail merge with implicit relational data objects without any explicit relational commands by using the `ExecuteNestedGroup` overload method. For further information, click [here](https://help.syncfusion.com/document-processing/word/word-library/java/mail-merge/mail-merge-for-nested-groups#mail-merge-with-implicit-relational-data).
 
 ## Event support for mail merge
 

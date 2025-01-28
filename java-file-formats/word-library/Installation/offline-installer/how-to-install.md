@@ -12,7 +12,7 @@ documentation: ug
 
 ## Installing with UI   
 
-The steps below show how to install the Essential Studio<sup style="font-size:70%">&reg;</sup>  FileFormats installer.
+The steps below show how to install the Essential Studio<sup style="font-size:70%">&reg;</sup> FileFormats installer.
 
 1.	Open the Syncfusion<sup style="font-size:70%">&reg;</sup> FileFormats offline installer file from downloaded location by double-clicking it. The Installer Wizard automatically opens and extracts the package.
 
@@ -97,7 +97,7 @@ The steps below show how to install the Essential Studio<sup style="font-size:70
 7.  After installing, click the **Launch Control Panel** link to open the Syncfusion<sup style="font-size:70%">&reg;</sup> Control Panel.
 
 
-8.  Click the Finish button. Your system has been installed with the Syncfusion<sup style="font-size:70%">&reg;</sup> Essential Studio<sup style="font-size:70%">&reg;</sup>  FileFormats product.
+8.  Click the Finish button. Your system has been installed with the Syncfusion<sup style="font-size:70%">&reg;</sup> Essential Studio<sup style="font-size:70%">&reg;</sup> FileFormats product.
 
     N> * You can find the required jars in the FileFormats installed location
     * **Location:** {ProgramFilesFolder}\Syncfusion\Essential Studio\ {Platform}\ {version}\JarFiles
@@ -105,7 +105,7 @@ The steps below show how to install the Essential Studio<sup style="font-size:70
 
 ## Installing in silent mode
 
-The Syncfusion<sup style="font-size:70%">&reg;</sup> Essential Studio<sup style="font-size:70%">&reg;</sup>  FileFormats Installer supports installation and uninstallation via the command line.
+The Syncfusion<sup style="font-size:70%">&reg;</sup> Essential Studio<sup style="font-size:70%">&reg;</sup> FileFormats Installer supports installation and uninstallation via the command line.
 
 ### Command Line Installation
 
@@ -127,14 +127,14 @@ To install through the Command Line in Silent mode, follow the steps below.
     **Example:** “D:\Temp\syncfusionessentialfileformats_x.x.x.x.exe” /Install silent /UNLOCKKEY:“product unlock key” /log “C:\Temp\EssentialStudio_Platform.log” /InstallPath:C:\Syncfusion\x.x.x.x /InstallSamples:true /InstallAssemblies:true /UninstallExistAssemblies:true /InstallToolbox:true
 
 	
-7.  Essential Studio<sup style="font-size:70%">&reg;</sup>  for FileFormats is installed.
+7.  Essential Studio<sup style="font-size:70%">&reg;</sup> for FileFormats is installed.
 
-    N> x.x.x.x should be replaced with the Essential Studio<sup style="font-size:70%">&reg;</sup>  version and the Product Unlock Key needs to be replaced with the Unlock Key for that version.
+    N> x.x.x.x should be replaced with the Essential Studio<sup style="font-size:70%">&reg;</sup> version and the Product Unlock Key needs to be replaced with the Unlock Key for that version.
    
 
 ### Command Line Uninstallation
 
-Syncfusion Essential FileFormats can be uninstalled silently using the Command Line.
+Syncfusion<sup style="font-size:70%">&reg;</sup> Essential<sup style="font-size:70%">&reg;</sup> FileFormats can be uninstalled silently using the Command Line.
 
 1.	Run the Syncfusion<sup style="font-size:70%">&reg;</sup> FileFormats installer by double-clicking it. The Installer Wizard automatically opens and extracts the package.
 2.	The file syncfusionessentialfileformats_(version).exe file will be extracted into the Temp directory.
@@ -148,6 +148,6 @@ Syncfusion Essential FileFormats can be uninstalled silently using the Command L
     **Example:** “D:\Temp\syncfusionessentialfileformats_x.x.x.x.exe" /uninstall silent
 
 
-7.  Essential Studio<sup style="font-size:70%">&reg;</sup>  for WPF is uninstalled.
+7.  Essential Studio<sup style="font-size:70%">&reg;</sup> for WPF is uninstalled.
    
    

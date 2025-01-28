@@ -8,7 +8,7 @@ documentation: UG
 
 # Available Syncfusion<sup style="font-size:70%">&reg;</sup> Java packages
 
-Below are the Java packages available in syncfusion.
+Below are the Java packages available in syncfusion<sup style="font-size:70%">&reg;</sup>.
 
 <table>
 <thead>  

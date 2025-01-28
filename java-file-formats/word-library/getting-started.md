@@ -178,7 +178,7 @@ textRange=paragraph.appendText("AdventureWorks Cycles, the fictitious company on
 
 {% endtabs %}  
 
-Essential DocIO allows you to create simple and multi-level lists. The following code sample explains how to create a numbered and bulleted list.
+Essential<sup style="font-size:70%">&reg;</sup> DocIO allows you to create simple and multi-level lists. The following code sample explains how to create a numbered and bulleted list.
 
 {% tabs %} 
 
@@ -267,7 +267,7 @@ The resultant Word document looks as follows.
 
 ## Performing Mail merge
 
-Essential DocIO allows you to generate documents by filling data in the template document from the data source. Mail merge operation automatically maps the column name in the data source and names of the merge fields in the template Word document and fills the data.
+Essential<sup style="font-size:70%">&reg;</sup> DocIO allows you to generate documents by filling data in the template document from the data source. Mail merge operation automatically maps the column name in the data source and names of the merge fields in the template Word document and fills the data.
 
 The following data sources are supported by the Essential<sup style="font-size:70%">&reg;</sup> DocIO for performing the Mail merge.
 

@@ -16,7 +16,7 @@ The following command shows how to mention the repository in Apache Maven.
 {% highlight XML %}
 <repository>
    <id>Syncfusion-Java</id>
-   <name>Syncfusion Java repo</name>
+   <name>Syncfusion<sup style="font-size:70%">&reg;</sup> Java repo</name>
    <url>https://jars.syncfusion.com/repository/maven-public/</url>
 </repository>
 {% endhighlight %}

@@ -134,7 +134,7 @@ To install through the Command Line in Silent mode, follow the steps below.
 
 ### Command Line Uninstallation
 
-Syncfusion Essential FileFormats can be uninstalled silently using the Command Line.
+Syncfusion<sup style="font-size:70%">&reg;</sup> Essential<sup style="font-size:70%">&reg;</sup> FileFormats can be uninstalled silently using the Command Line.
 
 1.	Run the Syncfusion<sup style="font-size:70%">&reg;</sup> FileFormats installer by double-clicking it. The Installer Wizard automatically opens and extracts the package.
 2.	The file syncfusionessentialfileformats_(version).exe file will be extracted into the Temp directory.

@@ -9,7 +9,7 @@ documentation: ug
 
 # Upgrading Syncfusion<sup style="font-size:70%">&reg;</sup> FileFormats
 
-Syncfusion releases new volumes once every three months, with exciting new features. There will be one Service Pack release for these volume releases. Service Pack releases are provided to address major bug fixes in the volume releases.
+Syncfusion<sup style="font-size:70%">&reg;</sup> releases new volumes once every three months, with exciting new features. There will be one Service Pack release for these volume releases. Service Pack releases are provided to address major bug fixes in the volume releases.
 
 You can upgrade to our latest version from any installed Syncfusion<sup style="font-size:70%">&reg;</sup> version.
 

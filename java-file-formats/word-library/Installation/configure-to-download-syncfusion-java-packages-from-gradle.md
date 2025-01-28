@@ -16,7 +16,7 @@ The following command shows how to mention the repository in Gradle.
 <td>
 repositories&nbsp;{<br />
 &nbsp;&nbsp;&nbsp;maven&nbsp; {<br />
-&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:green;font-size:13px;font-style:italic">&nbsp;&nbsp;//Syncfusion maven repository to download the artifacts</span>.<br />
+&nbsp;&nbsp;&nbsp;&nbsp;<span style="color:green;font-size:13px;font-style:italic">&nbsp;&nbsp;//Syncfusion<sup style="font-size:70%">&reg;</sup> maven repository to download the artifacts</span>.<br />
 &nbsp;&nbsp;&nbsp;&nbsp;url "https://jars.syncfusion.com/repository/maven-public/"<br />
 }<br />
 }
