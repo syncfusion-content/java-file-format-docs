@@ -36,4 +36,4 @@ N> Currently, Essential<sup style="font-size:70%">&reg;</sup> DocIO supports .DO
 
 **See Also**
 
-[Jars Required for Java Word library (DocIO)](https://help.syncfusion.com/document-processing/word/word-library/java/jars-required#download-jars)
+* [Jars Required for Java Word library (DocIO)](https://help.syncfusion.com/document-processing/word/word-library/java/jars-required#download-jars)
