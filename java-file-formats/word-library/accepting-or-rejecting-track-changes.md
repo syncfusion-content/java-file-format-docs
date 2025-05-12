@@ -1,5 +1,5 @@
 ---
-title: Accepting or Rejecting Track Changes | DocIO | Syncfusion
+title: Accepting or Rejecting Track Changes | Word library | Syncfusion
 description: This section illustrates how to Accept or Reject the Track changes in the Word document using Syncfusion Word library (Essential DocIO)
 platform: java-file-formats
 control: Word Library
@@ -41,7 +41,7 @@ document.close();
 
 ## Accept all changes
 
-You can **accept all track changes in Word document** using `AcceptAll`method.
+You can **accept all track changes in Word document** using `acceptAll` method.
 
 The following code example shows how to accept all the tracked changes.
 
@@ -66,7 +66,7 @@ By executing the above code example, it generates output Word document as follow
 
 ## Reject all changes
 
-You can **reject all track changes in Word document** using `RejectAll` method.
+You can **reject all track changes in Word document** using `rejectAll` method.
 
 The following code example shows how to reject all the tracked changes.
 
@@ -91,7 +91,7 @@ By executing the above code example, it generates output Word document as follow
 
 ## Accept all changes by a particular reviewer
 
-You can **accept all changes made by the author** in the Word document using `Accept`  method.
+You can **accept all changes made by the author** in the Word document using `accept` method.
 
 The following code example shows how to accept the tracked changes made by the author.
 
@@ -119,7 +119,7 @@ document.close();
 
 ## Reject all changes by particular reviewer
 
-You can **reject all changes made by the author** in the Word document using `Reject` method.
+You can **reject all changes made by the author** in the Word document using `reject` method.
 
 The following code example shows how to reject the tracked changes made by the author.
 
@@ -172,6 +172,6 @@ document.close();
 
 Frequently Asked Questions
 
-* [How to check whether a Word document contains tracked changes or not?](https://help.syncfusion.com/java-file-formats/word-library/faq#how-to-check-whether-a-word-document-contains-tracked-changes-or-not)
-* [How to accept or reject track changes of specific type in the Word document?](https://help.syncfusion.com/java-file-formats/word-library/faq#how-to-accept-or-reject-track-changes-of-specific-type-in-the-word-document)
-* [How to enable track changes for Word document?](https://help.syncfusion.com/java-file-formats/word-library/faq#how-to-enable-track-changes-for-word-document)
+* [How to check whether a Word document contains tracked changes or not?](https://help.syncfusion.com/document-processing/word/word-library/java/faq#how-to-check-whether-a-word-document-contains-tracked-changes-or-not)
+* [How to accept or reject track changes of specific type in the Word document?](https://help.syncfusion.com/document-processing/word/word-library/java/faq#how-to-accept-or-reject-track-changes-of-specific-type-in-the-word-document)
+* [How to enable track changes for Word document?](https://help.syncfusion.com/document-processing/word/word-library/java/faq#how-to-enable-track-changes-for-word-document)

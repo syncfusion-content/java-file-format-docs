@@ -309,6 +309,13 @@ secondText.getCharacterFormat().setUnderlineStyle(UnderlineStyle.DotDash);
 secondText.getCharacterFormat().setItalic(true);
 secondText.getCharacterFormat().setFontName("Times New Roman");
 secondText.getCharacterFormat().setTextColor(ColorSupport.getGreen());
+//Add a new paragraph to the section.
+IWParagraph secondParagraph = section.addParagraph();
+//Adds new text to the paragraph
+IWTextRange thirdText = secondParagraph.appendText("שלום עולם");
+thirdText.getCharacterFormat().setBidi(true);
+//Sets language identifier for right to left characters.
+thirdText.getCharacterFormat().setLocaleIdBidi((short)LocaleIDs.he_IL.getEnumValue());
 //Save the Word document.
 document.save("Sample.docx", FormatType.Docx);
 //Close the document.
@@ -722,7 +729,7 @@ document.close();
 
 {% endtabs %}  
 
-The list levels can be incremented or decremented by using the `IncreaseIndentLevel` and `DecreaseIndentLevel` methods respectively. The following code example explains how to increase or decrease the list indent levels.
+The list levels can be incremented or decremented by using the `increaseIndentLevel` and `decreaseIndentLevel` methods respectively. The following code example explains how to increase or decrease the list indent levels.
 
 {% tabs %} 
 
@@ -1073,7 +1080,7 @@ document.close();
   
 ## Working with symbols
 
-Symbols are used to add contents such as currencies, numbers, punctuations, and more. DocIO represents symbols with the WSymbol instance. Each symbol can be identified with their character codes.
+Symbols are used to add contents such as currencies, numbers, punctuations, and more. DocIO represents symbols with the `WSymbol` instance. Each symbol can be identified with their character codes.
 
 The following code example explains how to add new symbol to the document.
 

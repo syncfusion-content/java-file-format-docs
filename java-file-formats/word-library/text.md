@@ -1,5 +1,5 @@
 ---
-title: Word document to Text Conversion | DocIO | Syncfusion
+title: Word document to Text Conversion | Word library | Syncfusion
 description: This section illustrates how to perform Word document to Text conversion using Syncfusion Word library (Essential DocIO)
 platform: java-file-formats
 control: Word Library
@@ -8,7 +8,7 @@ documentation: UG
 
 # Word to Text and Text to Word Conversions
 
-The Essential DocIO converts the Word document into the Text file and vice versa. The following code example shows how to convert the Word document into text file.
+The Essential<sup style="font-size:70%">&reg;</sup> DocIO converts the Word document into the Text file and vice versa. The following code example shows how to convert the Word document into text file.
 
 {% tabs %}
 {% highlight JAVA %}

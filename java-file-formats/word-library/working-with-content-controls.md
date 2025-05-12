@@ -1,5 +1,5 @@
 ---
-title: Working with Content Controls | DocIO | Syncfusion
+title: Working with Content Controls | Word library | Syncfusion
 description: This section illustrates how to work with Content Controls in Word document using Syncfusion Java Word library (Essential DocIO)
 platform: java-file-formats
 control: Word Library
@@ -12,7 +12,7 @@ documentation: UG
 
 Content controls are individual controls that you can add and customize to use in templates, forms, and documents. For example, many online forms are designed with a drop-down list control that provides a restricted set of choices.
 
-N> You can use content controls only in documents that are saved in the Open XML Format and cannot be used in the Word 97-2003 document (.doc) format.
+N> You can use content controls only in documents that are saved in the Open XML Format.
 
 Content controls can be categorized based on its occurrence in a document as follows,
 
@@ -585,12 +585,11 @@ document1.close();
 
 ## Types of Content Controls
 
-The following types of content controls can be created by using the Essential DocIO.
+The following types of content controls can be created by using the Essential<sup style="font-size:70%">&reg;</sup> DocIO.
 
 * Rich Text
 * Plain Text
 * Check Box
-* Date picker
 * Drop-Down List and Combo Box
 * Picture
 

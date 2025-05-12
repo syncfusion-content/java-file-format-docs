@@ -1,5 +1,5 @@
 ---
-title: Working with Form Fields | DocIO | Syncfusion
+title: Working with Form Fields | Word library | Syncfusion
 description: This section illustrated how to work with FormFields in Word document using Syncfusion Java Word library (Essential DocIO)
 platform: java-file-formats
 control: Word Library
@@ -18,7 +18,7 @@ The following are the types of form field in the Word document
 
 ## Check Box
 
-You can add new Checkbox form field to a Word document by using `AppendCheckBox` method of `WParagraph` class.
+You can add new Checkbox form field to a Word document by using `appendCheckBox` method of `WParagraph` class.
 
 The following code illustrates how to add new checkbox form field.
 
@@ -59,7 +59,7 @@ You can modify the checkbox properties such as checked state, size, help text in
 {% tabs %} 
 
 {% highlight JAVA %}
-//Loads the template document .
+//Loads the template document.
 WordDocument document = new WordDocument("Checkbox.docx");
 //Iterates through paragraph items.
 for (Object item_tempObj : document.getLastParagraph().getChildEntities()) 
@@ -84,7 +84,7 @@ document.close();
 
 ## Drop-Down
 
-You can add new Dropdown form field to a Word document by using `AppendDropDownFormField` method of `WParagraph` class.
+You can add new Dropdown form field to a Word document by using `appendDropDownFormField` method of `WParagraph` class.
 
 The following code illustrates how to add a new dropdown field.
 
@@ -121,7 +121,7 @@ You can add or modify list of items of a Dropdown form field in a Word document.
 {% tabs %}  
 
 {% highlight JAVA %}
-//Loads the template document .
+//Loads the template document.
 WordDocument document = new WordDocument("Dropdown.docx");
 //Iterates through paragraph items.
 for (Object item_tempObj : document.getLastParagraph().getChildEntities()) 
@@ -146,7 +146,7 @@ document.close();
 
 ## Text Form field
 
-You can add new text form field to a Word document by using `AppendTextFormField` method of `WParagraph` class.
+You can add new text form field to a Word document by using `appendTextFormField` method of `WParagraph` class.
 
 The following code illustrates how to add new text form field.
 

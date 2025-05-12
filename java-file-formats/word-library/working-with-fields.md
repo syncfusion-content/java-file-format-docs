@@ -9,9 +9,9 @@ documentation: UG
 
 Fields in a Word document are placeholders for data that might change on field update. Fields are represented by the `WField` and `WFieldMark` instances in DocIO. A field in a Word document contains field codes, field separator, field result, and field end.
 
-To learn various types of Microsoft Word supported fields and their syntax,refer to the [MSDN article](https://support.office.com/en-US/article/Field-codes-in-Word-1ad6d91a-55a7-4a8d-b535-cf7888659a51#)
+To learn various types of Microsoft Word supported fields and their syntax,refer to the [MSDN article](https://support.microsoft.com/en-us/office/list-of-field-codes-in-word-1ad6d91a-55a7-4a8d-b535-cf7888659a51?ui=en-us&rs=en-us&ad=us#)
 
-From v16.1.0.24, the entire field code is included in Document Object Model(DOM). Hence, adding a field will automatically include the following elements in DOM:
+The entire field code is included in Document Object Model(DOM). Hence, adding a field will automatically include the following elements in DOM:
 
 1. `WField`: Represents the starting of a Field.
 
@@ -23,11 +23,9 @@ From v16.1.0.24, the entire field code is included in Document Object Model(DOM)
 
 5. `WFieldMark`: Represents the end of a Field.
 
-Find more information about migration changes [here](https://help.syncfusion.com/file-formats/release-notes/migratingtov16.1.0.24#). 
-
 ## Adding fields
 
-You can add a field to a Word document by using the `AppendField` method of `WParagraph` class.
+You can add a field to a Word document by using the `appendField` method of `WParagraph` class.
 
 The following code example explains how to add a field to the Word document.
 
@@ -107,11 +105,6 @@ Field updating engine calculates the resultant value based on the field code inf
 * TITLE
 * Cross-Reference
 * SEQ
-
-The following are the known limitations:
-
-* Updating of NUMPAGES field and Cross Reference field with Page number and Paragraph number options are not supported in Silverlight, WinRT, Universal, Windows Phone, and Xamarin applications.
-* Currently group shapes, drawing canvas, and table auto resizing are not supported in Word to PDF layouting, and this may lead to update incorrect page number and total number of pages.
 
 The following code example explains how to update the fields present in Word document.
 
@@ -200,9 +193,9 @@ document.close();
   
 ## Cross reference
 
-A cross-reference refers to an item that appears in another location in a document. You can create cross-reference to bookmarks in a document by using the `AppendCrossReference` method of `WParagraph` class.
+A cross-reference refers to an item that appears in another location in a document. You can create cross-reference to bookmarks in a document by using the `appendCrossReference` method of `WParagraph` class.
 
-N>  The Essential DocIO supports creating and updating the cross-reference fields only for bookmarks in a document.
+N>  The Essential<sup style="font-size:70%">&reg;</sup> DocIO supports creating and updating the cross-reference fields only for bookmarks in a document.
 
 The following code example explains how to append cross reference for bookmark in a Word document.
 
@@ -238,7 +231,7 @@ document.close();
 
 ## Unlink fields
 
-You can replace the field with its most recent result in the Word document by unlinking the field using the `Unlink` API. When you unlink a field, its current result is converted to text or a graphic and can no longer be updated automatically.
+You can replace the field with its most recent result in the Word document by unlinking the field using the `unlink` API. When you unlink a field, its current result is converted to text or a graphic and can no longer be updated automatically.
 
 
 The following code example shows how to unlink the fields in Word document.

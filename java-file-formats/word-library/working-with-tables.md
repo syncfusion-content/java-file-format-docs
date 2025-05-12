@@ -12,7 +12,7 @@ A table in Word document is used to arrange document content in rows and columns
 1. A row is a collection of cells and it is represented by an instance of `WTableRow`. Each row must contain at least one cell.
 2. A cell can contain one or more paragraphs and tables. An instance of `WTableCell` represents a table cell. Each table cell must contain at least one paragraph.
 
-N> Adding more than 63 columns not supported in Word document using Microsoft Word application. It shows alert when you attempt to insert table with more than 64 columns, which is a one of the behaviors of Microsoft Word and Essential DocIO does the same.
+N> Adding more than 63 columns not supported in Word document using Microsoft Word application. It shows alert when you attempt to insert table with more than 64 columns, which is a one of the behaviors of Microsoft Word and Essential<sup style="font-size:70%">&reg;</sup> DocIO does the same.
 
 The following image illustrates how a table in Word document is organized in EssentialDocIO’s DOM:
 
@@ -202,7 +202,7 @@ document.close();
 
 ## Align text within a table
 
-You can iterate the cells within a table and align text for each cell. Find more information about iterating the cells from [here](https://help.syncfusion.com/java-file-formats/word-library/working-with-tables#iterating-through-table-elements)
+You can iterate the cells within a table and align text for each cell. Find more information about iterating the cells from [here](https://help.syncfusion.com/document-processing/word/word-library/java/working-with-tables#iterating-through-table-elements)
 
 The following code example illustrates how to align text within a table.
 
@@ -377,7 +377,7 @@ document.close();
 
 A table style defines a set of table, row, cell and paragraph level formatting that can be applied to a table. `WTableStyle` instance represents table style in a Word document.
 
-N>  Essential DocIO currently provides support for table styles in DOCX and WordML formats alone. The visual appearance is also preserved in Word to PDF, Word to Image, and Word to HTML conversions.
+N>  Essential<sup style="font-size:70%">&reg;</sup> DocIO currently provides support for table styles in DOCX and WordML formats alone. The visual appearance is also preserved in Word to HTML conversion.
 
 The following code example illustrates how to apply the built-in table styles to the table.
 
@@ -470,6 +470,84 @@ document.close();
 {% endhighlight %}
 
 {% endtabs %}  
+
+### Apply Base Style
+
+Table styles can be based on other table styles also. When applying a base style, the new style will inherit the values of the base style that are not explicitly redefined in the new style. You can apply a custom table style or a built-in table style as a base for the table style.
+
+The following code example illustrates how to apply built-in and custom table styles as base styles for another custom table.
+
+{% tabs %} 
+
+{% highlight JAVA %}
+//Create a new Word document.
+WordDocument document = new WordDocument();
+//Add one section and paragraph to the document.
+document.ensureMinimal();
+WTable table = (WTable)document.getLastSection().addTable();
+table.resetCells(3,2);
+table.get(0,0).addParagraph().appendText("Row 1 Cell 1");
+table.get(0,1).addParagraph().appendText("Row 1 Cell 2");
+table.get(1,0).addParagraph().appendText("Row 2 Cell 1");
+table.get(1,1).addParagraph().appendText("Row 2 Cell 2");
+table.get(2,0).addParagraph().appendText("Row 3 Cell 1");
+table.get(2,1).addParagraph().appendText("Row 3 Cell2");
+
+//Add a new custom table style.
+WTableStyle tableStyle = (WTableStyle)document.addTableStyle("CustomStyle1");
+tableStyle.getTableProperties().setRowStripe((long)1);
+//Apply conditional formatting for the first row.
+ConditionalFormattingStyle firstRowStyle = tableStyle.getConditionalFormattingStyles().add(ConditionalFormattingType.FirstRow);
+firstRowStyle.getCharacterFormat().setBold(true);
+//Apply conditional formatting for the odd row.
+ConditionalFormattingStyle oddRowBandingStyle = tableStyle.getConditionalFormattingStyles().add(ConditionalFormattingType.OddRowBanding);
+oddRowBandingStyle.getCharacterFormat().setItalic(true);
+//Apply built-in table style as base style for CustomStyle1.
+tableStyle.applyBaseStyle(BuiltinTableStyle.TableContemporary);
+//Apply the custom table style to the table.
+table.applyStyle("CustomStyle1");
+document.getLastSection().addParagraph();
+
+//Create another table in the Word document.
+table=(WTable)document.getLastSection().addTable();
+table.resetCells(3,2);
+table.get(0,0).addParagraph().appendText("Row 1 Cell 1");
+table.get(0,1).addParagraph().appendText("Row 1 Cell 2");
+table.get(1,0).addParagraph().appendText("Row 2 Cell 1");
+table.get(1,1).addParagraph().appendText("Row 2 Cell 2");
+table.get(2,0).addParagraph().appendText("Row 3 Cell 1");
+table.get(2,1).addParagraph().appendText("Row 3 Cell2");
+
+//Add a new custom table style.
+tableStyle=(WTableStyle)document.addTableStyle("CustomStyle2");
+tableStyle.getTableProperties().setRowStripe((long)1);
+ //Apply conditional formatting for the first row.
+firstRowStyle=tableStyle.getConditionalFormattingStyles().add(ConditionalFormattingType.FirstRow);
+firstRowStyle.getParagraphFormat().setHorizontalAlignment(HorizontalAlignment.Center);
+//Apply conditional formatting for the odd row.
+oddRowBandingStyle=tableStyle.getConditionalFormattingStyles().add(ConditionalFormattingType.OddRowBanding);
+oddRowBandingStyle.getCharacterFormat().setTextColor((ColorSupport.getRed()).clone());
+
+//Add a new custom table style.
+WTableStyle tableStyle2 = (WTableStyle)document.addTableStyle("CustomStyle3");
+tableStyle2.getTableProperties().setRowStripe((long)1);
+//Apply conditional formatting for the first row.
+ConditionalFormattingStyle firstRowStyle2 = tableStyle2.getConditionalFormattingStyles().add(ConditionalFormattingType.FirstRow);
+firstRowStyle2.getCellProperties().setBackColor((ColorSupport.getBlue()).clone());
+//Apply conditional formatting for the odd row.
+ConditionalFormattingStyle oddRowStyle2 = tableStyle2.getConditionalFormattingStyles().add(ConditionalFormattingType.OddRowBanding);
+oddRowStyle2.getCellProperties().setBackColor((ColorSupport.getYellow()).clone());
+//Apply custom table style as base style for another custom table style.
+tableStyle2.applyBaseStyle("CustomStyle2");
+//Apply the custom table style to the table.
+table.applyStyle("CustomStyle3");
+//Save the Word document.
+document.save("Sample.docx",FormatType.Docx);
+//Close the Word document
+document.close();
+{% endhighlight %}
+
+{% endtabs %}  
  
 ## Merging cells vertically and horizontally
 
@@ -541,6 +619,8 @@ table.get(0,1).getCellFormat().setHorizontalMerge(CellMerge.Continue);
 document.save("HorizontalMerge.docx",FormatType.Docx);
 document.close();
 {% endhighlight %}
+
+{% endtabs %} 
 
 The following code example illustrates how to create a table with vertical merged cells.
 

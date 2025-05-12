@@ -7,9 +7,9 @@ documentation: UG
 keywords: Word, Office, SDK, Automation, API, create, edit, convert, read
 ---
 
-# Welcome to Syncfusion Essential File Formats Java Platform
+# Welcome to Syncfusion<sup style="font-size:70%">&reg;</sup> Essential<sup style="font-size:70%">&reg;</sup> File Formats Java Platform
 
-Essential File Formats for Java includes a Java class library to create, edit, write, and convert Word file formats in Java applications without Microsoft Office or interop dependencies.
+Essential<sup style="font-size:70%">&reg;</sup> File Formats for Java includes a Java class library to create, edit, write, and convert Word file formats in Java applications without Microsoft Office or interop dependencies.
 
 ## How to best read this user guide
 
@@ -18,9 +18,9 @@ Essential File Formats for Java includes a Java class library to create, edit, w
 
 ## Additional help resources
 
-The [Knowledge Base](http://www.syncfusion.com/kb/) section contains responses for common questions asked by the customers. This would be a good place to search for the topics that are not covered in the User Guide.
+The [Knowledge Base](https://support.syncfusion.com/kb) section contains responses for common questions asked by the customers. This would be a good place to search for the topics that are not covered in the User Guide.
 
-Similar to the Knowledge Base, the [Forum](http://www.syncfusion.com/forums/) section also contains responses to the questions that are asked by other customers.
+Similar to the Knowledge Base, the [Forum](https://www.syncfusion.com/forums/) section also contains responses to the questions that are asked by other customers.
 
 ## Create a support incident
 
@@ -39,7 +39,7 @@ Description
 </tr>
 <tr>
 <td>
-Word Library (Essential DocIO)
+Word Library (Essential<sup style="font-size:70%">&reg;</sup> DocIO)
 </td>
 <td>
 Java class library used to create, read, edit, and convert Microsoft Word files in Java applications.
