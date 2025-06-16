@@ -109,6 +109,26 @@ N> 1. DocIO supports editable ranges in DOCX format documents only.
 {% tabs %}  
 
 {% highlight JAVA %}
+// Create a Word document
+WordDocument document = new WordDocument();
+// Ensure at least one section and one paragraph exists
+document.ensureMinimal();
+// Access the last paragraph
+WParagraph paragraph = document.getLastParagraph();
+// Append initial text to the paragraph
+paragraph.appendText("Adventure Works Cycles, the fictitious company on which the AdventureWorks ");
+// Add an editable range to the paragraph
+EditableRangeStart editableRangeStart = paragraph.appendEditableRangeStart();
+// Append editable text
+paragraph.appendText("sample databases are based, is a large, multinational manufacturing company.");
+// End the editable range
+paragraph.appendEditableRangeEnd(editableRangeStart);
+// Protect the document and allow only reading
+document.protect(ProtectionType.AllowOnlyReading, "password");
+// Save the document
+document.save("EditableRange.docx", FormatType.Docx);
+// Close the document
+document.close();
 {% endhighlight %}
 
 {% endtabs %}  
@@ -122,6 +142,28 @@ The following code example illustrates how to retrieve the ID of an editable ran
 {% tabs %}  
 
 {% highlight JAVA %}
+// Create a Word document
+WordDocument document = new WordDocument();
+// Ensure the document has at least one section and one paragraph
+document.ensureMinimal();
+// Access the last paragraph
+WParagraph paragraph = document.getLastParagraph();
+// Append text before editable range
+paragraph.appendText("Adventure Works Cycles, the fictitious company on which the AdventureWorks ");
+// Append editable range start
+EditableRangeStart editableRangeStart = paragraph.appendEditableRangeStart();
+// Append editable content
+paragraph.appendText("sample databases are based, is a large, multinational manufacturing company.");
+// Append editable range end
+paragraph.appendEditableRangeEnd(editableRangeStart);
+// Retrieve editable range ID
+String editableRangeId = editableRangeStart.getId();
+// Protect the document to allow only reading
+document.protect(ProtectionType.AllowOnlyReading, "password");
+// Save the document
+document.save("EditableRange.docx", FormatType.Docx);
+// Close the document
+document.close();
 {% endhighlight %}
 
 {% endtabs %}
@@ -135,6 +177,14 @@ The following code example illustrates how to find the editable range in a Word 
 {% tabs %}  
 
 {% highlight JAVA %}
+// Load an existing Word document
+WordDocument document = new WordDocument("Template.docx");
+// Get the editable range by ID
+EditableRange editableRange = document.getEditableRanges().findById("0");
+// Save the document
+document.save("EditableRange.docx", FormatType.Docx);
+// Close the document
+document.close();
 {% endhighlight %}
 
 {% endtabs %}
@@ -148,6 +198,16 @@ The following code example demonstrates how to remove an editable range from a W
 {% tabs %}  
 
 {% highlight JAVA %}
+// Load an existing Word document
+WordDocument document = new WordDocument("Template.docx");
+// Get the editable range by ID
+EditableRange editableRange = document.getEditableRanges().findById("0");
+// Remove the editable range
+document.getEditableRanges().remove(editableRange);
+// Save the Word document
+document.save("EditableRange.docx", FormatType.Docx);
+// Close the document
+document.close();
 {% endhighlight %}
 
 {% endtabs %}
@@ -159,6 +219,14 @@ The following code example demonstrates how to remove an editable range at parti
 {% tabs %}  
 
 {% highlight JAVA %}
+// Load an existing Word document
+WordDocument document = new WordDocument("Template.docx");
+// Remove the editable range at index 1
+document.getEditableRanges().removeAt(1);
+// Save the Word document
+document.save("EditableRange.docx", FormatType.Docx);
+// Close the document
+document.close();
 {% endhighlight %}
 
 {% endtabs %}
@@ -166,13 +234,6 @@ The following code example demonstrates how to remove an editable range at parti
 ### Editing permission
 
 You can restrict editable ranges to specific groups or individuals.
-
-{% tabs %}  
-
-{% highlight JAVA %}
-{% endhighlight %}
-
-{% endtabs %}
 
 #### Group permission
 
@@ -183,6 +244,28 @@ The following code example illustrates how to make an editable range available t
 {% tabs %}  
 
 {% highlight JAVA %}
+// Create a new Word document
+WordDocument document = new WordDocument();
+// Ensure the document has at least one section and one paragraph
+document.ensureMinimal();
+// Access the last paragraph
+WParagraph paragraph = document.getLastParagraph();
+// Append text before the editable range
+paragraph.appendText("Adventure Works Cycles, the fictitious company on which the AdventureWorks ");
+// Add an editable range start
+EditableRangeStart editableRangeStart = paragraph.appendEditableRangeStart();
+// Set the editor group to Everyone
+editableRangeStart.setEditorGroup(EditorType.Everyone);
+// Append text inside the editable range
+paragraph.appendText("sample databases are based, is a large, multinational manufacturing company.");
+// Add the editable range end
+paragraph.appendEditableRangeEnd(editableRangeStart);
+// Protect the document with a password, allowing only reading
+document.protect(ProtectionType.AllowOnlyReading, "password");
+// Save the Word document
+document.save("EditableRange.docx", FormatType.Docx);
+// Close the document
+document.close();     
 {% endhighlight %}
 
 {% endtabs %}
@@ -196,6 +279,28 @@ The following code example illustrates how to make an editable range available t
 {% tabs %}  
 
 {% highlight JAVA %}
+// Create a new Word document
+WordDocument document = new WordDocument();
+// Ensure the document has at least one section and one paragraph
+document.ensureMinimal();
+// Access the last paragraph
+WParagraph paragraph = document.getLastParagraph();
+// Append text before the editable range
+paragraph.appendText("Adventure Works Cycles, the fictitious company on which the AdventureWorks ");
+// Add an editable range start
+EditableRangeStart editableRangeStart = paragraph.appendEditableRangeStart();
+// Set the single user allowed to edit this range
+editableRangeStart.setSingleUser("\"user@domain.com\"");
+// Append text inside the editable range
+paragraph.appendText("sample databases are based, is a large, multinational manufacturing company.");
+// Add the editable range end
+paragraph.appendEditableRangeEnd(editableRangeStart);
+// Protect the document with a password, allowing only reading
+document.protect(ProtectionType.AllowOnlyReading, "password");
+// Save the Word document
+document.save("EditableRange.docx", FormatType.Docx);
+// Close the document
+document.close();
 {% endhighlight %}
 
 {% endtabs %}
@@ -209,6 +314,31 @@ The following code example illustrates how to add an editable range inside a tab
 {% tabs %}  
 
 {% highlight JAVA %}
+// Load an existing Word document
+WordDocument document = new WordDocument("Data/Template.docx");
+// Access the first table in the first section
+WTable table = (WTable) document.getSections().get(0).getTables().get(0);
+// Access the paragraph in the 3rd row and 3rd column (index 2,2)
+WParagraph paragraph = (WParagraph) table.getRows().get(2).getCells().get(2).getChildEntities().get(0);
+// Create a new editable range start for the paragraph
+EditableRangeStart editableRangeStart = new EditableRangeStart(document);
+// Insert the editable range start at the beginning of the paragraph
+paragraph.getChildEntities().insert(0, editableRangeStart);
+// Set the editor group to allow everyone to edit
+editableRangeStart.setEditorGroup(EditorType.Everyone);
+// Apply editable range to the second column only (index 1)
+editableRangeStart.setFirstColumn((short) 0);
+editableRangeStart.setLastColumn((short) 1);
+// Access another paragraph in the 6th row, 3rd column (index 5,2)
+paragraph = (WParagraph) table.getRows().get(5).getCells().get(2).getChildEntities().get(0);
+// Append an editable range end to close the region
+paragraph.appendEditableRangeEnd();
+// Protect the document with a password and allow only reading
+document.protect(ProtectionType.AllowOnlyReading, "password");
+// Save the Word document
+document.save("EditableRange.docx", FormatType.Docx);
+// Close the document
+document.close();
 {% endhighlight %}
 
 {% endtabs %}
