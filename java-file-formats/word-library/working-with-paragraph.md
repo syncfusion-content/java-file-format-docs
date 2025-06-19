@@ -822,6 +822,7 @@ document.close();
 
 {% endtabs %}  
 
+N> Except for the following [ListPatternType](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.ListPatternType.html) enumeration values: Arabic, Bullet, ChineseCountingThousand, FarEast, KanjiDigit, LeadingZero, LowLetter, LowRoman, None, Number, Ordinal, OrdinalText, Special, UpLetter, and UpRoman, all other [ListPatternType](https://help.syncfusion.com/cr/document-processing/Syncfusion.DocIO.DLS.ListPatternType.html) values are supported only during DOCX to DOCX conversions.
 The following code example explains how to create numbered list with prefix from previous level.
 
 N> The `NumberPrefix` value for the numbered list should meet the syntax “\u000N” to update the previous list level value as a prefix to the current list level. For example, it should be represented as (“\u0000.” or “\u0000.\u0001.”).
