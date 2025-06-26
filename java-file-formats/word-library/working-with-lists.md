@@ -426,7 +426,7 @@ document.close();
 
 {% endtabs %}  
 
-### Get list value
+## Get list value
 
 You can get the string that represents the appearance of **list value of the paragraph** in the Word document using the `ListString` API. 
 
