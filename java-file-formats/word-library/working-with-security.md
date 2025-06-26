@@ -104,7 +104,7 @@ You can add an editable range to a Word document using the **appendEditableRange
 
 The following code example illustrates how to add an editable range in the Word document.
 
-N> 1. DocIO supports editable ranges in DOCX format documents only.
+N> DocIO supports editable ranges in DOCX format documents only.
 
 {% tabs %}  
 
