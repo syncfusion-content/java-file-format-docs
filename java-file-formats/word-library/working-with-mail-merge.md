@@ -148,3 +148,7 @@ You can remove or keep the unmerged merge fields in the output document based on
 ### Restart numbering in lists
 
 You can restart the list numbering in a Word document during Mail merge. For further information, click [here](https://help.syncfusion.com/document-processing/word/word-library/java/mail-merge/mail-merge-options#restart-numbering-in-lists).
+
+## See also
+
+* [How to Execute Nested Group with JSON in Word Document Using Java?](https://support.syncfusion.com/kb/article/20141/how-to-execute-nested-group-with-json-in-word-document-using-java)
