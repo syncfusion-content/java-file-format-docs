@@ -1,15 +1,15 @@
 ---
-title: Working with Form Fields | Word library | Syncfusion
-description: This section illustrated how to work with FormFields in Word document using Syncfusion Java Word library (Essential DocIO)
+title: Working with Form Fields | Word Library | Syncfusion
+description: This section illustrates how to work with form fields in a Word document using the Syncfusion Java Word Library (Essential DocIO).
 platform: java-file-formats
 control: Word Library
 documentation: UG
 ---
 # Working with Form Fields
 
-You can create template document with form fields such as Text, Checkbox and Drop-Down. You can also open an existing template document and fill the form fields with the specified data. 
+You can create a template document with form fields such as Text, Checkbox, and Drop-Down. You can also open an existing template document and fill the form fields with specified data. 
 
-The following are the types of form field in the Word document
+The following are the types of form fields in a Word document:
 
 * Checkbox – represented by an instance of WCheckBox
 * Drop-down – represented by an instance of WDropDownFormField
@@ -18,21 +18,21 @@ The following are the types of form field in the Word document
 
 ## Check Box
 
-You can add new Checkbox form field to a Word document by using `appendCheckBox` method of `WParagraph` class.
+You can add a new checkbox form field to a Word document by using the `appendCheckBox` method of the `WParagraph` class.
 
-The following code illustrates how to add new checkbox form field.
+The following code illustrates how to add a new checkbox form field.
 
 {% tabs %}  
 
 {% highlight JAVA %}
 //Creates a new Word document.
 WordDocument document = new WordDocument();
-//Adds new section to the document.
+//Adds a new section to the document.
 IWSection section = document.addSection();
-//Adds new paragraph to the section.
+//Adds a new paragraph to the section.
 WParagraph paragraph = (WParagraph)section.addParagraph();
 paragraph.appendText("Gender\t");
-//Appends new Checkbox.
+//Appends a new Checkbox.
 WCheckBox checkbox = paragraph.appendCheckBox();
 checkbox.setChecked(false);
 //Sets Checkbox size.
@@ -48,13 +48,13 @@ checkbox.setCalculateOnExit(true);
 paragraph.appendText("Female");
 //Saves the Word document.
 document.save("Checkbox.docx", FormatType.Docx);
-//Closes the document
+//Closes the document.
 document.close();
 {% endhighlight %}
 
 {% endtabs %}  
 
-You can modify the checkbox properties such as checked state, size, help text in a Word document. The following code illustrates how to modify the checkbox form field properties.
+You can modify the checkbox properties such as checked state, size, and help text in a Word document. The following code illustrates how to modify the checkbox form field properties.
 
 {% tabs %} 
 
@@ -68,7 +68,7 @@ for (Object item_tempObj : document.getLastParagraph().getChildEntities())
 	if (item instanceof WCheckBox) 
 	{
 		WCheckBox checkbox = (WCheckBox) item;
-		//Modifies check box properties.
+		//Modifies checkbox properties.
 		if (checkbox.getChecked())
 			checkbox.setChecked(false);
 		checkbox.setSizeType(CheckBoxSizeType.Exactly);
@@ -76,7 +76,7 @@ for (Object item_tempObj : document.getLastParagraph().getChildEntities())
 }
 //Saves the Word document.
 document.save("Sample.docx", FormatType.Docx);
-//Closes the document
+//Closes the document.
 document.close();
 {% endhighlight %}
 
@@ -84,7 +84,7 @@ document.close();
 
 ## Drop-Down
 
-You can add new Dropdown form field to a Word document by using `appendDropDownFormField` method of `WParagraph` class.
+You can add a new dropdown form field to a Word document by using the `appendDropDownFormField` method of the `WParagraph` class.
 
 The following code illustrates how to add a new dropdown field.
 
@@ -93,19 +93,19 @@ The following code illustrates how to add a new dropdown field.
 {% highlight JAVA %}
 //Creates a new Word document.
 WordDocument document = new WordDocument();
-//Adds new section to the document.
+//Adds a new section to the document.
 IWSection section = document.addSection();
-//Adds new paragraph to the section.
+//Adds a new paragraph to the section.
 WParagraph paragraph = (WParagraph)section.addParagraph();
 paragraph.appendText("Educational Qualification\t");
-//Appends Dropdown field.
+//Appends a Dropdown field.
 WDropDownFormField dropDownField = paragraph.appendDropDownFormField();
 //Adds items to the Dropdown items collection.
 dropDownField.getDropDownItems().add("Higher");
 dropDownField.getDropDownItems().add("Vocational");
 dropDownField.getDropDownItems().add("Universal");
 dropDownField.setEnabled(true);
-//Sets the item index for default value.
+//Sets the item index for the default value.
 dropDownField.setDropDownSelectedIndex(1);
 dropDownField.setCalculateOnExit(true);
 //Saves the Word document.
@@ -116,7 +116,7 @@ document.close();
 
 {% endtabs %}  
 
-You can add or modify list of items of a Dropdown form field in a Word document. The following code illustrates how to modify the dropdown list of a Dropdown form field.
+You can add or modify the list of items in a dropdown form field in a Word document. The following code illustrates how to modify the dropdown list of a dropdown form field.
 
 {% tabs %}  
 
@@ -144,29 +144,29 @@ document.close();
 
 {% endtabs %}  
 
-## Text Form field
+## Text Form Field
 
-You can add new text form field to a Word document by using `appendTextFormField` method of `WParagraph` class.
+You can add a new text form field to a Word document by using the `appendTextFormField` method of the `WParagraph` class.
 
-The following code illustrates how to add new text form field.
+The following code illustrates how to add a new text form field.
 
 {% tabs %} 
 
 {% highlight JAVA %}
 //Creates a new Word document.
 WordDocument document = new WordDocument();
-//Adds new section to the document.
+//Adds a new section to the document.
 IWSection section = document.addSection();
-//Adds new paragraph to the section.
+//Adds a new paragraph to the section.
 WParagraph paragraph = (WParagraph)section.addParagraph();
 paragraph.appendText("General Information");
 section.addParagraph();
 paragraph = (WParagraph)section.addParagraph();
 IWTextRange text = paragraph.appendText("Name\t");
 text.getCharacterFormat().setBold(true);
-//Appends Text form field.
+//Appends a Text form field.
 WTextFormField textField = paragraph.appendTextFormField(null);
-//Sets type of Text form field.
+//Sets the type of Text form field.
 textField.setType(TextFormFieldType.RegularText);
 textField.getCharacterFormat().setFontName("Calibri");
 textField.setCalculateOnExit(true);
@@ -174,27 +174,27 @@ section.addParagraph();
 paragraph = (WParagraph)section.addParagraph();
 text = paragraph.appendText("Date of Birth\t");
 text.getCharacterFormat().setBold(true);
-//Appends Text form field.
+//Appends a Text form field.
 textField = paragraph.appendTextFormField("Date field", DateTimeSupport.toString(LocalDateTime.now(), "MM/DD/YY"));
 textField.setStringFormat("MM/DD/YY");
 textField.setType(TextFormFieldType.DateText);
 textField.setCalculateOnExit(true);
 //Saves the Word document.
 document.save("TextForm.docx", FormatType.Docx);
-//Closes the document
+//Closes the document.
 document.close();
 {% endhighlight %}
 
 {% endtabs %}  
 
-You can add or modify text form field properties such as default text, type in a Word document. The following code illustrates how to modify the text form field
+You can add or modify text form field properties such as default text and type in a Word document. The following code illustrates how to modify the text form field.
 
 {% tabs %} 
 
 {% highlight JAVA %}
 //Loads the template document. 
 WordDocument document = new WordDocument("TextForm.docx");
-//Iterates through section.
+//Iterates through sections.
 for (Object section_tempObj : document.getSections()) 
 {
 	WSection section = (WSection) section_tempObj;

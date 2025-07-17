@@ -1,6 +1,6 @@
 ---
 title: Working with Content Controls | Word library | Syncfusion
-description: This section illustrates how to work with Content Controls in Word document using Syncfusion Java Word library (Essential DocIO)
+description: This section illustrates how to work with Content Controls in Word documents using the Syncfusion Java Word library (Essential DocIO)
 platform: java-file-formats
 control: Word Library
 documentation: UG
@@ -14,14 +14,14 @@ Content controls are individual controls that you can add and customize to use i
 
 N> You can use content controls only in documents that are saved in the Open XML Format.
 
-Content controls can be categorized based on its occurrence in a document as follows,
+Content controls can be categorized based on their occurrence in a document as follows:
 
 * InlineContentControl: Among inline content inside, as a child of a paragraph.
 * BlockContentControl: Among paragraphs and tables, as a child of a Body, HeaderFooter, Comment, Footnote, or a Shape node.
 
 ### Block Content Control
 
-You can add content control to a text body of the Word document using block content control. You can add text, tables, pictures, or other items into the block content control. Refer to the following code.
+You can add a content control to the text body of the Word document using block content control. You can add text, tables, pictures, or other items into the block content control. Refer to the following code.
 
 {% tabs %}
 {% highlight JAVA %}
@@ -52,7 +52,7 @@ document.close();
 
 ### Inline Content Control
 
-You can add content control as a child to a paragraph using the inline content control. You can add text, pictures, fields or other paragraph items into the inline content control. Refer to the following code.
+You can add a content control as a child to a paragraph using inline content control. You can add text, pictures, fields, or other paragraph items into the inline content control. Refer to the following code.
 
 {% tabs %}
 {% highlight JAVA %}
@@ -79,7 +79,7 @@ document.close();
 
 N> Currently, DocIO does not support RowContentControl and CellContentControl.
 
-## Common properties of Content Control
+## Common Properties of Content Control
 
 You can set formatting options for the content control in the Word document. The following are the common properties of a content control.
 
@@ -95,27 +95,27 @@ The tag value to identify the content control.
 
 This property allows you to define the appearance of the content controls. The appearance can be any one of the following:
 
-* BoundingBox: Displays the contents of content control within a box.
-* Tags: Displays the contents of content control within tags.
-* Hidden: Displays the contents of content control without any box or tags.
+* BoundingBox: Displays the contents of the content control within a box.
+* Tags: Displays the contents of the content control within tags.
+* Hidden: Displays the contents of the content control without any box or tags.
 
 ### Color
 
 Defines the color of the content control.
 
-### Temporary 
+### Temporary
 
 This property defines whether to remove a content control from the Word document when you edit the contents of the content control.
 
 ### Lock Contents
 
-Locking the contents of the content control. It restricts to modify the contents of the content control.
+Locking the contents of the content control restricts the modification of the contents of the content control.
 
 ### Lock Content Control
 
-It restricts to remove or delete the content control.
+It restricts the removal or deletion of the content control.
 
-### Example – Content Control Common properties
+### Example – Content Control Common Properties
 
 The following code sample illustrates the content control properties usage.
 
@@ -147,7 +147,7 @@ contentControl.getContentControlProperties().setColor(ColorSupport.getMagenta())
 ContentControlType controlType = contentControl.getContentControlProperties().getType();
 //Enables content control lock.
 contentControl.getContentControlProperties().setLockContentControl(true);
-//Protects the contents of content control.
+//Protects the contents of the content control.
 contentControl.getContentControlProperties().setLockContents(true);
 //Saves and closes the Word document instance.
 document.save("Sample.docx", FormatType.Docx);
@@ -158,7 +158,7 @@ document.close();
 
 ## Why Content Control?
 
-The content controls have the following three major use cases:
+Content controls have the following three major use cases:
 
 * Protection
 * Form Filling
@@ -166,18 +166,18 @@ The content controls have the following three major use cases:
 
 ### Protection
 
-Content controls provides options to prevent users from editing or deleting parts of a Word document contents. This is useful if you have information in a Word document or template that you should be able to read but not edit, or if you want to be able to edit content controls but not delete them. 
+Content controls provide options to prevent users from editing or deleting parts of a Word document's contents. This is useful if you have information in a Word document or template that should be readable but not editable, or if you want to be able to edit content controls but not delete them. 
 
 To protect contents inside a content control, you can use properties of the content control to prevent editing or deleting the content control:
 
-* The **LockContents** property prevents from editing the contents of the content control.
-* The **LockContentControl** property prevents from deleting the content control.
+* The **LockContents** property prevents editing the contents of the content control.
+* The **LockContentControl** property prevents deleting the content control.
 
 The following code sample shows how to protect the content control and its contents.
 
 {% tabs %}
 {% highlight JAVA %}
-//Creates a new Word document. 
+//Creates a new Word document.
 WordDocument document = new WordDocument();
 //Adds one section and one paragraph to the document.
 document.ensureMinimal();
@@ -199,7 +199,7 @@ contentControl.getContentControlProperties().setTag("Rich Text Protected");
 contentControl.getContentControlProperties().setTitle("Text Protected");
 //Enables content control lock.
 contentControl.getContentControlProperties().setLockContentControl(true);
-//Protects the contents of content control.
+//Protects the contents of the content control.
 contentControl.getContentControlProperties().setLockContents(true);
 //Saves and closes the Word document instance.
 document.save("Sample.docx", FormatType.Docx);

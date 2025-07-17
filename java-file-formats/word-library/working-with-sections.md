@@ -1,6 +1,6 @@
 ---
 title: Working with Sections | Syncfusion
-description: This section illustrates how to Work with Sections in Word document using Syncfusion Java Word library (Essential DocIO)
+description: This section illustrates how to work with sections in a Word document using the Syncfusion Java Word library (Essential DocIO)
 platform: java-file-formats
 control: Word Library
 documentation: UG
@@ -12,46 +12,46 @@ A section contains the contents present in the headers, footers, and the main do
 {% tabs %} 
 
 {% highlight JAVA %}
-//Create a new Word document.
+// Create a new Word document.
 WordDocument document = new WordDocument();
-//Add a new section to the document.
+// Add a new section to the document.
 IWSection section = document.addSection();
-//Add a new paragraph to the section.
+// Add a new paragraph to the section.
 IWParagraph paragraph = section.addParagraph();
-//Append the text to the created paragraph.
+// Append the text to the created paragraph.
 paragraph.appendText("AdventureWorks Cycles, the fictitious company on which the AdventureWorks sample databases are based, is a large, multinational manufacturing company.");
-//Save and close the Word document instance.
+// Save and close the Word document instance.
 document.save("Sample.docx", FormatType.Docx);
 document.close();
 {% endhighlight %}
 
 {% endtabs %}  
 
-You can add the multiple sections to the document. When you add more than one section into the word document, the section starts from the next page by default.
+You can add multiple sections to the document. When you add more than one section into the Word document, the section starts from the next page by default.
 
 You can also add a new section that starts on the same page by specifying the `BreakCode` as shown in the following code example.
 
 {% tabs %}   
 
 {% highlight JAVA %}
-//Create a new Word document.
+// Create a new Word document.
 WordDocument document = new WordDocument();
-//Add a new section to the document.
+// Add a new section to the document.
 IWSection section = document.addSection();
-//Add a paragraph to the created section.
+// Add a paragraph to the created section.
 IWParagraph paragraph = section.addParagraph();
 String paraText = "AdventureWorks Cycles, the fictitious company on which the AdventureWorks sample databases are based, is a large, multinational manufacturing company.";
-//Append the text to the created paragraph.
+// Append the text to the created paragraph.
 paragraph.appendText(paraText);
-//Add the new section to the document.
+// Add the new section to the document.
 section = document.addSection();
-//Set a section break.
-section.setBreakCode(SectionBreakCode.NoBreak) ;
-//Add a paragraph to the created section.
+// Set a section break.
+section.setBreakCode(SectionBreakCode.NoBreak);
+// Add a paragraph to the created section.
 paragraph = section.addParagraph();
-//Append the text to the created paragraph.
+// Append the text to the created paragraph.
 paragraph.appendText(paraText); 
-//Save and close the Word document instance.
+// Save and close the Word document instance.
 document.save("Sample.docx", FormatType.Docx);
 document.close();
 {% endhighlight %}
@@ -67,26 +67,26 @@ The following code example shows how to set the page setup properties.
 {% tabs %}  
 
 {% highlight JAVA %}
-//Create a new Word document.
+// Create a new Word document.
 WordDocument document = new WordDocument();
-//Add the section into the Word document.
+// Add the section into the Word document.
 IWSection section = document.addSection();
-//Set the page setup options.
+// Set the page setup options.
 section.getPageSetup().setOrientation(PageOrientation.Landscape);
 section.getPageSetup().getMargins().setAll(72);
 section.getPageSetup().getBorders().setLineWidth(2);
-//Add a paragraph to the created section.
+// Add a paragraph to the created section.
 IWParagraph paragraph = section.addParagraph();
-//Append the text to the created paragraph.
+// Append the text to the created paragraph.
 paragraph.appendText("AdventureWorks Cycles, the fictitious company on which the AdventureWorks sample databases are based, is a large, multinational manufacturing company."); 
-//Save and close the Word document instance.
+// Save and close the Word document instance.
 document.save("Sample.docx", FormatType.Docx);
 document.close();
 {% endhighlight %}
 
 {% endtabs %}  
  
-## Creating Multi-column document
+## Creating Multi-column Document
 
 You can split the contents into two or more columns by specifying the column width and spacing between columns.
 
@@ -95,70 +95,70 @@ The following code example shows how to display the contents in multiple columns
 {% tabs %} 
 
 {% highlight JAVA %}
-//Create a new Word document.
+// Create a new Word document.
 WordDocument document = new WordDocument();
-//Add the section into the Word document.
+// Add the section into the Word document.
 IWSection section = document.addSection();
-//Add the column into the section.
+// Add the column into the section.
 section.addColumn(150, 20);
-//Add the column into the section.
+// Add the column into the section.
 section.addColumn(150, 20);
-//Add the column into the section.
+// Add the column into the section.
 section.addColumn(150, 20);
-//Add a paragraph to the created section.
+// Add a paragraph to the created section.
 IWParagraph paragraph = section.addParagraph();
-//Add a paragraph to the created section.
+// Add a paragraph to the created section.
 paragraph = section.addParagraph();
 String paraText = "AdventureWorks Cycles, the fictitious company on which the AdventureWorks sample databases are based, is a large, multinational manufacturing company.";
-//Append the text to the created paragraph.
+// Append the text to the created paragraph.
 paragraph.appendText(paraText);
-//Add the column break.
+// Add the column break.
 paragraph.appendBreak(BreakType.ColumnBreak);
-//Add a paragraph to the created section.
+// Add a paragraph to the created section.
 paragraph = section.addParagraph();
-//Append the text to the created paragraph.
+// Append the text to the created paragraph.
 paragraph.appendText(paraText);
-//Add the column break.
+// Add the column break.
 paragraph.appendBreak(BreakType.ColumnBreak);
-//Add a paragraph to the created section.
+// Add a paragraph to the created section.
 paragraph = section.addParagraph();
-//Append the text to the created paragraph.
+// Append the text to the created paragraph.
 paragraph.appendText(paraText);
-//Save and close the Word document instance.
+// Save and close the Word document instance.
 document.save("Sample.docx", FormatType.Docx);
 document.close();
 {% endhighlight %}
 
 {% endtabs %} 
 
-## Creating document with different page settings
+## Creating Document with Different Page Settings
 
-You can prefer to have more sections in a Word document when you need to have different page settings or headers and footers for a specific set of contents. The following code example shows how to create a Word document with the multiple sections whose page orientation is portrait and landscape respectively.
+You can prefer to have more sections in a Word document when you need to have different page settings or headers and footers for a specific set of contents. The following code example shows how to create a Word document with multiple sections whose page orientation is portrait and landscape respectively.
 
 {% tabs %} 
 
 {% highlight JAVA %}
-//Creates a new Word document.
+// Creates a new Word document.
 WordDocument document = new WordDocument();
-//Add the section into the Word document.
+// Add the section into the Word document.
 IWSection section = document.addSection();
-//Add a paragraph to the created section.
+// Add a paragraph to the created section.
 IWParagraph paragraph = section.addParagraph();
 String paraText = "AdventureWorks Cycles, the fictitious company on which the AdventureWorks sample databases are based, is a large, multinational manufacturing company.";
-//Append the text to the created paragraph.
+// Append the text to the created paragraph.
 paragraph.appendText(paraText);
-//Set the page orientation as a portrait.
+// Set the page orientation as portrait.
 section.getPageSetup().setOrientation(PageOrientation.Portrait);
-//Add the new section to the document.
+// Add the new section to the document.
 section = document.addSection();
-//Set the section break.
-section.setBreakCode(SectionBreakCode.NewPage) ;
+// Set the section break.
+section.setBreakCode(SectionBreakCode.NewPage);
 paragraph = section.addParagraph();
-//Set the page orientation as a landscape
+// Set the page orientation as landscape.
 section.getPageSetup().setOrientation(PageOrientation.Landscape);
-//Append the text to the paragraph.
+// Append the text to the paragraph.
 paragraph.appendText(paraText);
-//Save and close the Word document instance.
+// Save and close the Word document instance.
 document.save("Sample.docx", FormatType.Docx);
 document.close();
 {% endhighlight %}
@@ -167,16 +167,16 @@ document.close();
    
 ## Working with Headers and Footers
 
-The header and footer also represent the group of paragraphs and tables that occur at the top and bottom of the page respectively. The header and footer may vary for each section. The following are the types of Headers or Footers:
+The header and footer represent the group of paragraphs and tables that occur at the top and bottom of the page, respectively. The header and footer may vary for each section. The following are the types of Headers or Footers:
 
 * FirstPageHeader: Represents the first-page header of the document.
 * FirstPageFooter: Represents the first-page footer of the document.
-* OddHeader: Represents the odd page header of the document and it is the default header for the section.
-* OddFooter: Represents the odd page footer of the document and it is the default footer for the section.
-* EvenHeader: Represents the even page header of the document.
-* Even Footer: Represents the even page footer of the document.
+* OddHeader: Represents the odd-page header of the document and is the default header for the section.
+* OddFooter: Represents the odd-page footer of the document and is the default footer for the section.
+* EvenHeader: Represents the even-page header of the document.
+* EvenFooter: Represents the even-page footer of the document.
 
-The following code example illustrates how to add simple header and footer into a Word document.
+The following code example illustrates how to add a simple header and footer to a Word document.
 
 {% tabs %} 
 
@@ -202,7 +202,7 @@ paragraph.appendText("\r\r[ Third Page ] \r\r" + paraText);
 paragraph = section.getHeadersFooters().getOddHeader().addParagraph();
 paragraph.appendText("[ Default Page Header ]");
 //Insert the default page footer.
-paragraph = section.getHeadersFooters().getOddHeader().addParagraph();
+paragraph = section.getHeadersFooters().getOddFooter().addParagraph();
 paragraph.appendText("[ Default Page Footer ]");
 //Save and close the Word document instance.
 document.save("Sample.docx", FormatType.Docx);
@@ -211,7 +211,7 @@ document.close();
 
 {% endtabs %}  
 
-You can have a specific header and footer contents for the first page in a Word document. The following code illustrates the same.
+You can have specific header and footer contents for the first page in a Word document. The following code illustrates the same.
 
 {% tabs %} 
 
@@ -220,7 +220,7 @@ You can have a specific header and footer contents for the first page in a Word 
 WordDocument document = new WordDocument();
 //Add the first section to the document.
 IWSection section = document.addSection();
-//Set the DifferentFirstPage as a true for inserting the header and footer text.
+//Set the DifferentFirstPage property to true for inserting the header and footer text.
 section.getPageSetup().setDifferentFirstPage(true);
 //Add a paragraph to the section.
 IWParagraph paragraph = section.addParagraph();
@@ -235,10 +235,10 @@ paragraph.getParagraphFormat().setPageBreakAfter(true);
 //Append some text to the third page of the document.
 paragraph = section.addParagraph();
 paragraph.appendText("\r\r[ Third Page ] \r\r" + paraText);
-//Insert the first page header.
+//Insert the first-page header.
 paragraph = section.getHeadersFooters().getFirstPageHeader().addParagraph();
-paragraph.appendText("[First Page Header ]");
-//Insert the first page footer.
+paragraph.appendText("[ First Page Header ]");
+//Insert the first-page footer.
 paragraph = section.getHeadersFooters().getFirstPageFooter().addParagraph();
 paragraph.appendText("[ First Page Footer ]");
 //Insert the default page header.
@@ -254,7 +254,7 @@ document.close();
 
 {% endtabs %}  
 
-A word document can have a different header and footer for the odd and even pages.
+A Word document can have a different header and footer for the odd and even pages.
 
 The following code example shows how to set a different header and footer for the odd and even pages of the document.
 
@@ -265,7 +265,7 @@ The following code example shows how to set a different header and footer for th
 WordDocument document = new WordDocument();
 //Add the first section to the document.
 IWSection section = document.addSection();
-//Set the DifferentOddAndEvenPages to true for inserting the header and footer text.
+//Set the DifferentOddAndEvenPages property to true for inserting the header and footer text.
 section.getPageSetup().setDifferentOddAndEvenPages(true);
 //Add a paragraph to the section.
 IWParagraph paragraph = section.addParagraph();
@@ -280,16 +280,16 @@ paragraph.getParagraphFormat().setPageBreakAfter(true);
 //Append some text to the third page of the document.
 paragraph = section.addParagraph();
 paragraph.appendText("\r\r[ Third Page ] \r\r" + paraText);
-//Insert the odd page header.
+//Insert the odd-page header.
 paragraph = section.getHeadersFooters().getOddHeader().addParagraph();
 paragraph.appendText("[ Odd Page Header ]");
-//Insert the default page footer.
+//Insert the odd-page footer.
 paragraph = section.getHeadersFooters().getOddFooter().addParagraph();
 paragraph.appendText("[ Odd Page Footer ]");
-//Insert the even page header.
+//Insert the even-page header.
 paragraph = section.getHeadersFooters().getEvenHeader().addParagraph();
-paragraph.appendText("[Even Page Header ]");
-//Insert the even page footer.
+paragraph.appendText("[ Even Page Header ]");
+//Insert the even-page footer.
 paragraph = section.getHeadersFooters().getEvenFooter().addParagraph();
 paragraph.appendText("[ Even Page Footer ]");
 //Save and close the Word document instance.
@@ -325,7 +325,7 @@ section = document.addSection();
 section.getHeadersFooters().getHeader().addParagraph().appendText("[ Second Section Header ]");
 //Insert the second section footer.
 section.getHeadersFooters().getFooter().addParagraph().appendText("[ Second Section Footer ]");
-//Set the LinkToPrevious to true for retrieve the header and footer from the previous section.
+//Set the LinkToPrevious property to true to retrieve the header and footer from the previous section.
 section.getHeadersFooters().setLinkToPrevious(true);
 //Append some text to the second page of the document.
 paragraph = section.addParagraph();
@@ -424,9 +424,9 @@ The following code example shows how to adjust the height of the header and foot
 WordDocument document = new WordDocument();
 //Add the first section to the document.
 IWSection section = document.addSection();
-//Specify the value to the header distance.
+//Specify the value for the header distance.
 section.getPageSetup().setHeaderDistance(100);
-//Specify the value to the footer distance.
+//Specify the value for the footer distance.
 section.getPageSetup().setFooterDistance(100);
 //Add a paragraph to the section.
 IWParagraph paragraph = section.addParagraph();
@@ -456,7 +456,7 @@ document.close();
 
 ## Removing a Section
 
-The following code example shows how to remove a particular section from the word document.
+The following code example shows how to remove a particular section from the Word document.
 
 {% tabs %}  
 
