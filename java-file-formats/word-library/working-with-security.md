@@ -1,26 +1,26 @@
 ---
-title: Working with Security | Word library | Syncfusion
-description: This section illustrates how to encrypt, decrypt and protect the Word document using Syncfusion Word library (Essential DocIO)
+title: Working with Security | Word Library | Syncfusion
+description: This section illustrates how to encrypt, decrypt, and protect a Word document using the Syncfusion Word Library (Essential DocIO).
 platform: java-file-formats
 control: Word Library
 documentation: UG
 ---
 # Working with Security
 
-You can encrypt a Word document with password to restrict unauthorized access. You can also control the types of changes you make to this document.
+You can encrypt a Word document with a password to restrict unauthorized access. You can also control the types of changes you make to this document.
 
-## Encrypting with password
+## Encrypting with a password
 
-The following code example shows how to encrypt the Word document with password.
+The following code example shows how to encrypt a Word document with a password.
 
 {% tabs %}  
 
 {% highlight JAVA %}
-//Open an input Word document.
+// Open an input Word document.
 WordDocument document = new WordDocument("Template.docx");
-//Encrypt the Word document with a password.
+// Encrypt the Word document with a password.
 document.encryptDocument("password");
-//Save and close the Word document instance.
+// Save and close the Word document instance.
 document.save("Sample.docx", FormatType.Docx);
 document.close();
 {% endhighlight %}
@@ -34,9 +34,9 @@ The following code example shows how to open the encrypted Word document.
 {% tabs %}  
 
 {% highlight JAVA %}
-//Open an input Word document.
-WordDocument document = new WordDocument("Template.docx","password");
-//Save and close the Word document instance.
+// Open an input Word document.
+WordDocument document = new WordDocument("Template.docx", "password");
+// Save and close the Word document instance.
 document.save("Sample.docx", FormatType.Docx);
 document.close();
 {% endhighlight %}
@@ -45,25 +45,25 @@ document.close();
 
 ## Remove encryption
 
-You can open the encrypted Word document and remove the encryption from the document. The following code example shows how to remove the encryption from encrypted Word document.
+You can open the encrypted Word document and remove the encryption from the document. The following code example shows how to remove the encryption from an encrypted Word document.
 
 {% tabs %}  
 
 {% highlight JAVA %}
-//Open an encrypted Word document.
-WordDocument document = new WordDocument ("Template.docx", "password");
-//Remove encryption in Word document.
+// Open an encrypted Word document.
+WordDocument document = new WordDocument("Template.docx", "password");
+// Remove encryption in the Word document.
 document.removeEncryption();
-//Save and close the Word document instance.
+// Save and close the Word document instance.
 document.save("Sample.docx", FormatType.Docx);
 document.close();
 {% endhighlight %}
 
 {% endtabs %}  
 
-## Protecting Word document from editing
+## Protecting the Word document from editing
 
-You can restrict a Word document from editing either by providing a password or without password. 
+You can restrict a Word document from editing either by providing a password or without a password. 
 
 The following are the types of protection:
 
@@ -75,7 +75,7 @@ The following are the types of protection:
 
 4. `AllowOnlyReading`: You can only view the content in the Word document.
 
-5. `NoProtection`: You can access/edit the Word document contents as normally.
+5. `NoProtection`: You can access/edit the Word document contents as usual.
 
 The following code example shows how to restrict editing to modify only form fields in a Word document.
 
@@ -83,11 +83,11 @@ The following code example shows how to restrict editing to modify only form fie
 
 {% highlight JAVA %}
 
-//Open a Word document.
+// Open a Word document.
 WordDocument document = new WordDocument("Template.docx");
-//Set the protection with password and it allows only to modify the form fields type.
+// Set the protection with a password and allow only modification of the form fields type.
 document.protect(ProtectionType.AllowOnlyFormFields, "password"); 
-//Save the Word document.
+// Save the Word document.
 document.save("Protection.docx", FormatType.Docx);
 document.close();
 {% endhighlight %}
@@ -96,13 +96,13 @@ document.close();
 
 ## Editable ranges
 
-An **editable range** is a portion of a Word document that allows editing even when the document is protected. In the Syncfusion .NET Word library (DocIO), editable ranges are represented using the **EditableRange** class. You can define these ranges programmatically to allow user edits within protected documents.
+An **editable range** is a portion of a Word document that allows editing even when the document is protected. In the Syncfusion .NET Word Library (DocIO), editable ranges are represented using the **EditableRange** class. You can define these ranges programmatically to allow user edits within protected documents.
 
 ### Add an editable range
 
 You can add an editable range to a Word document using the **appendEditableRangeStart()** and **appendEditableRangeEnd()** methods of the **WParagraph** class.
 
-The following code example illustrates how to add an editable range in the Word document.
+The following code example illustrates how to add an editable range in a Word document.
 
 N> DocIO supports editable ranges in DOCX format documents only.
 
@@ -133,7 +133,7 @@ document.close();
 
 {% endtabs %}  
 
-### Retrieve Id of an editable range
+### Retrieve the ID of an editable range
 
 You can retrieve the ID of an editable range using the **getId()** method of the **EditableRange** class.
 
@@ -148,7 +148,7 @@ WordDocument document = new WordDocument();
 document.ensureMinimal();
 // Access the last paragraph
 WParagraph paragraph = document.getLastParagraph();
-// Append text before editable range
+// Append text before the editable range
 paragraph.appendText("Adventure Works Cycles, the fictitious company on which the AdventureWorks ");
 // Append editable range start
 EditableRangeStart editableRangeStart = paragraph.appendEditableRangeStart();
@@ -214,7 +214,7 @@ document.close();
 
 An editable range at a specific index can also be removed from the **EditableRangeCollection** using the **removeAt()** method.
 
-The following code example demonstrates how to remove an editable range at particular index from a Word document.
+The following code example demonstrates how to remove an editable range at a particular index from a Word document.
 
 {% tabs %}  
 
@@ -290,7 +290,7 @@ paragraph.appendText("Adventure Works Cycles, the fictitious company on which th
 // Add an editable range start
 EditableRangeStart editableRangeStart = paragraph.appendEditableRangeStart();
 // Set the single user allowed to edit this range
-editableRangeStart.setSingleUser("\"user@domain.com\"");
+editableRangeStart.setSingleUser("user@domain.com");
 // Append text inside the editable range
 paragraph.appendText("sample databases are based, is a large, multinational manufacturing company.");
 // Add the editable range end
@@ -305,7 +305,7 @@ document.close();
 
 {% endtabs %}
 
-### Add editable range in a table
+### Add an editable range in a table
 
 Using the **setFirstColumn()** and **setLastColumn()** methods of the **EditableRangeStart** class, you can specify the starting and ending columns of an editable range within a table.
 
@@ -326,7 +326,7 @@ EditableRangeStart editableRangeStart = new EditableRangeStart(document);
 paragraph.getChildEntities().insert(0, editableRangeStart);
 // Set the editor group to allow everyone to edit
 editableRangeStart.setEditorGroup(EditorType.Everyone);
-// Apply editable range to the second column only (index 1)
+// Apply the editable range to the second column only (index 1)
 editableRangeStart.setFirstColumn((short) 0);
 editableRangeStart.setLastColumn((short) 1);
 // Access another paragraph in the 6th row, 3rd column (index 5,2)

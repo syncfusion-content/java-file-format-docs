@@ -1,45 +1,45 @@
 ---
-title: Working with Mail merge | Syncfusion
-description: This section illustrates about Mail merge Word document to create reports (letters, envelopes, labels, invoice, payroll) without MS Word or Office interop.
+title: Working with Mail Merge | Syncfusion
+description: This section illustrates how to use the Mail Merge feature in Word documents to create reports (letters, envelopes, labels, invoices, payroll) without MS Word or Office interop.
 platform: java-file-formats
 control: Word Library
 documentation: UG
 ---
-# Working with Mail merge
+# Working with Mail Merge
 
-Mail merge is a process of merging data from data source to a Word template document. The `WMergeField` class provides support to bind template document and data source. The `WMergeField` instance is replaced with the actual data retrieved from data source for the given merge field name in a template document.
+Mail Merge is a process of merging data from a data source into a Word template document. The `WMergeField` class provides support for binding the template document and data source. The `WMergeField` instance is replaced with the actual data retrieved from the data source for the given merge field name in a template document.
 
-The following data sources are supported by Essential<sup style="font-size:70%">&reg;</sup> DocIO for performing Mail merge:
+The following data sources are supported by Essential<sup style="font-size:70%">&reg;</sup> DocIO for performing Mail Merge:
 
 * String Arrays
-* Java objects
+* Java Objects
 
-## Mail merge process
+## Mail Merge Process
 
-The mail merge process involves three documents:
+The Mail Merge process involves three documents:
 
-1. **Template Word document**: This document contains the static or templated text and graphics along with the merge fields (that are placeholders) for replacing dynamic data.
+1. **Template Word Document**: This document contains static or templated text and graphics, along with the merge fields (placeholders) for replacing dynamic data.
 
-2. **Data source**: This represents file containing data to replace the merge fields in template Word document.
+2. **Data Source**: This represents a file containing data to replace the merge fields in the template Word document.
 
-3. **Final merged document**: This resultant document is a combination of the template Word document and the data from data source.
+3. **Final Merged Document**: This resultant document is a combination of the template Word document and the data from the data source.
 
-T> 1. You can use conditional fields ([IF](https://support.microsoft.com/en-us/office/field-codes-if-field-9f79e82f-e53b-4ff5-9d2c-ae3b22b7eb5e?ui=en-us&rs=en-us&ad=us), [Formula](https://support.microsoft.com/en-us/office/field-codes-formula-field-32d5c9de-3516-4ec3-80ed-d1fc2b5bc21d?ui=en-us&rs=en-us&ad=us)) combined with merge fields, when you require intelligent decisions in addition to simple mail merge (replace merge fields with result text). To use conditional fields, execute mail merge and then update fields in the Word document using `updateDocumentFields` API.
-T> 2. You can replace the fields ([IF](https://support.microsoft.com/en-us/office/field-codes-if-field-9f79e82f-e53b-4ff5-9d2c-ae3b22b7eb5e?ui=en-us&rs=en-us&ad=us), [Formula](https://support.microsoft.com/en-us/office/field-codes-formula-field-32d5c9de-3516-4ec3-80ed-d1fc2b5bc21d?ui=en-us&rs=en-us&ad=us)) combined with merge fields, with its most recent result and **generates the plain Word document** by unlinking the fields. Refer to this [link](https://help.syncfusion.com/document-processing/word/word-library/java/working-with-fields#unlink-fields) for more information. 
+T> 1. You can use conditional fields ([IF](https://support.microsoft.com/en-us/office/field-codes-if-field-9f79e82f-e53b-4ff5-9d2c-ae3b22b7eb5e?ui=en-us&rs=en-us&ad=us), [Formula](https://support.microsoft.com/en-us/office/field-codes-formula-field-32d5c9de-3516-4ec3-80ed-d1fc2b5bc21d?ui=en-us&rs=en-us&ad=us)) combined with merge fields when you require intelligent decisions in addition to simple Mail Merge (replacing merge fields with result text). To use conditional fields, execute Mail Merge and then update fields in the Word document using the `updateDocumentFields` API.
+T> 2. You can replace the fields ([IF](https://support.microsoft.com/en-us/office/field-codes-if-field-9f79e82f-e53b-4ff5-9d2c-ae3b22b7eb5e?ui=en-us&rs=en-us&ad=us), [Formula](https://support.microsoft.com/en-us/office/field-codes-formula-field-32d5c9de-3516-4ec3-80ed-d1fc2b5bc21d?ui=en-us&rs=en-us&ad=us)) combined with merge fields with their most recent result and **generate a plain Word document** by unlinking the fields. Refer to this [link](https://help.syncfusion.com/document-processing/word/word-library/java/working-with-fields#unlink-fields) for more information.
 
-### Create Word document template
+### Create Word Document Template
 
-You can create a template document with merge fields by using any Word editor application, like Microsoft Word. By using Word editor application, you can take the advantage of the visual interface to design unique layout, formatting, and more for your Word document template interactively. 
+You can create a template document with merge fields by using any Word editor application, such as Microsoft Word. By using a Word editor application, you can take advantage of the visual interface to design a unique layout, formatting, and more for your Word document template interactively.
 
-The following screenshot shows how to insert a merge field in the Word document by **using the Microsoft Word.**
+The following screenshot shows how to insert a merge field in the Word document **using Microsoft Word.**
 
 ![Word template document](MailMerge_images/MailMerge_template.png)
 
-You need to add a prefix (“Image:”) to the merge field name for merging an image in the place of a merge field.
+You need to add a prefix ("Image:") to the merge field name for merging an image in place of a merge field.
 
-**For example:** The merge field name should be like “Image:Photo” (<<Image:MergeFieldName>>)
+**For example:** The merge field name should be like "Image:Photo" (<<Image:MergeFieldName>>).
 
-You can **create Word document template programmatically** by adding merge fields to the Word document using Essential<sup style="font-size:70%">&reg;</sup> DocIO.
+You can **create a Word document template programmatically** by adding merge fields to the Word document using Essential<sup style="font-size:70%">&reg;</sup> DocIO.
 
 The following code example shows how to create a merge field in the Word document.
 
@@ -48,7 +48,7 @@ The following code example shows how to create a merge field in the Word documen
 {% highlight JAVA %}
 //Creates an instance of a WordDocument.
 WordDocument document = new WordDocument();
-//Adds a section and a paragraph in the document.
+//Adds a section and a paragraph to the document.
 document.ensureMinimal();
 //Appends merge field to the last paragraph.
 document.getLastParagraph().appendField("FullName", FieldType.FieldMergeField);
@@ -59,9 +59,9 @@ document.close();
 {% endhighlight %}
 {% endtabs %}
 
-### Execute mail merge
+### Execute Mail Merge
 
-The following code example shows how to perform mail merge in above Word document template using string arrays as data source.
+The following code example shows how to perform Mail Merge in the above Word document template using string arrays as the data source.
 
 {% tabs %}  
 {% highlight JAVA %}
@@ -70,7 +70,7 @@ FileInputStream fileStreamPath = new FileInputStream("Template.docx");
 WordDocument document = new WordDocument(fileStreamPath, FormatType.Docx);
 String[] fieldNames = new String[] { "FullName" };
 String[] fieldValues = new String[] { "Nancy Davolio" };
-//Performs the mail merge.
+//Performs the Mail Merge.
 document.getMailMerge().execute(fieldNames, fieldValues);
 //Saves the Word document.
 document.save("Output.docx", FormatType.Docx);
@@ -83,72 +83,68 @@ By executing the previous code example, it generates the resultant Word document
 
 ![Mail merge Word document](MailMerge_images/MailMerge_output.png)
 
-## Simple Mail merge
+## Simple Mail Merge
 
-The `MailMerge` class provides various overloads for the `Execute` method to perform Mail merge from various data sources. For further information, click [here](https://help.syncfusion.com/document-processing/word/word-library/java/mail-merge/simple-mail-merge). 
+The `MailMerge` class provides various overloads for the `Execute` method to perform Mail Merge from various data sources. For further information, click [here](https://help.syncfusion.com/document-processing/word/word-library/java/mail-merge/simple-mail-merge). 
 
-## Performing Mail merge for a group
+## Performing Mail Merge for a Group
 
-You can perform Mail merge and append multiple records from data source within a specified region to a template document. For further information, click [here](https://help.syncfusion.com/document-processing/word/word-library/java/mail-merge/mail-merge-for-group).
+You can perform Mail Merge and append multiple records from the data source within a specified region to a template document. For further information, click [here](https://help.syncfusion.com/document-processing/word/word-library/java/mail-merge/mail-merge-for-group).
 
-## Performing Nested Mail merge for group
+## Performing Nested Mail Merge for Group
 
-You can perform nested Mail merge with relational or hierarchical data source and independent data tables in a template document. For further information, click [here](https://help.syncfusion.com/document-processing/word/word-library/java/mail-merge/mail-merge-for-nested-groups).
+You can perform nested Mail Merge with relational or hierarchical data sources and independent data tables in a template document. For further information, click [here](https://help.syncfusion.com/document-processing/word/word-library/java/mail-merge/mail-merge-for-nested-groups).
 
-## Performing Mail merge with business objects
+## Performing Mail Merge with Business Objects
 
-You can perform Mail merge with business objects in a template document. For further information, click [here](https://help.syncfusion.com/document-processing/word/word-library/java/mail-merge/mail-merge-for-group#mail-merge-with-Java-objects).
+You can perform Mail Merge with business objects in a template document. For further information, click [here](https://help.syncfusion.com/document-processing/word/word-library/java/mail-merge/mail-merge-for-group#mail-merge-with-Java-objects).
 
-## Performing Nested Mail merge with relational data objects
+## Performing Nested Mail Merge with Relational Data Objects
 
-Essential<sup style="font-size:70%">&reg;</sup> DocIO supports performing nested Mail merge with implicit relational data objects without any explicit relational commands by using the `ExecuteNestedGroup` overload method. For further information, click [here](https://help.syncfusion.com/document-processing/word/word-library/java/mail-merge/mail-merge-for-nested-groups#mail-merge-with-implicit-relational-data).
+Essential<sup style="font-size:70%">&reg;</sup> DocIO supports performing nested Mail Merge with implicit relational data objects without any explicit relational commands by using the `ExecuteNestedGroup` overload method. For further information, click [here](https://help.syncfusion.com/document-processing/word/word-library/java/mail-merge/mail-merge-for-nested-groups#mail-merge-with-implicit-relational-data).
 
-## Event support for mail merge
+## Event Support for Mail Merge
 
-The `MailMerge` class provides event support to customize the document contents and merging image data during the Mail merge process. The following events are supported by Essential<sup style="font-size:70%">&reg;</sup> DocIO in Mail merge process:
+The `MailMerge` class provides event support to customize the document contents and merge image data during the Mail Merge process. The following events are supported by Essential<sup style="font-size:70%">&reg;</sup> DocIO in the Mail Merge process:
 
-* `MergeField`: Occurs when a **Mail merge field** except image Mail merge field is encountered.
+* `MergeField`: Occurs when a **Mail Merge field** except an image Mail Merge field is encountered.
 
-* `MergeImageField`: Occurs when an **image Mail merge field** is encountered.
+* `MergeImageField`: Occurs when an **image Mail Merge field** is encountered.
 
 * `BeforeClearGroupField`: Occurs when an **unmerged group field** is encountered.
 
-### MergeField event
+### MergeField Event
 
-You can customize the merging text during Mail merge process by using the `MergeField` event. For further information, click [here](https://help.syncfusion.com/document-processing/word/word-library/java/mail-merge/mail-merge-events#mergefield-event).
+You can customize the merging text during the Mail Merge process by using the `MergeField` event. For further information, click [here](https://help.syncfusion.com/document-processing/word/word-library/java/mail-merge/mail-merge-events#mergefield-event).
 
-### MergeImageField event
+### MergeImageField Event
 
-You can customize the merging image during Mail merge process by using the `MergeImageField` event. For further information, click [here](https://help.syncfusion.com/document-processing/word/word-library/java/mail-merge/mail-merge-events#mergeimagefield-event).
+You can customize the merging image during the Mail Merge process by using the `MergeImageField` event. For further information, click [here](https://help.syncfusion.com/document-processing/word/word-library/java/mail-merge/mail-merge-events#mergeimagefield-event).
 
-### BeforeClearGroupField event
+### BeforeClearGroupField Event
 
-You can get the unmerged groups during Mail merge process by using the `BeforeClearGroupField` event. For further information, click [here](https://help.syncfusion.com/document-processing/word/word-library/java/mail-merge/mail-merge-events#beforecleargroupfield-event).
+You can get the unmerged groups during the Mail Merge process by using the `BeforeClearGroupField` event. For further information, click [here](https://help.syncfusion.com/document-processing/word/word-library/java/mail-merge/mail-merge-events#beforecleargroupfield-event).
 
-## Mail merge options
+## Mail Merge Options
 
-The `MailMerge` class allows you to customize the Mail merge process with the following options:
+The `MailMerge` class allows you to customize the Mail Merge process with the following options:
 
-### Field mapping
+### Field Mapping
 
-You can automatically map the merge field names with data source column names during Mail merge process. For further information, click [here](https://help.syncfusion.com/document-processing/word/word-library/java/mail-merge/mail-merge-options#field-mapping).
+You can automatically map the merge field names with data source column names during the Mail Merge process. For further information, click [here](https://help.syncfusion.com/document-processing/word/word-library/java/mail-merge/mail-merge-options#field-mapping).
 
-### Retrieving the merge field names
+### Retrieving the Merge Field Names
 
 You can retrieve the merge field names and also merge field group names in the Word document. For further information, click [here](https://help.syncfusion.com/document-processing/word/word-library/java/mail-merge/mail-merge-options#retrieve-the-merge-field-names).
 
-### Removing empty paragraphs
+### Removing Empty Paragraphs
 
-You can remove the empty paragraphs when the paragraph has a merge field item without any data during Mail merge process. For further information, click [here](https://help.syncfusion.com/document-processing/word/word-library/java/mail-merge/mail-merge-options#remove-empty-paragraphs).
+You can remove the empty paragraphs when the paragraph contains a merge field item without any data during the Mail Merge process. For further information, click [here](https://help.syncfusion.com/document-processing/word/word-library/java/mail-merge/mail-merge-options#remove-empty-paragraphs).
 
-### Removing empty merge fields
+### Removing Empty Merge Fields
 
-You can remove or keep the unmerged merge fields in the output document based on the `ClearFields` property on each mail merge execution. For further information, click [here](https://help.syncfusion.com/document-processing/word/word-library/java/mail-merge/mail-merge-options#remove-empty-merge-fields).
+You can remove or keep the unmerged merge fields in the output document based on the `ClearFields` property during each Mail Merge execution. For further information, click [here](https://help.syncfusion.com/document-processing/word/word-library/java/mail-merge/mail-merge-options#remove-empty-merge-fields).
 
-### Restart numbering in lists
+### Restart Numbering in Lists
 
-You can restart the list numbering in a Word document during Mail merge. For further information, click [here](https://help.syncfusion.com/document-processing/word/word-library/java/mail-merge/mail-merge-options#restart-numbering-in-lists).
-
-## See also
-
-* [How to Execute Nested Group with JSON in Word Document Using Java?](https://support.syncfusion.com/kb/article/20141/how-to-execute-nested-group-with-json-in-word-document-using-java)
+You can restart the list numbering in a Word document during the Mail Merge process. For further information, click [here](https://help.syncfusion.com/document-processing/word/word-library/java/mail-merge/mail-merge-options#restart-numbering-in-lists).
