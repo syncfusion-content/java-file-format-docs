@@ -1,6 +1,6 @@
 ---
 title: Applying Watermark | Syncfusion
-description: This section illustrates how to insert text or pictures watermark to the Word document using Syncfusion Word library (Essential DocIO)
+description: This section illustrates how to insert text or picture watermarks into a Word document using the Syncfusion Word library (Essential DocIO).
 platform: java-file-formats
 control: Word Library
 documentation: UG
@@ -8,13 +8,13 @@ documentation: UG
 
 # Working with Watermark
 
-Watermarks are text or pictures that appear behind the document text. You can access the watermark in the document by using the `Watermark` property of `WordDocument` class.
+Watermarks are text or pictures that appear behind the document text. You can access the watermark in the document by using the `Watermark` property of the `WordDocument` class.
 
 There are two types of watermarks: Text and Picture.
 
-## Text watermark
+## Text Watermark
 
-You can add or modify text watermark in the Word document. The `TextWatermark` class represents the text watermark in the Word document.
+You can add or modify a text watermark in the Word document. The `TextWatermark` class represents the text watermark in the Word document.
 
 The following code example shows how to add a text watermark to the Word document.
 
@@ -40,7 +40,7 @@ textWatermark.setSemitransparent(false);
 textWatermark.setColor(ColorSupport.getBlack());
 //Save the Word document.
 document.save("Result_watermark1.docx", FormatType.Docx);
-//Closes the document.
+//Close the document.
 document.close();
 {% endhighlight %}
 
@@ -48,7 +48,7 @@ document.close();
 
 ## Picture Watermark
 
-You can add or modify the picture watermark in the Word document. The `PictureWatermark` class represents the picture watermark in the Word document.
+You can add or modify a picture watermark in the Word document. The `PictureWatermark` class represents the picture watermark in the Word document.
 
 The following code example shows how to add a picture watermark to the Word document.
 
@@ -63,12 +63,12 @@ IWParagraph paragraph = document.getLastParagraph();
 paragraph.appendText("AdventureWorks Cycles, the fictitious company on which the AdventureWorks sample databases are based, is a large, multinational manufacturing company.");
 //Create a new picture watermark.
 PictureWatermark picWatermark = new PictureWatermark();
-//Set the scaling to picture.
+//Set the scaling for the picture.
 picWatermark.setScaling(120f);
 picWatermark.setWashout(true);
-//Set the picture watermark to document.
+//Set the picture watermark to the document.
 document.setWatermark(picWatermark);
-//Set the image to the picture watermark.
+//Set the image for the picture watermark.
 Path path = Paths.get("David.png");
 byte[] data = Files.readAllBytes(path);
 picWatermark.loadPicture(data);

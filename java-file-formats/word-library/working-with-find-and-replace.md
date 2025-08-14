@@ -7,94 +7,94 @@ documentation: UG
 ---
 # Working with Find and Replace
 
-You can search a particular text you like to change and replace it with another text or part of the document.
+You can search for a particular text you want to change and replace it with another text or part of the document.
 
 ## Finding contents in a Word document
 
-You can find the first occurrence of a particular text within a single paragraph in the document by using `Find` method and its next occurrence by using `FindNext` method. You can also find a particular text pattern in the document.
+You can find the first occurrence of a particular text within a single paragraph in the document by using the `Find` method and its next occurrence by using the `FindNext` method. You can also find a particular text pattern in the document.
 
 The following code example illustrates how to find a particular text and its next occurrence in the document.
 
 {% tabs %}  
 
 {% highlight JAVA %}
-//Loads the template document
+// Loads the template document
 WordDocument document = new WordDocument("Template.docx", FormatType.Docx);
-//Finds the first occurrence of a particular text in the document
+// Finds the first occurrence of a particular text in the document
 TextSelection textSelection = document.find("as graphical contents", false, true);
-//Gets the found text as single text range
+// Gets the found text as a single text range
 WTextRange textRange = textSelection.getAsOneRange();
-//Modifies the text
+// Modifies the text
 textRange.setText("Replaced text");
-//Sets highlight color
+// Sets highlight color
 textRange.getCharacterFormat().setHighlightColor(ColorSupport.getYellow());
-//Finds the next occurrence of a particular text from the previous paragraph
+// Finds the next occurrence of a particular text from the previous paragraph
 textSelection = document.findNext(textRange.getOwnerParagraph(), "paragraph", true, false);
-//Gets the found text as single text range
+// Gets the found text as a single text range
 WTextRange range = textSelection.getAsOneRange();
-//Sets bold formatting
+// Sets bold formatting
 range.getCharacterFormat().setBold(true);
-//Saves and closes the document
+// Saves and closes the document
 document.save("Sample.docx", FormatType.Docx);
 document.close();
 {% endhighlight %}
 
 {% endtabs %}  
 
-You can find all the occurrence of a particular text within a single paragraph in the document by using `FindAll` method. 
+You can find all the occurrences of a particular text within a single paragraph in the document by using the `FindAll` method.
 
-The following code example illustrates how to find all the occurrences of a particular text in the document.
+The following code example illustrates how to find all occurrences of a particular text in the document.
 
 {% tabs %} 
 
 {% highlight JAVA %}
-//Loads the template document
+// Loads the template document
 WordDocument document = new WordDocument("Template.docx", FormatType.Docx);
-//Finds all the occurrences of a particular text
-TextSelection[] textSelections = document.findAll("paragraph",false,true);
-for(Object textSelection_tempObj : textSelections)
-{
-	TextSelection textSelection = (TextSelection)textSelection_tempObj;
+// Finds all the occurrences of a particular text
+TextSelection[] textSelections = document.findAll("paragraph", false, true);
+for (Object textSelection_tempObj : textSelections) {
+ 
+	TextSelection textSelection = (TextSelection) textSelection_tempObj;
 	WTextRange textRange = textSelection.getAsOneRange();
 	textRange.getCharacterFormat().setHighlightColor(ColorSupport.getYellowGreen());
 }
-//Saves and closes the document
+// Saves and closes the document
 document.save("Sample.docx", FormatType.Docx);
 document.close();
 {% endhighlight %}
 
 {% endtabs %}  
 
-You can find the first occurrence of a particular text extended to several paragraphs in the document by using `FindSingleLine` method and its next occurrence by using `FindNextSingleLine` method.
+You can find the first occurrence of a particular text extended to several paragraphs in the document by using the `FindSingleLine` method and its next occurrence by using the `FindNextSingleLine` method.
 
 The following code example illustrates how to find a particular text extended to several paragraphs in the Word document.
 
 {% tabs %}   
 
 {% highlight JAVA %}
-//Loads the template document
+// Loads the template document
 WordDocument document = new WordDocument("Template.docx", FormatType.Docx);
-//Finds the first occurrence of a particular text extended to several paragraphs in the document
+// Finds the first occurrence of a particular text extended to several paragraphs in the document
 TextSelection[] textSelections = document.findSingleLine("First paragraph Second paragraph", true, false);
 WParagraph paragraph = null;
-for(Object textSelection_tempObj : textSelections)
-{
-	//Gets the found text as single text range and set highlight color
-	TextSelection textSelection = (TextSelection)textSelection_tempObj;
+for (Object textSelection_tempObj : textSelections) {
+ 
+	// Gets the found text as a single text range and sets highlight color
+	TextSelection textSelection = (TextSelection) textSelection_tempObj;
 	WTextRange textRange = textSelection.getAsOneRange();
 	textRange.getCharacterFormat().setHighlightColor(ColorSupport.getYellowGreen());
-	paragraph=textRange.getOwnerParagraph();
+	paragraph = textRange.getOwnerParagraph();
 }
-//Finds the next occurrence of a particular text extended to several paragraphs in the document
-textSelections=document.findNextSingleLine(paragraph,"First paragraph Second paragraph",true,false);
-for(Object textSelection_tempObj : textSelections)
-{
-	//Gets the found text as single text range and sets italic formatting
-	TextSelection textSelection = (TextSelection)textSelection_tempObj;
+// Finds the next occurrence of a particular text extended to several paragraphs in the document
+textSelections = document.findNextSingleLine(paragraph, "First paragraph Second paragraph", true, false);
+for (Object textSelection_tempObj : textSelections) {
+ 
+	// Gets the found text as a single text range and sets italic formatting
+	TextSelection textSelection = (TextSelection) textSelection_tempObj;
 	WTextRange text = textSelection.getAsOneRange();
 	text.getCharacterFormat().setItalic(true);
 }
-//Saves and closes the document
+// Saves and closes the document
 document.save("Sample.docx", FormatType.Docx);
 document.close();
 {% endhighlight %}
@@ -112,9 +112,9 @@ The following code example illustrates how to replace all occurrences of a missp
 {% highlight JAVA %}
 // Opens the input Word document
 WordDocument document = new WordDocument("Template.docx");
-// Finds all occurrences of a misspelled word and replaces with properly spelled word
+// Finds all occurrences of a misspelled word and replaces it with the properly spelled word
 document.replace("Cyles", "Cycles", true, true);
-//Saves and closes the document
+// Saves and closes the document
 document.save("Sample.docx");
 document.close();
 {% endhighlight %}
@@ -125,18 +125,18 @@ document.close();
 
 You can find placeholder text in a Word document and replace it with any desired image.
 
-The following code example illustrates how to find and replace text in a word document with an image
+The following code example illustrates how to find and replace text in a Word document with an image.
 
 {% tabs %}  
 
 {% highlight JAVA %}
-//Opens the input Word document
+// Opens the input Word document
 WordDocument document = new WordDocument("Template.docx");
-//Finds all the image placeholder text in the Word document
+// Finds all the image placeholder text in the Word document
 TextSelection[] textSelections = document.findAll(Pattern.compile(MatchSupport.trimPattern("^//(.*)")));
-for (int i = 0; i < textSelections.length; i++) 
-{
-	// Replaces the image placeholder text with desired image
+for (int i = 0; i < textSelections.length; i++) {
+ 
+	// Replaces the image placeholder text with the desired image
 	WParagraph paragraph = new WParagraph(document);
 	WPicture picture = (WPicture) paragraph.appendPicture(new FileInputStream(textSelections[i].getSelectedText() + ".png"));
 	TextSelection newSelection = new TextSelection(paragraph, 0, 1);
@@ -144,14 +144,14 @@ for (int i = 0; i < textSelections.length; i++)
 	bodyPart.getBodyItems().add(paragraph);
 	document.replace(textSelections[i].getSelectedText(), bodyPart, true, true);
 }
-//Saves and closes the document
+// Saves and closes the document
 document.save("Sample.docx");
 document.close();
 {% endhighlight %}
 
 {% endtabs %}
 
-## Find and replace a pattern of text with a merge field 
+## Find and replace a pattern of text with a merge field
 
 You can find and replace a pattern of text in a Word document with merge fields using Regex.
 
@@ -166,21 +166,21 @@ WordDocument document = new WordDocument("Template.docx");
 TextSelection[] textSelections = document.findAll(
 Pattern.compile(MatchSupport.trimPattern("«([(?i)image(?-i)]*:*[a-zA-Z0-9 ]*:*[a-zA-Z0-9 ]+)»")));
 String[] searchedPlaceholders = new String[textSelections.length];
-for (int i = 0; i < textSelections.length; i++) 
-{
-	searchedPlaceholders[(int) i] = textSelections[(int) i].getSelectedText();
+for (int i = 0; i < textSelections.length; i++) {
+ 
+	searchedPlaceholders[i] = textSelections[i].getSelectedText();
 }
-for (int i = 0; i < searchedPlaceholders.length; i++) 
-{
+for (int i = 0; i < searchedPlaceholders.length; i++) {
+ 
 	WParagraph paragraph = new WParagraph(document);
-	// Replaces the placeholder text enclosed within '«' and '»' with desired merge field
-	paragraph.appendField(StringSupport.trimEnd(StringSupport.trimStart(searchedPlaceholders[i], '«'), '»'),FieldType.FieldMergeField);
+	// Replaces the placeholder text enclosed within '«' and '»' with the desired merge field
+	paragraph.appendField(StringSupport.trimEnd(StringSupport.trimStart(searchedPlaceholders[i], '«'), '»'), FieldType.FieldMergeField);
 	TextSelection newSelection = new TextSelection(paragraph, 0, paragraph.getItems().getCount());
 	TextBodyPart bodyPart = new TextBodyPart(document);
 	bodyPart.getBodyItems().add(paragraph);
-	document.replace(searchedPlaceholders[(int) i], bodyPart, true, true, true);
+	document.replace(searchedPlaceholders[i], bodyPart, true, true, true);
 }
-//Saves and closes the document
+// Saves and closes the document
 document.save("Sample.docx");
 document.close();
 {% endhighlight %}
@@ -227,7 +227,7 @@ document.save("Sample.docx");
 
 {% endtabs %}
 
-The following code example provides supporting method for the above code.
+The following code example provides a supporting method for the above code.
 
 {% tabs %}  
 
@@ -271,7 +271,7 @@ private void importDataToTable(WTable table) throws Exception
 
 {% endtabs %}
 
-The following code example provides supporting method for the above code.
+The following code example provides a supporting method for the above code.
 
 {% tabs %}  
 
@@ -355,7 +355,7 @@ document.close();
 {% endtabs %}
 ## Find and replace text extending to several paragraphs
 
-Apart from finding text in a paragraph, you can also find and replace text that extends to several paragraphs in a Word document. You can find the first occurrence of the text that extends to several paragraphs by using the `findSingleLine` method. Find the next occurrences of the text by using the `findNextSingleLine` method. Similarly, you can replace text that extends to several paragraphs by using `replaceSingleLine` method.
+Apart from finding text in a paragraph, you can also find and replace text that extends to several paragraphs in a Word document. You can find the first occurrence of the text that extends to several paragraphs by using the `findSingleLine` method. Find the next occurrences of the text by using the `findNextSingleLine` method. Similarly, you can replace text that extends to several paragraphs by using the `replaceSingleLine` method.
 
 The following code example illustrates how to replace text that extends to several paragraphs.
 
@@ -386,7 +386,7 @@ document.close();
 
 ## Find text in a Word document and format 
 
-You can find text in a Word document and format or highlight it .You can find the first occurrence of text using the `find` method. Find the next occurrences of the text using the `findNext` method.
+You can find text in a Word document and format or highlight it. You can find the first occurrence of text using the `find` method. Find the next occurrences of the text using the `findNext` method.
 
 The following code example illustrates how to find all occurrences of a length of text and highlight it.
 
@@ -395,7 +395,7 @@ The following code example illustrates how to find all occurrences of a length o
 {% highlight JAVA %}
 // Opens the input Word document
 WordDocument document = new WordDocument("Template.docx", FormatType.Docx);
-// Finds all occurrence of the text in the Word document
+// Finds all occurrences of the text in the Word document
 TextSelection[] textSelections = document.findAll("Adventure", true, true);
 for (int i = 0; i < textSelections.length; i++) 
 {

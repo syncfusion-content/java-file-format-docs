@@ -6,14 +6,14 @@ control: Word Library
 documentation: UG
 ---
 
-# Create Equation using LaTeX
-The Java Word library allows to create mathematical equation in Word document using **LaTeX**.
+# Create Equation Using LaTeX
+The Java Word library allows you to create mathematical equations in a Word document using **LaTeX**.
 
 ## Accent
 
-Add **accent** equation to a Word document using the LaTeX through **appendMath** API.
+Add **accent** equations to a Word document using LaTeX through the **appendMath** API.
 
-The following code example illustrates how to create accent equation using LaTeX in Word document.
+The following code example illustrates how to create an accent equation using LaTeX in a Word document.
 
 {% tabs %}  
 
@@ -118,9 +118,9 @@ The following table demonstrates the LaTeX equivalent to professional format acc
 
 ## Bar
 
-Add **bar** equation to a Word document using the LaTeX through **appendMath** API.
+Add **bar** equations to a Word document using LaTeX through the **appendMath** API.
 
-The following code example illustrates how to create bar equation using LaTeX in Word document.
+The following code example illustrates how to create a bar equation using LaTeX in a Word document.
 
 {% tabs %}  
 
@@ -130,7 +130,7 @@ The following code example illustrates how to create bar equation using LaTeX in
 WordDocument document = new WordDocument();
 //Adds one section and one paragraph to the document.
 document.ensureMinimal();
-//Append an bar equation using LaTeX.
+//Append a bar equation using LaTeX.
 document.getLastParagraph().appendMath("\\overline{a}");
 //Saves the Word document.
 document.save("Sample.docx", FormatType.Docx);
@@ -207,9 +207,9 @@ The following table demonstrates the LaTeX equivalent to professional format box
 
 ## Border Box
 
-Add **border box** equation to a Word document using the LaTeX through **appendMath** API.
+Add **border box** equations to a Word document using LaTeX through the **appendMath** API.
 
-The following code example illustrates how to create border box equation using LaTeX in Word document.
+The following code example illustrates how to create a border box equation using LaTeX in a Word document.
 
 {% tabs %}  
 
@@ -220,7 +220,7 @@ The following code example illustrates how to create border box equation using L
 WordDocument document = new WordDocument();
 //Adds one section and one paragraph to the document.
 document.ensureMinimal();
-//Append an border box equation using LaTeX.
+//Append a border box equation using LaTeX.
 document.getLastParagraph().appendMath("\\boxed{{x}^{2}+{y}^{2}={z}^{2}}");
 //Saves the Word document.
 document.save("Sample.docx", FormatType.Docx);
@@ -428,9 +428,9 @@ The following table demonstrates the LaTeX equivalent to professional format del
 
 ## Equation Array
 
-Add **equation array** to a Word document using the LaTeX through **appendMath** API.
+Add **equation array** to a Word document using LaTeX through the **appendMath** API.
 
-The following code example illustrates how to create an equation array using LaTeX in Word document.
+The following code example illustrates how to create an equation array using LaTeX in a Word document.
 
 {% tabs %}  
 
@@ -440,7 +440,7 @@ The following code example illustrates how to create an equation array using LaT
 WordDocument document = new WordDocument();
 //Adds one section and one paragraph to the document.
 document.ensureMinimal();
-//Append an box equation using LaTeX.
+//Appends a box equation using LaTeX.
 document.getLastParagraph().appendMath("\\eqarray{a@&b}");
 //Saves the Word document.
 document.save("Sample.docx", FormatType.Docx);
@@ -451,7 +451,7 @@ document.close();
 
 {% endtabs %} 
 
-The following table demonstrates the LaTeX equivalent to professional format equation array.
+The following table demonstrates the LaTeX equivalent to professional format equation arrays.
 
 <table>
 <thead>
@@ -470,9 +470,9 @@ The following table demonstrates the LaTeX equivalent to professional format equ
 
 ## Fraction
 
-Add **fraction** equation to a Word document using the LaTeX through **appendMath** API.
+Add **fraction** equation to a Word document using LaTeX through the **appendMath** API.
 
-The following code example illustrates how to create fraction equation using LaTeX in Word document.
+The following code example illustrates how to create a fraction equation using LaTeX in a Word document.
 
 {% tabs %}  
 
@@ -482,7 +482,7 @@ The following code example illustrates how to create fraction equation using LaT
 WordDocument document = new WordDocument();
 //Adds one section and one paragraph to the document.
 document.ensureMinimal();
-//Append an fraction equation using LaTeX.
+//Appends a fraction equation using LaTeX.
 document.getLastParagraph().appendMath("{\\frac{dy}{dx}}");
 //Saves the Word document.
 document.save("Sample.docx", FormatType.Docx);
@@ -523,23 +523,23 @@ The following table demonstrates the LaTeX equivalent to professional format fra
 
 ## Function
 
-Add **function** equation to a Word document using the LaTeX through **appendMath** API.
+Add **delimiter** equation to a Word document using LaTeX through the **appendMath** API.
 
-The following code example illustrates how to create function equation using LaTeX in Word document.
+The following code example illustrates how to create a delimiter equation using LaTeX in a Word document.
 
 {% tabs %}  
 
 {% highlight JAVA %}
 
-//Creates a new Word document.
+// Creates a new Word document.
 WordDocument document = new WordDocument();
-//Adds one section and one paragraph to the document.
+// Adds one section and one paragraph to the document.
 document.ensureMinimal();
-//Append an function equation using LaTeX.
-document.getLastParagraph().appendMath("\\sin{\\theta}");
-//Saves the Word document.
+// Appends a delimiter equation using LaTeX.
+document.getLastParagraph().appendMath("\sin{\theta}");
+// Saves the Word document.
 document.save("Sample.docx", FormatType.Docx);
-//Closes the document.
+// Closes the document.
 document.close();
 
 {% endhighlight %}
@@ -710,23 +710,23 @@ The following table demonstrates the LaTeX equivalent to professional format fun
 
 ## Group character
 
-Add **group character** equation to a Word document using the LaTeX through **appendMath** API.
+Add **group character** equation to a Word document using LaTeX through the **appendMath** API.
 
-The following code example illustrates how to create group character equation using LaTeX in Word document.
+The following code example illustrates how to create a group character equation using LaTeX in a Word document.
 
 {% tabs %}  
 
 {% highlight JAVA %}
 
-//Creates a new Word document.
+// Creates a new Word document.
 WordDocument document = new WordDocument();
-//Adds one section and one paragraph to the document.
+// Adds one section and one paragraph to the document.
 document.ensureMinimal();
-//Append an group character equation using LaTeX.
-document.getLastParagraph().appendMath("\\overbrace{a-b}");
-//Saves the Word document.
+// Appends a group character equation using LaTeX.
+document.getLastParagraph().appendMath("\overbrace{a-b}");
+// Saves the Word document.
 document.save("Sample.docx", FormatType.Docx);
-//Closes the document.
+// Closes the document.
 document.close();
 
 {% endhighlight %}
@@ -757,23 +757,23 @@ The following table demonstrates the LaTeX equivalent to professional format gro
 
 ## Limit
 
-Add **limit** equation to a Word document using the LaTeX through **appendMath** API.
+Add **limit** equation to a Word document using LaTeX through the **appendMath** API.
 
-The following code example illustrates how to create limit equation using LaTeX in Word document.
+The following code example illustrates how to create a limit equation using LaTeX in a Word document.
 
 {% tabs %}  
 
 {% highlight JAVA %}
 
-//Creates a new Word document.
+// Creates a new Word document.
 WordDocument document = new WordDocument();
-//Adds one section and one paragraph to the document.
+// Adds one section and one paragraph to the document.
 document.ensureMinimal();
-//Append an limit equation using LaTeX.
-document.getLastParagraph().appendMath("\\lim\\below{b}{a}");
-//Saves the Word document.
+// Appends a limit equation using LaTeX.
+document.getLastParagraph().appendMath("\lim\below{b}{a}");
+// Saves the Word document.
 document.save("Sample.docx", FormatType.Docx);
-//Closes the document.
+// Closes the document.
 document.close();
 
 {% endhighlight %}
@@ -809,23 +809,23 @@ The following table demonstrates the LaTeX equivalent to professional format lim
 
 ## Matrix
 
-Add **matrix** equation to a Word document using the LaTeX through **appendMath** API.
+Add **matrix** equation to a Word document using LaTeX through the **appendMath** API.
 
-The following code example illustrates how to create matrix equation using LaTeX in Word document.
+The following code example illustrates how to create a matrix equation using LaTeX in a Word document.
 
 {% tabs %}  
 
 {% highlight JAVA %}
 
-//Creates a new Word document.
+// Creates a new Word document.
 WordDocument document = new WordDocument();
-//Adds one section and one paragraph to the document.
+// Adds one section and one paragraph to the document.
 document.ensureMinimal();
-//Append an matrix equation using LaTeX.
-document.getLastParagraph().appendMath("\\begin{matrix}a&b\\\\\\end{matrix}");
-//Saves the Word document.
+// Appends a matrix equation using LaTeX.
+document.getLastParagraph().appendMath("\begin{matrix}a&b\\\end{matrix}");
+// Saves the Word document.
 document.save("Sample.docx", FormatType.Docx);
-//Closes the document.
+// Closes the document.
 document.close();
 
 {% endhighlight %}
@@ -851,9 +851,9 @@ The following table demonstrates the LaTeX equivalent to professional format mat
 
 ## N-array
 
-Add **N-array** equation to a Word document using the LaTeX through **appendMath** API.
+Add **N-array** equation to a Word document using LaTeX through the **appendMath** API.
 
-The following code example illustrates how to create N-array equation using LaTeX in Word document.
+The following code example illustrates how to create an N-array equation using LaTeX in a Word document.
 
 {% tabs %}  
 
@@ -943,9 +943,9 @@ The following table demonstrates the LaTeX equivalent to professional format N-a
 
 ## Radical
 
-Add **radical** equation to a Word document using the LaTeX through **appendMath** API.
+Add **radical** equation to a Word document using LaTeX through the **appendMath** API.
 
-The following code example illustrates how to create radical equation using LaTeX in Word document.
+The following code example illustrates how to create a radical equation using LaTeX in a Word document.
 
 {% tabs %}  
 
@@ -955,7 +955,7 @@ The following code example illustrates how to create radical equation using LaTe
 WordDocument document = new WordDocument();
 //Adds one section and one paragraph to the document.
 document.ensureMinimal();
-//Append an radical equation using LaTeX.
+//Append a radical equation using LaTeX.
 document.getLastParagraph().appendMath("\\sqrt{a}");
 //Saves the Word document.
 document.save("Sample.docx", FormatType.Docx);
@@ -1037,23 +1037,23 @@ The following table demonstrates the LaTeX equivalent to professional format Sub
 
 ## Left SubSuperScript
 
-Add **Left SubSuperScript** equation to a Word document using the LaTeX through **appendMath** API.
+Add **Left SubSuperScript** equation to a Word document using LaTeX through the **appendMath** API.
 
-The following code example illustrates how to create Left SubSuperScript equation using LaTeX in Word document.
+The following code example illustrates how to create a Left SubSuperScript equation using LaTeX in a Word document.
 
 {% tabs %}  
 
 {% highlight JAVA %}
 
-//Creates a new Word document.
+// Creates a new Word document.
 WordDocument document = new WordDocument();
-//Adds one section and one paragraph to the document.
+// Adds one section and one paragraph to the document.
 document.ensureMinimal();
-//Append an Left SubSuperScript equation using LaTeX.
+// Append a Left SubSuperScript equation using LaTeX.
 document.getLastParagraph().appendMath("{_{40}^{20}}{100}");
-//Saves the Word document.
+// Saves the Word document.
 document.save("Sample.docx", FormatType.Docx);
-//Closes the document.
+// Closes the document.
 document.close();
 
 {% endhighlight %}
@@ -1079,23 +1079,23 @@ The following table demonstrates the LaTeX equivalent to professional format Lef
 
 ## Right SubSuperScript
 
-Add **Right SubSuperScript** equation to a Word document using the LaTeX through **appendMath** API.
+Add **Right SubSuperScript** equation to a Word document using LaTeX through the **appendMath** API.
 
-The following code example illustrates how to create Right SubSuperScript equation using LaTeX in Word document.
+The following code example illustrates how to create a Right SubSuperScript equation using LaTeX in a Word document.
 
 {% tabs %}  
 
 {% highlight JAVA %}
 
-//Creates a new Word document.
+// Creates a new Word document.
 WordDocument document = new WordDocument();
-//Adds one section and one paragraph to the document.
+// Adds one section and one paragraph to the document.
 document.ensureMinimal();
-//Append an Right SubSuperScript equation using LaTeX.
+// Appends a Right SubSuperScript equation using LaTeX.
 document.getLastParagraph().appendMath("{100}_{40}^{20}");
-//Saves the Word document.
+// Saves the Word document.
 document.save("Sample.docx", FormatType.Docx);
-//Closes the document.
+// Closes the document.
 document.close();
 
 {% endhighlight %}
@@ -1152,17 +1152,17 @@ The following code example demonstrates how to apply styles to characters within
 
 {% highlight JAVA %}
 
-//Creates a new Word document.
+// Creates a new Word document.
 WordDocument document = new WordDocument();
-//Adds one section and one paragraph to the document.
+// Adds one section and one paragraph to the document.
 document.ensureMinimal();
-//Append an accent equation with bold using LaTeX.
+// Appends an accent equation with bold using LaTeX.
 document.getLastParagraph().appendMath("\\dot{\\mathbf{a}}");
-//Append an accent equation with bold-italic using LaTeX.
+// Appends an accent equation with bold-italic using LaTeX.
 document.getLastSection().addParagraph().appendMath("\\dot{\\mathbit{a}}");
-//Saves the Word document.
+// Saves the Word document.
 document.save("Sample.docx", FormatType.Docx);
-//Closes the document.
+// Closes the document.
 document.close();
 
 {% endhighlight %}
@@ -1212,23 +1212,23 @@ The following code examples show how to apply the scripts to equations in a Word
 
 {% highlight JAVA %}
 
-//Creates a new Word document.
+// Creates a new Word document.
 WordDocument document = new WordDocument();
-//Adds one section and one paragraph to the document.
+// Adds one section and one paragraph to the document.
 document.ensureMinimal();
-//Append an accent equation with Double-Struck font using LaTeX.
+// Appends an accent equation with Double-Struck font using LaTeX.
 document.getLastParagraph().appendMath("\\dot{\\mathbb{a}}");
-//Append an accent equation with Fraktur font using LaTeX.
+// Appends an accent equation with Fraktur font using LaTeX.
 document.getLastSection().addParagraph().appendMath("\\dot{\\mathfrak{a}}");
-//Append an accent equation with Sans Serif font using LaTeX.
+// Appends an accent equation with Sans Serif font using LaTeX.
 document.getLastSection().addParagraph().appendMath("\\dot{\\mathsf{a}}");
-//Append an accent equation with Script using LaTeX.
+// Appends an accent equation with Script using LaTeX.
 document.getLastSection().addParagraph().appendMath("\\dot{\\mathcal{a}}");
-//Append an accent equation with Script using LaTeX.
+// Appends an accent equation with Script using LaTeX.
 document.getLastSection().addParagraph().appendMath("\\dot{\\mathscr{a}}");
-//Saves the Word document.
+// Saves the Word document.
 document.save("Sample.docx", FormatType.Docx);
-//Closes the document.
+// Closes the document.
 document.close();
 
 {% endhighlight %}
@@ -1247,15 +1247,15 @@ The following code example shows how to preserve text as normal text, without an
 
 {% highlight JAVA %}
 
-//Creates a new Word document.
+// Creates a new Word document.
 WordDocument document = new WordDocument();
-//Adds one section and one paragraph to the document.
+// Adds one section and one paragraph to the document.
 document.ensureMinimal();
-//Append an accent equation as normal text using LaTeX.
+// Appends an accent equation as normal text using LaTeX.
 document.getLastParagraph().appendMath("\\dot{\\mathrm{a}}");
-//Saves the Word document.
+// Saves the Word document.
 document.save("Sample.docx", FormatType.Docx);
-//Closes the document.
+// Closes the document.
 document.close();
 
 {% endhighlight %}
@@ -1273,17 +1273,17 @@ The following code examples show how to apply the justification to equations in 
 {% highlight JAVA %}
 {% raw %}
 
-//Creates a new Word document.
+// Creates a new Word document.
 WordDocument document = new WordDocument();
-//Adds one section and one paragraph to the document.
+// Adds one section and one paragraph to the document.
 document.ensureMinimal();
-//Append an border box equation using LaTeX.
+// Appends a border box equation using LaTeX.
 WMath math = document.getLastParagraph().appendMath("\\boxed{{x}^{2}+{y}^{2}={z}^{2}}");
-//Apply math justification.
+// Applies math justification.
 math.getMathParagraph().setJustification(MathJustification.Left);
-//Saves the Word document.
+// Saves the Word document.
 document.save("Sample.docx", FormatType.Docx);
-//Closes the document.
+// Closes the document.
 document.close();
 
 {% endraw %}
@@ -1301,26 +1301,26 @@ The following code snippet shows how to modify the LaTeX equation in a Word docu
 
 {% highlight JAVA %}
 
-//Creates a new Word document.
+// Creates a new Word document.
 WordDocument document = new WordDocument("Template.docx", FormatType.Automatic);
-//Adds one section and one paragraph to the document.
+// Adds one section and one paragraph to the document.
 document.ensureMinimal();
 		
-// Access the first paragraph from the last section of the document.
+// Accesses the first paragraph from the last section of the document.
 WParagraph paragraph = (WParagraph)document.getLastSection().getBody().getChildEntities().get(0);
-// Retrieve the first math equation in the paragraph, if it exists.
+// Retrieves the first math equation in the paragraph, if it exists.
 WMath math = (WMath) paragraph.getChildEntities().get(0);
 if (math != null)
 {
-    // Get the LaTeX representation of the math equation.
+    // Gets the LaTeX representation of the math equation.
     String laTeX = math.getMathParagraph().getLaTeX();
-    // Replace occurrences of 'x' with 'k' in the LaTeX representation.
+    // Replaces occurrences of 'x' with 'k' in the LaTeX representation.
     math.getMathParagraph().setLaTeX(laTeX.replace("x", "k"));
 }
 
-//Saves the Word document.
+// Saves the Word document.
 document.save("Sample.docx", FormatType.Docx);
-//Closes the document.
+// Closes the document.
 document.close();
 
 {% endhighlight %}
@@ -1328,4 +1328,3 @@ document.close();
 {% endtabs %}
 
 ![Edit equation using LaTeX](WorkingwithMathematicalEquation_images/ModifyLaTeXEquation.png)
-

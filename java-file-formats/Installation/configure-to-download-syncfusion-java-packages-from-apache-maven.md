@@ -1,13 +1,13 @@
 ---
 title: Download Syncfusion Java packages from Apache Maven | Syncfusion
-description: This section demonstrates how to configure and download required Jars from Apache Maven (Jar configuration)
+description: This section demonstrates how to configure and download required JARs from Apache Maven (JAR configuration)
 platform: java-file-formats
 control: general
 documentation: UG
 ---
 # Configure to download Syncfusion<sup style="font-size:70%">&reg;</sup> Java packages from Apache Maven
 
-You can easily download the Syncfusion<sup style="font-size:70%">&reg;</sup> packages for Java using the [maven repository](https://jars.syncfusion.com/).
+You can easily download the Syncfusion<sup style="font-size:70%">&reg;</sup> packages for Java using the [Maven repository](https://jars.syncfusion.com/).
 
 The following command shows how to mention the repository in Apache Maven.
 

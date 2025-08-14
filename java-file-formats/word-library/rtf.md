@@ -9,35 +9,35 @@ documentation: UG
 # Word to RTF and RTF to Word Conversions
 
 ## RTF
-The [Rich Text Format (RTF)](http://en.wikipedia.org/wiki/Rich_Text_Format#) is one of the document formats supported by Microsoft Word and many other Word processing applications. RTF is human readable file format invented for interchanging formatted text between applications. It is an optional format for Word that retains most formatting and all content of the original document.
+The [Rich Text Format (RTF)](http://en.wikipedia.org/wiki/Rich_Text_Format#) is one of the document formats supported by Microsoft Word and many other word processing applications. RTF is a human-readable file format invented for interchanging formatted text between applications. It is an optional format for Word that retains most formatting and all content of the original document.
 
-Most of the Word processors (including Microsoft Word) uses the XML-based file formats, Microsoft has discontinued enhancements to the RTF and still supporting it. The last version was 1.9.1 released in 2008.
+Most word processors (including Microsoft Word) use XML-based file formats. Microsoft has discontinued enhancements to RTF but still supports it. The last version was 1.9.1, released in 2008.
 
-The Essential<sup style="font-size:70%">&reg;</sup> DocIO converts the RTF document into Word document and vice versa. The following code shows how to convert RTF document into Word document.
+The Essential<sup style="font-size:70%">&reg;</sup> DocIO converts RTF documents into Word documents and vice versa. The following code shows how to convert an RTF document into a Word document.
 
 {% tabs %}
 {% highlight JAVA %}
-//Load an existing document.
+// Load an existing document.
 WordDocument document = new WordDocument("Input.rtf", FormatType.Rtf);
-//Save the Word document as RTF file.
+// Save the Word document as an RTF file.
 document.save("RtfToWord.docx", FormatType.Docx);
-//Close the document.
+// Close the document.
 document.close();
 {% endhighlight %}
 {% endtabs %}
 
-The following code example shows how to convert Word document into RTF document.
+The following code example shows how to convert a Word document into an RTF document.
 
 {% tabs %}
 {% highlight JAVA %}
-//Load an existing document.
+// Load an existing document.
 WordDocument document = new WordDocument("Input.docx", FormatType.Docx);
-//Save the Word document as RTF file.
+// Save the Word document as an RTF file.
 document.save("WordToRtf.rtf", FormatType.Rtf);
-//Close the document.
+// Close the document.
 document.close();
 {% endhighlight %}
 {% endtabs %}
 
-## Supported and Unsupported features
-The supported and unsupported features of DocIO based on file formats can be referred [here](https://help.syncfusion.com/document-processing/word/word-library/java/supported-and-unsupported-features#)
+## Supported and Unsupported Features
+The supported and unsupported features of DocIO based on file formats can be referred to [here](https://help.syncfusion.com/document-processing/word/word-library/java/supported-and-unsupported-features#).
