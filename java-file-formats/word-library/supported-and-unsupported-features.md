@@ -1,15 +1,15 @@
 ---
 title: Supported and Unsupported Features | Syncfusion
-description: This section describes the support and unsupported elements used in Syncfusion Java Word library (Essential DocIO)
+description: This section describes the supported and unsupported elements used in the Syncfusion Java Word library (Essential DocIO).
 platform: java-file-formats
 control: Word Library
 documentation: UG
 ---
 # Supported and Unsupported Features
 
-This section describes the support and unsupported elements in the DocIO. 
+This section describes the supported and unsupported elements in DocIO. 
 
-## Word document features
+## Word Document Features
 
 <table>
 <thead>  
@@ -51,7 +51,7 @@ Yes<br/><br/></td><td>
 Yes<br/><br/></td></tr>
 <tr>
 <td>
-Encryption and Decryption<br/><br/></td><td>
+Encryption and decryption<br/><br/></td><td>
 Yes<br/><br/></td><td>
 Yes<br/><br/></td><td>
 N/A<br/><br/></td><td>
@@ -74,7 +74,7 @@ Yes<br/><br/></td></tr>
 <td>
 Track changes<br/><br/></td><td>
 Yes<br/><br/></td><td>
-Yes – limited [can only accept/reject]<br/><br/></td><td>
+Yes – limited (can only accept/reject)<br/><br/></td><td>
 No<br/><br/></td><td>
 No<br/><br/></td></tr>
 <tr>

@@ -1,6 +1,6 @@
 ---
 title: Mail merge options | Syncfusion
-description: This section illustrates the mail merge options used to customize field mapping, remove unmerged fields, unmerged mail merge groups, empty paragraphs and more.
+description: This section illustrates the mail merge options used to customize field mapping, remove unmerged fields, unmerged mail merge groups, empty paragraphs, and more.
 platform: java-file-formats
 control: Word Library
 documentation: UG
@@ -8,13 +8,13 @@ documentation: UG
 
 # Perform Mail merge options
 
-The `MailMerge` class allows you to customize the Mail merge process with the following options.
+The `MailMerge` class allows you to customize the mail merge process with the following options.
 
 ## Field Mapping
 
-The `MailMerge` class can automatically **maps the merge field names with data source column names** during Mail merge process. You can also customize the field mapping when the merge field names in the template document varies with the column names in the data source by using `MappedFields` collection.
+The `MailMerge` class can automatically **map the merge field names with data source column names** during the mail merge process. You can also customize the field mapping when the merge field names in the template document vary from the column names in the data source by using the `MappedFields` collection.
 
-The following code example shows how to add mapping when a merge field name in a document and column name in data source have different names.
+The following code example shows how to add mapping when a merge field name in a document and a column name in the data source have different names.
 
 {% tabs %}  
 
@@ -57,9 +57,9 @@ String[] fieldNames = document.getMailMerge().getMergeFieldNames();
 
 ## Remove empty paragraphs
 
-You can remove the empty paragraphs when the paragraph has only a merge field item, without any data during Mail merge process.
+You can remove the empty paragraphs when the paragraph has only a merge field item, without any data during the mail merge process.
 
-The following code example shows how to remove the empty paragraphs during Mail merge process.
+The following code example shows how to remove the empty paragraphs during the mail merge process.
 
 {% tabs %} 
 
@@ -81,23 +81,23 @@ document.close();
 
 {% endtabs %}  
 
-N>If any white space or line break exists in the merge field's parent paragraph, then it will not be considered as empty paragraph and not removed during mail merge process.
+N> If any white space or line break exists in the merge field's parent paragraph, then it will not be considered an empty paragraph and will not be removed during the mail merge process.
 
 ## Remove empty merge fields
 
-Essential<sup style="font-size:70%">&reg;</sup> DocIO removes or keeps the unmerged merge fields in the output document based on the `ClearFields` property on each mail merge execution.
+Essential<sup style="font-size:70%">®</sup> DocIO removes or keeps the unmerged merge fields in the output document based on the `ClearFields` property on each mail merge execution.
 
-When a merge field is considered as unmerged during mail merge process?
+When is a merge field considered unmerged during the mail merge process?
 
-1. The merge field doesn't have mapping field in data source.
+1. The merge field doesn't have a mapping field in the data source.
 
-2. The merge field has mapping field in data source, but the data is null or string.Empty.
+2. The merge field has a mapping field in the data source, but the data is null or string.Empty.
 
-Mail merge operation automatically removes the unmerged merge fields since the default value of `ClearFields` property is true.
+Mail merge operation automatically removes the unmerged merge fields since the default value of the `ClearFields` property is true.
 
-T> 1.Set `ClearFields` property to false before the mail merge execution statement if your requirement is to keep the unmerged merge fields in the output document.
-T> 2.Modify the `ClearFields` property before each mail merge execution statement while performing multiple mail merge executions if your requirement is to remove the unmerged merge fields in one mail merge execution and keep the unmerged merge fields in another mail merge execution.
-T> 3.Order the mail merge executions with the `ClearFields` property false as first to avoid removal merge fields that are required for next mail merge execution in the same document.
+T> 1. Set the `ClearFields` property to false before the mail merge execution statement if your requirement is to keep the unmerged merge fields in the output document.
+T> 2. Modify the `ClearFields` property before each mail merge execution statement while performing multiple mail merge executions if your requirement is to remove the unmerged merge fields in one mail merge execution and keep the unmerged merge fields in another mail merge execution.
+T> 3. Order the mail merge executions with the `ClearFields` property set to false as the first to avoid removing merge fields that are required for the next mail merge execution in the same document.
 
 The following code example shows how to keep the unmerged merge fields in the generated Word document.
  
@@ -106,7 +106,7 @@ The following code example shows how to keep the unmerged merge fields in the ge
 {% highlight JAVA %}
 //Opens the template document.
 WordDocument document = new WordDocument("Template.docx", FormatType.Docx);
-//Sets “ClearFields” to true to remove empty mail merge fields from document.
+//Sets "ClearFields" to true to remove empty mail merge fields from the document.
 document.getMailMerge().setClearFields(false);
 //Specifies the field names and field values.
 String[] fieldNames = new String[] { "EmployeeId", "Phone", "City" };
@@ -118,24 +118,25 @@ document.save("Removeemptymergefields.docx", FormatType.Docx);
 //Closes the Word document.
 document.close();
 {% endhighlight %}
+
 {% endtabs %} 
 
 ## Remove empty group
 
-You can remove the empty merge field groups which contains unmerged merge fields after executing mail merge for a group in a Word document.
+You can remove the empty merge field groups which contain unmerged merge fields after executing the mail merge for a group in a Word document.
 
-The following code example shows how to remove empty merge field group during mail merge process in a Word document.
+The following code example shows how to remove empty merge field groups during the mail merge process in a Word document.
 
 {% tabs %}  
 
 {% highlight JAVA %}
 //Opens the template document. 
 WordDocument document = new WordDocument("Template.docx", FormatType.Docx);
-//Gets the employee details as “IEnumerable” collection.
+//Gets the employee details as "IEnumerable" collection.
 ListSupport<Employees> employeeList = getEmployees();
-//Creates an instance of “MailMergeDataTable” by specifying mail merge group name and “IEnumerable” collection.
+//Creates an instance of "MailMergeDataTable" by specifying mail merge group name and "IEnumerable" collection.
 MailMergeDataTable dataTable = new MailMergeDataTable("Employees", employeeList);
-//Enable the flag to remove empty group which contain empty merge fields.
+//Enable the flag to remove empty groups which contain empty merge fields.
 document.getMailMerge().setRemoveEmptyGroup(true);
 //Performs Mail merge.
 document.getMailMerge().executeNestedGroup(dataTable);
@@ -147,7 +148,7 @@ document.close();
 
 {% endtabs %}
 
-The following code example shows getEmployees method which is used to get data for mail merge.
+The following code example shows the getEmployees method, which is used to get data for mail merge.
 
 {% tabs %}  
 
