@@ -9,11 +9,11 @@ documentation: UG
 
 A bookmark identifies a location or a selection of text within a document that you can name and identify for future reference.
 
-In Essential<sup style="font-size:70%">&reg;</sup> DocIO, bookmark is represented by Bookmark instance that is a pair of BookmarkStart and BookmarkEnd. BookmarkStart represents start point of a bookmark and BookmarkEnd represents end point of a bookmark. Every Word document contains a collection of bookmarks that are accessible through the Bookmarks property of WordDocument class.
+In Essential<sup style="font-size:70%">&reg;</sup> DocIO, a bookmark is represented by a Bookmark instance that is a pair of BookmarkStart and BookmarkEnd. BookmarkStart represents the starting point of a bookmark, and BookmarkEnd represents the endpoint of a bookmark. Every Word document contains a collection of bookmarks that are accessible through the Bookmarks property of the WordDocument class.
 
-## Adding a bookmark
+## Adding a Bookmark
 
-The following code example shows how to add a bookmark in Word document.
+The following code example shows how to add a bookmark in a Word document.
 
 {% tabs %} 
 
@@ -22,40 +22,40 @@ The following code example shows how to add a bookmark in Word document.
 WordDocument document = new WordDocument();
 //Add a new section into the Word Document.
 IWSection section = document.addSection();
-//Add a new paragraph into Word document and appends text into paragraph.
+//Add a new paragraph into the Word document and append text into the paragraph.
 IWParagraph paragraph = section.addParagraph();
 paragraph.appendText("Northwind Database");
 paragraph.getParagraphFormat().setHorizontalAlignment(HorizontalAlignment.Center); 
-//Add a paragraph into section.
+//Add a paragraph into the section.
 paragraph = section.addParagraph();
-//Add a new bookmark start into paragraph with name "Northwind".
+//Add a new bookmark start into the paragraph with the name "Northwind".
 paragraph.appendBookmarkStart("Northwind");
-//Add a text between the bookmark start and end into paragraph.
+//Add text between the bookmark start and end into the paragraph.
 paragraph.appendText("The Northwind sample database (Northwind.mdb) is included with all versions of Access. It provides data you can experiment with and database objects that demonstrate features you might want to implement in your own databases.");
-//Add a new bookmark end into paragraph with name " Northwind ".
+//Add a new bookmark end into the paragraph with the name "Northwind".
 paragraph.appendBookmarkEnd("Northwind");
-//Add a text after the bookmark end.
+//Add text after the bookmark end.
 paragraph.appendText(" Using Northwind, you can become familiar with how a relational database is structured and how the database objects work together to help you enter, store, manipulate, and print your data.");
-//Save the document in the given name and format.
+//Save the document with the given name and format.
 document.save("Bookmarks.docx", FormatType.Docx);
-//Release the resources occupied by WordDocument instance.
+//Release the resources occupied by the WordDocument instance.
 document.close(); 
 {% endhighlight %}
 
 {% endtabs %}  
 
-## Obtaining a bookmark instance
+## Obtaining a Bookmark Instance
 
-The following code example shows how to retrieve an instance of bookmark from a Word document.
+The following code example shows how to retrieve an instance of a bookmark from a Word document.
 
 {% tabs %}  
 
 {% highlight JAVA %}
-//Load an existing Word document into DocIO instance.
+//Load an existing Word document into the DocIO instance.
 WordDocument document = new WordDocument("Bookmarks.docx", FormatType.Docx);
-//Get the bookmark instance by using FindByName method of BookmarkCollection with bookmark name.
+//Get the bookmark instance by using the FindByName method of BookmarkCollection with the bookmark name.
 Bookmark bookmark = document.getBookmarks().findByName("Northwind");
-//Access the bookmark start’s owner paragraph by using bookmark and changes its back color.
+//Access the bookmark start’s owner paragraph by using the bookmark and change its background color.
 bookmark.getBookmarkStart().getOwnerParagraph().getParagraphFormat().setBackColor(ColorSupport.getAliceBlue());
 //Save and close the Word document.
 document.save("Result.docx", FormatType.Docx);
@@ -64,18 +64,18 @@ document.close();
 
 {% endtabs %}  
 
-## Removing a Bookmark from Word document
+## Removing a Bookmark from a Word Document
 
-The following code example shows how to remove a bookmark from Word document.
+The following code example shows how to remove a bookmark from a Word document.
 
 {% tabs %}  
 
 {% highlight JAVA %}
-//Load an existing Word document into DocIO instance.
+//Load an existing Word document into the DocIO instance.
 WordDocument document = new WordDocument("Bookmarks.docx", FormatType.Docx);
-//Get the bookmark instance by using FindByName method of BookmarkCollection with bookmark name.
+//Get the bookmark instance by using the FindByName method of BookmarkCollection with the bookmark name.
 Bookmark bookmark = document.getBookmarks().findByName("Northwind");
-//Remove the bookmark named "Northwind" from Word document.
+//Remove the bookmark named "Northwind" from the Word document.
 document.getBookmarks().remove(bookmark);
 //Save and close the Word document.
 document.save("Result.docx", FormatType.Docx);
@@ -84,16 +84,16 @@ document.close();
 
 {% endtabs %}  
 
-## Retrieving contents within a bookmark 
+## Retrieving Contents Within a Bookmark 
 
-BookmarkNavigator is used for navigating to a bookmark in a Word document. You can retrieve, replace and delete the content of a specified bookmark by using BookmarkNavigator.
+BookmarkNavigator is used for navigating to a bookmark in a Word document. You can retrieve, replace, and delete the content of a specified bookmark by using BookmarkNavigator.
 
-You can get the content between bookmark start and bookmark end of the specified bookmark in two ways: 
+You can get the content between the bookmark start and bookmark end of the specified bookmark in two ways: 
 
-1. You can use `getBookmarkContent` method for retrieving content as collection of body items when the bookmark start and bookmark end are preserved in a single section.
-2. You can use `getContent` method for retrieving content as collection of sections when the bookmark start and bookmark end are preserved in different sections. 
+1. You can use the `getBookmarkContent` method for retrieving content as a collection of body items when the bookmark start and bookmark end are preserved in a single section.
+2. You can use the `getContent` method for retrieving content as a collection of sections when the bookmark start and bookmark end are preserved in different sections. 
 
-The following code example shows how to retrieve the specified bookmark content by using `getBookmarkContent` method in a Word document.
+The following code example shows how to retrieve the specified bookmark content by using the `getBookmarkContent` method in a Word document.
 
 {% tabs %}   
 
@@ -117,12 +117,12 @@ document.close();
 
 {% endtabs %} 
 
-The following code example shows how to retrieve the specified bookmark content by using `getContent` method in a Word document.
+The following code example shows how to retrieve the specified bookmark content by using the `getContent` method in a Word document.
 
 {% tabs %}  
 
 {% highlight JAVA %}
-//Load the template document with bookmark "Northwind" whose start and end are preserved in different section.
+//Load the template document with the bookmark "Northwind" whose start and end are preserved in different sections.
 WordDocument document = new WordDocument("Template.docx", FormatType.Docx);
 //Create the bookmark navigator instance to access the bookmark.
 BookmarksNavigator bookmarkNavigator = new BookmarksNavigator(document);
@@ -130,27 +130,27 @@ BookmarksNavigator bookmarkNavigator = new BookmarksNavigator(document);
 bookmarkNavigator.moveToBookmark("Northwind");
 //Get the bookmark content as WordDocumentPart.
 WordDocumentPart wordDocumentPart = bookmarkNavigator.getContent();
-//Save the WordDocumentPart as separate Word document.
+//Save the WordDocumentPart as a separate Word document.
 WordDocument newDocument = wordDocumentPart.getAsWordDocument();
 //Close the WordDocumentPart instance.
 wordDocumentPart.close();
 //Close the template Word document.
 document.close();
 newDocument.save("Result.docx", FormatType.Docx);
-//Release the resources hold by WordDocument instance.
+//Release the resources held by the WordDocument instance.
 newDocument.close();
 {% endhighlight %}
 
 {% endtabs %}  
 
-## Retrieving bookmark contents within a table 
+## Retrieving Bookmark Contents Within a Table 
 
 You can select the column range for bookmarks inside the tables in Word documents by using `FirstColumn` and `LastColumn` properties.
 
-N> 1. `FirstColumn` and `LastColumn` properties are valid to select table cells, only when the respective bookmark end and start is present within the same row or next rows of the same table.
-N> 2. `FirstColumn` property denotes the top left corner cell and `LastColumn` property denotes the bottom right corner cell of rectangular selection region since you can only select the content as a rectangular selection by using bookmarks within the table.
-N> 3. `FirstColumn` property selects from the first cell of the respective row when this property value is negative (or) greater than the cells of a row (or) greater than the `LastColumn` value.
-N> 4. `LastColumn` property selects till last cell of the respective row when this property value is negative (or) greater than the cells of a row (or) less than the `FirstColumn` value.
+N> 1. `FirstColumn` and `LastColumn` properties are valid to select table cells only when the respective bookmark end and start are present within the same row or the next rows of the same table.
+N> 2. The `FirstColumn` property denotes the top-left corner cell, and the `LastColumn` property denotes the bottom-right corner cell of the rectangular selection region since you can only select the content as a rectangular selection by using bookmarks within the table.
+N> 3. The `FirstColumn` property selects from the first cell of the respective row when this property value is negative (or) greater than the cells of a row (or) greater than the `LastColumn` value.
+N> 4. The `LastColumn` property selects till the last cell of the respective row when this property value is negative (or) greater than the cells of a row (or) less than the `FirstColumn` value.
 
 The following code example shows how to retrieve the bookmark content of a specified column range from a table in a Word document.
 
@@ -161,7 +161,7 @@ The following code example shows how to retrieve the bookmark content of a speci
 WordDocument document = new WordDocument();
 //Add a section and a paragraph in the document.
 document.ensureMinimal();
-//Insert a new table with bookmark.
+//Insert a new table with a bookmark.
 IWTable table = CreateTable(document);
 //Create the bookmark navigator instance to access the bookmark.
 BookmarksNavigator bookmarkNavigator = new BookmarksNavigator(document);
@@ -173,7 +173,7 @@ bookmarkNavigator.getCurrentBookmark().setFirstColumn((short) 1);
 bookmarkNavigator.getCurrentBookmark().setLastColumn((short)4);
 //Get the bookmark content.
 TextBodyPart part = bookmarkNavigator.getBookmarkContent();
-//Add new section.
+//Add a new section.
 document.addSection();
 //Add the retrieved content into another new section.
 for (int i = 0; i < part.getBodyItems().getCount(); i++)
@@ -185,22 +185,22 @@ document.close();
 
 {% endtabs %}
 
-The following code example shows how to create table with bookmark.
+The following code example shows how to create a table with a bookmark.
 
 {% tabs %} 
 
 {% highlight JAVA %}
 public IWTable CreateTable(WordDocument document) throws Exception
 {
-	//Add a new table into Word document.
+	//Add a new table into the Word document.
 	IWTable table = document.getLastSection().addTable();
 	//Specify the total number of rows & columns.
 	table.resetCells(5, 5);
-	//Access the instance of the cells and adds the content into cells.
+	//Access the instance of the cells and add the content into cells.
 	table.get(0, 0).addParagraph().appendText("Supplier ID");
 	table.get(0, 1).addParagraph().appendText("Company Name");
 	IWParagraph paragraph = table.getRows().get(0).getCells().get(2).addParagraph();
-	//Append a bookmark start in third cell of first row.
+	//Append a bookmark start in the third cell of the first row.
 	paragraph.appendBookmarkStart("BkmkInTable");
 	paragraph.appendText("Contact Name");
 	table.get(0, 3).addParagraph().appendText("Address");
@@ -223,7 +223,7 @@ public IWTable CreateTable(WordDocument document) throws Exception
 	table.get(4, 0).addParagraph().appendText("4");
 	table.get(4, 1).addParagraph().appendText("Tokyo Traders");
 	paragraph = table.getRows().get(4).getCells().get(2).addParagraph();
-	//Append a bookmark end in third cell of last row.
+	//Append a bookmark end in the third cell of the last row.
 	paragraph.appendBookmarkEnd("BkmkInTable");
 	paragraph.appendText("Yoshi Nagase");
 	table.get(4, 3).addParagraph().appendText("9-8 Sekimai Musashino - shi");

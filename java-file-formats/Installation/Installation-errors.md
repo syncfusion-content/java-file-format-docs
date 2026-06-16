@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Installation Errors in FileFormats - Syncfusion
-description: Learn here about the common installation errors and solution to those errors in Syncfusion FileFormats Components installation.
+description: Learn here about the common installation errors and solutions to those errors in Syncfusion FileFormats Components installation.
 platform: java-file-formats
 control: Installation and Deployment
 documentation: ug
@@ -29,11 +29,11 @@ This article describes the most common installation errors, as well as the cause
 
 ### Reason
 
-You are attempting to use a Trial unlock key to unlock the licensed installer.
+You are attempting to use a trial unlock key to unlock the licensed installer.
 
 ### Suggested solution
 
-Only a licensed unlock key can unlock a licensed installer. So, to unlock the Licensed installer, use the Licensed unlock key. To generate the licensed unlock key, refer to [this](http://syncfusion.com/kb/2326) article.
+Only a licensed unlock key can unlock a licensed installer. So, to unlock the licensed installer, use the licensed unlock key. To generate the licensed unlock key, refer to [this](http://syncfusion.com/kb/2326) article.
 
 
 ## License has expired
@@ -88,30 +88,30 @@ You can choose from the options listed below.
 
 1. You can get a new license [here](https://www.syncfusion.com/sales/products). 
 2. Contact your account administrator. 
-3. Send an email to  <clientrelations@syncfusion.com> to request a license. 
-4. You can reach out to our sales team by emailing  <salessupport@syncfusion.com>.
+3. Send an email to <clientrelations@syncfusion.com> to request a license. 
+4. You can reach out to our sales team by emailing <salessupport@syncfusion.com>.
 
 ## Unable to install because of another installation
 
 ### Problem
 
-**Error Message:** Another installation is in progress. You cannot start this installation without completing all other currently active installations. Click cancel to end this installer or retry to attempt after currently active installation completed to install again.
+**Error Message:** Another installation is in progress. You cannot start this installation without completing all other currently active installations. Click cancel to end this installer or retry to attempt after the currently active installation is completed to install again.
 
 ![Warning Message](Errors/Installation_Errors_img4.png)
 
 ### Reason
 
-You are trying to install when another installation is already running in your machine.
+You are trying to install when another installation is already running on your machine.
 
 ### Suggested solution
 
-Open and kill the msiexec process in the task manager and then continue to install Syncfusion<sup style="font-size:70%">&reg;</sup>. If the problem is still present, restart the computer and try Syncfusion<sup style="font-size:70%">&reg;</sup> installer. 
+Open and kill the msiexec process in the task manager and then continue to install Syncfusion<sup style="font-size:70%">&reg;</sup>. If the problem is still present, restart the computer and try the Syncfusion<sup style="font-size:70%">&reg;</sup> installer again. 
 
 1. Open the Windows Task Manager.
 
 2. Browse the Details tab.
 
-3. Select the msiexec.exe and click **End task**.
+3. Select msiexec.exe and click **End task**.
 
 ![Task Manager](Errors/Installation_Errors_img5.png)
 
@@ -121,13 +121,13 @@ Open and kill the msiexec process in the task manager and then continue to insta
 
 #### Offline:
 
-**Error Message:** Controlled folder access seems to be enabled in your machine. The provided install or samples location (e.g., Public Documents) is protected by the controlled folder access settings.
+**Error Message:** Controlled folder access seems to be enabled on your machine. The provided install or samples location (e.g., Public Documents) is protected by the controlled folder access settings.
 
 ![Warning Message](Errors/Installation_Errors_img7.png)
 
 #### Online:
 
-**Error Message:** Controlled folder access seems to be enabled in your machine. The provided install, samples, or download location (e.g., Public Documents) is protected by the controlled folder access settings.
+**Error Message:** Controlled folder access seems to be enabled on your machine. The provided install, samples, or download location (e.g., Public Documents) is protected by the controlled folder access settings.
 
 ![Warning Message](Errors/Installation_Errors_img8.png)
 
@@ -139,10 +139,10 @@ You have enabled controlled folder access settings on your computer.
 
 **Suggestion 1:**
 
-1.	We will ship our demos in the public documents folder by default. 
-2.	You have controlled folder access enabled on your machine, so our demos cannot be installed in the documents folder. If you need to install our demos in the Documents folder, follow the steps in this [link](https://support.microsoft.com/en-us/windows/allow-an-app-to-access-controlled-folders-b5b6627a-b008-2ca2-7931-7e51e912b034) and disable the controlled folder access.
-3.	You can enable this option after the installing our Syncfusion<sup style="font-size:70%">&reg;</sup> setup.
+1. We will ship our demos in the public documents folder by default. 
+2. You have controlled folder access enabled on your machine, so our demos cannot be installed in the documents folder. If you need to install our demos in the Documents folder, follow the steps in this [link](https://support.microsoft.com/en-us/windows/allow-an-app-to-access-controlled-folders-b5b6627a-b008-2ca2-7931-7e51e912b034) and disable the controlled folder access.
+3. You can enable this option after installing our Syncfusion<sup style="font-size:70%">&reg;</sup> setup.
 
 **Suggestion 2:**
 
-1.	If you do not want to disable controlled folder access, you can install our demos in another directory.
+1. If you do not want to disable controlled folder access, you can install our demos in another directory.

@@ -16,7 +16,7 @@ The [Microsoft Word's](https://en.wikipedia.org/wiki/Microsoft_Word#) native fil
 
 ## Word Open XML formats (2007 & later)
 
-[Office Open XML](http://en.wikipedia.org/wiki/Office_Open_XML#) (OOXML or Microsoft Open XML (MOX)) is a zipped, new XML-based file format introduced by Microsoft in Office 2007 applications.The WordprocessingML is the markup language used by the Microsoft Office Word to store its DOCX documents.
+[Office Open XML](http://en.wikipedia.org/wiki/Office_Open_XML#) (OOXML or Microsoft Open XML (MOX)) is a zipped, new XML-based file format introduced by Microsoft in Office 2007 applications. The WordprocessingML is the markup language used by Microsoft Office Word to store its DOCX documents.
 
 DocIO supports the following WordprocessingML:
 
@@ -30,13 +30,13 @@ The following code example explains how to create a new Word document with a few
 
 {% tabs %}
 {% highlight JAVA %}
-//Create an instance of the WordDocument Instance (Empty Word Document).
+// Create an instance of the WordDocument class (Empty Word Document).
 WordDocument document = new WordDocument();
-//Add a section and a paragraph in the empty document.
+// Add a section and a paragraph in the empty document.
 document.ensureMinimal();
-//Append text to the last paragraph of the document.
+// Append text to the last paragraph of the document.
 document.getLastParagraph().appendText("Hello World");
-//Save and close the Word document.
+// Save and close the Word document.
 document.save("Sample.docx");
 document.close();
 {% endhighlight %}
@@ -45,17 +45,17 @@ document.close();
 
 ### Templates
 
-DOTX is a Word document template. The following code sample shows how to create the Word document template with a few lines of code.
+DOTX is a Word document template. The following code sample shows how to create a Word document template with a few lines of code.
 
 {% tabs %}
 {% highlight JAVA %}
-//Create an instance of the WordDocument Instance (Empty Word Document).
+// Create an instance of the WordDocument class (Empty Word Document).
 WordDocument document = new WordDocument();
-//Add a section and a paragraph in the empty document.
+// Add a section and a paragraph in the empty document.
 document.ensureMinimal();
-//Append text to the last paragraph of the document.
+// Append text to the last paragraph of the document.
 document.getLastParagraph().appendText("Hello World");
-//Save and close the Word document.
+// Save and close the Word document.
 document.save("Sample.dotx");
 document.close();
 
@@ -64,7 +64,7 @@ document.close();
 
 ### Macros
 
-DOCM is a macro-enabled Word document. It is same as the DOCX document contains macros and scripts. The DocIO provides only preservation support for macros. The following code shows how to load and save a macro-enabled document using the DocIO library.
+DOCM is a macro-enabled Word document. It is similar to the DOCX document but contains macros and scripts. The DocIO provides only preservation support for macros. The following code shows how to load and save a macro-enabled document using the DocIO library.
 
 {% tabs %}
 {% highlight JAVA %}
@@ -72,9 +72,9 @@ DOCM is a macro-enabled Word document. It is same as the DOCX document contains 
 WordDocument document = new WordDocument("Template.dotm");
 // Get the table.
 DataTableSupport table = getDataTable();
-// Execute the Mail Mmrge with groups.
+// Execute the Mail Merge with groups.
 document.getMailMerge().executeGroup(table);
-//Save and close the document.
+// Save and close the document.
 document.save("Sample.docm", FormatType.Word2013Docm);
 document.close();
 {% endhighlight %}
@@ -83,47 +83,47 @@ document.close();
 ## Word Processing XML (.xml)
 
 The XML format introduced in Microsoft Word 2003 was a simple, XML-based format called WordprocessingML or WordML.
-The Essential<sup style="font-size:70%">&reg;</sup> DocIO supports converting the Word document into Word Processing XML document and vice versa.
+The Essential<sup style="font-size:70%">&reg;</sup> DocIO supports converting Word documents into Word Processing XML documents and vice versa.
 
-N> 1. Importing and exporting the Word Processing 2007 XML documents is supported.
-N> 2. Exporting the Word Processing 2003 XML document is not supported. Whereas you can import the Word Processing 2003 XML documents and export it to the other supported file formats.
-N> 3. The custom XML elements present in the Word Processing 2003 XML documents will be removed automatically while importing, like latest Microsoft Word. The custom XML element is a depreciated feature in latest Microsoft Word.
+N> 1. Importing and exporting Word Processing 2007 XML documents is supported.
+N> 2. Exporting Word Processing 2003 XML documents is not supported. However, you can import Word Processing 2003 XML documents and export them to other supported file formats.
+N> 3. The custom XML elements present in Word Processing 2003 XML documents will be removed automatically while importing, similar to the latest Microsoft Word. The custom XML element is a deprecated feature in the latest Microsoft Word.
 
-The following code example shows how to convert the Word document into Word Processing XML document.
+The following code example shows how to convert a Word document into a Word Processing XML document.
 
 {% tabs %}
 {% highlight JAVA %}
-//Load an existing Word document.
+// Load an existing Word document.
 WordDocument document = new WordDocument("Sample.docx");
-//Save the document as a Word Processing ML document.
+// Save the document as a Word Processing ML document.
 document.save("WordToWordML.xml", FormatType.WordML);
-//Close the document.
+// Close the document.
 document.close();
 {% endhighlight %}
 {% endtabs %}
 
-The following code example shows how to convert the Word Processing XML document into Word document.
+The following code example shows how to convert a Word Processing XML document into a Word document.
 
 {% tabs %}
 {% highlight JAVA %}
-// Load an existing Word document. 
+// Load an existing Word Processing XML document.
 WordDocument document = new WordDocument("Template.xml");
-//Save the Word Processing ML document as docx.
+// Save the Word Processing ML document as DOCX.
 document.save("WordMLToWord.docx", FormatType.Docx);
-//Close the document.
+// Close the document.
 document.close();
 {% endhighlight %}
 {% endtabs %}
 
 ### Unsupported elements in Word to Word Processing XML conversion:
 
-The following table contains a list of unsupported elements in the Word to Word Processing XML conversion.
+The following table contains a list of unsupported elements in Word to Word Processing XML conversion.
 
 <table>
-<thead> 
+<thead>
 <tr>
 <th>Element</th>
-<th>Limitations or Unsupported elements</th>
+<th>Limitations or Unsupported Elements</th>
 </tr>
 </thead>
 <tr>
@@ -134,7 +134,7 @@ Not supported<br/><br/></td>
 </tr>
 <tr>
 <td>
-Embedded fonts<br/><br/></td>
+Embedded Fonts<br/><br/></td>
 <td>
 Not supported<br/><br/></td>
 </tr>
@@ -161,12 +161,12 @@ Not supported<br/><br/></td>
 Form Fields
 </td>
 <td>
-Unparsed in Word Processing 2003 XML document
+Unparsed in Word Processing 2003 XML documents
 </td>
 </tr>
 <tr>
 <td>
-Ole Object
+OLE Object
 </td>
 <td>
 Not supported

@@ -1,42 +1,42 @@
 ---
 title: Compare Word Documents | DocIO | Syncfusion
-description: Learn how to compare two Word documents using Java Word (DocIO) library without Microsoft Word or interop dependencies.
+description: Learn how to compare two Word documents using the Java Word (DocIO) library without Microsoft Word or interop dependencies.
 platform: java-file-formats
 control: Word library
 documentation: UG
 ---
-# Compare Word documents
+# Compare Word Documents
 
-Comparing two Word documents allows you to identify the changes between two versions of a document. The Java Word library (DocIO) enables you to compare two Word documents and highlight the following changes as tracked changes.
+Comparing two Word documents allows you to identify the changes between two versions of a document. The Java Word library (DocIO) enables you to compare two Word documents and highlight the following changes as tracked changes:
 
 * Insertions
 * Deletions
 * Formatting
 
-N> 1. DocIO performs word level comparison while comparing two Word documents. In this scenario, if a single character in a word is changed, the entire word will be highlighted as changed.
-N> 2. Comparing two Word documents supported in DOCX format only.
+N> 1. DocIO performs word-level comparison while comparing two Word documents. In this scenario, if a single character in a word is changed, the entire word will be highlighted as changed.
+N> 2. Comparing two Word documents is supported in DOCX format only.
 
-## Compare two Word documents 
+## Compare Two Word Documents
 
-Compare the existing Word documents or documents created from scratch using the ``Compare`` method in the Java Word library (DocIO).
+Compare existing Word documents or documents created from scratch using the `Compare` method in the Java Word library (DocIO).
 
-The following code example illustrates how to compare two Word documents.
+The following code example illustrates how to compare two Word documents:
 
 {% tabs %}
 {% highlight JAVA %}
-//Load the original document.
+// Load the original document.
 WordDocument originalDocument = new WordDocument("OriginalDocument.docx", FormatType.Docx);
 
-//Load the revised document.
+// Load the revised document.
 WordDocument revisedDocument = new WordDocument("RevisedDocument.docx", FormatType.Docx);
 
-//Compare the original document with the revised document.
+// Compare the original document with the revised document.
 originalDocument.compare(revisedDocument);
 
-//Save the word document.
+// Save the Word document.
 originalDocument.save("Sample.docx");
 
-//Close the word documents.
+// Close the Word documents.
 originalDocument.close();
 revisedDocument.close();
 {% endhighlight %}
@@ -44,27 +44,27 @@ revisedDocument.close();
 
 ![Compare Word documents in Java](../WorkingwithWordDocument_images/Compare-Word-documents-without-author.png)
 
-## Set Author and Date 
+## Set Author and Date
 
-Compare the two Word documents by setting the author and date for revisions to identify the changes. In DocIO, the default setting for the “author” field is “Author”, and the default setting for the “dateTime” field is the current time.
+Compare the two Word documents by setting the author and date for revisions to identify the changes. In DocIO, the default setting for the “author” field is “Author,” and the default setting for the “dateTime” field is the current time.
 
-The following code example shows how to set the author and date for revision while comparing two Word documents.
+The following code example shows how to set the author and date for revision while comparing two Word documents:
 
 {% tabs %}
 {% highlight JAVA %}
-//Load the original document.
+// Load the original document.
 WordDocument originalDocument = new WordDocument("OriginalDocument.docx", FormatType.Docx);
 
-//Load the revised document.
+// Load the revised document.
 WordDocument revisedDocument = new WordDocument("RevisedDocument.docx", FormatType.Docx);
 
-//Compare the original document with the revised document.
+// Compare the original document with the revised document.
 originalDocument.compare(revisedDocument, "Nancy Davolio", LocalDateTime.now().minusDays(1));
 
-//Save the word document.
+// Save the Word document.
 originalDocument.save("Sample.docx");
 
-//Close the word documents.
+// Close the Word documents.
 originalDocument.close();
 revisedDocument.close();
 {% endhighlight %}
@@ -72,35 +72,35 @@ revisedDocument.close();
 
 ![Compare Word documents in Java](../WorkingwithWordDocument_images/Compare-Word-documents.png)
 
-## Comparison options
+## Comparison Options
 
-You can customize the Word comparison using our ``ComparisonOptions`` in the DocIO.
+You can customize the Word comparison using our `ComparisonOptions` in DocIO.
 
-### Ignore format changes
+### Ignore Format Changes
 
-In the Java Word library (DocIO), document comparison includes formatting changes by default. However, you can configure DocIO to ignore formatting differences using the ``setDetectFormatChanges`` API to concentrate solely on content modifications.
+In the Java Word library (DocIO), document comparison includes formatting changes by default. However, you can configure DocIO to ignore formatting differences using the `setDetectFormatChanges` API to concentrate solely on content modifications.
 
-The following code example illustrates how to compare two Word documents by ignoring the format changes.
+The following code example illustrates how to compare two Word documents by ignoring the format changes:
 
 {% tabs %}
 {% highlight JAVA %}
-//Load the original document.
+// Load the original document.
 WordDocument originalDocument = new WordDocument("OriginalDocument.docx", FormatType.Docx);
 
-//Load the revised document.
+// Load the revised document.
 WordDocument revisedDocument = new WordDocument("RevisedDocument.docx", FormatType.Docx);
 
-//Set the Comparison option detect format changes, whether to detect format changes while comparing two Word documents.
+// Set the comparison option to detect format changes, whether to detect format changes while comparing two Word documents.
 ComparisonOptions compareOptions = new ComparisonOptions();
 compareOptions.setDetectFormatChanges(false);
 
-//Compare the original document with the revised document.
+// Compare the original document with the revised document.
 originalDocument.compare(revisedDocument, "Nancy Davolio", LocalDateTime.now(), compareOptions);
 
-//Save the word document.
+// Save the Word document.
 originalDocument.save("Sample.docx");
 
-//Close the word documents.
+// Close the Word documents.
 originalDocument.close();
 revisedDocument.close();
 {% endhighlight %}

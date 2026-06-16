@@ -1,6 +1,6 @@
 ---
-title: Word Document to HTML conversion | Word library | Syncfusion
-description: This section illustrates how to convert Word document to HTML using Syncfusion Word library (Essential DocIO)
+title: Word Document to HTML Conversion | Word Library | Syncfusion
+description: This section illustrates how to convert a Word document to HTML using the Syncfusion Word Library (Essential DocIO)
 platform: java-file-formats
 control: Word Library
 documentation: UG
@@ -8,28 +8,28 @@ documentation: UG
 
 # Word to HTML and HTML to Word Conversions
 
-The Essential<sup style="font-size:70%">&reg;</sup> DocIO converts the HTML file into a Word document and vice versa. You can also convert the Word document (DOCX, DOTX, DOCM, and DOTM) into HTML format.
+The Essential<sup style="font-size:70%">&reg;</sup> DocIO converts an HTML file into a Word document and vice versa. You can also convert a Word document (DOCX, DOTX, DOCM, and DOTM) into HTML format.
 
-In the Word library (DocIO) we use the [XmlReader](https://learn.microsoft.com/en-us/dotnet/api/system.xml.xmlreader?view=netframework-4.8) for parsing the content from input HTML. So, the input HTML should meet the XML standard (have proper open and close tags), even if you specify the `XHTMLValidationType` parameter as `XHTMLValidationType.None`.
+In the Word Library (DocIO), we use the [XmlReader](https://learn.microsoft.com/en-us/dotnet/api/system.xml.xmlreader?view=netframework-4.8) for parsing the content from the input HTML. So, the input HTML should meet the XML standard (have proper open and close tags), even if you specify the `XHTMLValidationType` parameter as `XHTMLValidationType.None`.
 
 ## XHTML Validation
 
-Every HTML content is validated against a Document Type Declaration (DTD) which is a set of mark-up declarations that define a document type for a SGML-family mark-up language (GML, SGML, XML, HTML).
+Every HTML content is validated against a Document Type Declaration (DTD), which is a set of markup declarations that define a document type for an SGML-family markup language (GML, SGML, XML, HTML).
 
-### XHTML validation types
+### XHTML Validation Types
 
-The following XHTML validation types are supported in Essential<sup style="font-size:70%">&reg;</sup> DocIO while importing an HTML content.
+The following XHTML validation types are supported in Essential<sup style="font-size:70%">&reg;</sup> DocIO while importing HTML content.
 
 <table>
 <thead>
 <tr>
-<td>XHTML validation types</td>
+<td>XHTML Validation Types</td>
 <td>Description</td>
 </tr>
 </thead>
 <tr>
 <td><b>XHTMLValidationType.None</b></td>
-<td>It does not perform any schema validation but the given HTML content should meet the XHTML 1.0 format.</td>
+<td>It does not perform any schema validation, but the given HTML content should meet the XHTML 1.0 format.</td>
 </tr>
 <tr>
 <td><b>XHTMLValidationType.Transitional</b></td>
@@ -37,38 +37,38 @@ The following XHTML validation types are supported in Essential<sup style="font-
 </tr>
 <tr>
 <td><b>XHTMLValidationType.Strict</b></td>
-<td>It does not allow the attributes inside the tag.</td>
+<td>It does not allow attributes inside the tags.</td>
 </tr>
 </table>
 
-The following code example shows how to convert the HTML file into a Word document.
+The following code example shows how to convert an HTML file into a Word document.
 
 {% tabs %}
 {% highlight JAVA %}
-//Load the HTML document against the validation type none.
+// Load the HTML document against the validation type none.
 WordDocument document = new WordDocument("Input.html", FormatType.Html);
 document.setXHTMLValidateOption(XHTMLValidationType.None);
-//Save the Word document.
+// Save the Word document.
 document.save("HTMLtoWord.docx", FormatType.Docx);
-//Close the document.
+// Close the document.
 document.close();
 {% endhighlight %}
 {% endtabs %}
 
-The following code example shows how to convert the Word document into HTML.
+The following code example shows how to convert a Word document into HTML.
 
 {% tabs %}
 {% highlight JAVA %}
-//Load the template document.
+// Load the template document.
 WordDocument document = new WordDocument("Template.docx", FormatType.Docx);
-//Saves the document as an Html file.
+// Save the document as an HTML file.
 document.save("WordToHtml.html", FormatType.Html);
-//Close the document. 
+// Close the document. 
 document.close();
 {% endhighlight %}
-{% endtabs %}			
+{% endtabs %}
 
-## Supported and unsupported items
+## Supported and Unsupported Items
 
 The following document elements and attributes are supported by DocIO in Word to HTML and HTML to Word conversions.
 

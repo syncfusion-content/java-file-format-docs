@@ -1,26 +1,26 @@
 ---
-title: Working with Mathematical Equation | Syncfusion
-description: This section illustrates about create, modify and remove mathematical equation in Word document without MS Word or Office interop
+title: Working with Mathematical Equations | Syncfusion
+description: This section illustrates how to create, modify, and remove mathematical equations in Word documents without MS Word or Office interop.
 platform: java-file-formats
 control: Word Library
 documentation: UG
 ---
-# Working with Mathematical Equation
+# Working with Mathematical Equations
 
-Equations in Word document are combination of mathematical symbols or text. For example, you can create a Fourier series equation in Word document.
+Equations in Word documents are combinations of mathematical symbols or text. For example, you can create a Fourier series equation in a Word document.
 
-The Java Word library offers two ways to create and modify equations in Word document.
+The Java Word library offers two ways to create and modify equations in Word documents:
 
 * [Using WMath DOM](https://help.syncfusion.com/java-file-formats/word-library/working-with-mathematical-equation#types-of-equation).
 * [Using LaTeX](https://help.syncfusion.com/java-file-formats/word-library/working-with-latex).
 
 ![Mathematical equation in Microsoft Word document](WorkingwithMathematicalEquation_images/Mathematical Equation.png)
 
-## Types of equation
+## Types of Equations
 
-The following different structures of equation can be created by using the Essential<sup style="font-size:70%">&reg;</sup> DocIO.
+The following different structures of equations can be created using the Essential<sup style="font-size:70%">®</sup> DocIO:
 
-![Different structures of equation in Microsoft Word application](WorkingwithMathematicalEquation_images/EquationStructures.png)
+![Different structures of equations in Microsoft Word application](WorkingwithMathematicalEquation_images/EquationStructures.png)
 
 * Accent
 * Bar
@@ -46,30 +46,30 @@ You can add an accent mark to the equation. The following code example shows how
 
 {% tabs %}
 {% highlight JAVA %}
-//Creates a new Word document
+// Creates a new Word document
 WordDocument document = new WordDocument();
-//Adds one section and one paragraph to the document
+// Adds one section and one paragraph to the document
 document.ensureMinimal();
-//Appends a new mathematical equation  to the paragraph
+// Appends a new mathematical equation to the paragraph
 WMath math = document.getLastParagraph().appendMath();
-//Adds a new math
+// Adds a new math
 IOfficeMath officeMath = math.getMathParagraph().getMaths().add();
-//Adds an accent equation
+// Adds an accent equation
 IOfficeMathAccent mathAccent = (IOfficeMathAccent) officeMath.getFunctions().add(MathFunctionType.Accent);
-//Sets the accent character
+// Sets the accent character
 mathAccent.setAccentCharacter("̆");
-//Adds the run element for accent
+// Adds the run element for accent
 IOfficeMathRunElement officeMathRunElement = (IOfficeMathRunElement) mathAccent.getEquation().getFunctions().add(MathFunctionType.RunElement);
 officeMathRunElement.setItem(new WTextRange(document));
-WTextRange textRange =(WTextRange) officeMathRunElement.getItem();
-//Sets text for accent equation
+WTextRange textRange = (WTextRange) officeMathRunElement.getItem();
+// Sets text for accent equation
 textRange.setText("a");
-//Applies character formatting for text range
+// Applies character formatting for text range
 textRange.getCharacterFormat().setBold(true);
 textRange.getCharacterFormat().setItalic(true);
-//Saves the Word document
+// Saves the Word document
 document.save("Sample.docx", FormatType.Docx);
-//Closes the document
+// Closes the document
 document.close();
 {% endhighlight %}
 
@@ -77,30 +77,30 @@ document.close();
 
 ### Bar
 
-You can add a bar (which adds horizontal line on top or bottom) to the equation. The following code example shows how to add a bar to the equation.
+You can add a bar (which adds a horizontal line on top or bottom) to the equation. The following code example shows how to add a bar to the equation.
 
 {% tabs %}
 {% highlight JAVA %}
-//Creates a new Word document
+// Creates a new Word document
 WordDocument document = new WordDocument();
-//Add a section and a paragraph in the empty document
+// Adds a section and a paragraph in the empty document
 document.ensureMinimal();
-//Appends a new mathematical equation to the paragraph
+// Appends a new mathematical equation to the paragraph
 WMath math = document.getLastParagraph().appendMath();
-//Adds a new math
+// Adds a new math
 IOfficeMath officeMath = math.getMathParagraph().getMaths().add();
-//Adds a bar equation
+// Adds a bar equation
 IOfficeMathBar mathBar = (IOfficeMathBar) officeMath.getFunctions().add(0, MathFunctionType.Bar);
-//Sets the position of bar
+// Sets the position of the bar
 mathBar.setBarTop(true);
-//Adds the run element for bar
+// Adds the run element for the bar
 IOfficeMathRunElement officeMathRunElement = (IOfficeMathRunElement) mathBar.getEquation().getFunctions().add(0, MathFunctionType.RunElement);
 officeMathRunElement.setItem(new WTextRange(document));
-//Sets text for bar equation
-((WTextRange)officeMathRunElement.getItem()).setText("a");
-//Saves the Word document
+// Sets text for bar equation
+((WTextRange) officeMathRunElement.getItem()).setText("a");
+// Saves the Word document
 document.save("Sample.docx", FormatType.Docx);
-//Closes the document
+// Closes the document
 document.close();
 {% endhighlight %}
 
@@ -112,84 +112,85 @@ You can add a box to the equation. The following code example shows how to add a
 
 {% tabs %}
 {% highlight JAVA %}
-//Creates a new Word document
+// Creates a new Word document
 WordDocument document = new WordDocument();
-//Adds one section and one paragraph to the document
+// Adds one section and one paragraph to the document
 document.ensureMinimal();
-//Appends a new mathematical equation to the paragraph
+// Appends a new mathematical equation to the paragraph
 WMath math = document.getLastParagraph().appendMath();
-//Adds a new math
+// Adds a new math
 IOfficeMath officeMath = math.getMathParagraph().getMaths().add();
-//Adds a box equation
+// Adds a box equation
 IOfficeMathBox mathBox = (IOfficeMathBox) officeMath.getFunctions().add(0, MathFunctionType.Box);
-//Adds the run element for box
-IOfficeMathRunElement officeMathRunElement =(IOfficeMathRunElement) officeMath.getFunctions().add(0, MathFunctionType.RunElement);
+// Adds the run element for box
+IOfficeMathRunElement officeMathRunElement = (IOfficeMathRunElement) officeMath.getFunctions().add(0, MathFunctionType.RunElement);
 officeMathRunElement.setItem(new WTextRange(document));
-//Sets text for math
-((WTextRange)officeMathRunElement.getItem()).setText("a+b");
-//Enables the flag, to behave the box and its contents as a single operator
+// Sets text for math
+((WTextRange) officeMathRunElement.getItem()).setText("a+b");
+// Enables the flag to behave the box and its contents as a single operator
 mathBox.setOperatorEmulator(true);
-//Enables the flag, to act box as the mathematical differential
+// Enables the flag to act box as the mathematical differential
 mathBox.setEnableDifferential(true);
-//Adds a break in box equation
+// Adds a break in the box equation
 mathBox.setBreak(officeMath.getBreaks().add(0));
-//Adds the run element for box
-officeMathRunElement =(IOfficeMathRunElement) mathBox.getEquation().getFunctions().add(0, MathFunctionType.RunElement);
-officeMathRunElement.setItem( new WTextRange(document));
-//Sets text for box equation
-((WTextRange)officeMathRunElement.getItem()).setText( "==");
-//Adds the run element for box
-officeMathRunElement =(IOfficeMathRunElement) mathBox.getEquation().getFunctions().add(1, MathFunctionType.RunElement);
-officeMathRunElement.setItem( new WTextRange(document));
-//Sets text for box equation
-((WTextRange)officeMathRunElement.getItem()).setText("adx");
-//Saves the Word document
+// Adds the run element for box
+officeMathRunElement = (IOfficeMathRunElement) mathBox.getEquation().getFunctions().add(0, MathFunctionType.RunElement);
+officeMathRunElement.setItem(new WTextRange(document));
+// Sets text for box equation
+((WTextRange) officeMathRunElement.getItem()).setText("==");
+// Adds the run element for box
+officeMathRunElement = (IOfficeMathRunElement) mathBox.getEquation().getFunctions().add(1, MathFunctionType.RunElement);
+officeMathRunElement.setItem(new WTextRange(document));
+// Sets text for box equation
+((WTextRange) officeMathRunElement.getItem()).setText("adx");
+// Saves the Word document
 document.save("Sample.docx", FormatType.Docx);
-//Closes the document
+// Closes the document
 document.close();
 {% endhighlight %}
 
 {% endtabs %}
 
-### Border box
+### Border Box
 
-You can add a box with the borders on four sides and strikethrough on horizontal, vertical, and diagonal directions to the equation. The following code example shows how to add a border box to the equation.
+You can add a box with borders on four sides and strikethroughs in horizontal, vertical, and diagonal directions to the equation. The following code example shows how to add a border box to the equation.
+
 {% tabs %}
 {% highlight JAVA %}
-//Creates a new Word document
+// Creates a new Word document
 WordDocument document = new WordDocument();
-//Adds one section and one paragraph to the document
+// Adds one section and one paragraph to the document
 document.ensureMinimal();
-//Appends a new mathematical equation to the paragraph
+// Appends a new mathematical equation to the paragraph
 WMath math = document.getLastParagraph().appendMath();
-//Adds a new math
+// Adds a new math
 IOfficeMath officeMath = math.getMathParagraph().getMaths().add();
-//Adds a border box equation
-IOfficeMathBorderBox mathBorderBox =(IOfficeMathBorderBox) officeMath.getFunctions().add(0, MathFunctionType.BorderBox);
-//Sets the diagonal strikethrough from lower left to upper right
+// Adds a border box equation
+IOfficeMathBorderBox mathBorderBox = (IOfficeMathBorderBox) officeMath.getFunctions().add(0, MathFunctionType.BorderBox);
+// Sets the diagonal strikethrough from lower left to upper right
 mathBorderBox.setStrikeDiagonalUp(true);
-//Sets the diagonal strikethrough from upper left to lower right
+// Sets the diagonal strikethrough from upper left to lower right
 mathBorderBox.setStrikeDiagonalDown(true);
-//Sets the horizontal strikethrough
+// Sets the horizontal strikethrough
 mathBorderBox.setStrikeHorizontal(true);
-//Sets the vertical strikethrough
+// Sets the vertical strikethrough
 mathBorderBox.setStrikeVertical(true);
-//Enables the flag, to hide the bottom border of an equation
+// Enables the flag to hide the bottom border of an equation
 mathBorderBox.setHideBottom(true);
-//Enables the flag, to hide the left border of an equation
+// Enables the flag to hide the left border of an equation
 mathBorderBox.setHideLeft(true);
-//Sets false to show the right border of an equation
+// Sets false to show the right border of an equation
 mathBorderBox.setHideRight(false);
-//Sets false to show the top border of an equation
+// Sets false to show the top border of an equation
 mathBorderBox.setHideTop(false);
-//Adds the run element for border box
+// Adds the run element for border box
 IOfficeMathRunElement officeMathRunElement = (IOfficeMathRunElement) mathBorderBox.getEquation().getFunctions().add(MathFunctionType.RunElement);
 officeMathRunElement.setItem(new WTextRange(document));
-//Sets text for border box equation
-((WTextRange)officeMathRunElement.getItem()).setText("a+b-c");
-//Saves the Word document
+// Sets text for border box equation
+((WTextRange) officeMathRunElement.getItem()).setText("a+b-c");
+// Saves the Word document
 document.save("Sample.docx", FormatType.Docx);
-//Closes the document
+// Closes the document
 document.close();
 
 {% endhighlight %}
@@ -198,76 +199,78 @@ document.close();
 
 ### Delimiter
 
-You can add a delimiter (parenthesis, square brackets and other characters) to the equation. The following code example shows how to a add delimiter to the equation. 
+You can add a delimiter (parenthesis, square brackets, and other characters) to the equation. The following code example shows how to add a delimiter to the equation.
+
 {% tabs %}
 {% highlight JAVA %}
-//Creates a new Word document
+// Creates a new Word document
 WordDocument document = new WordDocument();
-//Adds one section and one paragraph to the document
+// Adds one section and one paragraph to the document
 document.ensureMinimal();
-//Appends a new mathematical equation to the paragraph
+// Appends a new mathematical equation to the paragraph
 WMath math = document.getLastParagraph().appendMath();
-//Adds a new math
+// Adds a new math
 IOfficeMath officeMath = math.getMathParagraph().getMaths().add();
-//Adds a delimiter equation
-IOfficeMathDelimiter mathDelimiter =(IOfficeMathDelimiter) officeMath.getFunctions().add(0, MathFunctionType.Delimiter);
-//Sets the begin character
+// Adds a delimiter equation
+IOfficeMathDelimiter mathDelimiter = (IOfficeMathDelimiter) officeMath.getFunctions().add(0, MathFunctionType.Delimiter);
+// Sets the begin character
 mathDelimiter.setBeginCharacter("[");
-//Sets the end character
+// Sets the end character
 mathDelimiter.setEndCharacter("]");
-//Enables the flag, to grow delimiter characters to full height of the arguments
+// Enables the flag to grow delimiter characters to full height of the arguments
 mathDelimiter.setIsGrow(true);
-//Sets the appearance of delimiters
+// Sets the appearance of delimiters
 mathDelimiter.setDelimiterShape(MathDelimiterShapeType.Match);
-//Adds the run element for delimiter
-IOfficeMathRunElement officeMathRunElement =(IOfficeMathRunElement) mathDelimiter.getEquation().add(0).getFunctions().add(0, MathFunctionType.RunElement);
+// Adds the run element for delimiter
+IOfficeMathRunElement officeMathRunElement = (IOfficeMathRunElement) mathDelimiter.getEquation().add(0).getFunctions().add(0, MathFunctionType.RunElement);
 officeMathRunElement.setItem(new WTextRange(document));
-//Sets text for delimiter equation
-((WTextRange)officeMathRunElement.getItem()).setText("a+b");
-//Saves the Word document
+// Sets text for delimiter equation
+((WTextRange) officeMathRunElement.getItem()).setText("a+b");
+// Saves the Word document
 document.save("Sample.docx", FormatType.Docx);
-//Closes the document
+// Closes the document
 document.close();
 {% endhighlight %}
 
 {% endtabs %}
 
-### Equation array
+### Equation Array
 
-You can create a one dimensional array of equations in Word document. The following code example shows how to create an array of equations.
+You can create a one-dimensional array of equations in Word documents. The following code example shows how to create an array of equations.
+
 {% tabs %}
 {% highlight JAVA %}
-//Creates a new Word document
+// Creates a new Word document
 WordDocument document = new WordDocument();
-//Adds one section and one paragraph to the document
+// Adds one section and one paragraph to the document
 document.ensureMinimal();
-//Appends a new mathematical equation to the paragraph
+// Appends a new mathematical equation to the paragraph
 WMath math = document.getLastParagraph().appendMath();
-//Adds a new math
+// Adds a new math
 IOfficeMath officeMath = math.getMathParagraph().getMaths().add();
-//Adds an equation array
-IOfficeMathEquationArray mathEquationArray =(IOfficeMathEquationArray) officeMath.getFunctions().add(0, MathFunctionType.EquationArray);
-//Sets the vertical alignment for equation array
+// Adds an equation array
+IOfficeMathEquationArray mathEquationArray = (IOfficeMathEquationArray) officeMath.getFunctions().add(0, MathFunctionType.EquationArray);
+// Sets the vertical alignment for the equation array
 mathEquationArray.setVerticalAlignment(MathVerticalAlignment.Center);
-//Enables the flag, to distribute the equation array equally within the container
+// Enables the flag to distribute the equation array equally within the container
 mathEquationArray.setExpandEquationContainer(true);
-//Enables the flag, to expand the equations in an equation array to the maximum width
+// Enables the flag to expand the equations in an equation array to the maximum width
 mathEquationArray.setExpandEquationContainer(true);
-//Sets the row spacing rule
+// Sets the row spacing rule
 mathEquationArray.setRowSpacingRule(SpacingRule.Multiple);
-//Adds the run element for equation array
-IOfficeMathRunElement officeMathRunElement =(IOfficeMathRunElement) mathEquationArray.getEquation().add(0).getFunctions().add(0, MathFunctionType.RunElement);
+// Adds the run element for equation array
+IOfficeMathRunElement officeMathRunElement = (IOfficeMathRunElement) mathEquationArray.getEquation().add(0).getFunctions().add(0, MathFunctionType.RunElement);
 officeMathRunElement.setItem(new WTextRange(document));
-//Sets text for equation) array
-((WTextRange)officeMathRunElement.getItem()).setText("x+y+z=0");
-//Adds the run element for equation array
-officeMathRunElement =(IOfficeMathRunElement) mathEquationArray.getEquation().add(1).getFunctions().add(0, MathFunctionType.RunElement);
+// Sets text for equation array
+((WTextRange) officeMathRunElement.getItem()).setText("x+y+z=0");
+// Adds the run element for equation array
+officeMathRunElement = (IOfficeMathRunElement) mathEquationArray.getEquation().add(1).getFunctions().add(0, MathFunctionType.RunElement);
 officeMathRunElement.setItem(new WTextRange(document));
-//Sets text for equation array
-((WTextRange)officeMathRunElement.getItem()).setText("x+y-z=1");
-//Saves the Word document
+// Sets text for equation array
+((WTextRange) officeMathRunElement.getItem()).setText("x+y-z=1");
+// Saves the Word document
 document.save("Sample.docx", FormatType.Docx);
-//Closes the document
+// Closes the document
 document.close();
 {% endhighlight %}
 
@@ -275,32 +278,33 @@ document.close();
 
 ### Fraction
 
-You can create a fraction equation with a numerator and denominator in Word document. The following code example shows how to create a fraction equation.
+You can create a fraction equation with a numerator and denominator in Word documents. The following code example shows how to create a fraction equation.
+
 {% tabs %}
 {% highlight JAVA %}
-//Creates a new Word document
+// Creates a new Word document
 WordDocument document = new WordDocument();
-//Adds one section and one paragraph to the document
+// Adds one section and one paragraph to the document
 document.ensureMinimal();
-//Appends a new mathematical equation to the paragraph
+// Appends a new mathematical equation to the paragraph
 WMath math = document.getLastParagraph().appendMath();
-//Adds a new math
+// Adds a new math
 IOfficeMath officeMath = math.getMathParagraph().getMaths().add();
-//Adds a fraction getEquation()
-IOfficeMathFraction mathFraction =(IOfficeMathFraction) officeMath.getFunctions().add(0, MathFunctionType.Fraction);
-//Sets the denominator for fraction
-IOfficeMathRunElement officeMathRunElement =(IOfficeMathRunElement) mathFraction.getNumerator().getFunctions().add(0, MathFunctionType.RunElement);
+// Adds a fraction equation
+IOfficeMathFraction mathFraction = (IOfficeMathFraction) officeMath.getFunctions().add(0, MathFunctionType.Fraction);
+// Sets the denominator for the fraction
+IOfficeMathRunElement officeMathRunElement = (IOfficeMathRunElement) mathFraction.getNumerator().getFunctions().add(0, MathFunctionType.RunElement);
 officeMathRunElement.setItem(new WTextRange(document));
-((WTextRange)officeMathRunElement.getItem()).setText("a");
-//Sets the Numerator for fraction
-officeMathRunElement =(IOfficeMathRunElement) mathFraction.getDenominator().getFunctions().add(0, MathFunctionType.RunElement);
+((WTextRange) officeMathRunElement.getItem()).setText("a");
+// Sets the numerator for the fraction
+officeMathRunElement = (IOfficeMathRunElement) mathFraction.getDenominator().getFunctions().add(0, MathFunctionType.RunElement);
 officeMathRunElement.setItem(new WTextRange(document));
-((WTextRange)officeMathRunElement.getItem()).setText("b");
-//Sets the fraction type
+((WTextRange) officeMathRunElement.getItem()).setText("b");
+// Sets the fraction type
 mathFraction.setFractionType(MathFractionType.NormalFractionBar);
-//Saves the Word document
+// Saves the Word document
 document.save("Sample.docx", FormatType.Docx);
-//Closes the document
+// Closes the document
 document.close();
 {% endhighlight %}
 
@@ -308,65 +312,66 @@ document.close();
 
 ### Function
 
-You can create trigonometric functions in a Word document. The following code example shows how to create a function.  
+You can create trigonometric functions in a Word document. The following code example shows how to create a function.
+
 {% tabs %}
 {% highlight JAVA %}
-//Creates a new Word document
+// Creates a new Word document
 WordDocument document = new WordDocument();
-//Adds one section and one paragraph to the document
+// Adds one section and one paragraph to the document
 document.ensureMinimal();
-//Appends a new mathematical equation to the paragraph
+// Appends a new mathematical equation to the paragraph
 WMath math = document.getLastParagraph().appendMath();
-//Adds a new math
+// Adds a new math
 IOfficeMath officeMath = math.getMathParagraph().getMaths().add();
-//Adds a function
-IOfficeMathFunction mathFunction =(IOfficeMathFunction) officeMath.getFunctions().add(0, MathFunctionType.Function);
-//Sets the function name
-IOfficeMathRunElement officeMathRunElement =(IOfficeMathRunElement) mathFunction.getFunctionName().getFunctions().add(0, MathFunctionType.RunElement);
+// Adds a function
+IOfficeMathFunction mathFunction = (IOfficeMathFunction) officeMath.getFunctions().add(0, MathFunctionType.Function);
+// Sets the function name
+IOfficeMathRunElement officeMathRunElement = (IOfficeMathRunElement) mathFunction.getFunctionName().getFunctions().add(0, MathFunctionType.RunElement);
 officeMathRunElement.setItem(new WTextRange(document));
-((WTextRange)officeMathRunElement.getItem()).setText("sin");
-//Adds the run element for function
-officeMathRunElement =(IOfficeMathRunElement) mathFunction.getEquation().getFunctions().add(0, MathFunctionType.RunElement);
+((WTextRange) officeMathRunElement.getItem()).setText("sin");
+// Adds the run element for function
+officeMathRunElement = (IOfficeMathRunElement) mathFunction.getEquation().getFunctions().add(0, MathFunctionType.RunElement);
 officeMathRunElement.setItem(new WTextRange(document));
-//Sets text for function
-((WTextRange)officeMathRunElement.getItem()).setText("90");
-//Saves the Word document
+// Sets text for function
+((WTextRange) officeMathRunElement.getItem()).setText("90");
+// Saves the Word document
 document.save("Sample.docx", FormatType.Docx);
-//Closes the document
+// Closes the document
 document.close();
 {% endhighlight %}
 
 {% endtabs %}
 
-### Group character
+### Group Character
 
-You can group mathematical equations by adding a grouping character at above or below to the corresponding equations. The following code example shows how to create an equation with grouping character.
+You can group mathematical equations by adding a grouping character above or below the corresponding equations. The following code example shows how to create an equation with a grouping character.
 {% tabs %}
 {% highlight JAVA %}
-//Creates a new Word document
+// Creates a new Word document
 WordDocument document = new WordDocument();
-//Adds one section and one paragraph to the document
+// Adds one section and one paragraph to the document
 document.ensureMinimal();
-//Appends a new mathematical equation to the paragraph
+// Appends a new mathematical equation to the paragraph
 WMath math = document.getLastParagraph().appendMath();
-//Adds a new math
+// Adds a new math
 IOfficeMath officeMath = math.getMathParagraph().getMaths().add();
-//Adds a group character equation
-IOfficeMathGroupCharacter officeMathGroupCharacter =(IOfficeMathGroupCharacter) officeMath.getFunctions().add(0, MathFunctionType.GroupCharacter);
-//Sets the group character
+// Adds a group character equation
+IOfficeMathGroupCharacter officeMathGroupCharacter = (IOfficeMathGroupCharacter) officeMath.getFunctions().add(0, MathFunctionType.GroupCharacter);
+// Sets the group character
 officeMathGroupCharacter.setGroupCharacter("⏞");
-//Enables the flag to align group character at top
+// Enables the flag to align group character at the top
 officeMathGroupCharacter.setHasAlignTop(true);
-//Enables the flag to align the text and group character
+// Enables the flag to align the text and group character
 officeMathGroupCharacter.setHasCharacterTop(true);
-//Adds the run element for group character
-IOfficeMathRunElement officeMathRunElement =(IOfficeMathRunElement) officeMathGroupCharacter.getEquation().getFunctions().add(0, MathFunctionType.RunElement);
+// Adds the run element for group character
+IOfficeMathRunElement officeMathRunElement = (IOfficeMathRunElement) officeMathGroupCharacter.getEquation().getFunctions().add(0, MathFunctionType.RunElement);
 officeMathRunElement.setItem(new WTextRange(document));
-//Sets text for group character equation
-((WTextRange)officeMathRunElement.getItem()).setText("a-b");
-//Saves the Word document
+// Sets text for group character equation
+((WTextRange) officeMathRunElement.getItem()).setText("a-b");
+// Saves the Word document
 document.save("Sample.docx", FormatType.Docx);
-//Closes the document
+// Closes the document
 document.close();
 {% endhighlight %}
 
@@ -374,38 +379,38 @@ document.close();
 
 ### Limit
 
-You can add upper limit or lower limit to the mathematical equation. The following code example shows how to create limit equation.
+You can add an upper limit or lower limit to the mathematical equation. The following code example shows how to create a limit equation.
 {% tabs %}
 {% highlight JAVA %}
-//Creates a new Word document
+// Creates a new Word document
 WordDocument document = new WordDocument();
-//Adds one section and one paragraph to the document
+// Adds one section and one paragraph to the document
 document.ensureMinimal();
-//Appends a new mathematical equation to the paragraph
+// Appends a new mathematical equation to the paragraph
 WMath wMath = document.getLastParagraph().appendMath();
 IOfficeMath officeMath = wMath.getMathParagraph().getMaths().add();
-//Adds function to the math
-IOfficeMathFunction officeMathFunction =(IOfficeMathFunction) officeMath.getFunctions().add(0, MathFunctionType.Function);
-//Adds a mathematical limit equation
-IOfficeMathLimit officeMathLimit =(IOfficeMathLimit) officeMathFunction.getFunctionName().getFunctions().add(0, MathFunctionType.Limit);
-IOfficeMathRunElement officeMathRunElement =(IOfficeMathRunElement) officeMathLimit.getEquation().getFunctions().add(MathFunctionType.RunElement);
-officeMathRunElement.setItem( new WTextRange(document));
-//Sets text for limit equation.
-((WTextRange)officeMathRunElement.getItem()).setText("lim");
-//Sets the type of the limit.
+// Adds function to the math
+IOfficeMathFunction officeMathFunction = (IOfficeMathFunction) officeMath.getFunctions().add(0, MathFunctionType.Function);
+// Adds a mathematical limit equation
+IOfficeMathLimit officeMathLimit = (IOfficeMathLimit) officeMathFunction.getFunctionName().getFunctions().add(0, MathFunctionType.Limit);
+IOfficeMathRunElement officeMathRunElement = (IOfficeMathRunElement) officeMathLimit.getEquation().getFunctions().add(MathFunctionType.RunElement);
+officeMathRunElement.setItem(new WTextRange(document));
+// Sets text for limit equation
+((WTextRange) officeMathRunElement.getItem()).setText("lim");
+// Sets the type of the limit
 officeMathLimit.setLimitType(MathLimitType.LowerLimit);
-IOfficeMathRunElement officeMathRunElement_limit =(IOfficeMathRunElement) officeMathLimit.getLimit().getFunctions().add(MathFunctionType.RunElement);
+IOfficeMathRunElement officeMathRunElement_limit = (IOfficeMathRunElement) officeMathLimit.getLimit().getFunctions().add(MathFunctionType.RunElement);
 officeMathRunElement_limit.setItem(new WTextRange(document));
-//Sets the Limit value.
-((WTextRange)officeMathRunElement_limit.getItem()).setText("n=0");
-officeMathLimit.setLimitType( MathLimitType.LowerLimit);
-officeMathRunElement =(IOfficeMathRunElement) officeMathFunction.getEquation().getFunctions().add(MathFunctionType.RunElement);
-officeMathRunElement.setItem( new WTextRange(document));
-//Sets text for base of the specified equation
-((WTextRange)officeMathRunElement.getItem()).setText("x");
-//Saves the Word document
+// Sets the limit value
+((WTextRange) officeMathRunElement_limit.getItem()).setText("n=0");
+officeMathLimit.setLimitType(MathLimitType.LowerLimit);
+officeMathRunElement = (IOfficeMathRunElement) officeMathFunction.getEquation().getFunctions().add(MathFunctionType.RunElement);
+officeMathRunElement.setItem(new WTextRange(document));
+// Sets text for base of the specified equation
+((WTextRange) officeMathRunElement.getItem()).setText("x");
+// Saves the Word document
 document.save("Sample.docx");
-//Closes the document
+// Closes the document
 document.close();
 {% endhighlight %}
 
@@ -413,74 +418,74 @@ document.close();
 
 ### Matrix
 
-You can create a matrix equation in a Word document. The following code example shows how to create a matrix equation. 
+You can create a matrix equation in a Word document. The following code example shows how to create a matrix equation.
 {% tabs %}
 {% highlight JAVA %}
-//Creates a new Word document
+// Creates a new Word document
 WordDocument document = new WordDocument();
-//Adds one section and one paragraph to the document
+// Adds one section and one paragraph to the document
 document.ensureMinimal();
-//Appends a new mathematical equation to the paragraph
+// Appends a new mathematical equation to the paragraph
 WMath wmath = document.getLastParagraph().appendMath();
 IOfficeMath officeMath = wmath.getMathParagraph().getMaths().add();
-//Adds matrix getEquation()
+// Adds matrix equation
 IOfficeMathMatrix mathMatrix = (IOfficeMathMatrix) officeMath.getFunctions().add(MathFunctionType.Matrix);
-//Sets vertical alignment for matrix
+// Sets vertical alignment for matrix
 mathMatrix.setVerticalAlignment(MathVerticalAlignment.Center);
-//Sets width for matrix columns
+// Sets width for matrix columns
 mathMatrix.setColumnWidth(1);
-//Sets column spacing rule
+// Sets column spacing rule
 mathMatrix.setColumnSpacingRule(SpacingRule.OneAndHalf);
-//Sets column spacing value
+// Sets column spacing value
 mathMatrix.setColumnSpacing(3);
-//Enables the flag to hide place holders
+// Enables the flag to hide placeholders
 mathMatrix.setHidePlaceHolders(true);
-//Sets row spacing rule.
+// Sets row spacing rule
 mathMatrix.setRowSpacingRule(SpacingRule.Double);
-//Sets row spacing value.
+// Sets row spacing value
 mathMatrix.setRowSpacing(2);
 
-//Adds a new column
+// Adds a new column
 mathMatrix.getColumns().add();
-//Adds a new row
+// Adds a new row
 mathMatrix.getRows().add();
-//Sets horizontal alignment for column
+// Sets horizontal alignment for column
 mathMatrix.getColumns().get(0).setHorizontalAlignment(MathHorizontalAlignment.Left);
 
-//Gets an argument in first cell in first row
+// Gets an argument in the first cell in the first row
 officeMath = mathMatrix.getRows().get(0).getArguments().get(0);
-//Sets text for argument in first cell in first row
+// Sets text for argument in the first cell in the first row
 IOfficeMathRunElement officeMathRunElement = (IOfficeMathRunElement) officeMath.getFunctions().add(MathFunctionType.RunElement);
-officeMathRunElement.setItem( new WTextRange(document));
-((WTextRange)officeMathRunElement.getItem()).setText("1");
+officeMathRunElement.setItem(new WTextRange(document));
+((WTextRange) officeMathRunElement.getItem()).setText("1");
 
-//Adds a new column
+// Adds a new column
 mathMatrix.getColumns().add();
-//Adds a new row
+// Adds a new row
 mathMatrix.getRows().add();
-//Gets an argument in second cell in first row
+// Gets an argument in the second cell in the first row
 officeMath = mathMatrix.getRows().get(0).getArguments().get(1);
-//Sets text for argument in second cell in first row
+// Sets text for argument in the second cell in the first row
 officeMathRunElement = (IOfficeMathRunElement) officeMath.getFunctions().add(MathFunctionType.RunElement);
 officeMathRunElement.setItem(new WTextRange(document));
-((WTextRange)officeMathRunElement.getItem()).setText("2");
+((WTextRange) officeMathRunElement.getItem()).setText("2");
 
-//Gets an argument in first cell in second row
+// Gets an argument in the first cell in the second row
 officeMath = mathMatrix.getRows().get(1).getArguments().get(0);
-//Sets text for argument in first cell in second row
+// Sets text for argument in the first cell in the second row
 officeMathRunElement = (IOfficeMathRunElement) officeMath.getFunctions().add(MathFunctionType.RunElement);
 officeMathRunElement.setItem(new WTextRange(document));
-((WTextRange)officeMathRunElement.getItem()).setText("3");
+((WTextRange) officeMathRunElement.getItem()).setText("3");
 
-//Gets an argument in second cell in second row
+// Gets an argument in the second cell in the second row
 officeMath = mathMatrix.getRows().get(1).getArguments().get(1);
-//Sets text for argument in second cell in second row
+// Sets text for argument in the second cell in the second row
 officeMathRunElement = (IOfficeMathRunElement) officeMath.getFunctions().add(MathFunctionType.RunElement);
 officeMathRunElement.setItem(new WTextRange(document));
-((WTextRange)officeMathRunElement.getItem()).setText("4");
-//Saves the Word document.
+((WTextRange) officeMathRunElement.getItem()).setText("4");
+// Saves the Word document
 document.save("Sample.docx");
-//Closes the document
+// Closes the document
 document.close();
 {% endhighlight %}
 
@@ -488,42 +493,42 @@ document.close();
 
 ### N-Array
 
-You can create an equation with common large operators such as summation, integrals, union, intersection, logical OR, logical AND, products and co-products. The following code example shows how to create a summation with limits.
+You can create an equation with common large operators such as summation, integrals, union, intersection, logical OR, logical AND, products, and co-products. The following code example shows how to create a summation with limits.
 {% tabs %}
 {% highlight JAVA %}
-//Creates a new Word document
+// Creates a new Word document
 WordDocument document = new WordDocument();
-//Adds one section and one paragraph to the document
+// Adds one section and one paragraph to the document
 document.ensureMinimal();
-//Appends a new mathematical equation to the paragraph
+// Appends a new mathematical equation to the paragraph
 WMath wMath = document.getLastParagraph().appendMath();
 IOfficeMath officeMath = wMath.getMathParagraph().getMaths().add();
-//Adds a N-Array equation
+// Adds an N-Array equation
 IOfficeMathNArray officeMathNArray = (IOfficeMathNArray) officeMath.getFunctions().add(0, MathFunctionType.NArray);
-//Sets N-Array character.
+// Sets N-Array character
 officeMathNArray.setNArrayCharacter("∑");
-//Enables the flag, to grow N-array character to full height of the arguments
+// Enables the flag to grow N-Array character to the full height of the arguments
 officeMathNArray.setHasGrow(false);
-//Enables the flag to hide lower limit
+// Enables the flag to hide lower limit
 officeMathNArray.setHideLowerLimit(false);
-//Enables the flag to hide upper limit
+// Enables the flag to hide upper limit
 officeMathNArray.setHideUpperLimit(false);
-//Sets false to set limit position on above the summation
+// Sets false to set limit position above the summation
 officeMathNArray.setSubSuperscriptLimit(false);
-IOfficeMathRunElement officeMathRunElement =(IOfficeMathRunElement) officeMathNArray.getSubscript().getFunctions().add(MathFunctionType.RunElement);
+IOfficeMathRunElement officeMathRunElement = (IOfficeMathRunElement) officeMathNArray.getSubscript().getFunctions().add(MathFunctionType.RunElement);
 officeMathRunElement.setItem(new WTextRange(document));
-//Sets text for superscript property of NArray equation
-((WTextRange)officeMathRunElement.getItem()).setText("n=1");
-officeMathRunElement =(IOfficeMathRunElement) officeMathNArray.getSuperscript().getFunctions().add(MathFunctionType.RunElement);
+// Sets text for superscript property of N-Array equation
+((WTextRange) officeMathRunElement.getItem()).setText("n=1");
+officeMathRunElement = (IOfficeMathRunElement) officeMathNArray.getSuperscript().getFunctions().add(MathFunctionType.RunElement);
 officeMathRunElement.setItem(new WTextRange(document));
-((WTextRange)officeMathRunElement.getItem()).setText("10");
-officeMathRunElement =(IOfficeMathRunElement) officeMathNArray.getEquation().getFunctions().add(MathFunctionType.RunElement);
+((WTextRange) officeMathRunElement.getItem()).setText("10");
+officeMathRunElement = (IOfficeMathRunElement) officeMathNArray.getEquation().getFunctions().add(MathFunctionType.RunElement);
 officeMathRunElement.setItem(new WTextRange(document));
-//Sets text for NArray equation
-((WTextRange)officeMathRunElement.getItem()).setText("x");
-//Saves the Word document.
+// Sets text for N-Array equation
+((WTextRange) officeMathRunElement.getItem()).setText("x");
+// Saves the Word document
 document.save("Sample.docx");
-//Closes the document
+// Closes the document
 document.close();
 {% endhighlight %}
 

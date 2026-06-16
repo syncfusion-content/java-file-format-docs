@@ -13,14 +13,14 @@ Essential<sup style="font-size:70%">&reg;</sup> File Formats for Java includes a
 
 ## How to best read this user guide
 
-* The best way to get started would be to read the “Getting Started” section for the component you would like to start first. The “Getting Started” section gives enough information, so it is recommended to read this section end-to-end before starting to write a code. All other information can be referred as needed. 
+* The best way to get started would be to read the “Getting Started” section for the component you would like to start with first. The “Getting Started” section provides enough information, so it is recommended to read this section end-to-end before starting to write code. All other information can be referred to as needed.
 * After learning the basics about the component, integrate the component into your application. A good starting point is to refer to the code examples in the sample browser and in this user guide. It is very likely that you can find a code example that resembles your intended usage scenario. 
 
 ## Additional help resources
 
-The [Knowledge Base](https://support.syncfusion.com/kb) section contains responses for common questions asked by the customers. This would be a good place to search for the topics that are not covered in the User Guide.
+The [Knowledge Base](https://support.syncfusion.com/kb) section contains responses to common questions asked by customers. This would be a good place to search for topics that are not covered in the User Guide.
 
-Similar to the Knowledge Base, the [Forum](https://www.syncfusion.com/forums/) section also contains responses to the questions that are asked by other customers.
+Similar to the Knowledge Base, the [Forum](https://www.syncfusion.com/forums/) section also contains responses to questions that are asked by other customers.
 
 ## Create a support incident
 

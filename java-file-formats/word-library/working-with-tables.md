@@ -1,664 +1,630 @@
 ---
-title: Working With Tables | DocIO | Syncfusion
-description: This section illustrates how to work with Tables in Word document using Syncfusion Java Word library (Essential DocIO)
+title: Working with Shapes | Syncfusion
+description: This section describes how to work with the shapes and group shapes in a Word document using the Syncfusion Java Word library (Essential DocIO).
 platform: java-file-formats
 control: Word Library
 documentation: UG
+keywords: 
 ---
-# Working with Tables in Word document
+# Working with Shapes in a Word Document
 
-A table in Word document is used to arrange document content in rows and columns. `WTable` instance represents a table in Word document. A table must contain at least one row.
+Shapes are drawing objects that include lines, curves, circles, rectangles, etc. They can be preset or custom geometry. You can create and manipulate predefined shapes in DOCX and WordML format documents.
 
-1. A row is a collection of cells and it is represented by an instance of `WTableRow`. Each row must contain at least one cell.
-2. A cell can contain one or more paragraphs and tables. An instance of `WTableCell` represents a table cell. Each table cell must contain at least one paragraph.
+## Adding Shapes
 
-N> Adding more than 63 columns not supported in Word document using Microsoft Word application. It shows alert when you attempt to insert table with more than 64 columns, which is a one of the behaviors of Microsoft Word and Essential<sup style="font-size:70%">&reg;</sup> DocIO does the same.
-
-The following image illustrates how a table in Word document is organized in EssentialDocIO’s DOM:
-
-![DocIO Table DOM Structure](WorkingwithTables_images/WTable_DOM.jpg)
-
-The following code example illustrates how to create a simple table with predefined number of rows and cells.
-
-{% tabs %}  
-
-{% highlight JAVA %}
-//Create an instance of WordDocument class.
-WordDocument document = new WordDocument();
-//Add a section into Word document.
-IWSection section = document.addSection();
-//Add a new paragraph into Word document and appends text into paragraph.
-IWTextRange textRange = section.addParagraph().appendText("Price Details");
-textRange.getCharacterFormat().setFontName("Arial");
-textRange.getCharacterFormat().setFontSize(12);
-textRange.getCharacterFormat().setBold(true);
-section.addParagraph();
-//Add a new table into Word document.
-IWTable table = section.addTable();
-//Specify the total number of rows & columns.
-table.resetCells(3, 2);
-//Access the instance of the cell (first row, first cell) and add the content into cell.
-textRange = table.get(0, 0).addParagraph().appendText("Item");
-textRange.getCharacterFormat().setFontName("Arial");
-textRange.getCharacterFormat().setFontSize(12);
-textRange.getCharacterFormat().setBold(true);
-//Access the instance of the cell (first row, second cell) and add the content into cell.
-textRange = table.get(0, 1).addParagraph().appendText("Price($)");
-textRange.getCharacterFormat().setFontName("Arial");
-textRange.getCharacterFormat().setFontSize(12);
-textRange.getCharacterFormat().setBold(true);
-//Access the instance of the cell (second row, first cell) and add the content into cell.
-textRange = table.get(1, 0).addParagraph().appendText("Apple");
-textRange.getCharacterFormat().setFontName("Arial");
-textRange.getCharacterFormat().setFontSize(10);
-//Access the instance of the cell (second row, second cell) and add the content into cell.
-textRange = table.get(1, 1).addParagraph().appendText("50");
-textRange.getCharacterFormat().setFontName("Arial");
-textRange.getCharacterFormat().setFontSize(10);
-//Accessthe instance of the cell (third row, first cell) and add the content into cell.
-textRange = table.get(2, 0).addParagraph().appendText("Orange");
-textRange.getCharacterFormat().setFontName("Arial");
-textRange.getCharacterFormat().setFontSize(10);
-//Access the instance of the cell (third row, second cell) and add the content into cell.
-textRange = table.get(2, 1).addParagraph().appendText("30");
-textRange.getCharacterFormat().setFontName("Arial");
-textRange.getCharacterFormat().setFontSize(10);
-//Save the document in the given name and format.
-document.save("Table.docx", FormatType.Docx);
-//Release the resources occupied by WordDocument instance.
-document.close();
-{% endhighlight %}
-
-{% endtabs %}  
-
-The following code example illustrates how to create a simple table by dynamically adding rows.
-
-{% tabs %} 
-
-{% highlight JAVA %}
-//Create an instance of WordDocument class
-WordDocument document = new WordDocument();
-IWSection section = document.addSection();
-section.addParagraph().appendText("Price Details");
-section.addParagraph();
-//Add a new table into Word document
-IWTable table = section.addTable();
-//Add the first row into table
-WTableRow row = table.addRow();
-//Add the first cell into first row 
-WTableCell cell = row.addCell();
-//Specify the cell width
-cell.setWidth(200);
-cell.addParagraph().appendText("Item");
-//Add the second cell into first row 
-cell = row.addCell();
-//Specify the cell width
-cell.setWidth(200);
-cell.addParagraph().appendText("Price($)");
-//Add the second row into table
-row = table.addRow(true, false);
-//Add the first cell into second row
-cell = row.addCell();
-//Specify the cell width
-cell.setWidth(200);
-cell.addParagraph().appendText("Apple");
-//Add the second cell into second row
-cell = row.addCell();
-//Specify the cell width
-cell.setWidth(200);
-cell.addParagraph().appendText("50");
-//Add the third row into table
-row = table.addRow(true, false);
-//Add the first cell into third row 
-cell = row.addCell();
-//Specify the cell width
-cell.setWidth(200);
-cell.addParagraph().appendText("Orange");
-//Add the second cell into third row 
-cell = row.addCell();
-//Specify the cell width
-cell.setWidth(200);
-cell.addParagraph().appendText("30");
-//Add the fourth row into table
-row = table.addRow(true, false);
-//Add the first cell into fourth row
-cell = row.addCell();
-//Specify the cell width
-cell.setWidth(200);
-cell.addParagraph().appendText("Banana");
-//Add the second cell into fourth row 
-cell = row.addCell();
-//Specify the cell width
-cell.setWidth(200);
-cell.addParagraph().appendText("20");
-//Add the fifth row to table
-row = table.addRow(true, false);
-//Adds the first cell into fifth row 
-cell = row.addCell();
-//Specify the cell width
-cell.setWidth(200);
-cell.addParagraph().appendText("Grapes");
-//Add the second cell into fifth row 
-cell = row.addCell();
-//Specify the cell width
-cell.setWidth(200);
-cell.addParagraph().appendText("70");
-//Save and close the document instance
-document.save("Table.docx", FormatType.Docx);
-document.close();
-{% endhighlight %}
-
-{% endtabs %}  
-
-## Nested Table 
-
-You can create a nested table by adding a new table into a cell. The following code example illustrates how to add a table into a cell.
-
-{% tabs %} 
-
-{% highlight JAVA %}
-//Create an instance of WordDocument class.
-WordDocument document = new WordDocument();
-IWSection section = document.addSection();
-section.addParagraph().appendText("Price Details");
-IWTable table = section.addTable();
-table.resetCells(3, 2);
-table.get(0, 0).addParagraph().appendText("Item");
-table.get(0, 1).addParagraph().appendText("Price($)");
-table.get(1, 0).addParagraph().appendText("Items with same price");
-//Add a nested table into the cell (second row, first cell).
-IWTable nestTable = table.get(1, 0).addTable();
-//Create the specified number of rows and columns to nested table.
-nestTable.resetCells(3, 1);
-//Access the instance of the nested table cell (first row, first cell).
-WTableCell nestedCell = nestTable.getRows().get(0).getCells().get(0);
-//Specify the width of the nested cell.
-nestedCell.setWidth(200);
-//Add the content into nested cell.
-nestedCell.addParagraph().appendText("Apple");
-//Access the instance of the nested table cell (second row, first cell).
-nestedCell = nestTable.getRows().get(1).getCells().get(0);
-//Specify the width of the nested cell.
-nestedCell.setWidth(200);
-//Add the content into nested cell.
-nestedCell.addParagraph().appendText("Orange");
-//Access the instance of the nested table cell (third row, first cell).
-nestedCell = nestTable.getRows().get(2).getCells().get(0);
-//Specify the width of the nested cell.
-nestedCell.setWidth(200);
-//Add the content into nested cell.
-nestedCell.addParagraph().appendText("Mango");
-//Access the instance of the cell (second row, second cell).
-nestedCell = table.getRows().get(1).getCells().get(1);
-table.get(1, 1).addParagraph().appendText("85");
-table.get(2, 0).addParagraph().appendText("Pomegranate");
-table.get(2, 1).addParagraph().appendText("70");
-//Save and close the document instance.
-document.save("NestedTable.docx", FormatType.Docx);
-document.close();
-{% endhighlight %}
-
-{% endtabs %}  
-
-## Align text within a table
-
-You can iterate the cells within a table and align text for each cell. Find more information about iterating the cells from [here](https://help.syncfusion.com/document-processing/word/word-library/java/working-with-tables#iterating-through-table-elements)
-
-The following code example illustrates how to align text within a table.
+The following code example shows how to add a predefined shape to the document.
 
 {% tabs %}
 
 {% highlight JAVA %}
-private void alignCellContent(WTableCell tableCell,VerticalAlignment verticalAlignment,HorizontalAlignment horizontalAlignment)throws Exception
-{
-	//Set vertical alignment to the cell.
-	tableCell.getCellFormat().setVerticalAlignment(verticalAlignment);
-	//Iterate body items in table cell and set horizontal alignment.
-	alignCellContentForTextBody(tableCell,horizontalAlignment);
-}
-private void alignCellContentForTextBody(WTextBody textBody,HorizontalAlignment horizontalAlignment)throws Exception
-{
-	for(int i = 0;i<textBody.getChildEntities().getCount();i++)
-	{
-		//IEntity is the basic unit in DocIO DOM. 
-		//Access the body items as IEntity.
-		IEntity bodyItemEntity = textBody.getChildEntities().get(i);
-		//A Text body has 3 types of elements - Paragraph, Table and Block Content Control.
-		//Decide the element type by using EntityType.
-		switch(bodyItemEntity.getEntityType().toString())
-		{
-			case "Paragraph":
-				WParagraph paragraph = (WParagraph)bodyItemEntity;
-				//Set horizontal alignment for paragraph.
-				paragraph.getParagraphFormat().setHorizontalAlignment(horizontalAlignment);
-				break;
-			case "Table":
-				//Table is a collection of rows and cells.
-				//Iterate through table's DOM and set horizontal alignment.
-				alignCellContentForTable((WTable)bodyItemEntity,horizontalAlignment);
-				break;
-			case "BlockContentControl":
-				//Iterate to the body items of Block Content Control and set horizontal alignment.
-				BlockContentControl blockContentControl = (BlockContentControl)bodyItemEntity;
-				alignCellContentForTextBody(blockContentControl.getTextBody(),horizontalAlignment);
-				break;
-		}
-	}
-}
-private void alignCellContentForTable(WTable table,HorizontalAlignment horizontalAlignment)throws Exception
-{
-	//Iterate the row collection in a table.
-	for(Object row_tempObj : table.getRows())
-	{
-		WTableRow row = (WTableRow)row_tempObj;
-		//Iterate the cell collection in a table row.
-		for(Object cell_tempObj : row.getCells())
-		{
-			//Iterate items in cell and set horizontal alignment.
-			WTableCell cell = (WTableCell)cell_tempObj;
-			alignCellContentForTextBody(cell,horizontalAlignment);
-		}
-	}
-}
+// Create a new Word document.
+WordDocument document = new WordDocument();
+// Add a new section to the document.
+IWSection section = document.addSection();
+// Add a new paragraph to the section.
+WParagraph paragraph = (WParagraph) section.addParagraph();
+// Add a new shape to the document.
+Shape rectangle = paragraph.appendShape(AutoShapeType.RoundedRectangle, 150, 100);
+// Set position for the shape.
+rectangle.setVerticalPosition(72);
+rectangle.setHorizontalPosition(72);
+paragraph = (WParagraph) section.addParagraph();
+// Add text body contents to the shape.
+paragraph = (WParagraph) rectangle.getTextBody().addParagraph();
+IWTextRange text = paragraph.appendText("This text is in a rounded rectangle shape");
+text.getCharacterFormat().setTextColor(ColorSupport.getGreen());
+text.getCharacterFormat().setBold(true);
+// Add another shape to the document.
+paragraph = (WParagraph) section.addParagraph();
+paragraph.appendBreak(BreakType.LineBreak);
+Shape pentagon = paragraph.appendShape(AutoShapeType.Pentagon, 100, 100);
+paragraph = (WParagraph) pentagon.getTextBody().addParagraph();
+paragraph.appendText("This text is in a pentagon shape");
+// Set position for the shape.
+pentagon.setHorizontalPosition(72);
+pentagon.setVerticalPosition(200);
+// Save and close the Word document instance.
+document.save("Result.docx", FormatType.Docx);
+document.close();
 {% endhighlight %}
 
 {% endtabs %}
 
-## Apply formatting to Table, Row and Cell
+### Format Shapes
 
-The following code example illustrates how to load an existing document and apply table formatting options such as Borders, LeftIndent, Paddings, IsAutoResize, etc.
+Shapes can have formatting such as line color, fill color, positioning, wrap formats, etc. The following code example illustrates how to apply formatting options for a shape.
 
-N> 1. `BorderStyle.None` is the default value of `BorderType` property in `Borders` class which will not show borders for the table or cell. It is equivalent to border style not defined and borders can be inherited from style or parent formats.
-N> 2. To hide border for a table or cell in the Word Document, you can set `BorderType` property with `BorderStyle.Cleared`. It means border style defined as no border (Don’t show border) and shouldn’t inherit from style or parent formats.
-N> 3. To show/display border for a table or cell in the Word Document, you can set `BorderType` property with `BorderStyle` values (except `BorderStyle.None` and `BorderStyle.Cleared`).
-
-{% tabs %}  
+{% tabs %}
 
 {% highlight JAVA %}
-//Create an instance of WordDocument class (Empty Word Document)
+// Create a new Word document.
 WordDocument document = new WordDocument();
-//Open an existing Word document into DocIO instance
-document.open("Table.docx", FormatType.Docx);
-//Access the instance of the first section in the Word document
-WSection section = document.getSections().get(0);
-//Access the instance of the first table in the section
-WTable table = section.getTables().get(0);
-//Specify the title for the table
-table.setTitle("PriceDetails");
-//Specify the description of the table
-table.setDescription("This table shows the price details of various fruits");
-//Specify the left indent of the table
-table.setIndentFromLeft(50);
-//Specify the background color of the table
-table.getTableFormat().setBackColor(ColorSupport.fromArgb(192, 192, 192));
-//Specify the horizontal alignment of the table
-table.getTableFormat().setHorizontalAlignment(RowAlignment.Left);
-//Specify the left, right, top and bottom padding of all the cells in the table
-table.getTableFormat().getPaddings().setAll(10);
-//Specify the auto resize of table to automatically resize all cell width based on its content
-table.getTableFormat().setIsAutoResized(true);
-//Specify the table top, bottom, left and right border line width
-table.getTableFormat().getBorders().setLineWidth(2f);
-//Specify the table horizontal border line width
-table.getTableFormat().getBorders().getHorizontal().setLineWidth(2f);
-//Specify the table vertical border line width
-table.getTableFormat().getBorders().getVertical().setLineWidth(2f);
-//Specify the tables top, bottom, left and right border color
-table.getTableFormat().getBorders().setColor(ColorSupport.getRed());
-//Specify the table Horizontal border color
-table.getTableFormat().getBorders().getHorizontal().setColor(ColorSupport.getRed());
-//Specify the table vertical border color
-table.getTableFormat().getBorders().getVertical().setColor(ColorSupport.getRed());
-//Specify the table borders border type
-table.getTableFormat().getBorders().setBorderType(BorderStyle.Double);
-//Accesses the instance of the first row in the table
-WTableRow row = table.getRows().get(0);
-//Specify the row height
-row.setHeight(20);
-//Specify the row height type
-row.setHeightType(TableRowHeightType.AtLeast);
-//Save and close the document instance
-document.save("TableFormatting.docx", FormatType.Docx);
+// Add a new section to the document.
+IWSection section = document.addSection();
+// Add a new paragraph to the section.
+IWParagraph paragraph = (WParagraph) section.addParagraph();
+// Append a shape to the paragraph.
+Shape rectangle = paragraph.appendShape(AutoShapeType.RoundedRectangle, 150, 100);
+rectangle.setVerticalPosition(72);
+rectangle.setHorizontalPosition(72);
+paragraph = (WParagraph) section.addParagraph();
+paragraph = (WParagraph) rectangle.getTextBody().addParagraph();
+IWTextRange text = paragraph.appendText("This text is in a rounded rectangle shape");
+// Apply format to the text.
+text.getCharacterFormat().setTextColor(ColorSupport.getGreen());
+text.getCharacterFormat().setBold(true);
+// Apply fill color for the shape.
+rectangle.getFillFormat().setFill(true);
+rectangle.getFillFormat().setColor(ColorSupport.getLightGray());
+// Apply wrap formats.
+rectangle.getWrapFormat().setTextWrappingStyle(TextWrappingStyle.Square);
+rectangle.getWrapFormat().setTextWrappingType(TextWrappingType.Right);
+// Set horizontal and vertical origin.
+rectangle.setHorizontalOrigin(HorizontalOrigin.Margin);
+rectangle.setVerticalOrigin(VerticalOrigin.Page);
+// Set line format.
+rectangle.getLineFormat().setDashStyle(LineDashing.Dot);
+rectangle.getLineFormat().setColor(ColorSupport.getDarkGray());
+// Save and close the Word document instance.
+document.save("Result.docx", FormatType.Docx);
 document.close();
 {% endhighlight %}
 
-{% endtabs %}  
+{% endtabs %}
 
-### Applying cell formatting
-  
-The following code example illustrates how to load an existing document and apply cell formatting options such as VerticalAlignment, TextDirection, Paddings, Borders, etc.
+### Rotate Shapes
 
-{% tabs %} 
+You can rotate a shape and also apply flipping (horizontal and vertical) to it. The following code example explains how to rotate and flip a shape.
+
+{% tabs %}
 
 {% highlight JAVA %}
-//Create an instance of WordDocument class.
+// Create a new Word document.
 WordDocument document = new WordDocument();
-document.open("Table.docx",FormatType.Docx);
-WSection section = document.getSections().get(0);
-//Access the instance of the first row in the table.
-WTable table = section.getTables().get(0);
-//Specify the row height.
-WTableRow row = table.getRows().get(0);
-row.setHeight(20);
-//Specify the row height type.
-row.setHeightType(TableRowHeightType.AtLeast);
-//Access the instance of the first cell in the row.
-WTableCell cell = row.getCells().get(0);
-//Specify the cell back ground color.
-cell.getCellFormat().setBackColor(ColorSupport.fromArgb(192,192,192));
-//Specify the same padding as table option as false to preserve current cell padding.
-cell.getCellFormat().setSamePaddingsAsTable(false);
-//Specify the left, right, top and bottom padding of the cell.
-cell.getCellFormat().getPaddings().setLeft(5);
-cell.getCellFormat().getPaddings().setRight(5);
-cell.getCellFormat().getPaddings().setTop(5);
-cell.getCellFormat().getPaddings().setBottom(5);
-//Specify the vertical alignment of content of text.
-cell.getCellFormat().setVerticalAlignment(VerticalAlignment.Middle);
-//Disable the text wrap option to avoid displaying longer text on multiple lines.
-cell.getCellFormat().setTextWrap(false);
-//Access the instance of the second cell in the row.
-cell=row.getCells().get(1);
-cell.getCellFormat().setBackColor(ColorSupport.fromArgb(192,192,192));
-cell.getCellFormat().setSamePaddingsAsTable(false);
-//Specify the left, right, top and bottom padding of the cell.
-cell.getCellFormat().getPaddings().setAll(5);
-cell.getCellFormat().setVerticalAlignment(VerticalAlignment.Middle);
-//Disable the text wrap option to avoid displaying longer text on multiple lines.
-cell.getCellFormat().setTextWrap(false);
-//Save and close the document instance.
-document.save("TableCellFormatting.docx",FormatType.Docx);
+// Add a new section to the document.
+IWSection section = document.addSection();
+// Add a new paragraph to the section.
+WParagraph paragraph = (WParagraph) section.addParagraph();
+Shape rectangle = paragraph.appendShape(AutoShapeType.RoundedRectangle, 150, 100);
+// Set position for the shape.
+rectangle.setVerticalPosition(72);
+rectangle.setHorizontalPosition(72);
+// Set 90-degree rotation.
+rectangle.setRotation(90);
+// Set horizontal flip.
+rectangle.setFlipHorizontal(true);
+paragraph = (WParagraph) section.addParagraph();
+paragraph = (WParagraph) rectangle.getTextBody().addParagraph();
+IWTextRange text = paragraph.appendText("This text is in a rounded rectangle shape");
+// Save the Word document.
+document.save("Result.docx", FormatType.Docx);
+// Close the document.
 document.close();
 {% endhighlight %}
 
-{% endtabs %} 
+{% endtabs %}
+
+## Grouping Shapes
+
+The Word library now allows you to create or group multiple shapes, pictures, and text boxes as a group shape in a Word document (DOCX) and preserve it during DOCX and WordML format conversions.
+
+You can create a document with group shapes by using Microsoft Word. It provides an option to group a set of shapes and images as a single shape or treat a group shape as an individual item.
+![Create Group Shape in Microsoft Word](Working-with-Shapes_images/Working-with-Shapes_img1.jpeg)
+
+**Key Features:**
+
+1. You can easily manage a group of shapes, pictures, and text boxes as a group shape.
+2. You can move several shapes or images simultaneously and apply the same formatting properties for children of group shapes.
+
+N> 1. While grouping the shapes or other objects, the shapes should be positioned relative to the “Page”.
+N> 2. While grouping the shapes or other objects, the wrapping style should not be "In Line with Text".
+
+The following code example shows how to create a group shape in a Word document.
+
+{% tabs %}
+
+{% highlight JAVA %}
+// Create a new Word document.
+WordDocument document = new WordDocument();
+// Add a new section to the document.
+IWSection section = document.addSection();
+// Add a new paragraph to the section.
+WParagraph paragraph = (WParagraph) section.addParagraph();
+// Create a new group shape.
+GroupShape groupShape = new GroupShape(document);
+// Add the group shape to the paragraph.
+paragraph.getChildEntities().add(groupShape);
+// Create a new shape.
+Shape shape = new Shape(document, AutoShapeType.RoundedRectangle);
+// Set height and width for the shape.
+shape.setHeight(100);
+shape.setWidth(150);
+// Set horizontal and vertical position.
+shape.setHorizontalPosition(72);
+shape.setVerticalPosition(72);
+// Set wrapping style for the shape.
+shape.getWrapFormat().setTextWrappingStyle(TextWrappingStyle.InFrontOfText);
+// Set horizontal and vertical origin.
+shape.setHorizontalOrigin(HorizontalOrigin.Page);
+shape.setVerticalOrigin(VerticalOrigin.Page);
+// Add the specified shape to the group shape.
+groupShape.add(shape);
+// Create a new picture.
+WPicture picture = new WPicture(document);
+FileStreamSupport imageStream = new FileStreamSupport("Image.png", FileMode.Open, FileAccess.ReadWrite);
+picture.loadImage(imageStream.toArray());
+// Set wrapping style for the picture.
+picture.setTextWrappingStyle(TextWrappingStyle.InFrontOfText);
+// Set height and width for the image.
+picture.setHeight(100);
+picture.setWidth(100);
+// Set horizontal and vertical position.
+picture.setHorizontalPosition(400);
+picture.setVerticalPosition(150);
+// Set horizontal and vertical origin.
+picture.setHorizontalOrigin(HorizontalOrigin.Page);
+picture.setVerticalOrigin(VerticalOrigin.Page);
+// Add the specified picture to the group shape.
+groupShape.add(picture);
+// Create a new textbox.
+WTextBox textbox = new WTextBox(document);
+textbox.getTextBoxFormat().setWidth(150);
+textbox.getTextBoxFormat().setHeight(75);
+// Add new text to the textbox body.
+IWParagraph textboxParagraph = textbox.getTextBoxBody().addParagraph();
+textboxParagraph.appendText("Text inside text box");
+// Set wrapping style for the textbox.
+textbox.getTextBoxFormat().setTextWrappingStyle(TextWrappingStyle.Behind);
+// Set horizontal and vertical position.
+textbox.getTextBoxFormat().setHorizontalPosition(200);
+textbox.getTextBoxFormat().setVerticalPosition(200);
+// Set horizontal and vertical origin.
+textbox.getTextBoxFormat().setVerticalOrigin(VerticalOrigin.Page);
+textbox.getTextBoxFormat().setHorizontalOrigin(HorizontalOrigin.Page);
+// Add the specified textbox to the group shape.
+groupShape.add(textbox);
+// Save and close the Word document instance.
+document.save("Result.docx", FormatType.Docx);
+document.close();
+{% endhighlight %}
+
+{% endtabs %}
+
+### Nested Group Shapes
+
+					   
+
+The following code example illustrates how to group nested group shapes as a group shape in a Word document.
+
+{% tabs %}
+
+{% highlight JAVA %}
+// Create a new Word document.
+WordDocument document = new WordDocument();
+// Add a new section to the document.
+IWSection section = document.addSection();
+// Add a new paragraph to the section.
+WParagraph paragraph = (WParagraph) section.addParagraph();
+// Create a new group shape.
+GroupShape groupShape = new GroupShape(document);
+// Add the group shape to the paragraph.
+paragraph.getChildEntities().add(groupShape);
+// Append a new shape to the document.
+Shape shape = new Shape(document, AutoShapeType.RoundedRectangle);
+// Set height and width for the shape.
+shape.setHeight(100);
+shape.setWidth(150);
+// Set wrapping style for the shape.
+shape.getWrapFormat().setTextWrappingStyle(TextWrappingStyle.InFrontOfText);
+// Set horizontal and vertical position for the shape.
+shape.setHorizontalPosition(72);
+shape.setVerticalPosition(72);
+// Set horizontal and vertical origin for the shape.
+shape.setHorizontalOrigin(HorizontalOrigin.Page);
+shape.setVerticalOrigin(VerticalOrigin.Page);
+// Add the specified shape to the group shape.
+groupShape.add(shape);
+// Append a new picture to the document.
+WPicture picture = new WPicture(document);
+// Load image from the file.
+FileStreamSupport imageStream = new FileStreamSupport("Image.png", FileMode.Open, FileAccess.ReadWrite);
+picture.loadImage(imageStream.toArray());
+// Set wrapping style for the picture.
+picture.setTextWrappingStyle(TextWrappingStyle.InFrontOfText);
+// Set height and width for the picture.
+picture.setHeight(100);
+picture.setWidth(100);
+// Set horizontal and vertical position for the picture.
+picture.setHorizontalPosition(400);
+picture.setVerticalPosition(150);
+// Set horizontal and vertical origin for the picture.
+picture.setHorizontalOrigin(HorizontalOrigin.Page);
+picture.setVerticalOrigin(VerticalOrigin.Page);
+// Add the specified picture to the group shape.
+groupShape.add(picture);
+// Create a new nested group shape.
+GroupShape nestedGroupShape = new GroupShape(document);
+// Append a new textbox to the document.
+WTextBox textbox = new WTextBox(document);
+// Set width and height for the textbox.
+textbox.getTextBoxFormat().setWidth(150);
+textbox.getTextBoxFormat().setHeight(75);
+// Add new text to the textbox body.
+IWParagraph textboxParagraph = textbox.getTextBoxBody().addParagraph();
+// Add new text to the textbox paragraph.
+textboxParagraph.appendText("Text inside text box");
+// Set wrapping style for the textbox.
+textbox.getTextBoxFormat().setTextWrappingStyle(TextWrappingStyle.Behind);
+// Set horizontal and vertical position for the textbox.
+textbox.getTextBoxFormat().setHorizontalPosition(200);
+textbox.getTextBoxFormat().setVerticalPosition(200);
+// Set horizontal and vertical origin for the textbox.
+textbox.getTextBoxFormat().setVerticalOrigin(VerticalOrigin.Page);
+textbox.getTextBoxFormat().setHorizontalOrigin(HorizontalOrigin.Page);
+// Add the specified textbox to the nested group shape.
+nestedGroupShape.add(textbox);
+// Append a new shape to the document.
+shape = new Shape(document, AutoShapeType.Oval);
+// Set height and width for the new shape.
+shape.setHeight(100);
+shape.setWidth(150);
+// Set horizontal and vertical position for the shape.
+shape.setHorizontalPosition(200);
+shape.setVerticalPosition(72);
+// Set horizontal and vertical origin for the shape.
+shape.setHorizontalOrigin(HorizontalOrigin.Page);
+shape.setVerticalOrigin(VerticalOrigin.Page);
+// Set horizontal and vertical position for the nested group shape.
+nestedGroupShape.setHorizontalPosition(72);
+nestedGroupShape.setVerticalPosition(72);
+// Add the specified shape to the nested group shape.
+nestedGroupShape.add(shape);
+// Add the nested group shape to the group shape of the paragraph.
+groupShape.add(nestedGroupShape);
+// Save and close the Word document instance.
+document.save("Result.docx", FormatType.Docx);
+document.close();
+{% endhighlight %}
+
+{% endtabs %}
+
+## Ungrouping Shapes
+
+You can ungroup group shapes in the Word document to preserve each shape as an individual item.
+
+The following code example shows how to ungroup a group shape in a Word document.
+
+{% tabs %}
+
+{% highlight JAVA %}
+// Load the template document.
+WordDocument document = new WordDocument("Template.docx", FormatType.Automatic);
+// Get the last paragraph.
+WParagraph lastParagraph = document.getLastParagraph();
+// Iterate through the paragraph items to get the group shape.
+for (int i = 0; i < lastParagraph.getChildEntities().getCount(); i++)
+{
+	if (lastParagraph.getChildEntities().get(i) instanceof GroupShape)
+	{
+		GroupShape groupShape = (GroupShape) lastParagraph.getChildEntities().get(i);
+		// Ungroup the child shapes in the group shape.
+		groupShape.ungroup();
+		break;
+	}
+}
+// Save and close the Word document instance.
+document.save("Result.docx", FormatType.Docx);
+document.close();
+{% endhighlight %}
+
+{% endtabs %}
 
 ### Working with Table Style
 
-A table style defines a set of table, row, cell and paragraph level formatting that can be applied to a table. `WTableStyle` instance represents table style in a Word document.
+A table style defines a set of table, row, cell, and paragraph-level formatting that can be applied to a table. The `WTableStyle` instance represents table style in a Word document.
 
-N>  Essential<sup style="font-size:70%">&reg;</sup> DocIO currently provides support for table styles in DOCX and WordML formats alone. The visual appearance is also preserved in Word to HTML conversion.
+N>  Essential<sup style="font-size:70%">&reg;</sup> DocIO currently provides support for table styles in DOCX and WordML formats alone. The visual appearance is also preserved in Word-to-HTML conversion.
 
 The following code example illustrates how to apply the built-in table styles to the table.
 
-{% tabs %} 
+{% tabs %}
 
 {% highlight JAVA %}
-//Create an instance of WordDocument class.
+// Create an instance of WordDocument class.
 WordDocument document = new WordDocument("Table.docx", FormatType.Docx);
 WSection section = document.getSections().get(0);
 WTable table = section.getTables().get(0);
-//Apply "LightShading" built-in style to table.
+// Apply "LightShading" built-in style to table.
 table.applyStyle(BuiltinTableStyle.LightShading);
-//Save and close the document instance.
+// Save and close the document instance.
 document.save("TableStyle.docx", FormatType.Docx);
 document.close();
 {% endhighlight %}
 
-{% endtabs %}  
+{% endtabs %}
 
-### Table style options
+### Table Style Options
 
-Once you have applied a table style, you can enable or disable the special formatting of the table. There are six options: first column, last column, banded rows, banded columns, header row and last row.  
+Once you have applied a table style, you can enable or disable the special formatting of the table. There are six options: first column, last column, banded rows, banded columns, header row, and last row.
 
-The following code example illustrates how to enable and disable the special table formatting options of the table styles
+The following code example illustrates how to enable and disable the special table formatting options of the table styles.
 
-{% tabs %} 
+{% tabs %}
 
 {% highlight JAVA %}
-//Create an instance of WordDocument class.
-WordDocument document = new WordDocument("Table.docx",FormatType.Docx);
+// Create an instance of WordDocument class.
+WordDocument document = new WordDocument("Table.docx", FormatType.Docx);
 WSection section = document.getSections().get(0);
 WTable table = section.getTables().get(0);
-//Apply"LightShading" built-in style to table.
+// Apply "LightShading" built-in style to table.
 table.applyStyle(BuiltinTableStyle.LightShading);
-//Enable special formatting for banded columns of the table.
+// Enable special formatting for banded columns of the table.
 table.setApplyStyleForBandedColumns(true);
-//Enable special formatting for banded rows of the table.
+// Enable special formatting for banded rows of the table.
 table.setApplyStyleForBandedRows(true);
-//Disables special formatting for first column of the table.
+// Disable special formatting for the first column of the table.
 table.setApplyStyleForFirstColumn(false);
-//Enable special formatting for header row of the table.
+// Enable special formatting for the header row of the table.
 table.setApplyStyleForHeaderRow(true);
-//Enable special formatting for last column of the table.
+// Enable special formatting for the last column of the table.
 table.setApplyStyleForLastColumn(true);
-//Disable special formatting for last row of the table.
+// Disable special formatting for the last row of the table.
 table.setApplyStyleForLastRow(false);
-//Save and close the document instance.
-document.save("TableStyle.docx",FormatType.Docx);
+// Save and close the document instance.
+document.save("TableStyle.docx", FormatType.Docx);
 document.close();
 {% endhighlight %}
 
 {% endtabs %}
 
-### Custom table style
+### Custom Table Style
 
-The following code example illustrates how to apply a custom table style to table.
+The following code example illustrates how to apply a custom table style to a table.
 
-{% tabs %} 
+{% tabs %}
 
 {% highlight JAVA %}
-//Creates an instance of WordDocument class.
+// Create an instance of WordDocument class.
 WordDocument document = new WordDocument("Table.docx", FormatType.Docx);
 WSection section = document.getSections().get(0);
 WTable table = section.getTables().get(0);
-//Adds a new custom table style.
-WTableStyle tableStyle = (WTableStyle)document.addTableStyle("CustomStyle");
-//Applies formatting for whole table.
+// Add a new custom table style.
+WTableStyle tableStyle = (WTableStyle) document.addTableStyle("CustomStyle");
+// Apply formatting for the whole table.
 tableStyle.getTableProperties().setRowStripe(1);
 tableStyle.getTableProperties().setColumnStripe(1);
 tableStyle.getTableProperties().getPaddings().setTop(0);
 tableStyle.getTableProperties().getPaddings().setBottom(0);
 tableStyle.getTableProperties().getPaddings().setLeft(5.4f);
 tableStyle.getTableProperties().getPaddings().setRight(5.4f);
-//Applies conditional formatting for first row.
+// Apply conditional formatting for the first row.
 ConditionalFormattingStyle firstRowStyle = tableStyle.getConditionalFormattingStyles().add(ConditionalFormattingType.FirstRow);
 firstRowStyle.getCharacterFormat().setBold(true);
-firstRowStyle.getCharacterFormat().setTextColor(ColorSupport.fromArgb(255,255,255,255));
+firstRowStyle.getCharacterFormat().setTextColor(ColorSupport.fromArgb(255, 255, 255, 255));
 firstRowStyle.getCellProperties().setBackColor(ColorSupport.getBlue());
-//Applies conditional formatting for first column.
+// Apply conditional formatting for the first column.
 ConditionalFormattingStyle firstColumnStyle = tableStyle.getConditionalFormattingStyles().add(ConditionalFormattingType.FirstColumn);
 firstColumnStyle.getCharacterFormat().setBold(true);
-//Applies conditional formatting for odd row.
+// Apply conditional formatting for odd rows.
 ConditionalFormattingStyle oddRowBandingStyle = tableStyle.getConditionalFormattingStyles().add(ConditionalFormattingType.OddRowBanding);
 oddRowBandingStyle.getCellProperties().setBackColor(ColorSupport.getWhiteSmoke());
-//Applies the custom table style to the table.
+// Apply the custom table style to the table.
 table.applyStyle("CustomStyle");
-//Saves and closes the document instance
-document.save("TableStyle.docx",FormatType.Docx);
+// Save and close the document instance.
+document.save("TableStyle.docx", FormatType.Docx);
 document.close();
 {% endhighlight %}
 
-{% endtabs %}  
+{% endtabs %}
 
 ### Apply Base Style
 
-Table styles can be based on other table styles also. When applying a base style, the new style will inherit the values of the base style that are not explicitly redefined in the new style. You can apply a custom table style or a built-in table style as a base for the table style.
+Table styles can be based on other table styles as well. When applying a base style, the new style will inherit the values of the base style that are not explicitly redefined in the new style. You can apply a custom table style or a built-in table style as a base for the table style.
 
 The following code example illustrates how to apply built-in and custom table styles as base styles for another custom table.
 
-{% tabs %} 
+{% tabs %}
 
 {% highlight JAVA %}
-//Create a new Word document.
+// Create a new Word document.
 WordDocument document = new WordDocument();
-//Add one section and paragraph to the document.
+// Add one section and paragraph to the document.
 document.ensureMinimal();
-WTable table = (WTable)document.getLastSection().addTable();
-table.resetCells(3,2);
-table.get(0,0).addParagraph().appendText("Row 1 Cell 1");
-table.get(0,1).addParagraph().appendText("Row 1 Cell 2");
-table.get(1,0).addParagraph().appendText("Row 2 Cell 1");
-table.get(1,1).addParagraph().appendText("Row 2 Cell 2");
-table.get(2,0).addParagraph().appendText("Row 3 Cell 1");
-table.get(2,1).addParagraph().appendText("Row 3 Cell2");
+WTable table = (WTable) document.getLastSection().addTable();
+table.resetCells(3, 2);
+table.get(0, 0).addParagraph().appendText("Row 1 Cell 1");
+table.get(0, 1).addParagraph().appendText("Row 1 Cell 2");
+table.get(1, 0).addParagraph().appendText("Row 2 Cell 1");
+table.get(1, 1).addParagraph().appendText("Row 2 Cell 2");
+table.get(2, 0).addParagraph().appendText("Row 3 Cell 1");
+table.get(2, 1).addParagraph().appendText("Row 3 Cell 2");
 
-//Add a new custom table style.
-WTableStyle tableStyle = (WTableStyle)document.addTableStyle("CustomStyle1");
-tableStyle.getTableProperties().setRowStripe((long)1);
-//Apply conditional formatting for the first row.
+// Add a new custom table style.
+WTableStyle tableStyle = (WTableStyle) document.addTableStyle("CustomStyle1");
+tableStyle.getTableProperties().setRowStripe((long) 1);
+// Apply conditional formatting for the first row.
 ConditionalFormattingStyle firstRowStyle = tableStyle.getConditionalFormattingStyles().add(ConditionalFormattingType.FirstRow);
 firstRowStyle.getCharacterFormat().setBold(true);
-//Apply conditional formatting for the odd row.
+// Apply conditional formatting for odd rows.
 ConditionalFormattingStyle oddRowBandingStyle = tableStyle.getConditionalFormattingStyles().add(ConditionalFormattingType.OddRowBanding);
 oddRowBandingStyle.getCharacterFormat().setItalic(true);
-//Apply built-in table style as base style for CustomStyle1.
+// Apply built-in table style as base style for CustomStyle1.
 tableStyle.applyBaseStyle(BuiltinTableStyle.TableContemporary);
-//Apply the custom table style to the table.
+// Apply the custom table style to the table.
 table.applyStyle("CustomStyle1");
 document.getLastSection().addParagraph();
 
-//Create another table in the Word document.
-table=(WTable)document.getLastSection().addTable();
-table.resetCells(3,2);
-table.get(0,0).addParagraph().appendText("Row 1 Cell 1");
-table.get(0,1).addParagraph().appendText("Row 1 Cell 2");
-table.get(1,0).addParagraph().appendText("Row 2 Cell 1");
-table.get(1,1).addParagraph().appendText("Row 2 Cell 2");
-table.get(2,0).addParagraph().appendText("Row 3 Cell 1");
-table.get(2,1).addParagraph().appendText("Row 3 Cell2");
+// Create another table in the Word document.
+table = (WTable) document.getLastSection().addTable();
+table.resetCells(3, 2);
+table.get(0, 0).addParagraph().appendText("Row 1 Cell 1");
+table.get(0, 1).addParagraph().appendText("Row 1 Cell 2");
+table.get(1, 0).addParagraph().appendText("Row 2 Cell 1");
+table.get(1, 1).addParagraph().appendText("Row 2 Cell 2");
+table.get(2, 0).addParagraph().appendText("Row 3 Cell 1");
+table.get(2, 1).addParagraph().appendText("Row 3 Cell 2");
 
-//Add a new custom table style.
-tableStyle=(WTableStyle)document.addTableStyle("CustomStyle2");
-tableStyle.getTableProperties().setRowStripe((long)1);
- //Apply conditional formatting for the first row.
-firstRowStyle=tableStyle.getConditionalFormattingStyles().add(ConditionalFormattingType.FirstRow);
+// Add a new custom table style.
+tableStyle = (WTableStyle) document.addTableStyle("CustomStyle2");
+tableStyle.getTableProperties().setRowStripe((long) 1);
+// Apply conditional formatting for the first row.
+firstRowStyle = tableStyle.getConditionalFormattingStyles().add(ConditionalFormattingType.FirstRow);
 firstRowStyle.getParagraphFormat().setHorizontalAlignment(HorizontalAlignment.Center);
-//Apply conditional formatting for the odd row.
-oddRowBandingStyle=tableStyle.getConditionalFormattingStyles().add(ConditionalFormattingType.OddRowBanding);
+// Apply conditional formatting for odd rows.
+oddRowBandingStyle = tableStyle.getConditionalFormattingStyles().add(ConditionalFormattingType.OddRowBanding);
 oddRowBandingStyle.getCharacterFormat().setTextColor((ColorSupport.getRed()).clone());
 
-//Add a new custom table style.
-WTableStyle tableStyle2 = (WTableStyle)document.addTableStyle("CustomStyle3");
-tableStyle2.getTableProperties().setRowStripe((long)1);
-//Apply conditional formatting for the first row.
+// Add a new custom table style.
+WTableStyle tableStyle2 = (WTableStyle) document.addTableStyle("CustomStyle3");
+tableStyle2.getTableProperties().setRowStripe((long) 1);
+// Apply conditional formatting for the first row.
 ConditionalFormattingStyle firstRowStyle2 = tableStyle2.getConditionalFormattingStyles().add(ConditionalFormattingType.FirstRow);
 firstRowStyle2.getCellProperties().setBackColor((ColorSupport.getBlue()).clone());
-//Apply conditional formatting for the odd row.
+// Apply conditional formatting for odd rows.
 ConditionalFormattingStyle oddRowStyle2 = tableStyle2.getConditionalFormattingStyles().add(ConditionalFormattingType.OddRowBanding);
 oddRowStyle2.getCellProperties().setBackColor((ColorSupport.getYellow()).clone());
-//Apply custom table style as base style for another custom table style.
+// Apply custom table style as base style for another custom table style.
 tableStyle2.applyBaseStyle("CustomStyle2");
-//Apply the custom table style to the table.
+// Apply the custom table style to the table.
 table.applyStyle("CustomStyle3");
-//Save the Word document.
-document.save("Sample.docx",FormatType.Docx);
-//Close the Word document
+// Save the Word document.
+document.save("Sample.docx", FormatType.Docx);
+// Close the Word document.
 document.close();
 {% endhighlight %}
 
-{% endtabs %}  
- 
-## Merging cells vertically and horizontally
+{% endtabs %}
+
+## Merging Cells Vertically and Horizontally
 
 You can combine two or more table cells located in the same row or column into a single cell.
 
-The following code example illustrates how to apply horizontal merge to specified range of cells in a specified row.
+The following code example illustrates how to apply horizontal merge to a specified range of cells in a specified row.
 
-{% tabs %}  
+{% tabs %}
 
 {% highlight JAVA %}
-//Create an instance of WordDocument class.
+// Create an instance of WordDocument class.
 WordDocument document = new WordDocument();
 IWSection section = document.addSection();
 section.addParagraph().appendText("Horizontal merging of Table cells");
 IWTable table = section.addTable();
-table.resetCells(5,5);
-//Specify the horizontal merge from second cell to fifth cell in third row.
-table.applyHorizontalMerge(2,1,4);
-//Save and close the document instance.
-document.save("HorizontalMerge.docx",FormatType.Docx);
+table.resetCells(5, 5);
+// Specify the horizontal merge from the second cell to the fifth cell in the third row.
+table.applyHorizontalMerge(2, 1, 4);
+// Save and close the document instance.
+document.save("HorizontalMerge.docx", FormatType.Docx);
 document.close();
 {% endhighlight %}
 
-{% endtabs %}  
+{% endtabs %}
 
-The following code example illustrates how to apply vertical merge to specified range of rows in a specified column.
+The following code example illustrates how to apply vertical merge to a specified range of rows in a specified column.
 
-{% tabs %}  
+{% tabs %}
 
 {% highlight JAVA %}
-//Create an instance of WordDocument class.
+// Create an instance of WordDocument class.
 WordDocument document = new WordDocument();
 IWSection section = document.addSection();
 section.addParagraph().appendText("Vertical merging of Table cells");
 IWTable table = section.addTable();
-table.resetCells(5,5);
-//Specify the vertical merge to the third cell, from second row to fifth row.
-table.applyVerticalMerge(2,1,4);
-//Save and close the document instance.
-document.save("VerticalMerge.docx",FormatType.Docx);
+table.resetCells(5, 5);
+// Specify the vertical merge to the third cell, from the second row to the fifth row.
+table.applyVerticalMerge(2, 1, 4);
+// Save and close the document instance.
+document.save("VerticalMerge.docx", FormatType.Docx);
 document.close();
 {% endhighlight %}
 
-{% endtabs %}  
+{% endtabs %}
 
-The following code example illustrate how to create a table that contains horizontal merged cells.
+The following code example illustrates how to create a table that contains horizontally merged cells.
 
-{% tabs %}  
+{% tabs %}
 
 {% highlight JAVA %}
-//Create an instance of WordDocument class.
+// Create an instance of WordDocument class.
 WordDocument document = new WordDocument();
 IWSection section = document.addSection();
 section.addParagraph().appendText("Horizontal merging of Table cells");
 IWTable table = section.addTable();
-table.resetCells(2,2);
-//Add content to table cell.
-table.get(0,0).addParagraph().appendText("First row, First cell");
-table.get(0,1).addParagraph().appendText("First row, Second cell");
-table.get(1,0).addParagraph().appendText("Second row, First cell");
-table.get(1,1).addParagraph().appendText("Second row, Second cell");
-//Specifies the horizontal merge start to first row, first cell.
-table.get(0,0).getCellFormat().setHorizontalMerge(CellMerge.Start);
-//Modify the cell content.
-table.get(0,0).getParagraphs().get(0).setText("Horizontally merged cell");
-//Specify the horizontal merge continue to second row second cell.
-table.get(0,1).getCellFormat().setHorizontalMerge(CellMerge.Continue);
-//Save and close the document instance.
-document.save("HorizontalMerge.docx",FormatType.Docx);
+table.resetCells(2, 2);
+// Add content to table cells.
+table.get(0, 0).addParagraph().appendText("First row, First cell");
+table.get(0, 1).addParagraph().appendText("First row, Second cell");
+table.get(1, 0).addParagraph().appendText("Second row, First cell");
+table.get(1, 1).addParagraph().appendText("Second row, Second cell");
+// Specify the horizontal merge start to the first row, first cell.
+table.get(0, 0).getCellFormat().setHorizontalMerge(CellMerge.Start);
+// Modify the cell content.
+table.get(0, 0).getParagraphs().get(0).setText("Horizontally merged cell");
+// Specify the horizontal merge continuation to the second row, second cell.
+table.get(0, 1).getCellFormat().setHorizontalMerge(CellMerge.Continue);
+// Save and close the document instance.
+document.save("HorizontalMerge.docx", FormatType.Docx);
 document.close();
 {% endhighlight %}
 
-{% endtabs %} 
+{% endtabs %}
 
-The following code example illustrates how to create a table with vertical merged cells.
+The following code example illustrates how to create a table with vertically merged cells.
 
-{% tabs %} 
+{% tabs %}
 
 {% highlight JAVA %}
-//Create an instance of WordDocument class.
+// Create an instance of WordDocument class.
 WordDocument document = new WordDocument();
 IWSection section = document.addSection();
 section.addParagraph().appendText("Vertical merging of Table cells");
 IWTable table = section.addTable();
-table.resetCells(2,2);
-//Add content to table cells.
-table.get(0,0).addParagraph().appendText("First row, First cell");
-table.get(0,1).addParagraph().appendText("First row, Second cell");
-table.get(1,0).addParagraph().appendText("Second row, First cell");
-table.get(1,1).addParagraph().appendText("Second row, Second cell");
-//Specify the vertical merge start to first row first cell.
-table.get(0,0).getCellFormat().setVerticalMerge(CellMerge.Start);
-//Modify the cell content.
-table.get(0,0).getParagraphs().get(0).setText("Vertically merged cell");
-//Specify the vertical merge continue to second row first cell.
-table.get(1,0).getCellFormat().setVerticalMerge(CellMerge.Continue);
-//Save and close the document instance.
-document.save("VerticalMerge.docx",FormatType.Docx);
+table.resetCells(2, 2);
+// Add content to table cells.
+table.get(0, 0).addParagraph().appendText("First row, First cell");
+table.get(0, 1).addParagraph().appendText("First row, Second cell");
+table.get(1, 0).addParagraph().appendText("Second row, First cell");
+table.get(1, 1).addParagraph().appendText("Second row, Second cell");
+// Specify the vertical merge start to the first row, first cell.
+table.get(0, 0).getCellFormat().setVerticalMerge(CellMerge.Start);
+// Modify the cell content.
+table.get(0, 0).getParagraphs().get(0).setText("Vertically merged cell");
+// Specify the vertical merge continuation to the second row, first cell.
+table.get(1, 0).getCellFormat().setVerticalMerge(CellMerge.Continue);
+// Save and close the document instance.
+document.save("VerticalMerge.docx", FormatType.Docx);
 document.close();
 {% endhighlight %}
 
-{% endtabs %}  
+{% endtabs %}
   
 ## Specifying table header row to repeat on each page
 
-You can specify one or more rows in a table to be repeated as header row at the top of each page, when the table spans across multiple pages. 
+You can specify one or more rows in a table to be repeated as header rows at the top of each page when the table spans across multiple pages.
 
-* In the case of a single header row, it must be the first row in the table. 
-* In the case of multiple header rows, then header rows must be consecutive from the first row of the table.
+* In the case of a single header row, it must be the first row in the table.
+* In the case of multiple header rows, the header rows must be consecutive from the first row of the table.
 
-N>  Heading rows do not have any effect with nested tables in Microsoft Word as well as DocIO 
+N> Heading rows do not have any effect with nested tables in Microsoft Word as well as DocIO.
 
 The following code example illustrates how to create a table with a single header row.
 
@@ -669,22 +635,22 @@ The following code example illustrates how to create a table with a single heade
 WordDocument document = new WordDocument();
 IWSection section = document.addSection();
 IWTable table = section.addTable();
-table.resetCells(50,1);
+table.resetCells(50, 1);
 WTableRow row = table.getRows().get(0);
 //Specify the first row as a header row of the table.
 row.setIsHeader(true);
 row.setHeight(20);
 row.setHeightType(TableRowHeightType.AtLeast);
 row.getCells().get(0).addParagraph().appendText("Header Row");
-for(int i = 1;i<50;i++)
-{
-	row=table.getRows().get(i);
-	row.setHeight(20);
-	row.setHeightType(TableRowHeightType.AtLeast);
-	row.getCells().get(0).addParagraph().appendText("Text in Row" + i);
+for (int i = 1; i < 50; i++) {
+ 
+    row = table.getRows().get(i);
+    row.setHeight(20);
+    row.setHeightType(TableRowHeightType.AtLeast);
+    row.getCells().get(0).addParagraph().appendText("Text in Row" + i);
 }
 //Save and close the document instance.
-document.save("TableWithHeaderRow.docx",FormatType.Docx);
+document.save("TableWithHeaderRow.docx", FormatType.Docx);
 document.close();
 {% endhighlight %}
 
@@ -692,33 +658,35 @@ document.close();
 
 ## Keeping rows from breaking across pages
 
-You can enable or disable the table row content to split across multiple pages, when the row contents do not fit in a previous page.
+You can enable or disable the table row content to split across multiple pages when the row contents do not fit in a previous page.
 
 The following code example illustrates how to disable all the table rows from splitting across multiple pages.
 
 {% tabs %} 
 
 {% highlight JAVA %}
-//Creates an instance of WordDocument class.
+//Create an instance of WordDocument class.
 WordDocument document = new WordDocument("Template.docx");
 WSection section = document.getSections().get(0);
 WTable table = section.getTables().get(0);
 //Disable breaking across pages for all rows in the table.
-for(Object row_tempObj : table.getRows())
-{
-	WTableRow row = (WTableRow)row_tempObj;
-	row.getRowFormat().setIsBreakAcrossPages(false);
+for (Object row_tempObj : table.getRows()) {
+ 
+    WTableRow row = (WTableRow) row_tempObj;
+    row.getRowFormat().setIsBreakAcrossPages(false);
 }
 //Save and close the document instance.
-document.save("Result.docx",FormatType.Docx);
+document.save("Result.docx", FormatType.Docx);
 document.close();
 {% endhighlight %}
 
-{% endtabs %} 
+{% endtabs %}  
+
+			  
   
 ## Iterating through table elements
 
-The following code example illustrates how to iterate through the table and apply back color to a particular cell.
+The following code example illustrates how to iterate through the table and apply a background color to a particular cell.
 
 {% tabs %} 
 
@@ -728,34 +696,34 @@ WordDocument document = new WordDocument("Template.docx");
 WSection section = document.getSections().get(0);
 WTable table = section.getTables().get(0);
 //Iterate the rows of the table.
-for(Object row_tempObj : table.getRows())
-{
-	WTableRow row = (WTableRow)row_tempObj;
-	//Iterate through the cells of rows.
-	for(Object cell_tempObj : row.getCells())
-	{
-		WTableCell cell = (WTableCell)cell_tempObj;
-		//Iterate through the paragraphs of the cell.
-		for(Object paragraph_tempObj : cell.getParagraphs())
-		{
-			WParagraph paragraph = (WParagraph)paragraph_tempObj;
-			//When the paragraph contains text Panda then apply green as back color to cell.
-			if(paragraph.getText().contains("panda"))
-				cell.getCellFormat().setBackColor(ColorSupport.getGreen());
-		}
-	}
+for (Object row_tempObj : table.getRows()) {
+ 
+    WTableRow row = (WTableRow) row_tempObj;
+    //Iterate through the cells of rows.
+    for (Object cell_tempObj : row.getCells()) {
+  
+        WTableCell cell = (WTableCell) cell_tempObj;
+        //Iterate through the paragraphs of the cell.
+        for (Object paragraph_tempObj : cell.getParagraphs()) {
+   
+            WParagraph paragraph = (WParagraph) paragraph_tempObj;
+            //When the paragraph contains text "Panda" then apply green as the background color to the cell.
+            if (paragraph.getText().contains("Panda"))
+                cell.getCellFormat().setBackColor(ColorSupport.getGreen());
+        }
+    }
 }
 //Save and close the document instance.
-document.save("Sample.docx",FormatType.Docx);
+document.save("Sample.docx", FormatType.Docx);
 document.close();
-document.Close();
+				 
 {% endhighlight %}
 
 {% endtabs %}
 
 ## Removing the table
 
-You can remove a table from a text body by its instance or by its index position in the text body item collection. The following code example shows how to remove a table in Word document.
+You can remove a table from a text body by its instance or by its index position in the text body item collection. The following code example shows how to remove a table in a Word document.
 
 {% tabs %} 
 
@@ -769,7 +737,7 @@ WTable table = section.getTables().get(0);
 //Remove a table from the text body.
 section.getBody().getChildEntities().remove(table);
 //Save the Word document.
-document.save("Sample.docx",FormatType.Docx);
+document.save("Sample.docx", FormatType.Docx);
 //Close the document.
 document.close();
 {% endhighlight %}
