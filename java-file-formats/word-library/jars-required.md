@@ -10,9 +10,9 @@ documentation: UG
 
 The following jar files are required to be referenced in your Java application.
 
-1. syncfusion<sup style="font-size:70%">&reg;</sup>-docio
+1. syncfusion-docio
 
-2. syncfusion<sup style="font-size:70%">&reg;</sup>-javahelper
+2. syncfusion-javahelper
 
 Get the dependent jar files by installing [file formats controls](https://www.syncfusion.com/sales/products/fileformats?utm_source=ug&utm_medium=listing&utm_campaign=java-word-library#). You can find the required jars in the build installed drive.
 
