@@ -5,9 +5,19 @@ platform: java-file-formats
 control: Word Library
 documentation: UG
 ---
-# Getting Started of Word library (DocIO)
+# Getting Started with the Word Library (DocIO)
 
-In this page, you can see how to create a simple Word document by using Syncfusion<sup style="font-size:70%">&reg;</sup> Java Word library APIs. For creating and manipulating a Word document, the following jar files are required to be referenced in your Java application.
+In this page, you can learn how to create a simple Word document by using the Syncfusion<sup style="font-size:70%">&reg;</sup> Java Word library APIs. To create and manipulate a Word document, reference the following jar files in your Java application.
+
+## Prerequisites
+
+Before you begin, make sure your development environment meets the following requirements:
+
+* **Java Development Kit (JDK):** Version 8 or later.
+* **Build tool:** Apache Maven or Gradle for dependency management.
+* **Syncfusion Java packages:** Refer to [Configure to download Syncfusion Java packages from Apache Maven](https://help.syncfusion.com/java-file-formats/installation/configure-to-download-syncfusion-java-packages-from-apache-maven) or [Configure to download Syncfusion Java packages from Gradle](https://help.syncfusion.com/java-file-formats/installation/configure-to-download-syncfusion-java-packages-from-gradle) to add DocIO to your project.
+* **Syncfusion license key:** Required from v19.1.0.x onward. See the [licensing overview](https://help.syncfusion.com/common/essential-studio/licensing/overview).
+* **Java IDE:** Eclipse, IntelliJ IDEA, or any editor of your choice.
 
 <table>
 <thead>  
@@ -43,7 +53,7 @@ Import the following package in your Java application.
 
 import com.syncfusion.docio.*;
 
-import com.synfusion.javahelper.system.*; 
+import com.syncfusion.javahelper.system.*;
 
 {% endhighlight %}
 
@@ -53,16 +63,18 @@ import com.synfusion.javahelper.system.*;
 
 The following code example explains how to create a new Word document with a few lines of the code.
 
+N> The snippets in this section are intended to be run inside a `public static void main(String[] args)` method. Wrap them in your own class as needed.
+
 {% tabs %}  
 
 {% highlight JAVA %}
-//Creates an instance of WordDocument Instance (Empty Word Document).
+// Create a new, empty Word document.
 WordDocument document = new WordDocument();
-//Add a section and paragraph in the empty document.
+// Add a section and a default paragraph to the empty document.
 document.ensureMinimal();
-//Append text to the last paragraph of the document.
+// Append text to the last paragraph of the document.
 document.getLastParagraph().appendText("Hello World");
-//Save and close the Word document.
+// Save and close the Word document.
 document.save("Result.docx");
 document.close();
 {% endhighlight %}
@@ -73,7 +85,7 @@ document.close();
 
 An entire Word document is represented by an instance of the `WordDocument` and it is the root element of DocIO’s DOM. The Word document contains a collection of sections. A Word document must contain at least one section.
 
-A section represents a group of paragraphs, tables, and more, that have a specific set of properties used to define the pages, a number of columns, headers, and footers, and more, that decides how the text appears. A section should contain at least one paragraph in this body.
+A section represents a group of paragraphs, tables, and other elements that share a specific set of properties used to define page size, number of columns, headers and footers, and other layout settings that control how the text appears. A section's body should contain at least one paragraph.
 
 The following code example explains how to add a section into a `WordDocument` instance.
 
@@ -97,19 +109,19 @@ The following code example explains how to add a paragraph into a Word document.
 {% tabs %} 
 
 {% highlight JAVA %}
-//Add a new simple paragraph into the section.
+// Add a new simple paragraph to the section.
 IWParagraph firstParagraph = section.addParagraph();
-//Set the paragraph's horizontal alignment as justify.
+// Set the paragraph's horizontal alignment to justify.
 firstParagraph.getParagraphFormat().setHorizontalAlignment(HorizontalAlignment.Justify);
-//Add a text range into the paragraph.
+// Add a text range to the paragraph.
 IWTextRange firstTextRange = firstParagraph.appendText("AdventureWorks Cycles,");
-//set the font formatting of the text range.
+// Set the font formatting of the text range.
 firstTextRange.getCharacterFormat().setBoldBidi(true);
 firstTextRange.getCharacterFormat().setFontName("Calibri");
-firstTextRange.getCharacterFormat().setFontSize(14) ;
-//Add another text range into the paragraph.
+firstTextRange.getCharacterFormat().setFontSize(14);
+// Add another text range to the same paragraph.
 IWTextRange secondTextRange = firstParagraph.appendText(" the fictitious company on which the AdventureWorks sample databases are based, is a large, multinational manufacturing company.");
-//set the font formatting of the text range.
+// Set the font formatting of the text range.
 secondTextRange.getCharacterFormat().setFontName("Calibri");
 secondTextRange.getCharacterFormat().setFontSize(11);
 {% endhighlight %}
@@ -324,16 +336,16 @@ For example – let’s consider that you have a template document as shown.
 
 Here in this template, the employees are the group name and the exact same name should be used while performing the Mail merge through code. There are two special merge fields “TableStart:Employees” and “TableEnd:Employees” to denote the start and end of the Mail merge group.
 
-To merge an image in the replace of a merge field, you need to add a prefix (“Image:”)the merge field name.
+To merge an image in place of a merge field, prefix the merge field name with `Image:`.
 
-For example, the merge field name should be like “<<Image:Photo>>”(<<Image:MergeFieldName>>)
+For example, the merge field name should look like `«Image:Photo»` (in general, `«Image:MergeFieldName»`).
 
-The following code example shows how to perform a Mail merge with objects.
+The following conceptual example illustrates the structure of the operation. Refer to the link above for a runnable, API-correct version.
 
 {% tabs %}  
 
 {% highlight JAVA %}
-//Loads an existing Word document into DocIO instance.
+//Load the template document that contains the merge fields.
 WordDocument document = new WordDocument("EmployeesReportDemo.docx");
 //Gets the employee details as IEnumerable collection.
 ListSupport<Employee> employeeList = getEmployees();
