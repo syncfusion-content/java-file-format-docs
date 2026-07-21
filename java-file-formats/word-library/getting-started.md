@@ -340,14 +340,12 @@ To merge an image in place of a merge field, prefix the merge field name with `I
 
 For example, the merge field name should look like `«Image:Photo»` (in general, `«Image:MergeFieldName»`).
 
-For example, the merge field name should be like “<<Image:Photo>>”(<<Image:MergeFieldName>>)
-
 The following conceptual example illustrates the structure of the operation. Refer to the link above for a runnable, API-correct version.
 
 {% tabs %}  
 
 {% highlight JAVA %}
-// 1. Load the template document that contains the merge fields.
+//Load the template document that contains the merge fields.
 WordDocument document = new WordDocument("EmployeesReportDemo.docx");
 //Gets the employee details as IEnumerable collection.
 ListSupport<Employee> employeeList = getEmployees();
