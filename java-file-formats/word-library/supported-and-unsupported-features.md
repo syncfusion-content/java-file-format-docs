@@ -278,8 +278,8 @@ No<br/><br/></td></tr>
 <tr>
 <td>
 Equation<br/><br/></td><td>
-No<br/><br/></td><td>
-No<br/><br/></td><td>
+Yes<br/><br/></td><td>
+Yes<br/><br/></td><td>
 No<br/><br/></td><td>
 No<br/><br/></td></tr>
 <tr>

@@ -1,10 +1,10 @@
 ---
 layout: post
 title: Installation Errors in FileFormats - Syncfusion
-description: Learn here about the common installation errors and solution to those errors in Syncfusion FileFormats Components installation.
+description: Learn here about the common installation errors and solutions to those errors in Syncfusion FileFormats Components installation.
 platform: java-file-formats
 control: Installation and Deployment
-documentation: ug
+documentation: UG
 
 ---
 
@@ -33,7 +33,7 @@ You are attempting to use a Trial unlock key to unlock the licensed installer.
 
 ### Suggested solution
 
-Only a licensed unlock key can unlock a licensed installer. So, to unlock the Licensed installer, use the Licensed unlock key. To generate the licensed unlock key, refer to [this](http://syncfusion.com/kb/2326) article.
+Only a licensed unlock key can unlock a licensed installer. So, to unlock the Licensed installer, use the Licensed unlock key. To generate the licensed unlock key, refer to [this](https://www.syncfusion.com/kb/2326) article.
 
 
 ## License has expired
@@ -77,9 +77,9 @@ You can choose from the options listed below.
 
 The following are possible causes of this error:
 
-* When your trial period expired
-* When you don't have a license or an active trial
-* You are not the license holder of your license 
+* Your trial period has expired.
+* You do not have a license or an active trial.
+* You are not the license holder for your organization's license. 
 * Your account administrator has not yet assigned you a license.
 
 ### Suggested solution
@@ -88,8 +88,8 @@ You can choose from the options listed below.
 
 1. You can get a new license [here](https://www.syncfusion.com/sales/products). 
 2. Contact your account administrator. 
-3. Send an email to  <clientrelations@syncfusion.com> to request a license. 
-4. You can reach out to our sales team by emailing  <salessupport@syncfusion.com>.
+3. Send an email to <clientrelations@syncfusion.com> to request a license. 
+4. You can reach out to our sales team by emailing <salessupport@syncfusion.com>.
 
 ## Unable to install because of another installation
 
@@ -105,7 +105,7 @@ You are trying to install when another installation is already running in your m
 
 ### Suggested solution
 
-Open and kill the msiexec process in the task manager and then continue to install Syncfusion<sup style="font-size:70%">&reg;</sup>. If the problem is still present, restart the computer and try Syncfusion<sup style="font-size:70%">&reg;</sup> installer. 
+Open the Task Manager and end the msiexec process, then continue to install Syncfusion<sup style="font-size:70%">&reg;</sup>. If the problem is still present, restart the computer and try the Syncfusion<sup style="font-size:70%">&reg;</sup> installer again. 
 
 1. Open the Windows Task Manager.
 
@@ -141,7 +141,7 @@ You have enabled controlled folder access settings on your computer.
 
 1.	We will ship our demos in the public documents folder by default. 
 2.	You have controlled folder access enabled on your machine, so our demos cannot be installed in the documents folder. If you need to install our demos in the Documents folder, follow the steps in this [link](https://support.microsoft.com/en-us/windows/allow-an-app-to-access-controlled-folders-b5b6627a-b008-2ca2-7931-7e51e912b034) and disable the controlled folder access.
-3.	You can enable this option after the installing our Syncfusion<sup style="font-size:70%">&reg;</sup> setup.
+3.	You can enable this option after installing our Syncfusion<sup style="font-size:70%">&reg;</sup> setup.
 
 **Suggestion 2:**
 

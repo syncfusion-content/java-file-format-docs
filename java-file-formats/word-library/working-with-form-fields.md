@@ -7,9 +7,9 @@ documentation: UG
 ---
 # Working with Form Fields
 
-You can create template document with form fields such as Text, Checkbox and Drop-Down. You can also open an existing template document and fill the form fields with the specified data. 
+You can create a template document with form fields such as Text, Checkbox, and Drop-Down. You can also open an existing template document and fill the form fields with the specified data.
 
-The following are the types of form field in the Word document
+The following are the types of form fields in a Word document:
 
 * Checkbox – represented by an instance of WCheckBox
 * Drop-down – represented by an instance of WDropDownFormField

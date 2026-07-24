@@ -8,13 +8,13 @@ documentation: UG
 
 # Event support for Mail merge
 
-The `MailMerge` class provides event support to customize the document contents and merging image data during the Mail merge process. The following events are supported by Essential<sup style="font-size:70%">&reg;</sup> DocIO during Mail merge process:
+The `MailMerge` class provides event support to customize the document contents and merging image data during the Mail merge process. The following events are supported by Syncfusion<sup style="font-size:70%">&reg;</sup> Word Library (DocIO) during the Mail merge process:
 
-* `MergeField`- occurs when a **Mail merge field** except image Mail merge field is encountered.
+* `MergeField` - occurs when a **Mail merge field** except image Mail merge field is encountered.
 
-* `MergeImageField`- occurs when an **image Mail merge field** is encountered.
+* `MergeImageField` - occurs when an **image Mail merge field** is encountered.
 
-* `BeforeClearGroupField`- occurs when an **unmerged group field** is encountered.
+* `BeforeClearGroupField` - occurs when an **unmerged group field** is encountered.
 
 ## MergeField Event
 
@@ -81,7 +81,7 @@ private void applyAlternateRecordsTextColor (Object sender, MergeFieldEventArgs 
 
 {% endtabs %}  
 
-The following code example shows getDataTable method which are is to get data for mail merge.
+The following code example shows the getDataTable method, which is used to get data for mail merge.
 
 {% tabs %} 
 
@@ -138,7 +138,7 @@ public void add(MergeImageFieldEventHandler delegate) throws Exception
 public void remove(MergeImageFieldEventHandler delegate) throws Exception 
 {
 	if (delegate != null)
-		elegateList.remove(delegate);
+		delegateList.remove(delegate);
 }
 });
 //Specifies the field names and field values.

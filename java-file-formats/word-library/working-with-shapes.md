@@ -1,6 +1,6 @@
 ---
 title: Working with Shapes | Syncfusion
-description: This section describes how to work with the shapes and groupshape in Word document using Syncfusion Java Word library (Essential DocIO)
+description: This section describes how to work with the shapes and group shape in Word document using Syncfusion Java Word library (Essential DocIO)
 platform: java-file-formats
 control: Word Library
 documentation: UG
@@ -126,7 +126,7 @@ document.close();
 
 ## Grouping shapes
 
-Word library now allows you to create or group multiple shapes, pictures, text boxes as a group shape in Word document (DOCX) and preserve it as in DOCX and WordML format conversions.
+Word library now allows you to create a group of multiple shapes, pictures, text boxes as a group shape in Word document (DOCX) and preserve it as in DOCX and WordML format conversions.
 
 You can create a document with group shapes by using Microsoft Word. It provides an option to group a set of shapes and images as a single shape and a group shape as individual item.
 ![Create Group shape in Microsoft Word](Working-with-Shapes_images/Working-with-Shapes_img1.jpeg)

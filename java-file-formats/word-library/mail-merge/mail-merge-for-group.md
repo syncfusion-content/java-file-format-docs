@@ -8,7 +8,7 @@ documentation: UG
 
 # Mail merge for a group
 
-You can perform Mail merge and append multiple records from data source within a specified region to a template document. The region between start and end groups merge fields. It gets repeated for every record from the data source.
+You can perform Mail merge and append multiple records from a data source within a specified region to a template document. The region between start and end group merge fields gets repeated for every record from the data source.
 
 ## Create template for group mail merge
 
@@ -35,7 +35,7 @@ You can perform Mail merge with Java objects in a template document. The followi
 
 {% highlight JAVA %}
 //Loads an existing Word document into DocIO instance.
-WordDocument document = new WordDocument("EmployeesReportDemo.docx");
+WordDocument document = new WordDocument("EmployeesReportDemo.docx", FormatType.Docx);
 //Gets the employee details as IEnumerable collection.
 ListSupport<Employee> employeeList = getEmployees();
 //Uses the mail merge events handler for image fields.
@@ -70,7 +70,7 @@ MailMergeDataTable dataSource = new MailMergeDataTable("Employees",employeeList)
 //Executes the mail merge for group.
 document.getMailMerge().executeGroup(dataSource);
 //Saves and closes the WordDocument instance.
-document.save("Sample.docx");
+document.save("Sample.docx", FormatType.Docx);
 document.close();
 {% endhighlight %}
 

@@ -14,11 +14,11 @@ Comparing two Word documents allows you to identify the changes between two vers
 * Formatting
 
 N> 1. DocIO performs word level comparison while comparing two Word documents. In this scenario, if a single character in a word is changed, the entire word will be highlighted as changed.
-N> 2. Comparing two Word documents supported in DOCX format only.
+N> 2. Comparing two Word documents is supported in DOCX format only.
 
-## Compare two Word documents 
+## Compare two Word documents
 
-Compare the existing Word documents or documents created from scratch using the ``Compare`` method in the Java Word library (DocIO).
+You can compare existing Word documents or documents created from scratch using the `Compare` method in the Java Word library (DocIO).
 
 The following code example illustrates how to compare two Word documents.
 
@@ -44,9 +44,9 @@ revisedDocument.close();
 
 ![Compare Word documents in Java](../WorkingwithWordDocument_images/Compare-Word-documents-without-author.png)
 
-## Set Author and Date 
+## Set Author and Date
 
-Compare the two Word documents by setting the author and date for revisions to identify the changes. In DocIO, the default setting for the “author” field is “Author”, and the default setting for the “dateTime” field is the current time.
+You can compare two Word documents by setting the author and date for revisions to identify the changes. In DocIO, the default setting for the "author" field is "Author", and the default setting for the "dateTime" field is the current time.
 
 The following code example shows how to set the author and date for revision while comparing two Word documents.
 
@@ -74,7 +74,7 @@ revisedDocument.close();
 
 ## Comparison options
 
-You can customize the Word comparison using our ``ComparisonOptions`` in the DocIO.
+You can customize the Word comparison using the `ComparisonOptions` in the DocIO.
 
 ### Ignore format changes
 

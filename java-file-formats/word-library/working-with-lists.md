@@ -6,12 +6,12 @@ control: Word Library
 documentation: UG
 ---
 
-# Working with lists
+# Working with Lists
 
-Lists can organize and format the contents of a document in hierarchical way. There are nine levels in the list, starting from level 0 to level 8. DocIO supports both built-in list styles and custom list styles. The following are the types of list supported in DocIO: 
+Lists can organize and format the contents of a document in a hierarchical way. There are nine levels in the list, starting from level 0 to level 8. DocIO supports both built-in list styles and custom list styles. The following are the types of lists supported in DocIO:
 
 * Numbered list
-* Bulleted list 
+* Bulleted list
 
 ## Create Bulleted List
 
@@ -26,7 +26,7 @@ WordDocument document = new WordDocument();
 IWSection section = document.addSection();
 //Add a new paragraph to the section.
 IWParagraph paragraph = section.addParagraph();
-//Apply the default numbered list style.
+//Apply the default bulleted list style.
 paragraph.getListFormat().applyDefBulletStyle();
 //Add text to the paragraph.
 paragraph.appendText("List item 1");
@@ -301,12 +301,12 @@ paragraph = section.addParagraph();
 paragraph.appendText("Multilevel numbered list - Level 0");
 //Continue the last defined list.
 paragraph.getListFormat().continueListNumbering();
-//Increase the level indent.
+//Decrease the level indent.
 paragraph.getListFormat().decreaseIndentLevel();
 //Add a new paragraph.
 paragraph = section.addParagraph();
 paragraph.appendText("Multilevel numbered list - Level 1");
-//Continue he last defined list.
+//Continue the last defined list.
 paragraph.getListFormat().continueListNumbering();
 //Increase the level indent.
 paragraph.getListFormat().increaseIndentLevel();
@@ -371,7 +371,7 @@ document.close();
 
 The following code example explains how to create numbered list with prefix from previous level.
 
-N> The `NumberPrefix` value for the numbered list should meet the syntax “\u000N” to update the previous list level value as a prefix to the current list level. For example, it should be represented as (“\u0000.” or “\u0000.\u0001.”).
+N> The `NumberPrefix` value for the numbered list should meet the syntax “\u000N” to update the previous list level value as a prefix to the current list level. For example, it should be represented as ("\u0000." or "\u0000.\u0001.").
 {% tabs %}  
 
 {% highlight JAVA %}
@@ -428,11 +428,11 @@ document.close();
 
 ## Get list value
 
-You can get the string that represents the appearance of **list value of the paragraph** in the Word document using the `ListString` API. 
+You can get the string that represents the appearance of **the list value of the paragraph** in the Word document using the `ListString` API. 
 
-This API holds the static string of the list value recently calculated while saving the document as Text. It is not updated automatically for each modification done in the Word document. Hence, you should either invoke the `getText()` method of `WordDocument` or save the Word document as Text to get the actual list value from this API.
+This API holds the static string of the list value recently calculated while saving the document as text. It is not updated automatically for each modification done in the Word document. Hence, you should either invoke the `getText()` method of `WordDocument` or save the Word document as text to get the actual list value from this API.
 
-The following example shows how to **get a string that represents the appearance of list value of the paragraph**.
+The following example shows how to **get a string that represents the appearance of the list value of the paragraph**.
 
 {% tabs %}  
 
@@ -441,7 +441,7 @@ The following example shows how to **get a string that represents the appearance
 WordDocument document = new WordDocument("Template.docx");
 //Get the document text.
 document.getText();
-//Get the string that represents the appearance of list value of the paragraph.
+//Get the string that represents the appearance of the list value of the paragraph.
 String listString = document.getLastParagraph().getListString();
 //Save and close the WordDocument instance.
 document.save("Sample.docx", FormatType.Docx);
