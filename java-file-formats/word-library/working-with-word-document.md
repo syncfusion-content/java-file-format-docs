@@ -156,7 +156,7 @@ private void iterateTextBody(WTextBody textBody)throws Exception
 				//Process the paragraph contents.
 				//Iterate through the paragraph's DOM.
 				WParagraph paragraph = (WParagraph)bodyItemEntity;
-				terateParagraph(paragraph.getItems());
+			iterateParagraph(paragraph.getItems());
 				break;
 			case "Table":
 				//Table is a collection of rows and cells.

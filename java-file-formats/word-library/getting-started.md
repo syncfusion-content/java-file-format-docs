@@ -1,6 +1,6 @@
 ---
 title: Create a simple Word document in Java | Syncfusion
-description: This section illustrate how to create a new Word document from scratch in Java using Syncfusion Java Word library (Essential DocIO)
+description: This section illustrates how to create a new Word document from scratch in Java using the Syncfusion Java Word library (Essential DocIO).
 platform: java-file-formats
 control: Word Library
 documentation: UG
@@ -18,6 +18,8 @@ Before you begin, make sure your development environment meets the following req
 * **Syncfusion Java packages:** Refer to [Configure to download Syncfusion Java packages from Apache Maven](https://help.syncfusion.com/java-file-formats/installation/configure-to-download-syncfusion-java-packages-from-apache-maven) or [Configure to download Syncfusion Java packages from Gradle](https://help.syncfusion.com/java-file-formats/installation/configure-to-download-syncfusion-java-packages-from-gradle) to add DocIO to your project.
 * **Syncfusion license key:** Required from v19.1.0.x onward. See the [licensing overview](https://help.syncfusion.com/common/essential-studio/licensing/overview).
 * **Java IDE:** Eclipse, IntelliJ IDEA, or any editor of your choice.
+
+N> The Syncfusion Java Word library (Essential DocIO) is also required to be referenced in your application. The jar files listed below contain the core features needed for creating, reading, and manipulating a Word document.
 
 <table>
 <thead>  
@@ -92,11 +94,11 @@ The following code example explains how to add a section into a `WordDocument` i
 {% tabs %}  
 
 {% highlight JAVA %}
-//Create an instance of WordDocument Instance (Empty Word Document).
+//Create a WordDocument instance (empty Word document).
 WordDocument document = new WordDocument();
 //Add a new section into the Word document.
 IWSection section = document.addSection();
-//Specifies the page margins. 
+//Specify the page margins. 
 section.getPageSetup().getMargins().setAll(50);
 {% endhighlight %}
 
@@ -133,7 +135,7 @@ The following code example shows how to add an image into the Word document.
 {% tabs %}  
 
 {% highlight JAVA %}
-//Add another paragraph and aligns it as a center.
+//Add another paragraph and align it as center.
 IWParagraph paragraph = section.addParagraph();
 paragraph.getParagraphFormat().setHorizontalAlignment(HorizontalAlignment.Center);
 //Set after spacing for paragraph.
@@ -158,13 +160,13 @@ IWTable table = section.addTable();
 table.resetCells(2,2);
 //Access the instance of the cell (first row, first cell).
 WTableCell firstCell = table.getRows().get(0).getCells().get(0);
-//Specifies the width of the cell.
+//Specify the width of the cell.
 firstCell.setWidth(150);
-//Add a paragraph into the cell; a cell must have atleast 1 paragraph.
+//Add a paragraph into the cell; a cell must have at least one paragraph.
 paragraph=firstCell.addParagraph();		
 IWTextRange textRange = paragraph.appendText("Profile picture");
 textRange.getCharacterFormat().setBold(true);
-//Access the instance of cell (first row, second cell).
+//Access the instance of the cell (first row, second cell).
 WTableCell secondCell = table.getRows().get(0).getCells().get(1);
 secondCell.setWidth(330);
 paragraph=secondCell.addParagraph();
@@ -260,12 +262,12 @@ section.addParagraph();
 
 {% endtabs %}  
 
-Finally, save the document in the file system and close its instance.
+Finally, save the document to the file system and close its instance.
 {% tabs %} 
 
 {% highlight JAVA %}
-//Save the document in the given name and format.
-document.save(outputFileName,FormatType.Docx);
+//Save the document with the given name and format.
+document.save("Result.docx", FormatType.Docx);
 //Release the resources occupied by the WordDocument instance.
 document.close();
 {% endhighlight %}
@@ -279,7 +281,7 @@ The resultant Word document looks as follows.
 
 ## Performing Mail merge
 
-Essential<sup style="font-size:70%">&reg;</sup> DocIO allows you to generate documents by filling data in the template document from the data source. Mail merge operation automatically maps the column name in the data source and names of the merge fields in the template Word document and fills the data.
+Essential<sup style="font-size:70%">&reg;</sup> DocIO allows you to generate documents by filling data into the template document from a data source. The Mail merge operation automatically maps the column names in the data source to the merge-field names in the template Word document and fills the data.
 
 The following data sources are supported by the Essential<sup style="font-size:70%">&reg;</sup> DocIO for performing the Mail merge.
 
@@ -287,7 +289,7 @@ The following data sources are supported by the Essential<sup style="font-size:7
 * DataSet
 * DataTable
 
-Also, you can perform more than one Mail merge operations over the same template to generate documents as per your requirement.
+Also, you can perform more than one Mail merge operation over the same template to generate documents as per your requirement.
 
 Follow the given steps to perform a simple Mail merge in a Word document.
 
@@ -295,7 +297,7 @@ Let’s consider that you have a template Word document with the merge fields as
 
 ![Performing Mail merge input document](GettingStarted_images/GettingStarted_img2.png)
 
-The `MailMerge` class provides various overloads for the `execute` method to perform a Mail merge from the various data source. The Mail merge operation replaces the matching merge fields with the respective data.
+The `MailMerge` class provides various overloads for the `execute` method to perform a Mail merge from various data sources. The Mail merge operation replaces the matching merge fields with the respective data.
 
 The following code example shows how to perform a simple Mail merge by using a string array.
 
@@ -323,14 +325,14 @@ The resultant Word document looks as follows.
 
 ### Simple Mail merge with Group
 
-You can perform a Mail merge with the group to append multiple records from the data source into a single document. The group is a part of the document enclosed by two special merge fields named «TableStart:TableName» and «TableEnd:TableName»
+You can perform a Mail merge with a group to append multiple records from the data source into a single document. The group is a part of the document enclosed by two special merge fields named «TableStart:TableName» and «TableEnd:TableName».
 
 * «TableStart:TableName»: Denotes the start of the group.
 * «TableEnd:TableName»: Denotes the end of the group.
 
 The region between these two merge fields gets repeated for every record from the data source.
 
-For example – let’s consider that you have a template document as shown.
+For example, let’s consider that you have a template document as shown.
 
 ![Simple Mail merge with Group input document](GettingStarted_images/GettingStarted_img4.png)
 
@@ -340,54 +342,56 @@ To merge an image in place of a merge field, prefix the merge field name with `I
 
 For example, the merge field name should look like `«Image:Photo»` (in general, `«Image:MergeFieldName»`).
 
-The following conceptual example illustrates the structure of the operation. Refer to the link above for a runnable, API-correct version.
+The following code example illustrates how to perform a Mail merge with a group that includes image fields. The example uses a `MergeImageFieldEventHandler` to bind images from the file system for fields that are prefixed with `Image:`.
+
+N> For more information on Mail merge events and APIs, refer to the [Mail merge](https://help.syncfusion.com/java-file-formats/word-library/mail-merge) documentation.
 
 {% tabs %}  
 
 {% highlight JAVA %}
 //Load the template document that contains the merge fields.
 WordDocument document = new WordDocument("EmployeesReportDemo.docx");
-//Gets the employee details as IEnumerable collection.
+//Gets the employee details as a list.
 ListSupport<Employee> employeeList = getEmployees();
-//Uses the mail merge events handler for image fields.
+//Use the mail merge event handler for image fields.
 document.getMailMerge().MergeImageField.add("mergeField_EmployeeImage", new MergeImageFieldEventHandler() {
 ListSupport<MergeImageFieldEventHandler> delegateList = new ListSupport<MergeImageFieldEventHandler>(
 MergeImageFieldEventHandler.class);
-//Represents event handling for MergeFieldEventHandlerCollection.
+//Handles the MergeImageField event.
 public void invoke(Object sender, MergeImageFieldEventArgs args) throws Exception 
 {
 	mergeField_EmployeeImage(sender, args);
 }
-//Represents the method that handles MergeField event.
+//Dynamically invokes the MergeImageField event.
 public void dynamicInvoke(Object... args) throws Exception 
 {
 	mergeField_EmployeeImage((Object) args[0], (MergeImageFieldEventArgs) args[1]);
 }
-//Represents the method that handles MergeField event to add collection item.
+//Adds a delegate to the MergeImageField event handler collection.
 public void add(MergeImageFieldEventHandler delegate) throws Exception 
 {
 	if (delegate != null)
 		delegateList.add(delegate);
 }
-//Represents the method that handles MergeField event to remove collection item.
+//Removes a delegate from the MergeImageField event handler collection.
 public void remove(MergeImageFieldEventHandler delegate) throws Exception 
 {
 	if (delegate != null)
 		delegateList.remove(delegate);
 }
 });
-//Creates an instance of MailMergeDataTable by specifying MailMerge group name and IEnumerable collection.
-MailMergeDataTable dataSource = new MailMergeDataTable("Employees",employeeList);
-//Executes the mail merge for group.
+//Creates an instance of MailMergeDataTable by specifying the MailMerge group name and the list.
+MailMergeDataTable dataSource = new MailMergeDataTable("Employees", employeeList);
+//Executes the mail merge for the group.
 document.getMailMerge().executeGroup(dataSource);
 //Saves and closes the WordDocument instance.
-document.save("Sample.docx");
+document.save("Result.docx");
 document.close();
 {% endhighlight %}
 
 {% endtabs %}  
 
-The following code example shows getEmployees method which is used to get data for mail merge.
+The following code example shows the `getEmployees` method, which is used to get data for mail merge.
 
 {% tabs %}  
 
@@ -403,7 +407,7 @@ public ListSupport<Employee> getEmployees()throws Exception
 
 {% endtabs %}
 
-The following code example shows how to bind the image from file system during Mail merge process by using MergeImageFieldEventHandler.
+The following code example shows how to bind an image from the file system during the Mail merge process by using the `MergeImageFieldEventHandler`.
 
 {% tabs %}  
 
@@ -413,9 +417,9 @@ private void mergeField_EmployeeImage(Object sender, MergeImageFieldEventArgs ar
 	//Binds image from file system during mail merge.
 	if ((args.getFieldName()).equals("Photo")) 
 	{
-		String ProductFileName = args.getFieldValue().toString();
+		String productFileName = args.getFieldValue().toString();
 		//Gets the image from file system.
-		FileStreamSupport imageStream = new FileStreamSupport(ProductFileName, FileMode.Open, FileAccess.Read);
+		FileStreamSupport imageStream = new FileStreamSupport(productFileName, FileMode.Open, FileAccess.Read);
 		ByteArrayInputStream stream = new ByteArrayInputStream(imageStream.toArray());
 		args.setImageStream(stream);
 	}
@@ -425,7 +429,7 @@ private void mergeField_EmployeeImage(Object sender, MergeImageFieldEventArgs ar
 
 {% endtabs %}
 
-The following code example provides supporting class for the above code.
+The following code example provides the supporting class for the above code.
 {% tabs %}  
 
 {% highlight JAVA %}
@@ -508,7 +512,7 @@ public class Employee
 	public String setPhoto(String image)throws Exception
 	{
 		_photo=image;
-	return image;
+		return image;
 	}
 	public Employee(String firstName,String lastName,String title,String address,String city,String region,String country,String photoFilePath)throws Exception
 	{

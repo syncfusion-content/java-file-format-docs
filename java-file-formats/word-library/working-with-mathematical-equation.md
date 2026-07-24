@@ -1,15 +1,15 @@
 ---
 title: Working with Mathematical Equation | Syncfusion
-description: This section illustrates about create, modify and remove mathematical equation in Word document without MS Word or Office interop
+description: This section illustrates how to create, modify, and remove mathematical equations in a Word document without MS Word or Office interop
 platform: java-file-formats
 control: Word Library
 documentation: UG
 ---
 # Working with Mathematical Equation
 
-Equations in Word document are combination of mathematical symbols or text. For example, you can create a Fourier series equation in Word document.
+Equations in a Word document are a combination of mathematical symbols or text. For example, you can create a Fourier series equation in a Word document.
 
-The Java Word library offers two ways to create and modify equations in Word document.
+The Java Word library offers two ways to create and modify equations in a Word document.
 
 * [Using WMath DOM](https://help.syncfusion.com/java-file-formats/word-library/working-with-mathematical-equation#types-of-equation).
 * [Using LaTeX](https://help.syncfusion.com/java-file-formats/word-library/working-with-latex).
@@ -18,7 +18,7 @@ The Java Word library offers two ways to create and modify equations in Word doc
 
 ## Types of equation
 
-The following different structures of equation can be created by using the Essential<sup style="font-size:70%">&reg;</sup> DocIO.
+The following different structures of equations can be created by using the Essential<sup style="font-size:70%">&reg;</sup> DocIO.
 
 ![Different structures of equation in Microsoft Word application](WorkingwithMathematicalEquation_images/EquationStructures.png)
 
@@ -50,13 +50,13 @@ You can add an accent mark to the equation. The following code example shows how
 WordDocument document = new WordDocument();
 //Adds one section and one paragraph to the document
 document.ensureMinimal();
-//Appends a new mathematical equation  to the paragraph
+//Appends a new mathematical equation to the paragraph.
 WMath math = document.getLastParagraph().appendMath();
-//Adds a new math
+//Adds a new math.
 IOfficeMath officeMath = math.getMathParagraph().getMaths().add();
-//Adds an accent equation
+//Adds an accent equation.
 IOfficeMathAccent mathAccent = (IOfficeMathAccent) officeMath.getFunctions().add(MathFunctionType.Accent);
-//Sets the accent character
+//Sets the accent character.
 mathAccent.setAccentCharacter("̆");
 //Adds the run element for accent
 IOfficeMathRunElement officeMathRunElement = (IOfficeMathRunElement) mathAccent.getEquation().getFunctions().add(MathFunctionType.RunElement);
@@ -77,13 +77,13 @@ document.close();
 
 ### Bar
 
-You can add a bar (which adds horizontal line on top or bottom) to the equation. The following code example shows how to add a bar to the equation.
+You can add a bar (which adds a horizontal line on top or bottom) to the equation. The following code example shows how to add a bar to the equation.
 
 {% tabs %}
 {% highlight JAVA %}
 //Creates a new Word document
 WordDocument document = new WordDocument();
-//Add a section and a paragraph in the empty document
+//Add a section and a paragraph in the empty document.
 document.ensureMinimal();
 //Appends a new mathematical equation to the paragraph
 WMath math = document.getLastParagraph().appendMath();
@@ -564,8 +564,7 @@ document.close();
 
 ### Phantom
 
-You can create a phantom equation to add the spacing of the phantom
-without displaying that base and suppressing part of the glyph from spacing considerations. The following code example shows how to create a phantom equation.
+You can create a phantom equation to add the spacing of the phantom without displaying that base and suppressing part of the glyph from spacing considerations. The following code example shows how to create a phantom equation.
 {% tabs %}
 {% highlight JAVA %}
 //Creates a new Word document

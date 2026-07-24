@@ -72,10 +72,10 @@ DOCM is a macro-enabled Word document. It is same as the DOCX document contains 
 WordDocument document = new WordDocument("Template.dotm");
 // Get the table.
 DataTableSupport table = getDataTable();
-// Execute the Mail Mmrge with groups.
+// Execute the Mail Merge with groups.
 document.getMailMerge().executeGroup(table);
 //Save and close the document.
-document.save("Sample.docm", FormatType.Word2013Docm);
+document.save("Sample.docm", FormatType.Docm);
 document.close();
 {% endhighlight %}
 {% endtabs %}

@@ -7,10 +7,9 @@ documentation: UG
 ---
 # Accepting or Rejecting Track Changes
 
-It is used to keep track of the changes made to a Word document. It helps to maintain the record of author, name and time for every insertion, deletion, or modification in a document. This can be enabled by using the TrackChanges property of the Word document.
+Track changes is used to keep track of the changes made to a Word document. It helps to maintain the record of author, date, and time for every insertion, deletion, or modification in a document. This can be enabled by using the TrackChanges property of the Word document.
 
-N> 
-With this support, the changes made in the Word document by DocIO library cannot be tracked.
+N> With this support, the changes made in the Word document by DocIO library cannot be tracked.
 
 The following code example illustrates how to enable track changes of the document.
 
@@ -170,7 +169,7 @@ document.close();
 
 {% endtabs %}
 
-Frequently Asked Questions
+## Frequently Asked Questions
 
 * [How to check whether a Word document contains tracked changes or not?](https://help.syncfusion.com/document-processing/word/word-library/java/faq#how-to-check-whether-a-word-document-contains-tracked-changes-or-not)
 * [How to accept or reject track changes of specific type in the Word document?](https://help.syncfusion.com/document-processing/word/word-library/java/faq#how-to-accept-or-reject-track-changes-of-specific-type-in-the-word-document)

@@ -12,9 +12,9 @@ The `MailMerge` class allows you to customize the Mail merge process with the fo
 
 ## Field Mapping
 
-The `MailMerge` class can automatically **maps the merge field names with data source column names** during Mail merge process. You can also customize the field mapping when the merge field names in the template document varies with the column names in the data source by using `MappedFields` collection.
+The `MailMerge` class can automatically **map the merge field names** with data source column names during the Mail merge process. You can also customize the field mapping when the merge field names in the template document vary with the column names in the data source by using the `MappedFields` collection.
 
-The following code example shows how to add mapping when a merge field name in a document and column name in data source have different names.
+The following code example shows how to add mapping when a merge field name in a document and column name in the data source have different names.
 
 {% tabs %}  
 
@@ -106,7 +106,7 @@ The following code example shows how to keep the unmerged merge fields in the ge
 {% highlight JAVA %}
 //Opens the template document.
 WordDocument document = new WordDocument("Template.docx", FormatType.Docx);
-//Sets “ClearFields” to true to remove empty mail merge fields from document.
+//Sets “ClearFields” to false to keep empty mail merge fields from document.
 document.getMailMerge().setClearFields(false);
 //Specifies the field names and field values.
 String[] fieldNames = new String[] { "EmployeeId", "Phone", "City" };
@@ -154,7 +154,7 @@ The following code example shows getEmployees method which is used to get data f
 {% highlight JAVA %}
 public  ListSupport<Employees> getEmployees() throws Exception
 {
-	/Gets the OrderDetails as “IEnumerable” collection.
+	//Gets the OrderDetails as “IEnumerable” collection.
 	ListSupport<OrderDetails> orders = new ListSupport<OrderDetails>();
 	orders.add(new OrderDetails("10835", LocalDateTime.of(2015, 1, 5,0,0,0),  LocalDateTime.of(2015, 1, 12,0,0,0), LocalDateTime.of(2015, 1, 21,0,0,0)));
 	//Gets the CustomerDetails as “IEnumerable” collection.
@@ -332,7 +332,7 @@ public class OrderDetails
 	{
 		return _orderDate;
 	}
-	ublic LocalDateTime setOrderDate(LocalDateTime value)throws Exception
+	public LocalDateTime setOrderDate(LocalDateTime value)throws Exception
 	{
 		_orderDate=value;
 		return value;

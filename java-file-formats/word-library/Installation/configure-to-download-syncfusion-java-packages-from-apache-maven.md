@@ -9,7 +9,7 @@ documentation: UG
 
 You can easily download the Syncfusion<sup style="font-size:70%">&reg;</sup> packages for Java using the [maven repository](https://jars.syncfusion.com/).
 
-The following command shows how to mention the repository in Apache Maven.
+The following snippet shows how to add the repository in the `pom.xml` of your Apache Maven project.
 
 {% tabs %}  
 
@@ -23,7 +23,7 @@ The following command shows how to mention the repository in Apache Maven.
 
 {% endtabs %}
 
-The following command shows how to refer to the Syncfusion<sup style="font-size:70%">&reg;</sup> package, which needs to be used in your project as the dependency.
+The following snippet shows how to add the Syncfusion<sup style="font-size:70%">&reg;</sup> package, which needs to be used in your project as the dependency in the `pom.xml` file.
 
 {% tabs %}  
 
@@ -36,3 +36,5 @@ The following command shows how to refer to the Syncfusion<sup style="font-size:
 {% endhighlight %}
 
 {% endtabs %}
+
+N> The version `18.4.0.30` shown above is for illustration only. Replace it with the [latest Syncfusion<sup style="font-size:70%">&reg;</sup> Java package version](https://jars.syncfusion.com/) available for your license.
