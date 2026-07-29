@@ -1,14 +1,12 @@
 ---
 layout: post
-title: Installation Errors in FileFormats - Syncfusion
+title: Installation Errors in FileFormats | Syncfusion
 description: Learn here about the common installation errors and solutions to those errors in Syncfusion FileFormats Components installation.
 platform: java-file-formats
 control: Installation and Deployment
 documentation: UG
 
 ---
-
-
 # Common Installation Errors
 
 This article describes the most common installation errors, as well as the causes and solutions to those errors.

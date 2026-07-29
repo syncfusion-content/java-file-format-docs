@@ -114,7 +114,7 @@ document.save(stream, FormatType.Docx);
 
 ## Sending a document to a client browser
 
-You can save and send the document to a client browser from a web site or web application by saving the document to a stream and writing the stream bytes to the servlet response. Set the appropriate response headers (such as `Content-Type` and `Content-Disposition`) so the browser downloads the document as an attachment. The following code sample shows how to do this from a Java servlet.
+You can save and send the document to a client browser from a web site or web application by invoking the following shown overload of `save` method. This method explicitly makes use of an instance of [HttpResponse](https://msdn.microsoft.com/en-us/library/system.web.httpresponse(v=vs.110).aspx#) as its parameter to stream the document to the client browser. So, this overload is suitable for a web application that references System.Web assembly.
 
 {% tabs %}  
 

@@ -5,11 +5,11 @@ platform: java-file-formats
 control: general
 documentation: UG
 ---
-# Configure to download Syncfusion<sup style="font-size:70%">&reg;</sup> Java packages from Apache Maven
+# Configure to download Java packages from Apache Maven
 
 You can easily download the Syncfusion<sup style="font-size:70%">&reg;</sup> packages for Java using the [maven repository](https://jars.syncfusion.com/).
 
-The following snippet shows how to add the repository in the `pom.xml` of your Apache Maven project.
+The following snippet shows how to add the repository in your Apache Maven project.
 
 {% tabs %}  
 
@@ -23,7 +23,7 @@ The following snippet shows how to add the repository in the `pom.xml` of your A
 
 {% endtabs %}
 
-The following snippet shows how to add the Syncfusion<sup style="font-size:70%">&reg;</sup> package, which needs to be used in your project as the dependency in the `pom.xml` file.
+The following snippet shows how to add the Syncfusion<sup style="font-size:70%">&reg;</sup> package, which needs to be used in your project as the dependency.
 
 {% tabs %}  
 

@@ -54,8 +54,6 @@ You can add or modify the picture watermark in the Word document. The `PictureWa
 
 The following code example shows how to add a picture watermark to the Word document.
 
-N> The above code example uses `java.nio.file.Path` and `java.nio.file.Files` classes to read the image bytes. Ensure the image file path points to a valid image on the system.
-
 {% tabs %}  
 
 {% highlight JAVA %}

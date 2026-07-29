@@ -5,8 +5,7 @@ platform: java-file-formats
 control: general
 documentation: UG
 ---
-
-# Available Syncfusion<sup style="font-size:70%">&reg;</sup> Java packages
+# Available Java packages
 
 Below are the Java packages available in Syncfusion<sup style="font-size:70%">&reg;</sup>.
 

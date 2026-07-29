@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Installing Syncfusion FileFormats offline installer - Syncfusion
+title: Installing Syncfusion FileFormats offline installer | Syncfusion
 description: Learn here about how to install Syncfusion FileFormats offline installer after downloading from our Syncfusion website.
 platform: java-file-formats
 control: Installation and Deployment
@@ -8,7 +8,7 @@ documentation: UG
 
 ---
 
-# Installing Syncfusion<sup style="font-size:70%">&reg;</sup> FileFormats offline installer
+# Installing FileFormats offline installer
 
 ## Installing with UI   
 

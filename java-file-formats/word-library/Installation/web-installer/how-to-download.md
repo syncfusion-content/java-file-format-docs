@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Downloading Syncfusion FileFormats web installer - Syncfusion
+title: Downloading Syncfusion FileFormats web installer | Syncfusion
 description: Learn here about how to download Syncfusion FileFormats web installer from our Syncfusion website with license.
 platform: java-file-formats
 control: Installation and Deployment
@@ -8,7 +8,7 @@ documentation: UG
 
 ---
 
-# Downloading Syncfusion<sup style="font-size:70%">&reg;</sup> FileFormats Web Installer
+# Downloading FileFormats Web Installer
 
 [DocIO](https://www.syncfusion.com/word-framework/net),[PDF](https://www.syncfusion.com/pdf-framework/net),[Presentation](https://www.syncfusion.com/powerpoint-framework/net), and [XlsIO](https://www.syncfusion.com/excel-framework/net) controls will be included in the Syncfusion<sup style="font-size:70%">&reg;</sup> FileFormats installer. You can either download the licensed installer or try our trial installer depending on your license. 
 
