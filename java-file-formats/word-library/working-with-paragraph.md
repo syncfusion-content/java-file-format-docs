@@ -379,7 +379,7 @@ for(Object paragraph_tempObj : textbody.getParagraphs())
 		{
 			WPicture picture = (WPicture)(item);
 			//Replace the image.
-			if("Bookmark".equals(picture.getTitle()))
+			if(picture.getTitle()=="Bookmark")
 			{
 				FileInputStream file = new FileInputStream("Image.png");
 				byte[] byarr = new byte[(int) file.getChannel().size()];
