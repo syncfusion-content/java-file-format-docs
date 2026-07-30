@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Downloading Syncfusion FileFormats web installer | Syncfusion
-description: Learn here about how to download Syncfusion FileFormats web installer from our Syncfusion website with license.
+description: Learn here about how to download the Syncfusion FileFormats web installer for the Word Library from our Syncfusion website with license.
 platform: java-file-formats
 control: Installation and Deployment
 documentation: UG

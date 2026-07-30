@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Installing Syncfusion FileFormats web installer | Syncfusion
-description: Learn here about how to install Syncfusion FileFormats web installer after downloading from our Syncfusion website.
+description: Learn here about how to install the Syncfusion FileFormats web installer for the Word Library after downloading from our Syncfusion website.
 platform: java-file-formats
 control: Installation and Deployment
 documentation: UG

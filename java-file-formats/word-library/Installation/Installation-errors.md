@@ -7,7 +7,7 @@ control: Installation and Deployment
 documentation: UG
 
 ---
-# Common Installation Errors
+# Common Installation Errors in Word Library
 
 This article describes the most common installation errors, as well as the causes and solutions to those errors.
 

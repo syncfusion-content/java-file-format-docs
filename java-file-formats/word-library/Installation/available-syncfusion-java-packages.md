@@ -1,6 +1,6 @@
 ---
-title: Available Syncfusion Java packages | Syncfusion
-description: This section demonstrates the Java packages (Jar files) available in Syncfusion (Syncfusion Jars for Java)
+title: Available Syncfusion Java packages for Word Library | Syncfusion
+description: This section demonstrates the Java packages (Jar files) available in Syncfusion for the Word Library (Syncfusion Jars for Java)
 platform: java-file-formats
 control: general
 documentation: UG
