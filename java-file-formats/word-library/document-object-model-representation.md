@@ -1,6 +1,6 @@
 ---
-title: Document Object Model representation
-description: This section describes the DOM structure
+title: Document Object Model representation | Syncfusion
+description: Learn here all about the Document Object Model (DOM) representation of Word documents and their elements in the Syncfusion<sup>&reg;</sup> Java Word library
 platform: java-file-formats
 control: Word Library
 documentation: UG

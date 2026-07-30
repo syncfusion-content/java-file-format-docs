@@ -345,7 +345,7 @@ N> Hook the event handler before opening a Word document as per the above code e
 <p>Image</p>
 </td>
 <td style="width: 26%;">
-<p>![Alternate text](URL path)</p>
+<p><code>![Alternate text](URL path)</code></p>
 </td>
 <td style="width: 41.7072%;">
 <p>For image, enclose an alternative text within the brackets [], and then link of the image source within parentheses ().</p>
