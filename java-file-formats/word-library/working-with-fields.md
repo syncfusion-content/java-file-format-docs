@@ -5,7 +5,7 @@ platform: java-file-formats
 control: Word Library
 documentation: UG
 ---
-# Working with Fields
+# Working with Fields in Word Library
 
 Fields in a Word document are placeholders for data that might change on field update. Fields are represented by the `WField` and `WFieldMark` instances in DocIO. A field in a Word document contains field codes, field separator, field result, and field end.
 

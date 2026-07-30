@@ -7,7 +7,7 @@ documentation: UG
 ---
 
 
-# Word File Formats in Essential<sup style="font-size:70%">&reg;</sup> DocIO
+# Word File Formats in Essential® DocIO
 
 The [Microsoft Word's](https://en.wikipedia.org/wiki/Microsoft_Word#) native file formats are DOCX, DOTX, DOCM, and DOTM. The Essential<sup style="font-size:70%">&reg;</sup> DocIO supports the following major native file formats.
 
