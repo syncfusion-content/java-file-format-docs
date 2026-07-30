@@ -1,5 +1,5 @@
 ---
-title: Download Syncfusion Java packages for Word Library from Apache Maven | Syncfusion
+title: Download Word Library Java packages from Apache Maven | Syncfusion
 description: This section demonstrates how to configure and download required Jars for the Word Library from Apache Maven (Jar configuration)
 platform: java-file-formats
 control: general
