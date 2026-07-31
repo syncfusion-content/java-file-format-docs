@@ -18,6 +18,8 @@ You can add or modify text watermark in the Word document. The `TextWatermark` c
 
 The following code example shows how to add a text watermark to the Word document.
 
+N> The `TextWatermark` constructor accepts the following parameters: text, alternate text, width, and height.
+
 {% tabs %} 
 
 {% highlight JAVA %}
@@ -46,7 +48,7 @@ document.close();
 
 {% endtabs %}  
 
-## Picture Watermark
+## Picture watermark
 
 You can add or modify the picture watermark in the Word document. The `PictureWatermark` class represents the picture watermark in the Word document.
 

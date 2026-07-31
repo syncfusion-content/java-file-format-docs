@@ -5,13 +5,13 @@ platform: java-file-formats
 control: Word Library
 documentation: UG
 ---
-# Working with document Fields
+# Working with Fields in Word Library
 
 Fields in a Word document are placeholders for data that might change on field update. Fields are represented by the `WField` and `WFieldMark` instances in DocIO. A field in a Word document contains field codes, field separator, field result, and field end.
 
-To learn various types of Microsoft Word supported fields and their syntax,refer to the [MSDN article](https://support.microsoft.com/en-us/office/list-of-field-codes-in-word-1ad6d91a-55a7-4a8d-b535-cf7888659a51?ui=en-us&rs=en-us&ad=us#)
+To learn various types of Microsoft Word supported fields and their syntax, refer to the [MSDN article](https://support.microsoft.com/en-us/office/list-of-field-codes-in-word-1ad6d91a-55a7-4a8d-b535-cf7888659a51?ui=en-us&rs=en-us&ad=us#).
 
-The entire field code is included in Document Object Model(DOM). Hence, adding a field will automatically include the following elements in DOM:
+The entire field code is included in Document Object Model (DOM). Hence, adding a field will automatically include the following elements in DOM:
 
 1. `WField`: Represents the starting of a Field.
 
@@ -126,7 +126,7 @@ document.close();
 
 IF field compares two values and updates the field result with true text, when comparison succeeds otherwise false text.
 
-To learn more about IF field and its syntax in Microsoft Word, refer to the [MSDN article](https://support.office.com/en-au/article/Field-codes-IF-field-9f79e82f-e53b-4ff5-9d2c-ae3b22b7eb5e#)
+To learn more about IF field and its syntax in Microsoft Word, refer to the [MSDN article](https://support.office.com/en-au/article/Field-codes-IF-field-9f79e82f-e53b-4ff5-9d2c-ae3b22b7eb5e).
 
 The following code example explains how to add an If field to a Word document.
 
@@ -263,20 +263,22 @@ document.close();
 N>  XE (Index Entry) fields cannot be unlinked.
 
 ## Sequence Field
-You can use the Sequence (SEQ) field to automatically numbers the chapters, tables, figures, and other items in a Word document. When you add, delete, or move an item in Word document (along with SEQ fields), you can update the remaining SEQ fields with a new sequence.
 
-You can format the SEQ field using below switches.
+You can use the Sequence (SEQ) field to automatically number the chapters, tables, figures, and other items in a Word document. When you add, delete, or move an item in the Word document (along with SEQ fields), you can update the remaining SEQ fields with a new sequence.
 
-\c --  Repeats the closest preceding sequence number.
-\h --  Hides the field result unless a general-formatting-switch is also present.
-\n --  Inserts the next sequence number for the specified items. This is the default switch.
-\r  -- Resets the sequence number to the number following “r”.
-\s -- Resets the sequence number at the heading level following the "s".
+You can format the SEQ field using the following switches:
 
-### Apply Number format
-You can apply the number format for the sequence field using `NumberFormat` property. 
+* `\c` — Repeats the closest preceding sequence number.
+* `\h` — Hides the field result unless a general-formatting-switch is also present.
+* `\n` — Inserts the next sequence number for the specified items. This is the default switch.
+* `\r` — Resets the sequence number to the number following "r".
+* `\s` — Resets the sequence number at the heading level following "s".
 
-The following code example shows how to apply the number format for sequence field.
+### Apply Number Format
+
+You can apply the number format for the sequence field using `NumberFormat` property.
+
+The following code example shows how to apply the number format for the sequence field.
 
 {% tabs %}  
 
@@ -298,7 +300,7 @@ field.setNumberFormat(CaptionNumberingFormat.Roman);
 //Updates the document fields.
 document.updateDocumentFields();
 //Saves and closes the Word document.
-document.save("Sample.docx");
+document.save("Sample.docx", FormatType.Docx);
 document.close();
 {% endhighlight %}
 
@@ -403,8 +405,8 @@ field = ((WSeqField)((WParagraph)table.get(0,1).getChildEntities().get(1)).getCh
 field.setResetHeadingLevel(1);
 //Updates the document fields.
 document.updateDocumentFields();
-//Saves and closes the Word document. 
-document.save("Sample.docx");
+//Saves and closes the Word document.
+document.save("Sample.docx", FormatType.Docx);
 document.close();
 {% endhighlight %}
 

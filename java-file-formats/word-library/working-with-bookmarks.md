@@ -9,7 +9,7 @@ documentation: UG
 
 A bookmark identifies a location or a selection of text within a document that you can name and identify for future reference.
 
-In Essential<sup style="font-size:70%">&reg;</sup> DocIO, bookmark is represented by Bookmark instance that is a pair of BookmarkStart and BookmarkEnd. BookmarkStart represents start point of a bookmark and BookmarkEnd represents end point of a bookmark. Every Word document contains a collection of bookmarks that are accessible through the Bookmarks property of WordDocument class.
+In Essential<sup style="font-size:70%">&reg;</sup> DocIO, a bookmark is represented by a Bookmark instance that is a pair of BookmarkStart and BookmarkEnd. BookmarkStart represents the start point of a bookmark and BookmarkEnd represents the end point of a bookmark. Every Word document contains a collection of bookmarks that are accessible through the Bookmarks property of WordDocument class.
 
 ## Adding a bookmark
 
@@ -238,6 +238,8 @@ public IWTable CreateTable(WordDocument document) throws Exception
 
 You can insert table, paragraph, simple text and paragraph item at the start or end location of the current bookmark by using bookmark navigator.
 
+You can insert table, paragraph, simple text and paragraph item at the start or end location of the current bookmark by using bookmark navigator.
+
 The following code example shows how to insert a simple text by using BookmarkNavigator.
 
 {% tabs %} 
@@ -290,8 +292,6 @@ The following code example shows how to insert a paragraph by using BookmarkNavi
 {% tabs %}  
 
 {% highlight JAVA %}
-//Load the template document with bookmark "Northwind".
-WordDocument document = new WordDocument("Bookmarks.docx", FormatType.Docx);
 //Load the template document with bookmark "Northwind".
 WordDocument document = new WordDocument("Bookmarks.docx", FormatType.Docx);
 //Create the bookmark navigator instance to access the bookmark.

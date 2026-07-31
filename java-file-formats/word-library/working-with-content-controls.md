@@ -1,6 +1,6 @@
 ---
 title: Working with Content Controls | Word library | Syncfusion
-description: This section illustrates how to work with Content Controls in Word document using Syncfusion Java Word library (Essential DocIO)
+description: This section illustrates how to work with Content Controls in a Word document using the Syncfusion Java Word library (Essential DocIO)
 platform: java-file-formats
 control: Word Library
 documentation: UG
@@ -14,14 +14,14 @@ Content controls are individual controls that you can add and customize to use i
 
 N> You can use content controls only in documents that are saved in the Open XML Format.
 
-Content controls can be categorized based on its occurrence in a document as follows,
+Content controls can be categorized based on their occurrence in a document as follows:
 
-* InlineContentControl: Among inline content inside, as a child of a paragraph.
+* InlineContentControl: Among inline content, as a child of a paragraph.
 * BlockContentControl: Among paragraphs and tables, as a child of a Body, HeaderFooter, Comment, Footnote, or a Shape node.
 
 ### Block Content Control
 
-You can add content control to a text body of the Word document using block content control. You can add text, tables, pictures, or other items into the block content control. Refer to the following code.
+You can add content control to a text body of the Word document using the block content control. You can add text, tables, pictures, or other items into the block content control. Refer to the following code.
 
 {% tabs %}
 {% highlight JAVA %}
@@ -52,7 +52,7 @@ document.close();
 
 ### Inline Content Control
 
-You can add content control as a child to a paragraph using the inline content control. You can add text, pictures, fields or other paragraph items into the inline content control. Refer to the following code.
+You can add content control as a child to a paragraph using the inline content control. You can add text, pictures, fields, or other paragraph items into the inline content control. Refer to the following code.
 
 {% tabs %}
 {% highlight JAVA %}
@@ -95,27 +95,27 @@ The tag value to identify the content control.
 
 This property allows you to define the appearance of the content controls. The appearance can be any one of the following:
 
-* BoundingBox: Displays the contents of content control within a box.
-* Tags: Displays the contents of content control within tags.
-* Hidden: Displays the contents of content control without any box or tags.
+* BoundingBox: Displays the contents of the content control within a box.
+* Tags: Displays the contents of the content control within tags.
+* Hidden: Displays the contents of the content control without any box or tags.
 
 ### Color
 
 Defines the color of the content control.
 
-### Temporary 
+### Temporary
 
 This property defines whether to remove a content control from the Word document when you edit the contents of the content control.
 
 ### Lock Contents
 
-Locking the contents of the content control. It restricts to modify the contents of the content control.
+Locks the contents of the content control. It restricts modification of the contents of the content control.
 
 ### Lock Content Control
 
-It restricts to remove or delete the content control.
+It restricts removal or deletion of the content control.
 
-### Example – Content Control Common properties
+### Example – Content Control Common Properties
 
 The following code sample illustrates the content control properties usage.
 
@@ -166,7 +166,7 @@ The content controls have the following three major use cases:
 
 ### Protection
 
-Content controls provides options to prevent users from editing or deleting parts of a Word document contents. This is useful if you have information in a Word document or template that you should be able to read but not edit, or if you want to be able to edit content controls but not delete them. 
+Content controls provide options to prevent users from editing or deleting parts of a Word document's contents. This is useful if you have information in a Word document or template that you should be able to read but not edit, or if you want to be able to edit content controls but not delete them. 
 
 To protect contents inside a content control, you can use properties of the content control to prevent editing or deleting the content control:
 

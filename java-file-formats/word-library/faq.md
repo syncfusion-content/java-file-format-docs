@@ -368,9 +368,9 @@ document.close();
 {% endtabs %}  
   
   
-## Which units does Java Word library uses for measurement properties such as size, margins, etc, in a Word document?
+## Which units does the Java Word library use for measurement properties such as size, margins, etc., in a Word document?
 
-Java Word library uses Points for measurement properties in a Word document.
+The Java Word library uses Points for measurement properties in a Word document.
 
 ## Migration from Microsoft Office Automation to Essential<sup style="font-size:70%">&reg;</sup> DocIO
 

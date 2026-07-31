@@ -504,7 +504,7 @@ for(Object item_tempObj : textBody.getChildEntities())
 			{
 				//Get the image from its title and modifies its width and height.
 				WPicture picture = (WPicture)(paraItem);
-				if(picture.getTitle () == "Bookmark")
+				if("Bookmark".equals(picture.getTitle()))
 				{
 					picture.setWidth(150);
 					picture.setHeight(100);
