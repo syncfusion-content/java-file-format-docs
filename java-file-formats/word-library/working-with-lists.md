@@ -6,7 +6,7 @@ control: Word Library
 documentation: UG
 ---
 
-# Working with Lists
+# Working with Lists in Word Library
 
 Lists can organize and format the contents of a document in a hierarchical way. There are nine levels in the list, starting from level 0 to level 8. DocIO supports both built-in list styles and custom list styles. The following are the types of lists supported in DocIO:
 

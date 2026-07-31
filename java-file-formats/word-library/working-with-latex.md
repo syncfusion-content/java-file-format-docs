@@ -245,7 +245,11 @@ The following table demonstrates the LaTeX equivalent to professional format bor
 <tr>
 <td>1.</td>
 <td><img src="WorkingwithMathematicalEquation_images/BorderBox1.png" alt="Border Box equation"></td>
-<td>{% raw %}\boxed{{x}^{2}+{y}^{2}={z}^{2}}{% endraw %}</td>
+<td>
+{% raw %}
+\boxed{{x}^{2}+{y}^{2}={z}^{2}}
+{% endraw %}
+</td>
 </tr>
 </table>
 
