@@ -238,8 +238,6 @@ public IWTable CreateTable(WordDocument document) throws Exception
 
 You can insert table, paragraph, simple text and paragraph item at the start or end location of the current bookmark by using bookmark navigator.
 
-You can insert table, paragraph, simple text and paragraph item at the start or end location of the current bookmark by using bookmark navigator.
-
 The following code example shows how to insert a simple text by using BookmarkNavigator.
 
 {% tabs %} 
