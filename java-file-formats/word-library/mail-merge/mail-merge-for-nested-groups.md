@@ -8,7 +8,7 @@ documentation: UG
 
 # Nested Mail merge for group
 
-You can perform nested Mail merge with relational or hierarchical data source and independent data tables in a template document. 
+You can perform nested Mail merge with relational or hierarchical data source and independent data tables in a template document.
 
 ## Mail merge with implicit relational data
 
@@ -22,7 +22,7 @@ For example:
   * The merge field name should be like “TableName:Id” (<<TableName:MergeFieldName>>)
   * The merge field name should be like “Image:TableName:Photo” (<<Image:TableName:MergeFieldName>>)
   
-For example, consider that you have a template document as follow.
+For example, consider that you have a template document as follows.
 
 ![Word document template to map the fields of ancestor group](../MailMerge_images/Mail_merge_with_implicit_relation_template.png)
 

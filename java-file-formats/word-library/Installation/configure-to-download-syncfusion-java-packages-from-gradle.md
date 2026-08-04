@@ -5,11 +5,11 @@ platform: java-file-formats
 control: general
 documentation: UG
 ---
-# Configure Gradle to download Syncfusion<sup>&reg;</sup> Java packages
+# Configure to download Java packages from Gradle
 
 You can easily download the Syncfusion<sup style="font-size:70%">&reg;</sup> packages for Java using the [maven repository](https://jars.syncfusion.com/).
  
-The following command shows how to mention the repository in Gradle.
+The following snippet shows how to add the repository in the `build.gradle` file of your Gradle project.
 
 {% tabs %}
 {% highlight groovy tabtitle="Gradle" %}
@@ -22,7 +22,7 @@ repositories {
 {% endhighlight %}
 {% endtabs %}
 
-The following command shows how to refer to the Syncfusion<sup style="font-size:70%">&reg;</sup> package in Gradle, which needs to be used in your project as the dependency.
+The following snippet shows how to add the Syncfusion<sup style="font-size:70%">&reg;</sup> package in the `build.gradle` file, which needs to be used in your project as the dependency.
 
 {% tabs %}
 {% highlight groovy tabtitle="Gradle" %}
@@ -31,3 +31,5 @@ dependencies {
 }
 {% endhighlight %}
 {% endtabs %}
+
+N> The version `18.4.0.30` shown above is for illustration only. Replace it with the [latest Syncfusion<sup style="font-size:70%">&reg;</sup> Java package version](https://jars.syncfusion.com/) available for your license.

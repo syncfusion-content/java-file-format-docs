@@ -31,7 +31,7 @@ T> You can also save the markdown file as [HTML](https://help.syncfusion.com/doc
 
 ## Customize image data
 
-The Java Word library provides a ImageNodeVisited event, which customizes image data while importing a Markdown file. Implement the logic to customize the image data by using this ImageNodeVisited event.
+The Java Word library provides an ImageNodeVisited event, which customizes image data while importing a Markdown file. Implement the logic to customize the image data by using this ImageNodeVisited event.
 
 The following code example shows how to load image data based on the image source path when importing the Markdown files.
 
@@ -66,9 +66,10 @@ public void remove(MdImageNodeVisitedEventHandler delegate) throws Exception
 }
 });
 //Open the Markdown file.
-document.Open("Input.md");
+document.open("Input.md", FormatType.Markdown);
 //Save as a Word document.
-document.Save("Sample.docx");
+document.save("Sample.docx", FormatType.Docx);
+document.close();
 {% endhighlight %}
 
 {% endtabs %}
@@ -344,11 +345,11 @@ N> Hook the event handler before opening a Word document as per the above code e
 <p>Image</p>
 </td>
 <td style="width: 26%;">
-<p>![Alternate text](URL path)</p>
+<p><code>&#33;[Alternate text](URL path)</code></p>
 </td>
 <td style="width: 41.7072%;">
 <p>For image, enclose an alternative text within the brackets [], and then link of the image source within parentheses ().</p>
-<p>If URL path is base64string, then it will be preserved properly in Word document. Otherwise, you can also {{'[set image from stream while opening Markdown file.](https://help.syncfusion.com/document-processing/word/word-library/java/convert-markdown-to-word-document-in-java#customize-image-data)'| markdownify }}</p>
+<p>If URL path is base64string, then it will be preserved properly in Word document. Otherwise, you can also {{'[set image from stream while opening Markdown file.](https://help.syncfusion.com/document-processing/word/word-library/java/convert-markdown-to-word-document-in-java#customize-image-data)'| markdownify }}</p>
 </td>
 </tr>
 <tr>

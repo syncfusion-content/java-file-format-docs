@@ -96,7 +96,7 @@ document.close();
 
 ## Editable ranges
 
-An **editable range** is a portion of a Word document that allows editing even when the document is protected. In the Syncfusion .NET Word library (DocIO), editable ranges are represented using the **EditableRange** class. You can define these ranges programmatically to allow user edits within protected documents.
+An **editable range** is a portion of a Word document that allows editing even when the document is protected. In the Syncfusion Java Word library (DocIO), editable ranges are represented using the **EditableRange** class. You can define these ranges programmatically to allow user edits within protected documents.
 
 ### Add an editable range
 

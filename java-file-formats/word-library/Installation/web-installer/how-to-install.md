@@ -1,13 +1,13 @@
 ---
 layout: post
-title: Installing Syncfusion FileFormats web installer - Syncfusion
-description: Learn here about how to install Syncfusion FileFormats web installer after downloading from our Syncfusion website.
+title: Installing Syncfusion FileFormats web installer | Syncfusion
+description: Learn here about how to install the Syncfusion FileFormats web installer for the Word Library after downloading from our Syncfusion website.
 platform: java-file-formats
 control: Installation and Deployment
-documentation: ug
+documentation: UG
 ---
 
-# Installing Syncfusion<sup style="font-size:70%">&reg;</sup> FileFormats web installer
+# Installing FileFormats web installer
 
 
 ## Overview
@@ -19,7 +19,7 @@ For the Essential Studio<sup style="font-size:70%">&reg;</sup> FileFormats produ
 
 The steps below show how to install Essential Studio<sup style="font-size:70%">&reg;</sup> FileFormats Web Installer.
 
-1.  Open the Syncfusion<sup style="font-size:70%">&reg;</sup> Essential Studio<sup style="font-size:70%">&reg;</sup> FileFormats Web Installer file from downloaded location by double-clicking it. The Installer Wizard automatically opens and extracts the package.
+1.  Open the Syncfusion<sup style="font-size:70%">&reg;</sup> Essential Studio<sup style="font-size:70%">&reg;</sup> FileFormats Web Installer file from the downloaded location by double-clicking it. The Installer Wizard automatically opens and extracts the package.
 
     ![Installer Extraction Wizard](images/Step-by-Step-Installation_img1.png)
 
@@ -54,10 +54,10 @@ The steps below show how to install Essential Studio<sup style="font-size:70%">&
 
 	![Existing Version for install](images/Step-by-Step-Installation_img20.png)
 	
-	N> From the 2021 Volume 1 release, Syncfusion<sup style="font-size:70%">&reg;</sup> has provided option to uninstall the previous versions from 18.1 while installing the new version.
+	N> From the 2021 Volume 1 release, Syncfusion<sup style="font-size:70%">&reg;</sup> has provided the option to uninstall the previous versions from 18.1 while installing the new version.
 	
 	
-5.	Pop up screen will be displayed to get the confirmation to uninstall selected previous versions.
+5.	A pop-up screen will be displayed to get confirmation to uninstall the selected previous versions.
 
 	![Existing Version for install](images/Step-by-Step-Installation_img21.png)
 	
@@ -66,7 +66,7 @@ The steps below show how to install Essential Studio<sup style="font-size:70%">&
 
     ![Confirmation for install/uninstall](images/Step-by-Step-Installation_img15.png)
 	
-	N> By clicking the **Download Size and Installation** Size links, you can determine the approximate size of the download and installation
+	N> By clicking the **Download Size** and **Installation Size** links, you can determine the approximate size of the download and installation.
 	
 
 7.  The Configuration Wizard will appear. You can change the Download, Install, and Demos locations from here. You can also change the Additional settings on a product-by-product basis. Click Next to install with the default settings.
@@ -75,12 +75,12 @@ The steps below show how to install Essential Studio<sup style="font-size:70%">&
 	
 	**Additional settings**
 	
-    * Select the **Install Demos** check box to install Syncfusion<sup style="font-size:70%">&reg;</sup> samples, or leave the check box unchecked, if you do not want to install Syncfusion<sup style="font-size:70%">&reg;</sup> samples
+    * Select the **Install Demos** check box to install Syncfusion<sup style="font-size:70%">&reg;</sup> samples, or leave the check box unchecked if you do not want to install Syncfusion<sup style="font-size:70%">&reg;</sup> samples.
 	* Select the **Register Syncfusion<sup style="font-size:70%">&reg;</sup> Assemblies in GAC** check box to install the latest Syncfusion<sup style="font-size:70%">&reg;</sup> assemblies in GAC, or clear this check box when you do not want to install the latest assemblies in GAC.
-    * Select the **Configure Syncfusion<sup style="font-size:70%">&reg;</sup> controls in Visual Studio** check box to configure the Syncfusion<sup style="font-size:70%">&reg;</sup> controls in the Visual Studio toolbox, or clear this check box when you do not want to configure the Syncfusion<sup style="font-size:70%">&reg;</sup> controls in the Visual Studio toolbox during installation. Note that you must also select the Register Syncfusion<sup style="font-size:70%">&reg;</sup> assemblies in GAC check box when you select this check box.
-    * Select the **Configure Syncfusion<sup style="font-size:70%">&reg;</sup> Extensions controls in Visual Studio** checkbox to configure the Syncfusion<sup style="font-size:70%">&reg;</sup> Extensions in Visual Studio or clear this check box when you do not want to configure the Syncfusion<sup style="font-size:70%">&reg;</sup> Extensions in Visual Studio.
-    * Check the **Create Desktop Shortcut** checkbox to add a desktop shortcut for Syncfusion<sup style="font-size:70%">&reg;</sup> Control Panel
-    * Check the **Create Start Menu Shortcut** checkbox to add a shortcut to the start menu for Syncfusion<sup style="font-size:70%">&reg;</sup> Control Panel
+    * Select the **Configure Syncfusion<sup style="font-size:70%">&reg;</sup> controls in Visual Studio** check box to configure the Syncfusion<sup style="font-size:70%">&reg;</sup> controls in the Visual Studio toolbox, or clear this check box when you do not want to configure the Syncfusion<sup style="font-size:70%">&reg;</sup> controls in the Visual Studio toolbox during installation. Note that you must also select the **Register Syncfusion<sup style="font-size:70%">&reg;</sup> Assemblies in GAC** check box when you select this check box.
+    * Select the **Configure Syncfusion<sup style="font-size:70%">&reg;</sup> Extensions controls in Visual Studio** check box to configure the Syncfusion<sup style="font-size:70%">&reg;</sup> Extensions in Visual Studio, or clear this check box when you do not want to configure the Syncfusion<sup style="font-size:70%">&reg;</sup> Extensions in Visual Studio.
+    * Check the **Create Desktop Shortcut** check box to add a desktop shortcut for the Syncfusion<sup style="font-size:70%">&reg;</sup> Control Panel.
+    * Check the **Create Start Menu Shortcut** check box to add a shortcut to the start menu for the Syncfusion<sup style="font-size:70%">&reg;</sup> Control Panel.
 
 
 
@@ -92,7 +92,7 @@ The steps below show how to install Essential Studio<sup style="font-size:70%">&
 	
 	I> The products you have chosen will be installed based on your Syncfusion<sup style="font-size:70%">&reg;</sup> License (Trial or Licensed).
 
-10. The download and installation\uninstallation progress will be displayed as shown below.
+10. The download, installation, and uninstallation progress will be displayed as shown below.
 
     ![Download and Installation progress install](images/Step-by-Step-Installation_img10.png)
 
@@ -106,8 +106,8 @@ The steps below show how to install Essential Studio<sup style="font-size:70%">&
 
     ![Control Panel](images/Step-by-Step-Installation_img19.png)
 	
-	N> * You can find the required jars in the FileFormats installed location
-    * **Location:** {ProgramFilesFolder}\Syncfusion\Essential Studio\ {Platform}\ {version}\JarFiles
+	N> * You can find the required jars in the FileFormats installed location (Windows).
+    * **Location:** {ProgramFilesFolder}\Syncfusion\Essential Studio\{Platform}\{version}\JarFiles
     * **Example:** C:\Program Files (x86)\Syncfusion\Essential Studio\FileFormats\19.1.0.54\JarFiles
 	
 ## Uninstallation
@@ -117,7 +117,7 @@ Syncfusion<sup style="font-size:70%">&reg;</sup> FileFormats installer can be un
    * Uninstall the FileFormats using the Syncfusion<sup style="font-size:70%">&reg;</sup> FileFormats web installer
    * Uninstall the FileFormats from Windows Control Panel
 
-Follow either one of the option below to uninstall Syncfusion<sup style="font-size:70%">&reg;</sup> Essential Studio<sup style="font-size:70%">&reg;</sup> FileFormats installer.
+Follow either one of the options below to uninstall the Syncfusion<sup style="font-size:70%">&reg;</sup> Essential Studio<sup style="font-size:70%">&reg;</sup> FileFormats installer.
   
 **Option 1: Uninstall the FileFormats using the Syncfusion<sup style="font-size:70%">&reg;</sup> FileFormats web installer**
 
@@ -144,17 +144,17 @@ N> If the **Syncfusion<sup style="font-size:70%">&reg;</sup> Essential Studio<su
 	
 	![Platform Selection wizard Installed](images/Step-by-Step-Installation_img4.png)
 	
-	You can also select the products to be installed from the **Available** tab.Click the Next button.
+	You can also select the products to be installed from the **Available** tab. Click the Next button.
 	
 	<em>**Available**</em>
 	
 	![Platform Selection wizard Available](images/Step-by-Step-Installation_img25.png)
 	
-3.  If any other products selected for installation, Uninstall previous version wizard will be displayed with previous version(s) installed for the selected products. Here you can view the list of installed previous versions for the selected products. Select **Uninstall All** checkbox to select all the versions. Click Next.
+3.  If any other products are selected for installation, the Uninstall previous version wizard will be displayed with the previous version(s) installed for the selected products. Here you can view the list of installed previous versions for the selected products. Select the **Uninstall All** checkbox to select all the versions. Click Next.
 
 	![Existing Version for install](images/Step-by-Step-Installation_img26.png)
 	
-4.	Pop up screen will be displayed to get the confirmation to uninstall selected previous versions.
+4.	A pop-up screen will be displayed to get confirmation to uninstall the selected previous versions.
 
 	![Existing Version for install](images/Step-by-Step-Installation_img21.png)	
 	
@@ -162,7 +162,7 @@ N> If the **Syncfusion<sup style="font-size:70%">&reg;</sup> Essential Studio<su
 
     ![Confirmation for install/uninstall](images/Step-by-Step-Installation_img15.png)
 	
-	N> By clicking the **Download Size and Installation** Size links, you can determine the approximate size of the download and installation
+	N> By clicking the **Download Size** and **Installation Size** links, you can determine the approximate size of the download and installation.
 	
 6.	The Configuration Wizard will appear. You can change the Download, Install, and Demos locations from here. You can also change the Additional settings on a product-by-product basis. Click Next to install with the default settings.
 
@@ -176,11 +176,11 @@ N> If the **Syncfusion<sup style="font-size:70%">&reg;</sup> Essential Studio<su
 	
 	I> The products you have chosen will be installed based on your Syncfusion<sup style="font-size:70%">&reg;</sup> License (Trial or Licensed).
 
-9.	The download, installation, and uninstallation progresses will be shown.
+9.	The download, installation, and uninstallation progress will be shown.
 
     ![Download and Installation progress install/uninstall](images/Step-by-Step-Installation_img17.png)
 
-10.	When the installation is finished, the **Summary** wizard will appear. Here you can see the list of products that have been successfully and unsuccessfully installed/uninstalled. To close the Summary wizard, click Finish.
+10.	When the installation is finished, the **Summary** wizard will appear. Here you can see the list of products that have been successfully installed/uninstalled and those that failed. To close the Summary wizard, click Finish.
 
     ![Summary install/uninstall](images/Step-by-Step-Installation_img18.png)
 	

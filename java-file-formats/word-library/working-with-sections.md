@@ -202,7 +202,7 @@ paragraph.appendText("\r\r[ Third Page ] \r\r" + paraText);
 paragraph = section.getHeadersFooters().getOddHeader().addParagraph();
 paragraph.appendText("[ Default Page Header ]");
 //Insert the default page footer.
-paragraph = section.getHeadersFooters().getOddHeader().addParagraph();
+paragraph = section.getHeadersFooters().getOddFooter().addParagraph();
 paragraph.appendText("[ Default Page Footer ]");
 //Save and close the Word document instance.
 document.save("Sample.docx", FormatType.Docx);

@@ -57,16 +57,16 @@ document.open(fileStreamPath, FormatType.Automatic);
 
 {% endtabs %}  
 
-## Opening the read only Word document
+## Opening the read-only Word document
 
-You can open the ready only documents or read-only streams using the openReadOnly method. If the Word document for reading is opened by any other application such as Microsoft Word, then the same document can be opened using the DocIO in ReadOnly mode. The following code sample explains the same.
+You can open read-only documents or read-only streams using the `openReadOnly` method. If the Word document you want to read is opened by another application such as Microsoft Word, you can still open the same document using DocIO in read-only mode. The following code sample explains the same.
 
 {% tabs %}  
   
 {% highlight JAVA %}
 //Create an empty WordDocument instance.
 WordDocument document = new WordDocument();
-//Load or open an existing word document using the read only stream.
+//Load or open an existing word document using the read-only stream.
 document.openReadOnly("Template.docx", FormatType.Docx);
 {% endhighlight %} 
 
@@ -81,7 +81,7 @@ You can save the created or manipulated Word document to the file system using t
 {% highlight JAVA %}
 //Create an empty WordDocument instance.
 WordDocument document = new WordDocument();
-//open an existing Word document using the Open method of WordDocument class.
+//Open an existing Word document using the open method of WordDocument class.
 document.open(fileName);
 //To-Do some manipulation
 //To-Do some manipulation
@@ -100,8 +100,8 @@ You can also save the created or manipulated word document to the stream by usin
 {% highlight JAVA %}
 //Creates an empty WordDocument instance
 WordDocument document = new WordDocument();
-//Opens an existing Word document through Open method of WordDocument class.
-document.Open(fileName);
+//Opens an existing Word document through the open method of WordDocument class.
+document.open(fileName);
 //To-Do some manipulation
 //To-Do some manipulation
 //Create an instance of the output stream.
@@ -112,7 +112,7 @@ document.save(stream, FormatType.Docx);
 
 {% endtabs %}  
 
-## Sending to a client browser
+## Sending a document to a client browser
 
 You can save and send the document to a client browser from a web site or web application by invoking the following shown overload of `save` method. This method explicitly makes use of an instance of [HttpResponse](https://msdn.microsoft.com/en-us/library/system.web.httpresponse(v=vs.110).aspx#) as its parameter to stream the document to the client browser. So, this overload is suitable for a web application that references System.Web assembly.
 
@@ -121,17 +121,18 @@ You can save and send the document to a client browser from a web site or web ap
 {% highlight JAVA %}
 //Create an empty WordDocument instance.
 WordDocument document = new WordDocument();
-//Open an existing Word document using the Open method of WordDocument class.
-document.Open(fileName);
+//Open an existing Word document using the open method of WordDocument class.
+document.open(fileName);
 //To-Do some manipulation.
 //To-Do some manipulation.
-//Create an instance of the output stream.
-ByteArrayOutputStream stream = new ByteArrayOutputStream();
-//Save the document to the stream.
-document.save(outputFileName, FormatType.Docx, Response, HttpContentDisposition.Attachment);
+//Set the response headers so the browser downloads the document as an attachment.
+response.setContentType("application/vnd.openxmlformats-officedocument.wordprocessingml.document");
+response.setHeader("Content-Disposition", "attachment; filename=\"" + outputFileName + "\"");
+//Save the document to the servlet response output stream.
+document.save(response.getOutputStream(), FormatType.Docx);
 {% endhighlight %}
 
-{% endtabs %}  
+{% endtabs %}
 
 ## Closing a document
 
@@ -142,8 +143,8 @@ Once the document manipulation and save operation are completed, you should clos
 {% highlight JAVA %}
 //Create an empty WordDocument instance.
 WordDocument document = new WordDocument();
-//Opens an existing Word document using the Open method of WordDocument class
-document.Open(fileName);
+//Opens an existing Word document using the open method of WordDocument class.
+document.open(fileName);
 //To-Do some manipulation.
 //To-Do some manipulation.
 //Create an instance of the output stream.

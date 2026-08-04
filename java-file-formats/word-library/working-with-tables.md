@@ -55,7 +55,7 @@ textRange.getCharacterFormat().setFontSize(10);
 textRange = table.get(1, 1).addParagraph().appendText("50");
 textRange.getCharacterFormat().setFontName("Arial");
 textRange.getCharacterFormat().setFontSize(10);
-//Accessthe instance of the cell (third row, first cell) and add the content into cell.
+//Access the instance of the cell (third row, first cell) and add the content into cell.
 textRange = table.get(2, 0).addParagraph().appendText("Orange");
 textRange.getCharacterFormat().setFontName("Arial");
 textRange.getCharacterFormat().setFontSize(10);
@@ -410,7 +410,7 @@ The following code example illustrates how to enable and disable the special tab
 WordDocument document = new WordDocument("Table.docx",FormatType.Docx);
 WSection section = document.getSections().get(0);
 WTable table = section.getTables().get(0);
-//Apply"LightShading" built-in style to table.
+//Apply "LightShading" built-in style to table.
 table.applyStyle(BuiltinTableStyle.LightShading);
 //Enable special formatting for banded columns of the table.
 table.setApplyStyleForBandedColumns(true);
@@ -748,7 +748,6 @@ for(Object row_tempObj : table.getRows())
 //Save and close the document instance.
 document.save("Sample.docx",FormatType.Docx);
 document.close();
-document.Close();
 {% endhighlight %}
 
 {% endtabs %}
