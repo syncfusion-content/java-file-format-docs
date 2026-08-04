@@ -1,6 +1,6 @@
 ---
 title: Find item in Word document in Java | Syncfusion
-description: Find an item in the Word document in Java using Syncfusion Java Word library (Essential DocIO)
+description: Learn how to Find an item in the Word document in Java using Syncfusion<sup>&reg;</sup> Java Word library
 platform: java-file-formats
 control: Word Library
 documentation: UG
@@ -8,16 +8,16 @@ documentation: UG
 
 # Find item in Word document
 
-Just like you can search for a text in a Word document, you can also search for an item (like image, content control, textbox, and so on). The Java Word library supports to find an item in Word document based on its properties. With this functionality, you can:
+Just like you can search for a text in a Word document, you can also search for an item (like image, content control, textbox, and so on). The Java Word library supports finding an item in Word document based on its properties. With this functionality, you can:
 
 * Find the first item based on one property.
-* Find the first item based on multiple properties
+* Find the first item based on multiple properties.
 * Find all the items based on one property.
 * Find all the items based on multiple properties.
 
 ## Find item by property
 
-Using findItemByProperty API, find the first item in the Word document that has the specified property name and value.
+Using `findItemByProperty` API, find the first item in the Word document that has the specified property name and value.
 
 The following code example illustrates how to find the first item based on one property.
 
@@ -44,7 +44,7 @@ document.close();
 
 ## Find item by properties
 
-Using findItemByProperties API, find the first item in the Word document based on multiple property names and their corresponding values.
+Using `findItemByProperties` API, find the first item in the Word document based on multiple property names and their corresponding values.
 
 The following code example illustrates how to find the first item in Word document based on multiple property names and their corresponding values.
 
@@ -70,7 +70,7 @@ document.close();
 
 ## Find all items by property
 
-Using findAllItemsByProperty API, find all the items in the Word document that has the specified property name and value.
+Using `findAllItemsByProperty` API, find all the items in the Word document that has the specified property name and value.
 
 The following code example illustrates how to find all the items in Word document based on one property.
 
@@ -108,7 +108,7 @@ document.close();
 
 ## Find all items by properties
 
-Using findAllItemsByProperties API, find all the items in the Word document based on multiple property names and their corresponding values.
+Using `findAllItemsByProperties` API, find all the items in the Word document based on multiple property names and their corresponding values.
 
 The following code example illustrates how to find all the items in Word document based on multiple property names and their corresponding values.
 

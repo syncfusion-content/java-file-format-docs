@@ -8,7 +8,7 @@ documentation: UG
 
 # Word to Text and Text to Word Conversions
 
-The Essential<sup style="font-size:70%">&reg;</sup> DocIO converts the Word document into the Text file and vice versa. The following code example shows how to convert the Word document into text file.
+The Essential<sup style="font-size:70%">&reg;</sup> DocIO converts a Word document into a text file and vice versa. The following code example shows how to convert a Word document into a text file.
 
 {% tabs %}
 {% highlight JAVA %}
@@ -27,7 +27,7 @@ The following code example shows how to convert a text file into a Word document
 {% highlight JAVA %}
 //Load a text file.
 WordDocument document = new WordDocument("Template.txt");
-//Save the document as a text file.
+//Save the document as a Word file.
 document.save("TextToWord.docx", FormatType.Docx);
 //Close the document.
 document.close();
